@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>그레벵</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/reset.css">
+
+
+        <style media="screen">
+
+            .imgbox{
+                width:400px;
+                height:400px;
+                position:relative;
+                overflow:hidden;
+            }
+
+            .imgbox>div{
+                width:100%;
+                height:100%;
+                background: url('http://www.melville-design.com/wp-content/uploads/2017/03/HARTO_072016-2619_HD-540x720.jpg') 0 0 no-repeat;
+                background-size: 105% auto;
+                -webkit-background-size: 105% auto;
+
+                opacity:0;
+
+                transform:translate3d(-100%,0,0);
+                -webkit-transform:translate3d(-100%,0,0);
+            }
+
+            .imgbox.loading>div{
+                transform:translate3d(-20px,0,0);
+                -webkit-transform:translate3d(-20px,0,0);
+            }
+
+            .imgbox.loaded>div{
+                opacity:1;
+                transition:transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+                -webkit-transition:-webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+                transform:translate3d(0,0,0);
+                -webkit-transform:translate3d(0,0,0);
+            }
+
+            .imgbox::after{
+                content:'';
+                display:block;
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                transition:transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                -webkit-transition:-webkit-transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background: #000;
+
+                transform:translate3d(-100%,0,0);
+                -webkit-transform:translate3d(-100%,0,0);
+            }
+
+            .imgbox.loading::after{
+                transform:translate3d(0,0,0);
+                -webkit-transform:translate3d(0,0,0);
+            }
+
+            .imgbox.loaded::after{
+                transform:translate3d(100%,0,0);
+                -webkit-transform:translate3d(100%,0,0);
+            }
+
+        </style>
+
+
+    </head>
+    <body>
+
+        <div class="imgbox" id="img1">
+            <div></div>
+        </div>
+
+        <script>
+            var elem = document.querySelector('#img1');
+            setTimeout(function(){
+                elem.className = 'imgbox loading';
+                setTimeout(function(){
+                    elem.className = 'imgbox loading loaded';
+                },450);
+            },100);
+
+        </script>
+
+    </body>
+</html>
