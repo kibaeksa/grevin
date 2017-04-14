@@ -1,2 +1,118 @@
 @import 'reset.css';
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*layout*/
+#header{
+    overflow: hidden;
+    width:100%;
+    height: 100px;
+    background: url(../img/test/header.jpg)no-repeat;
+    text-indent: -3000px;
+}
+#contents{   
+    width:100%;
+}
+#footer{
+    overflow: hidden;
+    width: 100%;
+}
+
+/*Floor-Info*/
+#contents .title-floor{
+    display: table;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    background: url(../img/test/bg_title.jpg)no-repeat;
+    background-position: left top;
+    background-size: auto;
+    text-align: center;
+}
+#contents .title-floor .title-text{
+    display: table-cell;       
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+#contents .title-floor .title-text h2{    
+    letter-spacing: 1em;
+    font-size: 12px;
+    font-weight: normal;
+}
+#contents .title-floor .title-text h1{    
+    font-size: 80px;
+    font-weight: normal;
+    padding-top: 20px;  
+}
+#contents .title-floor .title-text h1 strong{
+    font-family: '';
+}
+#contents .title-floor .title-text .tline{
+    display: inline-block;
+    width: 490px;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+#contents .title-floor .title-text p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+}
+#contents .title-floor .title-subimg{
+    width: 130px;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 180px;
+    background: #fff;
+}
+#contents .title-floor .title-subimg img{
+    margin: 15px 0 0 15px;
+}
+#contents .article-floor{
+    overflow: hidden;
+    width: 100%;
+    min-height: 1000px;
+    margin-top: 210px;
+    background: beige;
+}
+#contents .article-floor > div{
+    display: inline-block;
+}
+#contents .article-floor .con-infobox{
+    
+}
+#contents .article-floor .con-infobox .con-text{}
+#contents .article-floor .con-infobox .con-text h3{
+    font-size: 24px;
+    font-weight: 300;
+}
+#contents .article-floor .con-infobox .con-text h2{
+    font-family: 'myriad Pro';
+    font-size: 58px;
+    letter-spacing: 0.3em;
+}
+#contents .article-floor .con-infobox .con-text p{
+    font-size: 16px;
+    color: #666;
+    line-height: 24px;
+}
+#contents .article-floor .con-infobox .con-text span{}
+#contents .article-floor .con-infobox .con-text span img{}
+#contents .article-floor .con-infobox .con-text a{
+    display: inline-block;
+    padding: 22px 74px;
+    border: 1px solid #000;
+    
+}
+#contents .article-floor .con-imgbox{}
+#contents .article-floor .con-imgbox .com-img{
+    background: url(../img/test/.jpg)no-repeat;
+    background-size: ;
+    
+}
+#contents .article-floor .con-imgbox .com-img img{}
+
+
