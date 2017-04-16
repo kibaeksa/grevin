@@ -1,0 +1,41 @@
+@mixin css3($prop , $value...){
+    #{$prop} : $value;
+    -webkit-#{$prop} : $value;
+    -moz-#{$prop} : $value;
+    -ms-#{$prop} : $value;
+}
+
+@mixin animation($delay, $duration, $animation , $fillmode , $iteration) {
+
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: $fillmode;
+    -webkit-animation-iteration-count:$iteration;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: $fillmode;
+    -moz-animation-iteration-count:$iteration;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: $fillmode;
+    animation-iteration-count:$iteration;
+}
+
+@mixin keyframe ($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation_name} {
+        @content;
+    }
+
+    @keyframes #{$animation_name} {
+        @content;
+    }
+}
