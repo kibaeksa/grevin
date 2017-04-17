@@ -9,6 +9,9 @@
         <title>그레벵</title>
 
         <link rel="stylesheet" type="text/css" href="/css/style.css">
+        
+        <script src="js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery-1.12.4.min.js"></script>
 
     </head>
     <body>
@@ -113,12 +116,110 @@
                         국내 팬들을 비롯해 외국인 관람객에게도 최고의 인기 장소다.</p>
                         <span><img src="img/test/view_point.png" alt="뷰포인트">한류우드스크린 안의 내 모습을 놓치지 말자!</span>                                                
                     </div>
-                    <img class="con-img" src="img/test/2F-05.jpg" alt="">                    
+                    <img class="con-img" src="img/test/2F-05.jpg" alt="">
+                    
+                    <img class="con-img2" src="img/test/2F-05_sub.png" alt="">                     
                     <div class="con-img_bg"></div>
                     <div class="deco"></div>
                     <span class="arrow">1 / 2<img src="img/test/arrow_r.png" alt=""></span>
                 </div>
                 <!-- 컨텐츠 End -->
+                
+                <div class="bot-banner">
+                    <div class="bb-title">
+                        <p>EXPERIENCE</p>
+                        <div class="deco"></div>
+                    </div>
+                    
+                    <script type="text/javascript">
+                        jssor_1_slider_init = function() {
+
+                            var jssor_1_options = {
+                              $AutoPlay: 1,
+                              $SlideWidth: 1080,
+                              $Cols: 2,
+                              $Align: 410,
+                              $ArrowNavigatorOptions: {
+                                $Class: $JssorArrowNavigator$
+                              },
+                              $BulletNavigatorOptions: {
+                                $Class: $JssorBulletNavigator$
+                              }
+                            };
+
+                            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+                            /*responsive code begin*/
+                            /*remove responsive code if you don't want the slider scales while window resizing*/
+                            function ScaleSlider() {
+                                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                                if (refSize) {
+                                    refSize = Math.min(refSize, 1900);
+                                    jssor_1_slider.$ScaleWidth(refSize);
+                                }
+                                else {
+                                    window.setTimeout(ScaleSlider, 30);
+                                }
+                            }
+                            ScaleSlider();
+                            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+                            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+                            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+                            /*responsive code end*/           
+
+                        };
+                    </script>
+                    
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:680px;visibility:hidden;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+                            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-dark"></div>
+                            <div class="mask-block"></div>
+                            <div class="mask-dark"></div>
+                        </div>
+                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:680px;overflow:hidden;">
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                            <div class="slitem">
+                                <img data-u="image" src="img/test/slide_01.jpg" />
+                            </div>
+                        </div>
+                        <!-- Bullet Navigator -->
+                        <div data-u="navigator" class="jssorb01" style="bottom:-30px;right:16px;" data-autocenter="1">
+                            <div data-u="prototype" style="width:6px;height:6px;border-radius:3px;"></div>
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <span data-u="arrowleft" class="jssora13l" data-autocenter="2"></span>
+                        <span data-u="arrowright" class="jssora13r" data-autocenter="2"></span>
+                    </div>
+                    <script type="text/javascript">jssor_1_slider_init();</script>
+                    <!-- #endregion Jssor Slider End -->
+                    
+                </div>
+                <!-- 하단 배너 -->
                 
             </div>
 
