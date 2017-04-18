@@ -12,151 +12,175 @@
         
         <script src="js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="js/jquery/jquery-1.12.4.min.js"></script>
+        <script src="js/Swiper.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var swipers = $('#slide_min-01').Swipers({
+                    width : 500,
+                    height : 380,
+                    auto : true,
+                    loop : true,
+                    duration : 800,
+                    callback : function(index){
+                        $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
+                    }
+                });
+                
+                var swipers = $('#slide_min-02').Swipers({
+                    width : 300,
+                    height : 380,
+                    auto : true,
+                    loop : true,
+                    duration : 800,
+                    callback : function(index){
+                        $('.control-02 .num a').removeClass('on').eq(index).addClass('on');
+                    }
+                });
+
+
+                $('.prev').bind('click',function(){
+                    swipers.prev();
+                });
+
+                $('.next').bind('click',function(){
+                    swipers.next();
+                });
+
+                $('.control .num a').bind('click',function(){
+                    swipers.move($(this).index());
+                });
+                
+                $('#head_banner').click(function(){
+                    $(this).slideUp();
+                });
+
+            });
+        </script>        
 
     </head>
     <body>
         <div id="wrapper">
+            
+            <div id="head_banner">
+                TOP BANNER
+            </div>
 
             <div id="header">
                 <!-- 추후 업데이트 -->
             </div>
+            
+            <div class="slide-main">
+                <img src="/img/test/bg_main.jpg" alt="">                
+            </div>
+            <!-- 배너형 타이틀 End -->
 
-            <div id="contents_1080">
-                <!-- 배너형 타이틀 start -->
-                <div class="title-floor">
-                    <div class="title-text">
-                       <h2>GREVIN WORLD</h2>
-                       <h1><strong>2th</strong> FLOOR</h1>
-                       <div class="tline"></div>
-                       <p>세계적인 패션디자이너와 패셔니스타는 물론 헐리웃 스타, 한류의 주역들 그리고 스포츠 선수들까지!<br>이 모든 스타들을 한 자리에서 만날 수 있는 공간</p>
-                    </div>                 
-                </div>
-                <!-- 배너형 타이틀 End -->
+            <div id="contents" class="w-fix">
+                <!-- 배너형 타이틀 start -->                
                 
                 <!-- 컨텐츠 start -->
-                <div class="article-main m01">                   
-                    <div class="con-iconbox">                        
-                        <ul>
-                            <li>
-                                <img src="http://placehold.it/144x112" alt="">
-                                <h3>시간 안내</h3>
-                                <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/144x112" alt="">
-                                <h3>시간 안내</h3>
-                                <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/144x112" alt="">
-                                <h3>시간 안내</h3>
-                                <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                            </li>
-                            <li>
-                                <img src="http://placehold.it/144x112" alt="">
-                                <h3>시간 안내</h3>
-                                <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                            </li>
-                        </ul>                       
-                    </div>                                                      
-                </div>               
-               
-                
-                <div class="bot-banner">
-                    <div class="bb-title">
-                        <p>EXPERIENCE</p>
-                        <div class="deco"></div>
-                    </div>
-                    
-                    <script type="text/javascript">
-                        jssor_1_slider_init = function() {
-
-                            var jssor_1_options = {
-                              $AutoPlay: 1,
-                              $SlideWidth: 1080,
-                              $Cols: 2,
-                              $Align: 410,
-                              $ArrowNavigatorOptions: {
-                                $Class: $JssorArrowNavigator$
-                              },
-                              $BulletNavigatorOptions: {
-                                $Class: $JssorBulletNavigator$
-                              }
-                            };
-
-                            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-                            /*responsive code begin*/
-                            /*remove responsive code if you don't want the slider scales while window resizing*/
-                            function ScaleSlider() {
-                                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                                if (refSize) {
-                                    refSize = Math.min(refSize, 1900);
-                                    jssor_1_slider.$ScaleWidth(refSize);
-                                }
-                                else {
-                                    window.setTimeout(ScaleSlider, 30);
-                                }
-                            }
-                            ScaleSlider();
-                            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-                            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-                            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-                            /*responsive code end*/           
-
-                        };
-                    </script>
-                    
-                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:680px;visibility:hidden;">
-                        <!-- Loading Screen -->
-                        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
-                            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-                        </div>
-                        <div class="mask">
-                            <div class="mask-dark"></div>
-                            <div class="mask-block"></div>
-                            <div class="mask-dark"></div>
-                        </div>
-                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:680px;overflow:hidden;">
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="img/test/slide_01.jpg" />
-                            </div>
-                        </div>
-                        <!-- Bullet Navigator -->
-                        <div data-u="navigator" class="jssorb01" style="bottom:-30px;right:16px;" data-autocenter="1">
-                            <div data-u="prototype" style="width:6px;height:6px;border-radius:3px;"></div>
-                        </div>
-                        <!-- Arrow Navigator -->
-                        <span data-u="arrowleft" class="jssora13l" data-autocenter="2"></span>
-                        <span data-u="arrowright" class="jssora13r" data-autocenter="2"></span>
-                    </div>
-                    <script type="text/javascript">jssor_1_slider_init();</script>
-                    <!-- #endregion Jssor Slider End -->
-                    
+                <div class="article-main"> 
+                    <ul>
+                        <li>
+                            <img src="http://placehold.it/144x112" alt="">
+                            <h3>시간 안내</h3>
+                            <p>그레뱅 방문 전 일정을 참고해주세요</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/144x112" alt="">
+                            <h3>예매하기</h3>
+                            <p>온라인 에매시 2,000원 할인 혜택</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/144x112" alt="">
+                            <h3>대관 안내</h3>
+                            <p>품격있고 프라이빗한 비즈니스 공간</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/144x112" alt="">
+                            <h3>오시는 길</h3>
+                            <p>그레벵으로 떠나는 특별한 여행</p>
+                        </li>
+                    </ul>         
                 </div>
-                <!-- 하단 배너 -->
+                
+                <div class="article-main">
+                    <div class="line_divid"></div>
+                </div> 
+                
+                <div class="article-main"> 
+                    <div class="con-box" style="width:740px; float:left;">
+                        <h2>UPCOMING<strong> EVENT</strong></h2>
+                        <div id="slide_min-01">
+                            <ul>
+                                <li>
+                                    <img src="/img/test/slide_min01_01.jpg" alt="">
+                                    <div class="sm-info">
+                                        <h3></h3>
+                                        <p></p>
+                                        <a href="#"></a>
+                                    </div>
+                                </li>
+                                <li><img src="/img/test/slide_min01_01.jpg" alt=""></li>
+                                <li><img src="/img/test/slide_min01_01.jpg" alt=""></li>
+                            </ul>                             
+                        </div>   
+                        <div class="control-01">
+                            <a href="javascript:void(0)" class="prev"><img src="/img/test/btn_prev_min.png" alt=""></a>
+                            <a href="javascript:void(0)" class="next"><img src="/img/test/btn_next_min.png" alt=""></a> 
+                            <div class="num">
+                                <a href="javascript:void(0)" class="on"></a>
+                                <a href="javascript:void(0)"></a>
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>                        
+                                        
+                    </div>     
+                    
+                    <div class="con-box" style="width:300px; float:right;">                       
+                        <h2><strong>SOCIAL</strong> HUB<img src="/img/test/sns.png" id="btn-sns" alt=""></h2>
+                        <div id="slide_min-02">
+                            <ul>
+                                <li>
+                                    <img src="/img/test/slide_min02_01.jpg" alt="">
+                                    <div class="sm-info">
+                                        <h3></h3>
+                                        <p></p>
+                                        <a href="#"></a>
+                                    </div>
+                                </li>
+                                <li><img src="/img/test/slide_min02_01.jpg" alt=""></li>
+                                <li><img src="/img/test/slide_min02_01.jpg" alt=""></li>
+                            </ul>                             
+                        </div>   
+                        <div class="control-02">
+                            <a href="javascript:void(0)" class="prev"><img src="/img/test/btn_prev_min.png" alt=""></a>
+                            <a href="javascript:void(0)" class="next"><img src="/img/test/btn_next_min.png" alt=""></a> 
+                            <div class="num">
+                                <a href="javascript:void(0)" class="on"></a>
+                                <a href="javascript:void(0)"></a>
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                <!--슬라이드-->
+                
+                <div class="article-main"> 
+                    <div class="con-box" style="width:; float:left;">
+                        <h2><strong>CAFE</strong> GREVIN</h2>
+                        <div>
+                            <img src="/img/test/cafe_01.jpg" alt="" style="margin-right:10px;">
+                            <img src="/img/test/cafe_02.jpg" alt="">
+                        </div>
+                    </div>     
+                    
+                    <div class="con-box" style="width:; float:right;">
+                        <h2>GREVIN <strong>BOUTIQUE</strong></h2>
+                        <div>
+                            <img src="/img/test/boutique_01.jpg" alt="">
+                        </div>
+                    </div>     
+                </div>                 
                 
             </div>
 

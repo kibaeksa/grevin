@@ -29,6 +29,7 @@ $url_23: url(../img/test/deco_05.png);
 $url_24: url(../img/test/deco_06.png);
 $url_25: url(../img/test/btn_prev.png);
 $url_26: url(../img/test/btn_next.png);
+$url_27: url(../img/test/line_01.png);
 
 //@extend-elements
 //original selectors
@@ -43,20 +44,12 @@ $url_26: url(../img/test/btn_next.png);
 
 //original selectors
 //input[type="text"], input[type="password"], input[type="number"], input[type="tel"], textarea
-%extend_2 {
-	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-	border-radius: 0;
-	padding: 0;
-	margin: 0;
-	border: 1px solid $color_nobel_approx;
-	//Instead of the line below you could use @include box-sizing($bs)
+%extend_2 {	
 	box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-	font-family: $font_2;
-	font-size: 12px;
+    -ms-box-sizing: border-box;	
 }
 
 //original selectors
@@ -77,6 +70,16 @@ $url_26: url(../img/test/btn_next.png);
 @import 'common/mixin.scss';
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
+#head_banner{
+    height:150px; 
+    background:#d20038; 
+    color:#fff; 
+    text-align:center;
+    line-height: 150px;
+    font-family: $font_1;
+    font-size: 42px;
+}
+
 #header {
 	overflow: hidden;
 	width: 100%;
@@ -84,7 +87,12 @@ $url_26: url(../img/test/btn_next.png);
 	background: $url_16 no-repeat;
 	text-indent: -3000px;
 }
+.w-fix{
+        width: 1080px;
+        margin: 45px auto;
+    }
 #contents {
+    
 	.title-floor {
 		display: table;
 		position: relative;
@@ -141,6 +149,149 @@ $url_26: url(../img/test/btn_next.png);
         /* title-subimg END */
 	}
     /* title-floor END */
+    .article-main {
+        overflow: hidden;
+        margin-bottom: 60px;
+        ul{
+            overflow: hidden;
+            width: 100%;
+            li{
+                width:25%;
+                float: left;
+                text-align: center;
+                border-right: 1px solid #ddd;
+                @extend %extend_2; 
+                &:last-child{
+                    border-right: 0 none;
+                }
+                img{
+                    margin-bottom: 15px;
+                }
+                h3{
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding-bottom: 5px;
+                }
+                p{
+                    font-size: 14px;
+                    color: #666;
+                }
+            }            
+        }
+        /* icon box END */
+        .line_divid{
+            width: 100%;
+            height: 9px;
+            background: $url_27 repeat-x;
+        }
+        /* line_divid END */
+        .con-box{
+            display: inline-block;                 
+            position:relative;
+            h2{
+                font-family: $font_0;
+                font-size: 28px;
+                font-weight: normal;
+                padding-bottom: 20px;
+                strong{
+                    font-weight: bold;
+                }
+                #btn-sns{
+                    float: right;
+                    padding-top: 2px;
+                }
+            }
+            .control-01{    
+                margin-top: 51px;
+                width: 500px;
+                height: 380px;
+                position: absolute;
+                top:0; left: 0;
+                text-align: center;
+                .prev{
+                    position: absolute;
+                    margin-top: -13px;
+                    top: 50%;
+                    left: 15px;
+                    font-size: 13px;
+                }
+                .next{
+                    position: absolute;
+                    margin-top: -13px;
+                    top: 50%;
+                    right: 15px;
+                    font-size: 13px;
+                }
+                .num{
+                    position: absolute;
+                    bottom:28px;
+                    right:-150px;                   
+                    a{
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 5px;
+                        border-radius: 50%;
+                        background: #ccc;
+                    }
+                    a.on{
+                        background: #000;
+                    }
+                }
+                /* num END */
+            }
+            .control-02{    
+                margin-top: 51px;
+                width: 300px;
+                height: 380px;
+                position: absolute;
+                top:0; left: 0;
+                text-align: center;
+                .prev{
+                    position: absolute;
+                    margin-top: -13px;
+                    top: 50%;
+                    left: 15px;
+                    font-size: 13px;
+                }
+                .next{
+                    position: absolute;
+                    margin-top: -13px;
+                    top: 50%;
+                    right: 15px;
+                    font-size: 13px;
+                }
+                .num{
+                    position: absolute;
+                    left: 50%;
+                    bottom: 28px;
+                    text-align: center;                 
+                    a{
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        margin: 0 5px;
+                        border-radius: 50%;
+                        background: #ccc;
+                    }
+                    a.on{
+                        background: #000;
+                    }
+                }
+                /* num END */
+            }
+            /* control END */           
+            
+            .sm-info{                
+                width: 240px;
+                height: 380px;
+                background: steelblue;               
+            }
+            /* sm-info END */
+        }
+        /* slide-min END */
+    }    
+    /* article-main END *//********************************************/
 	.article-floor {
 		position: relative;
 		> div {
@@ -531,3 +682,4 @@ $url_26: url(../img/test/btn_next.png);
 	}
 }
 /* bot-banner END */
+

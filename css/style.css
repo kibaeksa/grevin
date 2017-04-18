@@ -1,4 +1,11 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+#contents .article-main ul li {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+
 .jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
   position: absolute;
   width: 12px;
@@ -136,6 +143,15 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
 img {
   vertical-align: top; }
 
+#head_banner {
+  height: 150px;
+  background: #d20038;
+  color: #fff;
+  text-align: center;
+  line-height: 150px;
+  font-family: nexa script;
+  font-size: 42px; }
+
 #header {
   overflow: hidden;
   width: 100%;
@@ -143,8 +159,14 @@ img {
   background: url(../img/test/header.jpg) no-repeat;
   text-indent: -3000px; }
 
+.w-fix {
+  width: 1080px;
+  margin: 45px auto; }
+
 #contents {
   /* title-floor END */
+  /* article-main END */
+  /********************************************/
   /* article-floor END */ }
   #contents .title-floor {
     display: table;
@@ -192,6 +214,123 @@ img {
       background: #fff; }
       #contents .title-floor .title-subimg img {
         margin: 15px 0 0 15px; }
+  #contents .article-main {
+    overflow: hidden;
+    margin-bottom: 60px;
+    /* icon box END */
+    /* line_divid END */
+    /* slide-min END */ }
+    #contents .article-main ul {
+      overflow: hidden;
+      width: 100%; }
+      #contents .article-main ul li {
+        width: 25%;
+        float: left;
+        text-align: center;
+        border-right: 1px solid #ddd; }
+        #contents .article-main ul li:last-child {
+          border-right: 0 none; }
+        #contents .article-main ul li img {
+          margin-bottom: 15px; }
+        #contents .article-main ul li h3 {
+          font-size: 18px;
+          font-weight: 500;
+          padding-bottom: 5px; }
+        #contents .article-main ul li p {
+          font-size: 14px;
+          color: #666; }
+    #contents .article-main .line_divid {
+      width: 100%;
+      height: 9px;
+      background: url(../img/test/line_01.png) repeat-x; }
+    #contents .article-main .con-box {
+      display: inline-block;
+      position: relative;
+      /* control END */
+      /* sm-info END */ }
+      #contents .article-main .con-box h2 {
+        font-family: nexa;
+        font-size: 28px;
+        font-weight: normal;
+        padding-bottom: 20px; }
+        #contents .article-main .con-box h2 strong {
+          font-weight: bold; }
+        #contents .article-main .con-box h2 #btn-sns {
+          float: right;
+          padding-top: 2px; }
+      #contents .article-main .con-box .control-01 {
+        margin-top: 51px;
+        width: 500px;
+        height: 380px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        /* num END */ }
+        #contents .article-main .con-box .control-01 .prev {
+          position: absolute;
+          margin-top: -13px;
+          top: 50%;
+          left: 15px;
+          font-size: 13px; }
+        #contents .article-main .con-box .control-01 .next {
+          position: absolute;
+          margin-top: -13px;
+          top: 50%;
+          right: 15px;
+          font-size: 13px; }
+        #contents .article-main .con-box .control-01 .num {
+          position: absolute;
+          bottom: 28px;
+          right: -150px; }
+          #contents .article-main .con-box .control-01 .num a {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: #ccc; }
+          #contents .article-main .con-box .control-01 .num a.on {
+            background: #000; }
+      #contents .article-main .con-box .control-02 {
+        margin-top: 51px;
+        width: 300px;
+        height: 380px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        /* num END */ }
+        #contents .article-main .con-box .control-02 .prev {
+          position: absolute;
+          margin-top: -13px;
+          top: 50%;
+          left: 15px;
+          font-size: 13px; }
+        #contents .article-main .con-box .control-02 .next {
+          position: absolute;
+          margin-top: -13px;
+          top: 50%;
+          right: 15px;
+          font-size: 13px; }
+        #contents .article-main .con-box .control-02 .num {
+          position: absolute;
+          left: 50%;
+          bottom: 28px;
+          text-align: center; }
+          #contents .article-main .con-box .control-02 .num a {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: #ccc; }
+          #contents .article-main .con-box .control-02 .num a.on {
+            background: #000; }
+      #contents .article-main .con-box .sm-info {
+        width: 240px;
+        height: 380px;
+        background: steelblue; }
   #contents .article-floor {
     position: relative;
     /* con-infobox END */
