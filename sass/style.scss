@@ -85,23 +85,14 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
 .slide-main-wrap {
     overflow: hidden;
     position: relative;
-    left: 0;
+    left: 50%;
     top: 0;
-
+    margin-left: -950px;
     #slide-main {
-        li {
-            background: url('../img/test/bg_main.jpg') no-repeat;
-            background-position: center;
-        }
-
-        img {
-            height: 100%;
-            margin: 0 auto;
-        }
     }
 
     .control-m {
-        width: 100%;
+        width: 1900px;
         height: 650px;
         position: absolute;
         top: 0;
@@ -121,6 +112,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
                 margin: 0 5px;
                 border-radius: 50%;
                 background: #fff;
+                vertical-align: middle;
             }
 
             a.on {
@@ -151,17 +143,29 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         }
     }
     .title-floor {
+        overflow: visible !important;
         display: table;
         position: relative;
         left: 0;
         top: 0;
         width: 100%;
         height: 900px;
-        background: $url_18 no-repeat;
-        background-position: left top;
-        background-size: auto;
-        text-align: center;
 
+        text-align: center;
+        .blur{
+            position:absolute;
+            top: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: $url_18 no-repeat;
+            background-position: left top;
+            background-size: auto;
+            filter: blur(0);
+            z-index: -1;
+        }
         .title-text {
             display: table-cell;
             color: $white;
@@ -408,6 +412,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
                         margin: 0 5px;
                         border-radius: 50%;
                         background: #fff;
+                        @extend %extend_2;
                     }
 
                     a.on {
@@ -456,6 +461,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
                         margin: 0 5px;
                         border-radius: 50%;
                         background: #fff;
+                        @extend %extend_2;
                     }
 
                     a.on {

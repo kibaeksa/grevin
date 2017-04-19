@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -162,17 +162,12 @@ img {
 .slide-main-wrap {
   overflow: hidden;
   position: relative;
-  left: 0;
+  left: 50%;
   top: 0;
+  margin-left: -950px;
   /* control-m END */ }
-  .slide-main-wrap #slide-main li {
-    background: url("../img/test/bg_main.jpg") no-repeat;
-    background-position: center; }
-  .slide-main-wrap #slide-main img {
-    height: 100%;
-    margin: 0 auto; }
   .slide-main-wrap .control-m {
-    width: 100%;
+    width: 1900px;
     height: 650px;
     position: absolute;
     top: 0;
@@ -190,7 +185,8 @@ img {
         height: 6px;
         margin: 0 5px;
         border-radius: 50%;
-        background: #fff; }
+        background: #fff;
+        vertical-align: middle; }
       .slide-main-wrap .control-m .num a.on {
         background: 0 none;
         border: 2px solid #fff; }
@@ -214,18 +210,29 @@ img {
       top: 56%;
       left: -250px; }
   #contents .title-floor {
+    overflow: visible !important;
     display: table;
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 900px;
-    background: url("../img/test/bg_title.jpg") no-repeat;
-    background-position: left top;
-    background-size: auto;
     text-align: center;
     /* title-text END */
     /* title-subimg END */ }
+    #contents .title-floor .blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../img/test/bg_title.jpg") no-repeat;
+      background-position: left top;
+      background-size: auto;
+      filter: blur(0);
+      z-index: -1; }
     #contents .title-floor .title-text {
       display: table-cell;
       color: #fff;

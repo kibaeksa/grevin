@@ -9,9 +9,25 @@
         <title>그레벵</title>
 
         <link rel="stylesheet" type="text/css" href="/css/style.css">
-        
+
         <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+
+      $(window).scroll(function() {
+
+        if($(this).scrollTop() >= 100){
+            $('.title-floor').animate({height: "500px"});
+            $('.title-floor').find('.blur').css('filter','blur(5px)');
+        }
+
+      });
+
+    });
+    </script>
 
     </head>
     <body>
@@ -24,6 +40,7 @@
             <div id="contents">
                 <!-- 배너형 타이틀 start -->
                 <div class="title-floor">
+                    <div class="blur">tttttt</div>
                     <div class="title-text">
                        <h2>GREVIN WORLD</h2>
                        <h1><strong>2th</strong> FLOOR</h1>
@@ -35,10 +52,12 @@
                     </div>
                 </div>
                 <!-- 배너형 타이틀 End -->
-                
+
+                <div style="width:100%; height:60px; background:#fff;"></div>
+
                 <!-- 컨텐츠 start -->
-                <div class="article-floor s01">                   
-                    <div class="con-infobox">                        
+                <div class="article-floor s01">
+                    <div class="con-infobox">
                         <h3>뷰티살롱</h3>
                         <h2>BEAUTY<br>SALON</h2>
                         <p>시대와 국가를 초월한 여배우들을 만날 수 있는 곳. <br>
@@ -46,51 +65,51 @@
                         배우 고소영과 영화 ‘로마의 휴일’의 히로인 오드리 햅번, <br>
                         할리우드의 패션 아이콘 중 한 명인 패리스 힐튼의 밀랍인형을 만날 수 있다.</p>
                         <span><img src="/img/test/view_point.png" alt="뷰포인트">가장 멋진 스타를 선택하여 내 얼굴과 합성해보자!</span>
-                        <a href="#; return false;">GAME ZONE ▶</a>                        
+                        <a href="#; return false;">GAME ZONE ▶</a>
                     </div>
-                    <img class="con-img" src="/img/test/2F-01.png" alt="">                    
+                    <img class="con-img" src="/img/test/2F-01.png" alt="">
                     <div class="con-img_bg"></div>
-                    <div class="deco"></div>                                      
+                    <div class="deco"></div>
                 </div>
-                
-                <div class="article-floor s02">                   
-                    <div class="con-infobox">                        
+
+                <div class="article-floor s02">
+                    <div class="con-infobox">
                         <h3>패션 스튜디오</h3>
                         <h2>FASHION<br>STUDIO</h2>
                         <p>세계적인 패션 디자이너들과 패셔니스타들의 공간으로 한국을 대표했던<br>
-                        디자이너 앙드레 김, 대한민국 대표 패셔니스타 배우 김태희, 세계적인 탑 모델 나오미 캠벨,<br> 
-                        남다른 패션 감각을 보여줬던 다이애나 영국 왕세자비의 밀랍인형이 전시되어 있다.<br><br> 
+                        디자이너 앙드레 김, 대한민국 대표 패셔니스타 배우 김태희, 세계적인 탑 모델 나오미 캠벨,<br>
+                        남다른 패션 감각을 보여줬던 다이애나 영국 왕세자비의 밀랍인형이 전시되어 있다.<br><br>
 
-                        특히, 디자이너 앙드레 김이 직접 디자인하고 제작한 드레스도 인물들과 함께<br> 
+                        특히, 디자이너 앙드레 김이 직접 디자인하고 제작한 드레스도 인물들과 함께<br>
                         전시되어 있어 이 패셔너블한 공간에 특별함을 더해준다.</p>
-                        <span><img src="/img/test/view_point.png" alt="뷰포인트">세계적인 디자이너와 패셔니스타의 숨결 느껴보기!</span>  
+                        <span><img src="/img/test/view_point.png" alt="뷰포인트">세계적인 디자이너와 패셔니스타의 숨결 느껴보기!</span>
                     </div>
-                    <img class="con-img" src="/img/test/2F-02.png" alt="">                    
+                    <img class="con-img" src="/img/test/2F-02.png" alt="">
                     <div class="con-img_bg"></div>
                     <div class="deco"></div>
-                    <span class="arrow"><img src="/img/test/arrow.png" alt="">1 / 3</span>                                      
+                    <span class="arrow"><img src="/img/test/arrow.png" alt="">1 / 3</span>
                 </div>
-                
-                <div class="article-floor s03">                   
-                    <div class="con-infobox">                        
+
+                <div class="article-floor s03">
+                    <div class="con-infobox">
                         <h3>명예의 전당</h3>
                         <h2>HALL<br>OF FAME</h2>
-                        <p>그레뱅 뮤지엄의 메인 홀인 명예의 전당에서는 월드 스타들을 만날 수 있다.<br> 
-                        2017년 새롭게 입성한 국민MC 유재석, K-POP의 주역인 싸이와 지드래곤, 비,<br> 
-                        팝의 황제 마이클 잭슨과 세계적 피아니스트 랑랑의 밀랍인형이 전시되어 있다.<br><br> 
+                        <p>그레뱅 뮤지엄의 메인 홀인 명예의 전당에서는 월드 스타들을 만날 수 있다.<br>
+                        2017년 새롭게 입성한 국민MC 유재석, K-POP의 주역인 싸이와 지드래곤, 비,<br>
+                        팝의 황제 마이클 잭슨과 세계적 피아니스트 랑랑의 밀랍인형이 전시되어 있다.<br><br>
 
-                        또한, 할리우드의 대표적인 섹시 스타 안젤리나 졸리와<br> 
+                        또한, 할리우드의 대표적인 섹시 스타 안젤리나 졸리와<br>
                         아카데미상 3회 수상에 빛나는 연기파 배우 메릴 스트립과등을 확인할 수 있다.</p>
-                        <span><img src="/img/test/view_point.png" alt="뷰포인트">그레벵 스타들의 핸드 프린팅에 내손을 살포시 얹어보기!</span>  
+                        <span><img src="/img/test/view_point.png" alt="뷰포인트">그레벵 스타들의 핸드 프린팅에 내손을 살포시 얹어보기!</span>
                     </div>
-                    <img class="con-img" src="/img/test/2F-03.jpg" alt="">                    
+                    <img class="con-img" src="/img/test/2F-03.jpg" alt="">
                     <div class="con-img_bg"></div>
                     <div class="deco"></div>
-                    <span class="arrow">1 / 2<img src="/img/test/arrow_r.png" alt=""></span>                                      
+                    <span class="arrow">1 / 2<img src="/img/test/arrow_r.png" alt=""></span>
                 </div>
-                
-                <div class="article-floor s04">                   
-                    <div class="con-infobox">                        
+
+                <div class="article-floor s04">
+                    <div class="con-infobox">
                         <h3>레코딩 스튜디오</h3>
                         <h2>RECODING<br>STUDIO</h2>
                         <p>실제 녹음실 현장과 그 분위기를 그대로 재현한 전시관으로<br>
@@ -98,39 +117,39 @@
                         세계 3대 테너로 꼽히는 이탈리안 성악가 루치아노 파바로티와 세계적인 소프라노 조수미,<br>
                         그리고 영국 팝의 전설 비틀즈 멤버 존 레논의 밀랍인형을이곳에서 만날 수 있다.</p>
                         <span><img src="/img/test/view_point.png" alt="뷰포인트">존 레논의 음향 콘솔에 설치된 뮤직 퀴즈 게임을 해보자!</span>
-                        <a href="#; return false;">GAME ZONE ▶</a>                        
+                        <a href="#; return false;">GAME ZONE ▶</a>
                     </div>
-                    <img class="con-img" src="/img/test/2F-04.png" alt="">                    
-                    <img class="con-img2" src="/img/test/2F-04_sub.jpg" alt="">                    
+                    <img class="con-img" src="/img/test/2F-04.png" alt="">
+                    <img class="con-img2" src="/img/test/2F-04_sub.jpg" alt="">
                     <div class="con-img_bg"></div>
-                    <div class="deco"></div>                                      
+                    <div class="deco"></div>
                 </div>
-                   
-                <div class="article-floor s05">                   
-                    <div class="con-infobox">                        
+
+                <div class="article-floor s05">
+                    <div class="con-infobox">
                         <h3>한류우드</h3>
                         <h2>KOREAN<br>WAVE</h2>
                         <p>소품, 지미집 카메라 등이 있는 이곳은 드라마 촬영 현장을 그대로 재현한 공간.<br>
                         실제 드라마 촬영 현장에서와 같은 생동감 넘치는 음향 효과와 함께<br>
                         한류 스타 김수현, 박신혜, 이민호, 장근석, 현빈의 밀랍인형을 확인할 수 있다. <br>
                         국내 팬들을 비롯해 외국인 관람객에게도 최고의 인기 장소다.</p>
-                        <span><img src="/img/test/view_point.png" alt="뷰포인트">한류우드스크린 안의 내 모습을 놓치지 말자!</span>                                                
+                        <span><img src="/img/test/view_point.png" alt="뷰포인트">한류우드스크린 안의 내 모습을 놓치지 말자!</span>
                     </div>
                     <img class="con-img" src="/img/test/2F-05.jpg" alt="">
-                    
-                    <img class="con-img2" src="/img/test/2F-05_sub.png" alt="">                     
+
+                    <img class="con-img2" src="/img/test/2F-05_sub.png" alt="">
                     <div class="con-img_bg"></div>
                     <div class="deco"></div>
                     <span class="arrow">1 / 2<img src="/img/test/arrow_r.png" alt=""></span>
                 </div>
                 <!-- 컨텐츠 End -->
-                
+
                 <div class="bot-banner">
                     <div class="bb-title">
                         <p>EXPERIENCE</p>
                         <div class="deco"></div>
                     </div>
-                    
+
                     <script type="text/javascript">
                         jssor_1_slider_init = function() {
 
@@ -165,11 +184,11 @@
                             $Jssor$.$AddEvent(window, "load", ScaleSlider);
                             $Jssor$.$AddEvent(window, "resize", ScaleSlider);
                             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-                            /*responsive code end*/           
+                            /*responsive code end*/
 
                         };
                     </script>
-                    
+
                     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:680px;visibility:hidden;">
                         <!-- Loading Screen -->
                         <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
@@ -217,14 +236,14 @@
                     </div>
                     <script type="text/javascript">jssor_1_slider_init();</script>
                     <!-- #endregion Jssor Slider End -->
-                    
+
                 </div>
                 <!-- 하단 배너 -->
-                
+
             </div>
 
             <div id="footer">
-                
+
             </div>
 
 
