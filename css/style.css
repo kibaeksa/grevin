@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-#contents .article-main ul li {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,7 +11,7 @@
   width: 12px;
   height: 12px;
   filter: alpha(opacity=70);
-  opacity: .7;
+  opacity: 0.7;
   overflow: hidden;
   cursor: pointer;
   border: #000 1px solid; }
@@ -156,18 +156,63 @@ img {
   overflow: hidden;
   width: 100%;
   height: 100px;
-  background: url(../img/test/header.jpg) no-repeat;
+  background: url("../img/test/header.jpg") no-repeat;
   text-indent: -3000px; }
 
-.w-fix {
-  width: 1080px;
-  margin: 45px auto; }
+.slide-main-wrap {
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+  /* control-m END */ }
+  .slide-main-wrap #slide-main li {
+    background: url("../img/test/bg_main.jpg") no-repeat;
+    background-position: center; }
+  .slide-main-wrap #slide-main img {
+    height: 100%;
+    margin: 0 auto; }
+  .slide-main-wrap .control-m {
+    width: 100%;
+    height: 650px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 3; }
+    .slide-main-wrap .control-m .num {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      margin-left: -43px; }
+      .slide-main-wrap .control-m .num a {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background: #fff; }
+      .slide-main-wrap .control-m .num a.on {
+        background: 0 none;
+        border: 2px solid #fff; }
 
 #contents {
+  position: relative;
   /* title-floor END */
   /* article-main END */
   /********************************************/
   /* article-floor END */ }
+  #contents.w-fix {
+    width: 1080px;
+    margin: 45px auto; }
+  #contents .bg-deco {
+    position: absolute;
+    z-index: -1; }
+    #contents .bg-deco.x01 {
+      top: 23%;
+      right: -410px; }
+    #contents .bg-deco.x02 {
+      top: 56%;
+      left: -250px; }
   #contents .title-floor {
     display: table;
     position: relative;
@@ -175,7 +220,7 @@ img {
     top: 0;
     width: 100%;
     height: 900px;
-    background: url(../img/test/bg_title.jpg) no-repeat;
+    background: url("../img/test/bg_title.jpg") no-repeat;
     background-position: left top;
     background-size: auto;
     text-align: center;
@@ -220,34 +265,34 @@ img {
     /* icon box END */
     /* line_divid END */
     /* slide-min END */ }
-    #contents .article-main ul {
+    #contents .article-main ul.icon-box {
       overflow: hidden;
       width: 100%; }
-      #contents .article-main ul li {
+      #contents .article-main ul.icon-box li {
         width: 25%;
         float: left;
         text-align: center;
         border-right: 1px solid #ddd; }
-        #contents .article-main ul li:last-child {
+        #contents .article-main ul.icon-box li:last-child {
           border-right: 0 none; }
-        #contents .article-main ul li img {
+        #contents .article-main ul.icon-box li img {
           margin-bottom: 15px; }
-        #contents .article-main ul li h3 {
+        #contents .article-main ul.icon-box li h3 {
           font-size: 18px;
           font-weight: 500;
           padding-bottom: 5px; }
-        #contents .article-main ul li p {
+        #contents .article-main ul.icon-box li p {
           font-size: 14px;
           color: #666; }
     #contents .article-main .line_divid {
       width: 100%;
       height: 9px;
-      background: url(../img/test/line_01.png) repeat-x; }
+      background: url("../img/test/line_01.png") repeat-x; }
     #contents .article-main .con-box {
       display: inline-block;
       position: relative;
-      /* control END */
-      /* sm-info END */ }
+      /* sm-info END */
+      /* control END */ }
       #contents .article-main .con-box h2 {
         font-family: nexa;
         font-size: 28px;
@@ -258,22 +303,87 @@ img {
         #contents .article-main .con-box h2 #btn-sns {
           float: right;
           padding-top: 2px; }
+      #contents .article-main .con-box .slide_min {
+        float: left; }
+        #contents .article-main .con-box .slide_min ul li {
+          position: relative;
+          /* sm-info END */ }
+          #contents .article-main .con-box .slide_min ul li .sm-info-02 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -70px;
+            color: #fff;
+            text-align: center;
+            padding-top: 140px;
+            z-index: 3; }
+            #contents .article-main .con-box .slide_min ul li .sm-info-02 h3 {
+              margin-bottom: 20px; }
+            #contents .article-main .con-box .slide_min ul li .sm-info-02 p {
+              width: 140px;
+              padding-bottom: 40px;
+              font-size: 16px; }
+            #contents .article-main .con-box .slide_min ul li .sm-info-02 a {
+              display: inline-block;
+              font-family: nexa;
+              letter-spacing: 0.5em;
+              color: #fff;
+              border: 1px solid #fff;
+              padding: 10px 16px 10px 26px; }
+      #contents .article-main .con-box .sm-info-01 {
+        float: right;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        width: 240px;
+        height: 380px;
+        color: #fff; }
+        #contents .article-main .con-box .sm-info-01 ul li {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 240px;
+          height: 380px;
+          background: #ac8927;
+          padding: 50px 24px; }
+          #contents .article-main .con-box .sm-info-01 ul li span {
+            position: relative;
+            font-size: 12px;
+            vertical-align: bottom; }
+            #contents .article-main .con-box .sm-info-01 ul li span img {
+              margin-right: 10px; }
+          #contents .article-main .con-box .sm-info-01 ul li h3 {
+            padding: 20px 0 10px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px; }
+          #contents .article-main .con-box .sm-info-01 ul li p {
+            padding-bottom: 40px;
+            font-size: 14px;
+            line-height: 18px; }
+          #contents .article-main .con-box .sm-info-01 ul li a {
+            display: inline-block;
+            font-family: nexa;
+            letter-spacing: 0.5em;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px 16px 10px 26px; }
       #contents .article-main .con-box .control-01 {
-        margin-top: 51px;
         width: 500px;
         height: 380px;
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         text-align: center;
+        z-index: 3;
         /* num END */ }
-        #contents .article-main .con-box .control-01 .prev {
+        #contents .article-main .con-box .control-01 .prev-01 {
           position: absolute;
           margin-top: -13px;
           top: 50%;
           left: 15px;
           font-size: 13px; }
-        #contents .article-main .con-box .control-01 .next {
+        #contents .article-main .con-box .control-01 .next-01 {
           position: absolute;
           margin-top: -13px;
           top: 50%;
@@ -282,32 +392,32 @@ img {
         #contents .article-main .con-box .control-01 .num {
           position: absolute;
           bottom: 28px;
-          right: -150px; }
+          right: -145px; }
           #contents .article-main .con-box .control-01 .num a {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 6px;
+            height: 6px;
             margin: 0 5px;
             border-radius: 50%;
-            background: #ccc; }
+            background: #fff; }
           #contents .article-main .con-box .control-01 .num a.on {
-            background: #000; }
+            background: 0 none;
+            border: 1px solid #fff; }
       #contents .article-main .con-box .control-02 {
-        margin-top: 51px;
         width: 300px;
         height: 380px;
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         text-align: center;
         /* num END */ }
-        #contents .article-main .con-box .control-02 .prev {
+        #contents .article-main .con-box .control-02 .prev-02 {
           position: absolute;
           margin-top: -13px;
           top: 50%;
           left: 15px;
           font-size: 13px; }
-        #contents .article-main .con-box .control-02 .next {
+        #contents .article-main .con-box .control-02 .next-02 {
           position: absolute;
           margin-top: -13px;
           top: 50%;
@@ -317,20 +427,18 @@ img {
           position: absolute;
           left: 50%;
           bottom: 28px;
+          margin-left: -26px;
           text-align: center; }
           #contents .article-main .con-box .control-02 .num a {
             display: inline-block;
-            width: 10px;
-            height: 10px;
+            width: 6px;
+            height: 6px;
             margin: 0 5px;
             border-radius: 50%;
-            background: #ccc; }
+            background: #fff; }
           #contents .article-main .con-box .control-02 .num a.on {
-            background: #000; }
-      #contents .article-main .con-box .sm-info {
-        width: 240px;
-        height: 380px;
-        background: steelblue; }
+            background: 0 none;
+            border: 1px solid #fff; }
   #contents .article-floor {
     position: relative;
     /* con-infobox END */
@@ -384,7 +492,7 @@ img {
         right: -20px;
         z-index: 1; }
       #contents .article-floor.s01 .deco {
-        background: url(../img/test/deco_01.png) no-repeat;
+        background: url("../img/test/deco_01.png") no-repeat;
         width: 632px;
         height: 122px;
         position: absolute;
@@ -418,7 +526,7 @@ img {
         left: -70px;
         z-index: 1; }
       #contents .article-floor.s02 .deco {
-        background: url(../img/test/deco_02.png) no-repeat;
+        background: url("../img/test/deco_02.png") no-repeat;
         width: 205px;
         height: 50px;
         position: absolute;
@@ -462,7 +570,7 @@ img {
         right: -15px;
         z-index: 1; }
       #contents .article-floor.s03 .deco {
-        background: url(../img/test/deco_03.jpg) no-repeat;
+        background: url("../img/test/deco_03.jpg") no-repeat;
         width: 890px;
         height: 550px;
         position: absolute;
@@ -512,7 +620,7 @@ img {
         left: -15px;
         z-index: 1; }
       #contents .article-floor.s04 .deco {
-        background: url(../img/test/deco_04.png) no-repeat;
+        background: url("../img/test/deco_04.png") no-repeat;
         width: 424px;
         height: 416px;
         position: absolute;
@@ -547,7 +655,7 @@ img {
         right: -150px;
         z-index: 1; }
       #contents .article-floor.s05 .deco {
-        background: url(../img/test/deco_05.png) no-repeat;
+        background: url("../img/test/deco_05.png") no-repeat;
         width: 85px;
         height: 35px;
         position: absolute;
@@ -575,7 +683,7 @@ img {
   overflow: hidden;
   width: 100%;
   height: 463px;
-  background: url(../img/test/footer.jpg) no-repeat;
+  background: url("../img/test/footer.jpg") no-repeat;
   margin-top: 100px; }
 
 /* #footer END */
@@ -599,7 +707,7 @@ img {
   display: block;
   position: absolute;
   cursor: pointer;
-  background: url(../img/test/btn_prev.png) no-repeat;
+  background: url("../img/test/btn_prev.png") no-repeat;
   overflow: hidden;
   z-index: 2;
   top: 0;
@@ -613,7 +721,7 @@ img {
   display: block;
   position: absolute;
   cursor: pointer;
-  background: url(../img/test/btn_next.png) no-repeat;
+  background: url("../img/test/btn_next.png") no-repeat;
   overflow: hidden;
   z-index: 2;
   top: 0;
@@ -649,7 +757,7 @@ img {
     font: bold 16px nexa;
     letter-spacing: 1em; }
   .bot-banner .bb-title .deco {
-    background: url(../img/test/deco_06.png) no-repeat;
+    background: url("../img/test/deco_06.png") no-repeat;
     width: 205px;
     height: 50px;
     position: absolute;

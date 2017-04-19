@@ -9,13 +9,24 @@
         <title>그레벵</title>
 
         <link rel="stylesheet" type="text/css" href="/css/style.css">
-        
+
         <script src="js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="js/jquery/jquery-1.12.4.min.js"></script>
         <script src="js/Swiper.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                var swipers = $('#slide_min-01').Swipers({
+                var swipers0 = $('#slide-main').Swipers({
+                    width : 1900,
+                    height : 650,
+                    auto : true,
+                    loop : true,
+                    duration : 800,
+                    callback : function(index){
+                        $('.control-m .num a').removeClass('on').eq(index).addClass('on');
+                    }
+                });
+
+                var swipers1 = $('#sm01').Swipers({
                     width : 500,
                     height : 380,
                     auto : true,
@@ -25,8 +36,8 @@
                         $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
                     }
                 });
-                
-                var swipers = $('#slide_min-02').Swipers({
+
+                var swipers2 = $('#sm02').Swipers({
                     width : 300,
                     height : 380,
                     auto : true,
@@ -37,30 +48,33 @@
                     }
                 });
 
+                $('.prev-01').bind('click',function(){swipers1.prev();});
+                $('.prev-02').bind('click',function(){swipers2.prev();});
 
-                $('.prev').bind('click',function(){
-                    swipers.prev();
+                $('.next-01').bind('click',function(){swipers1.next();});
+                $('.next-02').bind('click',function(){swipers2.next();});
+
+                $('.control-m .num a').bind('click',function(){
+                    swipers0.move($(this).index());
+                });
+                $('.control-01 .num a').bind('click',function(){
+                    swipers1.move($(this).index());
+                });
+                $('.control-02 .num a').bind('click',function(){
+                    swipers2.move($(this).index());
                 });
 
-                $('.next').bind('click',function(){
-                    swipers.next();
-                });
-
-                $('.control .num a').bind('click',function(){
-                    swipers.move($(this).index());
-                });
-                
                 $('#head_banner').click(function(){
                     $(this).slideUp();
                 });
 
             });
-        </script>        
+        </script>
 
     </head>
     <body>
         <div id="wrapper">
-            
+
             <div id="head_banner">
                 TOP BANNER
             </div>
@@ -68,124 +82,184 @@
             <div id="header">
                 <!-- 추후 업데이트 -->
             </div>
-            
-            <div class="slide-main">
-                <img src="/img/test/bg_main.jpg" alt="">                
+
+            <div class="slide-main-wrap">
+               <div id="slide-main">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="control-m">
+                    <div class="num">
+                        <a href="javascript:void(0)" class="on"></a>
+                        <a href="javascript:void(0)"></a>
+                        <a href="javascript:void(0)"></a>
+                        <a href="javascript:void(0)"></a>
+                        <a href="javascript:void(0)"></a>
+                    </div>
+                </div>
             </div>
             <!-- 배너형 타이틀 End -->
 
             <div id="contents" class="w-fix">
-                <!-- 배너형 타이틀 start -->                
-                
+                <!-- 배너형 타이틀 start -->
+
                 <!-- 컨텐츠 start -->
-                <div class="article-main"> 
-                    <ul>
+                <div class="article-main">
+                    <ul class="icon-box">
                         <li>
-                            <img src="http://placehold.it/144x112" alt="">
+                            <img src="/img/test/icon_01.png" alt="">
                             <h3>시간 안내</h3>
                             <p>그레뱅 방문 전 일정을 참고해주세요</p>
                         </li>
                         <li>
-                            <img src="http://placehold.it/144x112" alt="">
+                            <img src="/img/test/icon_02.png" alt="">
                             <h3>예매하기</h3>
                             <p>온라인 에매시 2,000원 할인 혜택</p>
                         </li>
                         <li>
-                            <img src="http://placehold.it/144x112" alt="">
+                            <img src="/img/test/icon_03.png" alt="">
                             <h3>대관 안내</h3>
                             <p>품격있고 프라이빗한 비즈니스 공간</p>
                         </li>
                         <li>
-                            <img src="http://placehold.it/144x112" alt="">
+                            <img src="/img/test/icon_04.png" alt="">
                             <h3>오시는 길</h3>
                             <p>그레벵으로 떠나는 특별한 여행</p>
                         </li>
-                    </ul>         
+                    </ul>
                 </div>
-                
+
                 <div class="article-main">
                     <div class="line_divid"></div>
-                </div> 
-                
-                <div class="article-main"> 
+                </div>
+
+                <div class="article-main">
                     <div class="con-box" style="width:740px; float:left;">
                         <h2>UPCOMING<strong> EVENT</strong></h2>
-                        <div id="slide_min-01">
+                        <div class="slide_min" id="sm01">
                             <ul>
-                                <li>
-                                    <img src="/img/test/slide_min01_01.jpg" alt="">
-                                    <div class="sm-info">
-                                        <h3></h3>
-                                        <p></p>
-                                        <a href="#"></a>
-                                    </div>
-                                </li>
                                 <li><img src="/img/test/slide_min01_01.jpg" alt=""></li>
                                 <li><img src="/img/test/slide_min01_01.jpg" alt=""></li>
-                            </ul>                             
-                        </div>   
+                                <li><img src="/img/test/slide_min01_01.jpg" alt=""></li>
+                            </ul>
+                        </div>
                         <div class="control-01">
-                            <a href="javascript:void(0)" class="prev"><img src="/img/test/btn_prev_min.png" alt=""></a>
-                            <a href="javascript:void(0)" class="next"><img src="/img/test/btn_next_min.png" alt=""></a> 
-                            <div class="num">
-                                <a href="javascript:void(0)" class="on"></a>
-                                <a href="javascript:void(0)"></a>
-                                <a href="javascript:void(0)"></a>
-                            </div>
-                        </div>                        
-                                        
-                    </div>     
-                    
-                    <div class="con-box" style="width:300px; float:right;">                       
-                        <h2><strong>SOCIAL</strong> HUB<img src="/img/test/sns.png" id="btn-sns" alt=""></h2>
-                        <div id="slide_min-02">
-                            <ul>
-                                <li>
-                                    <img src="/img/test/slide_min02_01.jpg" alt="">
-                                    <div class="sm-info">
-                                        <h3></h3>
-                                        <p></p>
-                                        <a href="#"></a>
-                                    </div>
-                                </li>
-                                <li><img src="/img/test/slide_min02_01.jpg" alt=""></li>
-                                <li><img src="/img/test/slide_min02_01.jpg" alt=""></li>
-                            </ul>                             
-                        </div>   
-                        <div class="control-02">
-                            <a href="javascript:void(0)" class="prev"><img src="/img/test/btn_prev_min.png" alt=""></a>
-                            <a href="javascript:void(0)" class="next"><img src="/img/test/btn_next_min.png" alt=""></a> 
+                            <a href="javascript:void(0)" class="prev-01"><img src="/img/test/btn_prev_min.png" alt=""></a>
+                            <a href="javascript:void(0)" class="next-01"><img src="/img/test/btn_next_min.png" alt=""></a>
                             <div class="num">
                                 <a href="javascript:void(0)" class="on"></a>
                                 <a href="javascript:void(0)"></a>
                                 <a href="javascript:void(0)"></a>
                             </div>
                         </div>
-                    </div>     
+                        <div class="sm-info-01">
+                            <ul>
+                                <li>
+                                    <span><img src="/img/test/slush_01.png" alt="">2016 .10 .31</span>
+                                    <h3>그레뱅 뮤지엄 할로윈 스페셜 오픈</h3>
+                                    <p>할로윈을 맞아 특별히 준비한 좀비투어가 곧 시작됩니다.</p>
+                                    <a href="#">more ▶</a>
+                                </li>
+                                <li>
+                                    <span><img src="/img/test/slush_02.png" alt="">2016 .10 .31</span>
+                                    <h3>그레뱅 뮤지엄 할로윈 스페셜 오픈</h3>
+                                    <p>할로윈을 맞아 특별히 준비한 좀비투어가 곧 시작됩니다.</p>
+                                    <a href="#">more ▶</a>
+                                </li>
+                                <li>
+                                    <span><img src="/img/test/slush_03.png" alt="">2016 .10 .31</span>
+                                    <h3>그레뱅 뮤지엄 할로윈 스페셜 오픈</h3>
+                                    <p>할로윈을 맞아 특별히 준비한 좀비투어가 곧 시작됩니다.</p>
+                                    <a href="#">more ▶</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="con-box" style="width:300px; float:right;">
+                        <h2><strong>SOCIAL</strong> HUB<img src="/img/test/sns.png" id="btn-sns" usemap="#map-sns" alt=""></h2>
+                        <map name="map-sns">
+                            <area shape="rect" coords="0,0,26,26" href="http://naver.com" alt="">
+                            <area shape="rect" coords="29,0,55,26" href="http://naver.com" alt="">
+                            <area shape="rect" coords="58,0,84,26" href="http://naver.com" alt="">
+                            <area shape="rect" coords="87,0,112,26" href="http://naver.com" alt="">
+                        </map>
+                        <div class="slide_min" id="sm02">
+                            <ul>
+                                <li>
+                                    <img src="/img/test/slide_min02_01.jpg" alt="">
+                                    <div class="sm-info-02">
+                                        <h3><img src="/img/test/sns_01.png" alt=""></h3>
+                                        <p>#그레뱅 베스트 포즈왕</p>
+                                        <a href="#">more ▶</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="/img/test/slide_min02_01.jpg" alt="">
+                                    <div class="sm-info-02">
+                                        <h3><img src="/img/test/sns_01.png" alt=""></h3>
+                                        <p>#그레뱅 베스트 포즈왕</p>
+                                        <a href="#">more ▶</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="/img/test/slide_min02_01.jpg" alt="">
+                                    <div class="sm-info-02">
+                                        <h3><img src="/img/test/sns_01.png" alt=""></h3>
+                                        <p>#그레뱅 베스트 포즈왕</p>
+                                        <a href="#">more ▶</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="control-02">
+                            <a href="javascript:void(0)" class="prev-02"><img src="/img/test/btn_prev_min.png" alt=""></a>
+                            <a href="javascript:void(0)" class="next-02"><img src="/img/test/btn_next_min.png" alt=""></a>
+                            <div class="num">
+                                <a href="javascript:void(0)" class="on"></a>
+                                <a href="javascript:void(0)"></a>
+                                <a href="javascript:void(0)"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--슬라이드-->
-                
-                <div class="article-main"> 
+
+                <div class="article-main">
                     <div class="con-box" style="width:; float:left;">
                         <h2><strong>CAFE</strong> GREVIN</h2>
                         <div>
                             <img src="/img/test/cafe_01.jpg" alt="" style="margin-right:10px;">
                             <img src="/img/test/cafe_02.jpg" alt="">
                         </div>
-                    </div>     
-                    
+                    </div>
+
                     <div class="con-box" style="width:; float:right;">
                         <h2>GREVIN <strong>BOUTIQUE</strong></h2>
                         <div>
                             <img src="/img/test/boutique_01.jpg" alt="">
                         </div>
-                    </div>     
-                </div>                 
-                
+                    </div>
+                </div>
+
+                <div class="bg-deco x01"><img src="/img/test/deco_m01.png" alt=""></div>
+                <div class="bg-deco x02"><img src="/img/test/deco_04.png" alt=""></div>
+
             </div>
 
             <div id="footer">
-                
+
             </div>
 
 
