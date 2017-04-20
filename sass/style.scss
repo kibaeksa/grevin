@@ -152,7 +152,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         height: 900px;
 
         text-align: center;
-        .blur{
+        .mask{
             position:absolute;
             top: 0;
             left: 0;
@@ -163,15 +163,17 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             background: $url_18 no-repeat;
             background-position: left top;
             background-size: auto;
-            filter: blur(0);
+            filter: brightness(1);
             z-index: -1;
+            transition: .4s;
         }
         .title-text {
             display: table-cell;
             color: $white;
             text-align: center;
             vertical-align: middle;
-
+            transition: 1s;
+            opacity: 0;
             h1 {
                 font-size: 80px;
                 font-weight: normal;

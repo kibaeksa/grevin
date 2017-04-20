@@ -21,7 +21,8 @@
 
         if($(this).scrollTop() >= 100){
             $('.title-floor').animate({height: "500px"});
-            $('.title-floor').find('.blur').css('filter','blur(5px)');
+            $('.title-floor').find('.mask').css('filter','brightness(0.4)');
+            $('.title-floor').find('.title-text').css('opacity','1');
         }
 
       });
@@ -40,7 +41,7 @@
             <div id="contents">
                 <!-- 배너형 타이틀 start -->
                 <div class="title-floor">
-                    <div class="blur">tttttt</div>
+                    <div class="mask"></div>
                     <div class="title-text">
                        <h2>GREVIN WORLD</h2>
                        <h1><strong>2th</strong> FLOOR</h1>
