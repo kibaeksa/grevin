@@ -724,6 +724,14 @@ img {
       vertical-align: top;
       margin: 2px 4px; }
 
+.title-basic-sub {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center; }
+  .title-basic-sub h3 {
+    font-size: 25px;
+    font-weight: 100; }
+
 .search-basic {
   width: 100%;
   padding: 40px 0;
@@ -887,6 +895,45 @@ img {
     background-color: #444;
     color: #fff;
     font-size: 14px; }
+
+/* FAQ page */
+.accordion-basic {
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444; }
+  .accordion-basic .accordion-box {
+    margin-top: -1px;
+    border-bottom: 1px solid #e7e7e7; }
+    .accordion-basic .accordion-box .accordion-box-title.on {
+      background: #f8f8f8;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #e7e7e7; }
+    .accordion-basic .accordion-box .accordion-box-title img {
+      vertical-align: middle; }
+    .accordion-basic .accordion-box .accordion-box-title table {
+      width: 100%; }
+      .accordion-basic .accordion-box .accordion-box-title table tr {
+        height: 60px;
+        line-height: 60px; }
+        .accordion-basic .accordion-box .accordion-box-title table tr th {
+          font-family: nexa; }
+        .accordion-basic .accordion-box .accordion-box-title table tr td {
+          font-weight: 500;
+          color: #444; }
+          .accordion-basic .accordion-box .accordion-box-title table tr td:last-child {
+            text-align: center; }
+    .accordion-basic .accordion-box .accordion-box-dropdown {
+      display: none; }
+      .accordion-basic .accordion-box .accordion-box-dropdown table {
+        width: 100%; }
+        .accordion-basic .accordion-box .accordion-box-dropdown table tr th {
+          font-family: nexa;
+          color: #d20038; }
+        .accordion-basic .accordion-box .accordion-box-dropdown table tr td {
+          padding: 40px 0 70px;
+          line-height: 24px; }
 
 /* #contents END */
 #footer {

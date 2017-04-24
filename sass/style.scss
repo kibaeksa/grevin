@@ -839,6 +839,15 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         }
     }
 }
+.title-basic-sub{
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    h3{
+        font-size: 25px;
+        font-weight: 100;
+    }
+}
 .search-basic{
     width: 100%;
     padding: 40px 0;
@@ -1035,6 +1044,63 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         background-color: #444;
         color: #fff;
         font-size: 14px;
+    }
+}
+
+/* FAQ page */
+.accordion-basic{
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    .accordion-box{
+        margin-top: -1px;
+        border-bottom: 1px solid #e7e7e7;
+        .accordion-box-title{
+            &.on{
+                background: #f8f8f8;
+                border-top: 1px solid #444;
+                border-bottom: 1px solid #e7e7e7;
+            }
+            img{
+                vertical-align: middle;
+            }
+            table{
+                width: 100%;
+                tr{
+                    height: 60px;
+                    line-height: 60px;
+                    th{
+                        font-family: $font_0;
+                    }
+                    td{
+                        font-weight: 500;
+                        color: #444;
+                        &:last-child{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .accordion-box-dropdown{
+            display: none;
+            table{
+                width: 100%;
+                tr{
+                    th{
+                        font-family: $font_0;
+                        color: #d20038;
+                    }
+                    td{
+                        padding: 40px 0 70px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
     }
 }
 
