@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a:hover {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1005,20 +1005,22 @@ img {
           color: #d20038; }
 
 .tip-body {
+  overflow: hidden;
   background: url(../img/test/line_01.png) repeat-x;
   background-position: left bottom;
   padding-bottom: 30px; }
+  .tip-body.col3 {
+    width: 1110px;
+    margin-left: -15px; }
+  .tip-body.col2 {
+    width: 1100px;
+    margin-left: -10px; }
   .tip-body .tip-cp-box {
-    display: inline-block;
+    float: left;
     position: relative;
     width: 340px;
     height: 420px;
-    margin-right: 28px;
-    margin-bottom: 30px; }
-    .tip-body .tip-cp-box.col3:nth-child(3n) {
-      margin-right: 0; }
-    .tip-body .tip-cp-box.col2:nth-child(2n) {
-      margin-right: 0 !important; }
+    margin: 0 15px 30px; }
     .tip-body .tip-cp-box .tip-cp_img {
       overflow: hidden;
       width: 100%;
@@ -1071,14 +1073,16 @@ img {
       line-height: 60px; }
       .tip-body .tip-cp-box .tip-cp_button a {
         display: inline-block;
-        width: 100%;
+        width: 60px;
         height: 60px;
+        border: 2px solid #ccc;
         background: url(../img/test/btn_more.png) no-repeat;
         background-position: center;
-        transition: .1s;
+        transition: .4s;
         transform: translate3d(0, 0, 0); }
         .tip-body .tip-cp-box .tip-cp_button a:hover {
           width: 84%;
+          height: 60px;
           border: 2px solid #d20038;
           background: url(../img/test/btn_more_more.png) no-repeat;
           background-position: center;
@@ -1189,53 +1193,65 @@ img {
 
 /* bot-banner END */
 /* layer popup */
-#tip-cp-layerpop {
+.tip-cp-layerpop-wrapper {
+  display: none;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); }
+
+.tip-cp-layerpop {
   background-color: #fff;
   color: #000;
   display: none;
   width: 1280px;
-  min-height: 500px; }
-  #tip-cp-layerpop .tcl-head {
+  min-height: 500px;
+  display: block;
+  margin: 30px auto; }
+  .tip-cp-layerpop .tcl-head {
     position: relative;
     width: 1080px;
     margin: 0 auto;
     padding: 30px 0; }
-    #tip-cp-layerpop .tcl-head h1 {
+    .tip-cp-layerpop .tcl-head h1 {
       font-size: 17px;
       font-weight: normal;
       color: #666; }
-      #tip-cp-layerpop .tcl-head h1 span {
+      .tip-cp-layerpop .tcl-head h1 span {
         color: #b9b9b9;
         padding: 0 10px; }
-      #tip-cp-layerpop .tcl-head h1 strong {
+      .tip-cp-layerpop .tcl-head h1 strong {
         font-family: nexa;
         font-size: 20px;
         letter-spacing: 0.3em;
         color: #d20038; }
-    #tip-cp-layerpop .tcl-head .b-close {
+    .tip-cp-layerpop .tcl-head .b-close {
       cursor: pointer;
       position: absolute;
       right: 0;
       top: 26px; }
-  #tip-cp-layerpop .tcl-title {
+  .tip-cp-layerpop .tcl-title {
     position: relative;
     width: 100%;
     height: 500px;
     text-align: center; }
-    #tip-cp-layerpop .tcl-title .tcl-mask {
+    .tip-cp-layerpop .tcl-title .tcl-mask {
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      z-index: -1;
+      z-index: 1;
       background: rgba(0, 0, 0, 0.5); }
-    #tip-cp-layerpop .tcl-title img {
+    .tip-cp-layerpop .tcl-title img {
       position: absolute;
       left: 0;
       top: 0;
-      z-index: -2; }
-    #tip-cp-layerpop .tcl-title span {
+      z-index: 0; }
+    .tip-cp-layerpop .tcl-title span {
       margin-top: 200px;
       padding: 30px;
       border: 1px solid #fff;
@@ -1243,57 +1259,57 @@ img {
       font-size: 30px;
       font-weight: 300;
       display: inline-block; }
-  #tip-cp-layerpop .tcl-body {
+  .tip-cp-layerpop .tcl-body {
     padding: 80px 100px; }
-    #tip-cp-layerpop .tcl-body .tcl-desc {
+    .tip-cp-layerpop .tcl-body .tcl-desc {
       padding-bottom: 80px; }
-      #tip-cp-layerpop .tcl-body .tcl-desc p {
+      .tip-cp-layerpop .tcl-body .tcl-desc p {
         font-size: 30px;
         font-weight: 300;
         line-height: 40px; }
-    #tip-cp-layerpop .tcl-body .line_divid-h {
+    .tip-cp-layerpop .tcl-body .line_divid-h {
       margin: 0 auto;
       width: 100px;
       border-top: 1px solid #000;
       text-align: center; }
-    #tip-cp-layerpop .tcl-body .tcl-htmlbody {
+    .tip-cp-layerpop .tcl-body .tcl-htmlbody {
       padding: 80px 0; }
-    #tip-cp-layerpop .tcl-body .line_divid-v {
+    .tip-cp-layerpop .tcl-body .line_divid-v {
       margin: 0 auto;
       width: 1px;
       height: 80px;
       border-left: 1px solid #000;
       text-align: center; }
-    #tip-cp-layerpop .tcl-body .tcl-sns {
+    .tip-cp-layerpop .tcl-body .tcl-sns {
       padding: 30px 0 80px;
       text-align: center; }
-      #tip-cp-layerpop .tcl-body .tcl-sns p {
+      .tip-cp-layerpop .tcl-body .tcl-sns p {
         font-size: 15px;
         padding-bottom: 20px; }
-      #tip-cp-layerpop .tcl-body .tcl-sns ul {
+      .tip-cp-layerpop .tcl-body .tcl-sns ul {
         overflow: hidden; }
-        #tip-cp-layerpop .tcl-body .tcl-sns ul li {
+        .tip-cp-layerpop .tcl-body .tcl-sns ul li {
           display: inline-block;
           margin-right: 10px; }
-          #tip-cp-layerpop .tcl-body .tcl-sns ul li :last-child {
+          .tip-cp-layerpop .tcl-body .tcl-sns ul li :last-child {
             margin-right: 0; }
-    #tip-cp-layerpop .tcl-body .tcl-pn {
+    .tip-cp-layerpop .tcl-body .tcl-pn {
       overflow: hidden;
       padding: 30px 0 0;
       border-top: 1px solid #000; }
-      #tip-cp-layerpop .tcl-body .tcl-pn a {
+      .tip-cp-layerpop .tcl-body .tcl-pn a {
         color: #222;
         font-size: 15px; }
-        #tip-cp-layerpop .tcl-body .tcl-pn a img {
+        .tip-cp-layerpop .tcl-body .tcl-pn a img {
           border: 1px solid #ccc;
           vertical-align: middle; }
-        #tip-cp-layerpop .tcl-body .tcl-pn a:first-child {
+        .tip-cp-layerpop .tcl-body .tcl-pn a:first-child {
           float: left; }
-          #tip-cp-layerpop .tcl-body .tcl-pn a:first-child img {
+          .tip-cp-layerpop .tcl-body .tcl-pn a:first-child img {
             margin-right: 15px; }
-        #tip-cp-layerpop .tcl-body .tcl-pn a:last-child {
+        .tip-cp-layerpop .tcl-body .tcl-pn a:last-child {
           float: right; }
-          #tip-cp-layerpop .tcl-body .tcl-pn a:last-child img {
+          .tip-cp-layerpop .tcl-body .tcl-pn a:last-child img {
             margin-left: 15px; }
 
 /* layer popup END */
