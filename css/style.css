@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a:hover {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1015,8 +1015,10 @@ img {
     height: 420px;
     margin-right: 28px;
     margin-bottom: 30px; }
-    .tip-body .tip-cp-box:nth-child(3n) {
+    .tip-body .tip-cp-box.col3:nth-child(3n) {
       margin-right: 0; }
+    .tip-body .tip-cp-box.col2:nth-child(2n) {
+      margin-right: 0 !important; }
     .tip-body .tip-cp-box .tip-cp_img {
       overflow: hidden;
       width: 100%;
@@ -1025,7 +1027,7 @@ img {
       background-size: cover;
       background-position: center; }
       .tip-body .tip-cp-box .tip-cp_img img {
-        height: 100%; }
+        width: 100%; }
     .tip-body .tip-cp-box .tip-cp_info {
       position: absolute;
       left: 50%;
@@ -1076,6 +1078,8 @@ img {
         transition: .1s;
         transform: translate3d(0, 0, 0); }
         .tip-body .tip-cp-box .tip-cp_button a:hover {
+          width: 84%;
+          border: 2px solid #d20038;
           background: url(../img/test/btn_more_more.png) no-repeat;
           background-position: center;
           transform: translate3d(0, 0, 0); }
@@ -1274,14 +1278,23 @@ img {
           #tip-cp-layerpop .tcl-body .tcl-sns ul li :last-child {
             margin-right: 0; }
     #tip-cp-layerpop .tcl-body .tcl-pn {
+      overflow: hidden;
       padding: 30px 0 0;
       border-top: 1px solid #000; }
       #tip-cp-layerpop .tcl-body .tcl-pn a {
+        color: #222;
         font-size: 15px; }
+        #tip-cp-layerpop .tcl-body .tcl-pn a img {
+          border: 1px solid #ccc;
+          vertical-align: middle; }
         #tip-cp-layerpop .tcl-body .tcl-pn a:first-child {
           float: left; }
+          #tip-cp-layerpop .tcl-body .tcl-pn a:first-child img {
+            margin-right: 15px; }
         #tip-cp-layerpop .tcl-body .tcl-pn a:last-child {
           float: right; }
+          #tip-cp-layerpop .tcl-body .tcl-pn a:last-child img {
+            margin-left: 15px; }
 
 /* layer popup END */
 .dn {
