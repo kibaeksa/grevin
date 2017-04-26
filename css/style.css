@@ -1,5 +1,5 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1014,7 +1014,7 @@ img {
     margin-left: -15px; }
   .tip-body.col2 {
     width: 1100px;
-    margin-left: -10px; }
+    margin-left: -15px; }
   .tip-body .tip-cp-box {
     float: left;
     position: relative;
@@ -1104,6 +1104,58 @@ img {
     .btn_morelist a:hover {
       background: #000;
       color: #fff; }
+
+/* Docent page */
+#tab {
+  margin: 0 5px; }
+  #tab > input {
+    display: none; }
+    #tab > input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+      display: block; }
+    #tab > input:nth-of-type(1):checked ~ section > label:nth-of-type(1) {
+      border-bottom: 0 none;
+      color: #222; }
+    #tab > input:nth-of-type(1) ~ div:nth-of-type(1) {
+      display: none; }
+    #tab > input:nth-of-type(1) ~ section > label:nth-of-type(1) {
+      border: 1px solid #222;
+      color: #999; }
+    #tab > input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+      display: block; }
+    #tab > input:nth-of-type(2):checked ~ section > label:nth-of-type(2) {
+      border-bottom: 0 none;
+      color: #222; }
+    #tab > input:nth-of-type(2) ~ div:nth-of-type(2) {
+      display: none; }
+    #tab > input:nth-of-type(2) ~ section > label:nth-of-type(2) {
+      border: 1px solid #222;
+      color: #999; }
+    #tab > input:nth-of-type(3):checked ~ div:nth-of-type(3) {
+      display: block; }
+    #tab > input:nth-of-type(3):checked ~ section > label:nth-of-type(3) {
+      border-bottom: 0 none;
+      color: #222; }
+    #tab > input:nth-of-type(3) ~ div:nth-of-type(3) {
+      display: none; }
+    #tab > input:nth-of-type(3) ~ section > label:nth-of-type(3) {
+      border: 1px solid #222;
+      color: #999; }
+  #tab > section {
+    overflow: hidden;
+    width: 100%;
+    padding-left: 1px; }
+    #tab > section > label {
+      float: left;
+      display: block;
+      width: 33.4%;
+      height: 70px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 70px;
+      margin-left: -1px; }
+  #tab > div {
+    padding-top: 50px;
+    width: 100%; }
 
 /* #contents END */
 #footer {

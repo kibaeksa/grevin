@@ -1193,7 +1193,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     }
     &.col2{
         width: 1100px;
-        margin-left: -10px;
+        margin-left: -15px;
     }
     .tip-cp-box{
         float: left;
@@ -1302,6 +1302,92 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             color: #fff;
         }
     }
+}
+
+/* Docent page */
+
+#tab {
+	margin: 0 5px;
+	> input {
+		display: none;
+		&:nth-of-type(1) {
+			&:checked {
+				~ div:nth-of-type(1) {
+					display: block;
+				}
+				~ section > label:nth-of-type(1) {
+					border-bottom: 0 none;
+					color: #222;
+				}
+			}
+			~ div:nth-of-type(1) {
+				display: none;
+			}
+			~ section > label:nth-of-type(1) {
+				border: 1px solid #222;
+				color: #999;
+			}
+		}
+		&:nth-of-type(2) {
+			&:checked {
+				~ div:nth-of-type(2) {
+					display: block;
+				}
+				~ section > label:nth-of-type(2) {
+					border-bottom: 0 none;
+					color: #222;
+				}
+			}
+			~ div:nth-of-type(2) {
+				display: none;
+			}
+			~ section > label:nth-of-type(2) {
+				border: 1px solid #222;
+				color: #999;
+			}
+		}
+		&:nth-of-type(3) {
+			&:checked {
+				~ div:nth-of-type(3) {
+					display: block;
+				}
+				~ section > label:nth-of-type(3) {
+					border-bottom: 0 none;
+					color: #222;
+				}
+			}
+			~ div:nth-of-type(3) {
+				display: none;
+			}
+			~ section > label:nth-of-type(3) {
+				border: 1px solid #222;
+				color: #999;
+			}
+		}
+	}
+	> section {
+		overflow: hidden;
+		width: 100%;
+		@extend %extend_2;
+		padding-left: 1px;
+		> label {
+			float: left;
+			display: block;
+			width: 33.4%;
+			height: 70px;
+
+			@extend %extend_2;
+			text-align: center;
+			font-size: 24px;
+			line-height: 70px;
+			margin-left: -1px;
+		}
+	}
+	> div {
+		padding-top: 50px;
+		width: 100%;
+		@extend %extend_2;
+	}
 }
 
 /* #contents END */
