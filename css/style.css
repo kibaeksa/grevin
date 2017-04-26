@@ -702,6 +702,13 @@ img {
         #contents .article-floor.s05 .arrow img {
           float: right; }
 
+.image-basic {
+  padding: 60px 0; }
+  .image-basic img {
+    margin-left: -100px; }
+
+/***** world END *****/
+/***** news *****/
 /* notice page */
 .title-basic {
   width: 100%;
@@ -972,6 +979,8 @@ img {
         line-height: 24px;
         height: 74px; }
 
+/***** news END *****/
+/***** tip *****/
 /* tip - couple page */
 .title-tip {
   background: #ac8827;
@@ -1157,6 +1166,7 @@ img {
     padding-top: 50px;
     width: 100%; }
 
+/***** tip END *****/
 /* #contents END */
 #footer {
   overflow: hidden;

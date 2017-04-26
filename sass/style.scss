@@ -813,7 +813,15 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     }
     /* article-floor END */
 }
+.image-basic{
+    padding: 60px 0;
+    img{
+        margin-left: -100px;
+    }
+}
+/***** world END *****/
 
+/***** news *****/
 /* notice page */
 .title-basic{
     width: 100%;
@@ -1148,6 +1156,9 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         }
     }
 }
+/***** news END *****/
+
+/***** tip *****/
 /* tip - couple page */
 .title-tip{
     background: #ac8827;
@@ -1389,6 +1400,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
 		@extend %extend_2;
 	}
 }
+/***** tip END *****/
 
 /* #contents END */
 #footer {
