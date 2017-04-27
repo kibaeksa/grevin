@@ -126,7 +126,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
 img {
   vertical-align: top; }
 
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.reserve-basic .reserve-box .reserve-input, #contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -384,6 +384,7 @@ img {
   border-top: 9px solid #d20038; }
 
 /***** rent *****/
+/* VenueRentalsInfo */
 .place-description {
   padding: 60px 0;
   text-align: center;
@@ -473,6 +474,95 @@ img {
           vertical-align: middle;
           border: 1px solid #ccc; }
 
+/* VenueRentalsInfo END */
+/* Reservation */
+.reserve-sub {
+  padding: 55px 0 15px; }
+  .reserve-sub span {
+    font-size: 13px;
+    color: #999; }
+    .reserve-sub span sup {
+      margin-right: 5px; }
+
+.reserve-basic {
+  overflow: hidden; }
+  .reserve-basic .reserve-box {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222; }
+    .reserve-basic .reserve-box:first-child {
+      width: 600px;
+      float: left; }
+    .reserve-basic .reserve-box:last-child {
+      width: 380px;
+      float: right; }
+    .reserve-basic .reserve-box .reserve-input {
+      height: 60px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+      color: #666; }
+      .reserve-basic .reserve-box .reserve-input span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+        padding-top: 10px;
+        width: 125px;
+        vertical-align: top; }
+        .reserve-basic .reserve-box .reserve-input span sup {
+          margin-right: 5px; }
+      .reserve-basic .reserve-box .reserve-input label {
+        font-size: 16px;
+        margin-right: 20px; }
+      .reserve-basic .reserve-box .reserve-input input {
+        height: 40px;
+        margin: 0 5px; }
+      .reserve-basic .reserve-box .reserve-input select {
+        font-family: nexa;
+        font-weight: bold;
+        color: #666;
+        height: 40px;
+        margin: 0 5px;
+        padding: 0 10px; }
+      .reserve-basic .reserve-box .reserve-input textarea {
+        margin-left: 5px; }
+    .reserve-basic .reserve-box ul {
+      overflow: hidden;
+      padding: 20px 0 20px 35px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e7e7e7; }
+      .reserve-basic .reserve-box ul li {
+        padding: 5px 0;
+        font-size: 14px;
+        color: #666;
+        list-style: square !important; }
+    .reserve-basic .reserve-box p {
+      font-size: 14px;
+      margin: 0 0 5px 30px; }
+      .reserve-basic .reserve-box p strong {
+        font-family: nexa;
+        display: inline-block;
+        width: 100px;
+        letter-spacing: 0.03em; }
+      .reserve-basic .reserve-box p span {
+        font-family: nexa;
+        font-weight: 600;
+        color: #666;
+        letter-spacing: 0.03em; }
+    .reserve-basic .reserve-box a {
+      display: inline-block;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 45px;
+      text-align: center;
+      background: #333;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 300; }
+
+/* Reservation END */
+/* RentalHistory */
 .history-basic .history-box {
   padding: 40px 0;
   border-bottom: 1px solid #ccc; }
@@ -509,6 +599,7 @@ img {
       color: #666;
       line-height: 22px; }
 
+/* RentalHistory END */
 /***** rent END *****/
 /***** main *****/
 .slide-main-wrap {
