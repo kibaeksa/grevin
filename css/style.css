@@ -383,6 +383,44 @@ img {
 .header_line {
   border-top: 9px solid #d20038; }
 
+/***** rent *****/
+.history-basic .history-box {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc; }
+  .history-basic .history-box:last-child {
+    border-color: #222; }
+  .history-basic .history-box .history-img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block; }
+    .history-basic .history-box .history-img img {
+      width: 100%;
+      display: block; }
+  .history-basic .history-box .history-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-left: 50px; }
+    .history-basic .history-box .history-text span {
+      font-family: nexa;
+      font-size: 15px;
+      font-weight: 600;
+      color: #999; }
+    .history-basic .history-box .history-text h2 {
+      font-size: 40px;
+      font-weight: 300;
+      color: #222;
+      padding: 10px 0 25px;
+      text-transform: uppercase; }
+    .history-basic .history-box .history-text p {
+      font-size: 15px;
+      font-weight: 300;
+      color: #666;
+      line-height: 22px; }
+
+/***** rent END *****/
+/***** main *****/
 .slide-main-wrap {
   overflow: hidden;
   position: relative;
