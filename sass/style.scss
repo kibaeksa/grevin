@@ -455,6 +455,120 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
 }
 
 /***** rent *****/
+.place-description{
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    h2{
+        font-family: $font_0;
+        font-size: 40px;
+        font-weight: 400;
+        padding-bottom: 20px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+        color: #666;
+        strong{
+            font-weight: 500;
+        }
+        &:last-child{
+            padding-top: 15px;
+        }
+    }
+}
+.place-basic{
+    .place-box{
+        overflow: hidden;
+        padding: 30px 0;
+        border-bottom: 1px solid #ccc;
+        &:last-child{
+            border-color: #222;
+        }
+        .place-img{
+            width: 540px;
+            height: 370px;
+            overflow: hidden;
+            float: right;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .place-text{
+            float:left;
+            vertical-align: top;
+            margin-top: 15px;
+            margin-left: 50px;
+            h2{
+                font-family: $font_0;
+                font-size: 40px;
+                font-weight: 600;
+                color: #222;
+                padding: 25px 0 10px;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 13px;
+                font-weight: 300;
+                color: #666;
+                line-height: 21px;
+                padding-bottom: 20px;
+            }
+            h4{
+                font-size: 16px;
+                font-weight: 500;
+                color: #222;
+                padding-bottom: 10px;
+            }
+            ul{
+                overflow: hidden;
+                width: 420px;
+                li{
+                    float: left;
+                    width: 50%;
+                    padding: 4px 0;
+                    font-size: 13px;
+                    color: #666;
+                }
+            }
+            table{
+                width: 420px;
+                margin-top: 20px;
+                border: 1px solid #ccc;
+                thead{
+                    tr{
+                        height: 32px;
+                        th{
+                            font-family: $font_0;
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: #222;
+                            text-align: center;
+                            vertical-align: middle;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        height: 48px;
+                        td{
+                            font-family: $font_0;
+                            font-size: 13px;
+                            font-weight: 300;
+                            color: #666;
+                            text-align: center;
+                            vertical-align: middle;
+                            border: 1px solid #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .history-basic{
     .history-box{
         padding: 40px 0;
@@ -482,6 +596,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
                 font-size: 15px;
                 font-weight: 600;
                 color: #999;
+                letter-spacing: 0.05em;
             }
             h2{
                 font-size: 40px;

@@ -384,6 +384,95 @@ img {
   border-top: 9px solid #d20038; }
 
 /***** rent *****/
+.place-description {
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc; }
+  .place-description h2 {
+    font-family: nexa;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 20px; }
+  .place-description p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #666; }
+    .place-description p strong {
+      font-weight: 500; }
+    .place-description p:last-child {
+      padding-top: 15px; }
+
+.place-basic .place-box {
+  overflow: hidden;
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc; }
+  .place-basic .place-box:last-child {
+    border-color: #222; }
+  .place-basic .place-box .place-img {
+    width: 540px;
+    height: 370px;
+    overflow: hidden;
+    float: right; }
+    .place-basic .place-box .place-img img {
+      width: 100%;
+      display: block; }
+  .place-basic .place-box .place-text {
+    float: left;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-left: 50px; }
+    .place-basic .place-box .place-text h2 {
+      font-family: nexa;
+      font-size: 40px;
+      font-weight: 600;
+      color: #222;
+      padding: 25px 0 10px;
+      text-transform: uppercase; }
+    .place-basic .place-box .place-text p {
+      font-size: 13px;
+      font-weight: 300;
+      color: #666;
+      line-height: 21px;
+      padding-bottom: 20px; }
+    .place-basic .place-box .place-text h4 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+      padding-bottom: 10px; }
+    .place-basic .place-box .place-text ul {
+      overflow: hidden;
+      width: 420px; }
+      .place-basic .place-box .place-text ul li {
+        float: left;
+        width: 50%;
+        padding: 4px 0;
+        font-size: 13px;
+        color: #666; }
+    .place-basic .place-box .place-text table {
+      width: 420px;
+      margin-top: 20px;
+      border: 1px solid #ccc; }
+      .place-basic .place-box .place-text table thead tr {
+        height: 32px; }
+        .place-basic .place-box .place-text table thead tr th {
+          font-family: nexa;
+          font-size: 13px;
+          font-weight: 600;
+          color: #222;
+          text-align: center;
+          vertical-align: middle;
+          border: 1px solid #ccc; }
+      .place-basic .place-box .place-text table tbody tr {
+        height: 48px; }
+        .place-basic .place-box .place-text table tbody tr td {
+          font-family: nexa;
+          font-size: 13px;
+          font-weight: 300;
+          color: #666;
+          text-align: center;
+          vertical-align: middle;
+          border: 1px solid #ccc; }
+
 .history-basic .history-box {
   padding: 40px 0;
   border-bottom: 1px solid #ccc; }
@@ -406,7 +495,8 @@ img {
       font-family: nexa;
       font-size: 15px;
       font-weight: 600;
-      color: #999; }
+      color: #999;
+      letter-spacing: 0.05em; }
     .history-basic .history-box .history-text h2 {
       font-size: 40px;
       font-weight: 300;
