@@ -1370,16 +1370,24 @@ img {
       .reserve-basic .reserve-box .reserve-input label {
         font-size: 16px;
         margin-right: 20px; }
-      .reserve-basic .reserve-box .reserve-input input {
+      .reserve-basic .reserve-box .reserve-input input[type="text"] {
         height: 40px;
-        margin: 0 5px; }
+        margin: 0 5px;
+        padding: 0 10px;
+        width: 130px; }
+      .reserve-basic .reserve-box .reserve-input input[type="radio"] {
+        height: 40px;
+        margin: 0 5px;
+        padding: 0 10px; }
       .reserve-basic .reserve-box .reserve-input select {
         font-family: nexa;
         font-weight: bold;
         color: #666;
+        width: 100px;
         height: 40px;
         margin: 0 5px;
-        padding: 0 10px; }
+        padding: 0 10px;
+        text-align: center; }
       .reserve-basic .reserve-box .reserve-input textarea {
         margin-left: 5px; }
     .reserve-basic .reserve-box ul {
