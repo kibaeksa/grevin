@@ -126,7 +126,7 @@ input[type="text"], input[type="password"], input[type="number"], input[type="te
 img {
   vertical-align: top; }
 
-.reserve-basic .reserve-box .reserve-input, #contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -476,91 +476,6 @@ img {
 
 /* VenueRentalsInfo END */
 /* Reservation */
-.reserve-sub {
-  padding: 55px 0 15px; }
-  .reserve-sub span {
-    font-size: 13px;
-    color: #999; }
-    .reserve-sub span sup {
-      margin-right: 5px; }
-
-.reserve-basic {
-  overflow: hidden; }
-  .reserve-basic .reserve-box {
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222; }
-    .reserve-basic .reserve-box:first-child {
-      width: 600px;
-      float: left; }
-    .reserve-basic .reserve-box:last-child {
-      width: 380px;
-      float: right; }
-    .reserve-basic .reserve-box .reserve-input {
-      height: 60px;
-      padding: 10px 0;
-      border-bottom: 1px solid #ccc;
-      font-size: 16px;
-      color: #666; }
-      .reserve-basic .reserve-box .reserve-input span {
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 500;
-        color: #222;
-        padding-top: 10px;
-        width: 125px;
-        vertical-align: top; }
-        .reserve-basic .reserve-box .reserve-input span sup {
-          margin-right: 5px; }
-      .reserve-basic .reserve-box .reserve-input label {
-        font-size: 16px;
-        margin-right: 20px; }
-      .reserve-basic .reserve-box .reserve-input input {
-        height: 40px;
-        margin: 0 5px; }
-      .reserve-basic .reserve-box .reserve-input select {
-        font-family: nexa;
-        font-weight: bold;
-        color: #666;
-        height: 40px;
-        margin: 0 5px;
-        padding: 0 10px; }
-      .reserve-basic .reserve-box .reserve-input textarea {
-        margin-left: 5px; }
-    .reserve-basic .reserve-box ul {
-      overflow: hidden;
-      padding: 20px 0 20px 35px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #e7e7e7; }
-      .reserve-basic .reserve-box ul li {
-        padding: 5px 0;
-        font-size: 14px;
-        color: #666;
-        list-style: square !important; }
-    .reserve-basic .reserve-box p {
-      font-size: 14px;
-      margin: 0 0 5px 30px; }
-      .reserve-basic .reserve-box p strong {
-        font-family: nexa;
-        display: inline-block;
-        width: 100px;
-        letter-spacing: 0.03em; }
-      .reserve-basic .reserve-box p span {
-        font-family: nexa;
-        font-weight: 600;
-        color: #666;
-        letter-spacing: 0.03em; }
-    .reserve-basic .reserve-box a {
-      display: inline-block;
-      width: 100%;
-      height: 60px;
-      line-height: 60px;
-      margin-top: 45px;
-      text-align: center;
-      background: #333;
-      color: #fff;
-      font-size: 25px;
-      font-weight: 300; }
-
 /* Reservation END */
 /* RentalHistory */
 .history-basic .history-box {
@@ -1415,6 +1330,203 @@ img {
         height: 74px; }
 
 /***** news END *****/
+/***** organ *****/
+/* SchoolReservation */
+.reserve-sub {
+  padding: 55px 0 15px; }
+  .reserve-sub span {
+    font-size: 13px;
+    color: #999; }
+    .reserve-sub span sup {
+      margin-right: 5px; }
+
+.reserve-basic {
+  overflow: hidden; }
+  .reserve-basic .reserve-box {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222; }
+    .reserve-basic .reserve-box:first-child {
+      width: 600px;
+      float: left; }
+    .reserve-basic .reserve-box:last-child {
+      width: 380px;
+      float: right; }
+    .reserve-basic .reserve-box .reserve-input {
+      height: 60px;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+      color: #666; }
+      .reserve-basic .reserve-box .reserve-input span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+        padding-top: 10px;
+        width: 125px;
+        vertical-align: top; }
+        .reserve-basic .reserve-box .reserve-input span sup {
+          margin-right: 5px; }
+      .reserve-basic .reserve-box .reserve-input label {
+        font-size: 16px;
+        margin-right: 20px; }
+      .reserve-basic .reserve-box .reserve-input input {
+        height: 40px;
+        margin: 0 5px; }
+      .reserve-basic .reserve-box .reserve-input select {
+        font-family: nexa;
+        font-weight: bold;
+        color: #666;
+        height: 40px;
+        margin: 0 5px;
+        padding: 0 10px; }
+      .reserve-basic .reserve-box .reserve-input textarea {
+        margin-left: 5px; }
+    .reserve-basic .reserve-box ul {
+      overflow: hidden;
+      padding: 20px 0 20px 35px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e7e7e7; }
+      .reserve-basic .reserve-box ul li {
+        padding: 5px 0;
+        font-size: 14px;
+        color: #666;
+        list-style: square !important; }
+    .reserve-basic .reserve-box p {
+      font-size: 14px;
+      margin: 0 0 5px 30px; }
+      .reserve-basic .reserve-box p strong {
+        font-family: nexa;
+        display: inline-block;
+        width: 100px;
+        letter-spacing: 0.03em; }
+      .reserve-basic .reserve-box p span {
+        font-family: nexa;
+        font-weight: 600;
+        color: #666;
+        letter-spacing: 0.03em; }
+    .reserve-basic .reserve-box a {
+      display: inline-block;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 45px;
+      text-align: center;
+      background: #333;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 300; }
+
+/* SchoolReservation END */
+/* AroundCourse */
+.around-map {
+  padding-top: 40px; }
+  .around-map .around-map-box {
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 10px; }
+    .around-map .around-map-box img {
+      width: 100%; }
+  .around-map .around-map-list {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #999; }
+    .around-map .around-map-list ul {
+      overflow: hidden; }
+      .around-map .around-map-list ul li {
+        float: left;
+        width: 20%;
+        padding-bottom: 15px;
+        font-size: 14px;
+        color: #333; }
+        .around-map .around-map-list ul li:last-child {
+          padding-bottom: 0; }
+        .around-map .around-map-list ul li span {
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          text-align: center;
+          margin-right: 10px;
+          background-color: #333;
+          color: #fff;
+          font-family: nexa;
+          font-size: 12px;
+          font-weight: bold;
+          letter-spacing: 0.05em; }
+
+.around-basic .around-box {
+  overflow: hidden;
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc; }
+  .around-basic .around-box:last-child {
+    border-color: #222; }
+  .around-basic .around-box .around-img {
+    overflow: hidden;
+    float: left;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 540px;
+    height: 350px; }
+    .around-basic .around-box .around-img span {
+      position: absolute;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      background-color: #333;
+      color: #fff;
+      font-family: nexa;
+      font-size: 30px;
+      letter-spacing: 0.1em; }
+    .around-basic .around-box .around-img img {
+      width: 100%;
+      display: block; }
+  .around-basic .around-box .around-text {
+    float: left;
+    vertical-align: top;
+    margin-left: 70px; }
+    .around-basic .around-box .around-text h2 {
+      font-size: 40px;
+      font-weight: 300;
+      color: #222;
+      padding-top: 38px;
+      text-transform: uppercase; }
+    .around-basic .around-box .around-text span {
+      display: inline-block;
+      font-family: nexa;
+      font-size: 13px;
+      font-weight: 600;
+      color: #d20038;
+      letter-spacing: 0.05em;
+      padding: 15px 0; }
+      .around-basic .around-box .around-text span i {
+        font-style: inherit;
+        color: #999;
+        margin: 0 10px;
+        text-decoration: none; }
+    .around-basic .around-box .around-text p {
+      font-size: 13px;
+      font-weight: 300;
+      color: #666;
+      line-height: 22px; }
+    .around-basic .around-box .around-text a {
+      display: inline-block;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #222;
+      margin-top: 60px;
+      font-family: nexa;
+      font-size: 13px;
+      letter-spacing: 0.05em; }
+
+/* AroundCourse END */
+/***** organ END *****/
 /***** tip *****/
 /* tip - couple page */
 .title-tip {

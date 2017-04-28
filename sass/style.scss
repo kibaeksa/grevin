@@ -572,112 +572,6 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
 /* VenueRentalsInfo END */
 
 /* Reservation */
-.reserve-sub{
-    padding: 55px 0 15px;
-    span{
-        font-size: 13px;
-        color: #999;
-        sup{
-            margin-right: 5px;
-        }
-    }
-}
-.reserve-basic{
-    overflow: hidden;
-    .reserve-box{
-        border-top: 1px solid #222;
-        border-bottom: 1px solid #222;
-        &:first-child{
-            width: 600px;
-            float: left;
-        }
-        &:last-child{
-            width: 380px;
-            float: right;
-        }
-        .reserve-input{
-            height: 60px;
-            padding: 10px 0;
-            border-bottom: 1px solid #ccc;
-            font-size: 16px;
-            color: #666;
-            @extend %extend_2;
-            span{
-                display: inline-block;
-                font-size: 16px;
-                font-weight: 500;
-                color: #222;
-                padding-top: 10px;
-                width: 125px;
-
-                vertical-align: top;
-                sup{
-                    margin-right: 5px;
-                }
-            }
-            label{
-                font-size: 16px;
-                margin-right: 20px;
-            }
-            input{
-                height: 40px;
-                margin: 0 5px;
-            }            
-            select{
-                font-family: $font_0;
-                font-weight: bold;
-                color: #666;
-                height: 40px;
-                margin: 0 5px;
-                padding: 0 10px;
-            }
-            textarea{
-                margin-left: 5px;
-            }
-        }
-        ul{
-            overflow: hidden;
-            padding: 20px 0 20px 35px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid #e7e7e7;
-            li{
-                padding: 5px 0;
-                font-size: 14px;
-                color: #666;
-                list-style: square !important;
-            }
-        }
-        p{
-            font-size: 14px;
-            margin: 0 0 5px 30px;
-            strong{
-                font-family: $font_0;
-                display: inline-block;
-                width: 100px;
-                letter-spacing: 0.03em;
-            }
-            span{
-                font-family: $font_0;
-                font-weight: 600;
-                color: #666;
-                letter-spacing: 0.03em;
-            }
-        }
-        a{
-            display: inline-block;
-            width: 100%;
-            height: 60px;
-            line-height: 60px;
-            margin-top: 45px;
-            text-align: center;
-            background: #333;
-            color: #fff;
-
-            font-size: 25px;
-            font-weight: 300;
-        }
-    }
-}
 /* Reservation END */
 
 /* RentalHistory */
@@ -1794,6 +1688,248 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     }
 }
 /***** news END *****/
+
+/***** organ *****/
+/* SchoolReservation */
+.reserve-sub{
+    padding: 55px 0 15px;
+    span{
+        font-size: 13px;
+        color: #999;
+        sup{
+            margin-right: 5px;
+        }
+    }
+}
+.reserve-basic{
+    overflow: hidden;
+    .reserve-box{
+        border-top: 1px solid #222;
+        border-bottom: 1px solid #222;
+        &:first-child{
+            width: 600px;
+            float: left;
+        }
+        &:last-child{
+            width: 380px;
+            float: right;
+        }
+        .reserve-input{
+            height: 60px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            font-size: 16px;
+            color: #666;
+            @extend %extend_2;
+            span{
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 500;
+                color: #222;
+                padding-top: 10px;
+                width: 125px;
+
+                vertical-align: top;
+                sup{
+                    margin-right: 5px;
+                }
+            }
+            label{
+                font-size: 16px;
+                margin-right: 20px;
+            }
+            input{
+                height: 40px;
+                margin: 0 5px;
+            }
+            select{
+                font-family: $font_0;
+                font-weight: bold;
+                color: #666;
+                height: 40px;
+                margin: 0 5px;
+                padding: 0 10px;
+            }
+            textarea{
+                margin-left: 5px;
+            }
+        }
+        ul{
+            overflow: hidden;
+            padding: 20px 0 20px 35px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e7e7e7;
+            li{
+                padding: 5px 0;
+                font-size: 14px;
+                color: #666;
+                list-style: square !important;
+            }
+        }
+        p{
+            font-size: 14px;
+            margin: 0 0 5px 30px;
+            strong{
+                font-family: $font_0;
+                display: inline-block;
+                width: 100px;
+                letter-spacing: 0.03em;
+            }
+            span{
+                font-family: $font_0;
+                font-weight: 600;
+                color: #666;
+                letter-spacing: 0.03em;
+            }
+        }
+        a{
+            display: inline-block;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            margin-top: 45px;
+            text-align: center;
+            background: #333;
+            color: #fff;
+
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+}
+/* SchoolReservation END */
+
+/* AroundCourse */
+.around-map{
+    padding-top: 40px;
+    .around-map-box{
+        overflow: hidden;
+        width: 100%;
+        height: 500px;
+        margin-bottom: 10px;
+        img{
+            width: 100%;
+        }
+    }
+    .around-map-list{
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #999;
+
+        @extend %extend_2;
+        ul{
+            overflow: hidden;
+            li{
+                float: left;
+                width: 20%;
+                padding-bottom: 15px;
+                font-size: 14px;
+                color: #333;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                span{
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    text-align: center;
+                    margin-right: 10px;
+                    background-color: #333;
+                    color: #fff;
+                    font-family: $font_0;
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 0.05em;
+                }
+            }
+        }
+    }
+}
+
+.around-basic{
+    .around-box{
+        overflow: hidden;
+        padding: 30px 0;
+        border-bottom: 1px solid #ccc;
+        &:last-child{
+            border-color: #222;
+        }
+        .around-img{
+            overflow: hidden;
+            float: left;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 540px;
+            height: 350px;
+            span{
+                position: absolute;
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                text-align: center;
+                background-color: #333;
+                color: #fff;
+                font-family: $font_0;
+                font-size: 30px;
+                letter-spacing: 0.1em;
+            }
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .around-text{
+            float: left;
+            vertical-align: top;
+            margin-left: 70px;
+            h2{
+                font-size: 40px;
+                font-weight: 300;
+                color: #222;
+                padding-top: 38px;
+                text-transform: uppercase;
+            }
+            span{
+                display: inline-block;
+                font-family: $font_0;
+                font-size: 13px;
+                font-weight: 600;
+                color: #d20038;
+                letter-spacing: 0.05em;
+                padding: 15px 0;
+                i{
+                    font-style: inherit;
+                    color: #999;
+                    margin: 0 10px;
+                    text-decoration: none;
+                }
+            }
+            p{
+                font-size: 13px;
+                font-weight: 300;
+                color: #666;
+                line-height: 22px;
+            }
+            a{
+                display: inline-block;
+                width: 150px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border: 1px solid #222;
+                margin-top: 60px;
+                font-family: $font_0;
+                font-size: 13px;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+/* AroundCourse END */
+/***** organ END *****/
 
 /***** tip *****/
 /* tip - couple page */
