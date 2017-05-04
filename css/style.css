@@ -383,6 +383,194 @@ img {
 .header_line {
   border-top: 9px solid #d20038; }
 
+/***** info *****/
+.information-time {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px; }
+  .information-time h3 {
+    padding-top: 60px;
+    font-size: 35px;
+    font-weight: 300;
+    color: #333; }
+  .information-time .time_box {
+    width: 726px;
+    margin: 25px auto 0;
+    background-color: #f8f8f8;
+    padding: 35px 0;
+    text-align: center; }
+    .information-time .time_box p {
+      font-size: 18px;
+      color: #444;
+      letter-spacing: 0.07em;
+      margin-bottom: 10px; }
+      .information-time .time_box p i {
+        display: inline-block;
+        width: 10px;
+        letter-spacing: 0 !important; }
+      .information-time .time_box p span {
+        font-family: nexa;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.1em; }
+    .information-time .time_box > span {
+      display: inline-block;
+      padding-top: 5px;
+      font-size: 13px;
+      color: #444; }
+
+.information-calendar {
+  width: 100%; }
+  .information-calendar .calendar_box {
+    overflow: hidden; }
+    .information-calendar .calendar_box .cal-head {
+      font-family: nexa;
+      font-size: 35px;
+      text-align: center;
+      margin-bottom: 30px; }
+      .information-calendar .calendar_box .cal-head a {
+        display: inline-block;
+        vertical-align: middle; }
+      .information-calendar .calendar_box .cal-head h3 {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 50px;
+        font-family: nexa; }
+
+#info-calendar {
+  width: 100%; }
+  #info-calendar thead tr {
+    height: 65px;
+    border-top: 2px solid #444;
+    border-bottom: 1px solid #e7e7e7; }
+    #info-calendar thead tr th {
+      font-size: 18px;
+      vertical-align: middle;
+      opacity: 0.7; }
+      #info-calendar thead tr th:first-child {
+        color: #d20038; }
+      #info-calendar thead tr th:last-child {
+        color: #6f96d7; }
+  #info-calendar tbody tr {
+    height: 100px; }
+    #info-calendar tbody tr td {
+      position: relative;
+      border: 1px solid #e7e7e7;
+      padding: 19px 18px;
+      color: #999;
+      vertical-align: middle;
+      text-align: center; }
+      #info-calendar tbody tr td span {
+        position: absolute;
+        top: 14px;
+        left: 18px;
+        font-family: nexa;
+        font-size: 14px;
+        font-weight: bold; }
+      #info-calendar tbody tr td p {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        text-align: right;
+        font-size: 12px;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 70px;
+        overflow: hidden; }
+      #info-calendar tbody tr td h4 {
+        font-family: nexa;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.075em; }
+      #info-calendar tbody tr td:first-child {
+        background-color: #fff3f5;
+        color: #d20038; }
+      #info-calendar tbody tr td:last-child {
+        background-color: #f1f6fa;
+        color: #6f96d7; }
+
+.information-pay {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px; }
+  .information-pay h3 {
+    padding-top: 90px;
+    font-size: 35px;
+    font-weight: 300;
+    color: #333; }
+
+#info-pay {
+  width: 100%;
+  margin-top: 30px; }
+  #info-pay thead tr th {
+    padding: 20px 0 40px;
+    border: 1px solid #e7e7e7; }
+    #info-pay thead tr th img {
+      margin-bottom: 5px; }
+    #info-pay thead tr th p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #333;
+      line-height: 24px; }
+      #info-pay thead tr th p span {
+        font-size: 15px;
+        color: #333; }
+    #info-pay thead tr th:first-child {
+      border-left: 0 none; }
+    #info-pay thead tr th:last-child {
+      border-right: 0 none; }
+  #info-pay tbody tr {
+    height: 50px; }
+    #info-pay tbody tr th {
+      font-family: 'Noto Sans KR';
+      font-size: 13px;
+      font-weight: 300;
+      border: 1px solid #e7e7e7;
+      border-left: 0 none;
+      vertical-align: middle;
+      text-align: left;
+      color: #333; }
+    #info-pay tbody tr td {
+      font-family: nexa;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #e7e7e7;
+      vertical-align: middle;
+      color: #444; }
+      #info-pay tbody tr td:last-child {
+        border-right: 0 none; }
+
+.note-basic {
+  border-bottom: 1px solid #e7e7e7; }
+  .note-basic table {
+    width: 100%; }
+    .note-basic table tr th {
+      font-family: nexa;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      vertical-align: middle; }
+    .note-basic table tr td {
+      padding: 40px;
+      text-align: left; }
+      .note-basic table tr td li {
+        font-size: 13px;
+        color: #444;
+        height: 24px; }
+
+.btn-reserve {
+  width: 100%;
+  text-align: center; }
+  .btn-reserve a {
+    display: inline-block;
+    width: 384px;
+    height: 90px;
+    line-height: 90px;
+    background-color: #bf9419;
+    font-size: 35px;
+    font-weight: 100;
+    color: #fff; }
+
+/***** info END *****/
 /***** rent *****/
 /* VenueRentalsInfo */
 .place-description {
