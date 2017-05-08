@@ -19,18 +19,6 @@ $black_40: rgba(0, 0, 0, 0.4); //fonts
 $font_0: nexa;
 $font_1: nexa script;
 $font_2: NotoSansKRRegular; //urls
-$url_16: url("../img/test/header.jpg");
-$url_17: url("../img/test/footer.jpg");
-$url_18: url("../img/test/bg_title.jpg");
-$url_19: url("../img/test/deco_01.png");
-$url_20: url("../img/test/deco_02.png");
-$url_21: url("../img/test/deco_03.jpg");
-$url_22: url("../img/test/deco_04.png");
-$url_23: url("../img/test/deco_05.png");
-$url_24: url("../img/test/deco_06.png");
-$url_25: url("../img/test/btn_prev.png");
-$url_26: url("../img/test/btn_next.png");
-$url_27: url("../img/test/line_01.png"); //@extend-elements
 //original selectors
 //input, select
 
@@ -953,8 +941,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             bottom: 0;
             width: 100%;
             height: 100%;
-            background: $url_18 no-repeat;
-            background-position: left top;
+            background: url('../img/test/bg_title.jpg') 0 0 no-repeat;
             background-size: auto;
             filter: brightness(1);
             z-index: -1;
@@ -1050,7 +1037,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
         .line_divid {
             width: 100%;
             height: 9px;
-            background: $url_27 repeat-x;
+            background: url('../img/test/line_01.png') 0 0  repeat-x;
         }
         /* line_divid END */
         .con-box {
@@ -1275,11 +1262,19 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     .article-floor {
         position: relative;
 
-        > div {
-            display: inline-block;
+        .content-inner{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            >div{
+                display: inline-block;
+                vertical-align: middle;
+            }
         }
 
+
         .con-infobox {
+            text-align: left;
             h3 {
                 font-size: 24px;
                 font-weight: 300;
@@ -1315,6 +1310,13 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
         }
         /* con-infobox END */
+
+        /* con-imagebox */
+        .con-imagebox{
+
+        }
+        /* con-imagebox END */
+
         &.s01 {
             width: 1340px;
             min-width: 1080px;
@@ -1339,7 +1341,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
 
             .deco {
-                background: $url_19 no-repeat;
+                background: url('../img/test/bg_title.jpg') no-repeat;
                 width: 632px;
                 height: 122px;
                 position: absolute;
@@ -1385,7 +1387,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
 
             .deco {
-                background: $url_20 no-repeat;
+                background:url('../img/test/deco_02.png') no-repeat;
                 width: 205px;
                 height: 50px;
                 position: absolute;
@@ -1443,7 +1445,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
 
             .deco {
-                background: $url_21 no-repeat;
+                background: url('../img/test/deco_03.jpg') no-repeat;
                 width: 890px;
                 height: 550px;
                 position: absolute;
@@ -1509,7 +1511,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
 
             .deco {
-                background: $url_22 no-repeat;
+                background:url('../img/test/deco_04.png') no-repeat;
                 width: 424px;
                 height: 416px;
                 position: absolute;
@@ -1556,7 +1558,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
             }
 
             .deco {
-                background: $url_23 no-repeat;
+                background: url('../img/test/deco_05.png') no-repeat;
                 width: 85px;
                 height: 35px;
                 position: absolute;
@@ -1603,8 +1605,8 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     height: 80px;
     margin-top: 60px;
     text-align: center;
-    background: $url_27 repeat-x;
-    background-position: left bottom;
+    background: url('../img/test/line_01.png') 0 0 repeat-x;
+
     h2{
         font-size: 45px;
         font-weight: 500;
@@ -2613,7 +2615,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     display: block;
     position: absolute;
     cursor: pointer;
-    background: $url_25 no-repeat;
+    background: url('../img/test/btn_prev.png') no-repeat;
     overflow: hidden;
     z-index: 2;
     top: 0;
@@ -2627,7 +2629,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     display: block;
     position: absolute;
     cursor: pointer;
-    background: $url_26 no-repeat;
+    background: url('../img/test/btn_next.png') 0 0 no-repeat;
     overflow: hidden;
     z-index: 2;
     top: 0;
@@ -2675,7 +2677,7 @@ $url_27: url("../img/test/line_01.png"); //@extend-elements
     }
 
     .deco {
-        background: $url_24 no-repeat;
+        background: url('../img/test/deco_06.png') no-repeat;
         width: 205px;
         height: 50px;
         position: absolute;
