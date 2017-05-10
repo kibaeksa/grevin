@@ -1,0 +1,16 @@
+.content-inner{
+    width: 1080px;
+    position: relative;
+    margin: 0 auto;
+}
+
+%clfix{
+    &::after{
+        content:'';
+        display:block;
+        height:0;
+        font-size:0;
+        clear:both;
+        visibility:hidden;
+    }
+}

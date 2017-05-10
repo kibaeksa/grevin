@@ -1,6 +1,7 @@
 @import 'common/fonts.scss';
 @import 'common/reset.scss';
 @import 'common/mixin.scss';
+@import 'common/common.scss';
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 //colors
@@ -61,36 +62,6 @@ $font_2: NotoSansKRRegular; //urls
 %sprite{
     background:url('/img/sprite.png') 0 0 no-repeat;
     display: block;
-}
-
-%clfix{
-    &::after{
-        content:'';
-        display:block;
-        height:0;
-        font-size:0;
-        clear:both;
-        visibility:hidden;
-    }
-}
-
-
-/*** Common use class ***/
-.content-inner{
-    width: 1080px;
-    position: relative;
-    margin: 0 auto;
-}
-
-.clfix{
-    &::after{
-        content:'';
-        display:block;
-        height:0;
-        font-size:0;
-        clear:both;
-        visibility:hidden;
-    }
 }
 
 /* Layout */
@@ -1262,19 +1233,12 @@ $font_2: NotoSansKRRegular; //urls
     .article-floor {
         position: relative;
 
-        .content-inner{
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            >div{
-                display: inline-block;
-                vertical-align: middle;
-            }
-        }
-
-
-        .con-infobox {
+        .con-infobox{
+            position: absolute;
+            top: 0;
+            left: 0;
             text-align: left;
+
             h3 {
                 font-size: 24px;
                 font-weight: 300;
@@ -1313,280 +1277,167 @@ $font_2: NotoSansKRRegular; //urls
 
         /* con-imagebox */
         .con-imagebox{
-
+            position: absolute;
+            top: 0;
+            right: 0;
         }
         /* con-imagebox END */
 
-        &.s01 {
-            width: 1340px;
-            min-width: 1080px;
-            height: 560px;
-            margin: 210px auto 0;
 
-            .con-img {
-                position: absolute;
+        &.article-grid2{
+            text-align: right;
+            .con-infobox{
+                left: auto;
                 right: 0;
-                top: 0;
-                z-index: 2;
             }
 
-            .con-img_bg {
-                background-color: $color_hot_toddy_approx;
-                width: 340px;
-                height: 190px;
-                position: absolute;
-                top: 20px;
-                right: -20px;
-                z-index: 1;
-            }
-
-            .deco {
-                background: url('../img/test/bg_title.jpg') no-repeat;
-                width: 632px;
-                height: 122px;
-                position: absolute;
-                bottom: -20px;
-                right: 180px;
-                z-index: 3;
-            }
-
-            .con-infobox {
-                position: absolute;
-                top: 100px;
+            .con-imagebox{
+                right: auto;
                 left: 0;
             }
         }
-        /* .s01 END */
-        &.s02 {
-            width: 1760px;
-            min-width: 1080px;
-            height: 740px;
-            margin: 210px auto 0;
+        //이미지가 좌측,글자가 우측의 그리드일때
 
-            .con-infobox {
-                position: absolute;
-                top: 100px;
-                left: 1020px;
-            }
-
-            .con-img {
-                position: absolute;
-                right: 0;
-                left: 0;
-                z-index: 2;
-            }
-
-            .con-img_bg {
-                background-color: $color_crimson_approx;
-                width: 378px;
-                height: 535px;
-                position: absolute;
-                top: 200px;
-                left: -70px;
-                z-index: 1;
-            }
-
-            .deco {
-                background:url('../img/test/deco_02.png') no-repeat;
-                width: 205px;
-                height: 50px;
-                position: absolute;
-                bottom: 120px;
-                left: 800px;
-                z-index: 3;
-            }
-
-            .arrow {
-                display: inline-block;
-                width: 145px;
-                height: 80px;
-                line-height: 80px;
-                background: $white;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -50px;
-                z-index: 3;
-                font-size: 18px;
-
-                img {
-                    margin: 14px 20px;
-                }
-            }
-        }
-        /* .s02 END */
-        &.s03 {
-            width: 1380px;
-            min-width: 1080px;
+        .content-inner{
             height: 500px;
-            margin: 280px auto 0;
+            margin: 0 auto;
+        }
 
-            .con-infobox {
-                position: absolute;
-                top: 100px;
-                left: 0;
+        /* 화면크기 1201~1400픽셀 일 때 */
+        @media only screen and (min-width : 1280px) and (max-width : 1400px){
+            .content-inner{
+                width: 1280px;
+            }
+        }
+        /* 화면크기 1201~1400픽셀 일 때 END */
+
+        /* 화면크기 1401~1600픽셀 일 때 */
+        @media only screen and (min-width : 1401px) and (max-width : 1600px){
+            .content-inner{
+                width: 1400px;
+            }
+        }
+        /* 화면크기 1401~1600픽셀 일 때 END */
+
+        /* 화면크기 1600픽셀 이상일 때 */
+        @media only screen and (min-width : 1601px){
+            .content-inner{
+                width: 1600px;
+                height: 600px;
             }
 
-            .con-img {
-                position: absolute;
-                top: 0;
-                right: 0;
-                z-index: 2;
+            &.box1{
+                margin-top: 140px;
+
+                .con-infobox{
+                    top: 150px;
+                    left: 145px;
+                }
+
+                .con-imagebox{
+                    right: 160px;
+                }
             }
 
-            .con-img_bg {
-                background-color: $color_hot_toddy_approx;
-                width: 460px;
-                height: 225px;
-                position: absolute;
-                bottom: -15px;
-                right: -15px;
-                z-index: 1;
+            &.box2{
+                margin-top: 140px;
+
+                .con-imagebox{
+                    left: 20px;
+                }
+
+                .con-infobox{
+                    top: 130px;
+                    right: 25px;
+                }
             }
 
-            .deco {
-                background: url('../img/test/deco_03.jpg') no-repeat;
-                width: 890px;
-                height: 550px;
-                position: absolute;
-                top: -200px;
-                right: -260px;
-                z-index: 1;
+            &.box3{
+                margin-top: 140px;
+
+                .con-infobox{
+                    top: 80px;
+                    left: 90px;
+                }
+
+                .con-imagebox{
+                    right: 90px;
+                }
             }
 
-            .arrow {
-                display: inline-block;
-                width: 105px;
-                height: 52px;
-                line-height: 52px;
-                background: $white;
-                position: absolute;
-                top: 50%;
-                left: 42%;
-                margin-left: -50px;
-                z-index: 3;
-                padding: 14px 20px;
-                font-size: 18px;
+            &.box4{
+                margin-top: 140px;
 
-                img {
-                    float: right;
+                .con-imagebox{
+                    left: 70px;
+                }
+
+                .con-infobox{
+                    right: 80px;
+                }
+            }
+
+            &.box5{
+                margin-top: 140px;
+
+                .con-infobox{
+                    left: 90px;
+                }
+
+                .con-imagebox{
+                    right: -5px;
                 }
             }
         }
-        /* .s03 END */
-        &.s04 {
-            width: 1460px;
-            min-width: 1080px;
-            height: 810px;
-            margin: 210px auto 0;
+        /* 화면크기 1600픽셀 이상일 때 END */
 
-            .con-infobox {
-                position: absolute;
-                top: 260px;
-                right: 0;
+        .preload-anim{
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            >*{
+                opacity: 0;
+                @include css3(transform,translate3d(-100%,0,0));
             }
 
-            .con-img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 2;
+            &::after{
+                content:'';
+                display:block;
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                background: #000;
+
+                @include css3(transition,all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) , opacity 0.5s ease 0.3s);
+                @include css3(transform,translate3d(-100%,0,0));
             }
 
-            .con-img2 {
-                position: absolute;
-                top: 0;
-                left: 570px;
-                z-index: 2;
-            }
+            &.loading{
+                >*{
+                    @include css3(transform,translate3d(-20px,0,0));
+                }
 
-            .con-img_bg {
-                background-color: $color_crimson_approx;
-                width: 221px;
-                height: 415px;
-                position: absolute;
-                bottom: -15px;
-                left: -15px;
-                z-index: 1;
-            }
-
-            .deco {
-                background:url('../img/test/deco_04.png') no-repeat;
-                width: 424px;
-                height: 416px;
-                position: absolute;
-                top: 200px;
-                left: 36%;
-                z-index: 1;
-            }
-        }
-        /* .s04 END */
-        &.s05 {
-            width: 1600px;
-            min-width: 1080px;
-            height: 564px;
-            margin: 210px auto 0;
-
-            .con-infobox {
-                position: absolute;
-                top: 200px;
-                left: 0;
-            }
-
-            .con-img {
-                position: absolute;
-                top: 0;
-                right: 72px;
-                z-index: 2;
-            }
-
-            .con-img2 {
-                position: absolute;
-                bottom: 0;
-                right: 780px;
-                z-index: 2;
-            }
-
-            .con-img_bg {
-                background-color: $color_hot_toddy_approx;
-                width: 630px;
-                height: 230px;
-                position: absolute;
-                top: 220px;
-                right: -150px;
-                z-index: 1;
-            }
-
-            .deco {
-                background: url('../img/test/deco_05.png') no-repeat;
-                width: 85px;
-                height: 35px;
-                position: absolute;
-                top: 0;
-                left: 20%;
-                z-index: 1;
-            }
-
-            .arrow {
-                display: inline-block;
-                width: 105px;
-                height: 52px;
-                line-height: 52px;
-                background: $white;
-                position: absolute;
-                top: 32%;
-                right: 0;
-                margin-left: -50px;
-                z-index: 3;
-                padding: 14px 20px;
-                font-size: 18px;
-
-                img {
-                    float: right;
+                &::after{
+                    @include css3(transform,translate3d(0,0,0));
                 }
             }
+            &.loaded{
+                >*{
+                    opacity: 1;
+                    @include css3(transform,translate3d(0,0,0));
+                    @include css3(transition,all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s , opacity 0.5s ease 0.3s);
+                }
+
+                &::after{
+                    @include css3(transform,translate3d(100%,0,0));
+                }
+            }
+
+
         }
-        /* .s05 END */
+
     }
     /* article-floor END */
 }
