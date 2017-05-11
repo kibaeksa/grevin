@@ -161,6 +161,7 @@ img {
 #wrapper {
   position: relative;
   width: 100%;
+  min-width: 1080px;
   overflow: hidden; }
 
 #head_banner {
@@ -753,65 +754,95 @@ img {
     #contents .bg-deco.x02 {
       top: 56%;
       left: -250px; }
-  #contents .title-floor {
-    overflow: visible !important;
-    display: table;
-    position: relative;
-    left: 0;
-    top: 0;
+  #contents .visual-floor {
     width: 100%;
-    height: 900px;
+    padding-bottom: 50%;
+    position: relative;
     text-align: center;
+    background: #0c0d12;
+    transition: padding-bottom 1s;
+    -webkit-transition: padding-bottom 1s;
+    -moz-transition: padding-bottom 1s;
+    -ms-transition: padding-bottom 1s;
     /* title-text END */
     /* title-subimg END */ }
-    #contents .title-floor .mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
+    #contents .visual-floor .visual-image-wrapper {
       width: 100%;
       height: 100%;
-      background: url("../img/test/bg_title.jpg") 0 0 no-repeat;
-      background-size: auto;
-      filter: brightness(1);
-      z-index: -1;
-      transition: .4s; }
-    #contents .title-floor .title-text {
-      display: table-cell;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      #contents .visual-floor .visual-image-wrapper > div {
+        width: 110%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0); }
+        #contents .visual-floor .visual-image-wrapper > div img {
+          width: 100%;
+          transition: all 0.8s ease 0.3s;
+          -webkit-transition: all 0.8s ease 0.3s;
+          -moz-transition: all 0.8s ease 0.3s;
+          -ms-transition: all 0.8s ease 0.3s; }
+    #contents .visual-floor .title-text {
       color: #fff;
       text-align: center;
       vertical-align: middle;
-      transition: 1s;
       opacity: 0;
+      margin-top: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all 1s ease 0.5s;
+      -webkit-transition: all 1s ease 0.5s;
+      -moz-transition: all 1s ease 0.5s;
+      -ms-transition: all 1s ease 0.5s;
+      transform: translate3d(-50%, -50%, 0);
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      -moz-transform: translate3d(-50%, -50%, 0);
+      -ms-transform: translate3d(-50%, -50%, 0);
       /* tline END */ }
-      #contents .title-floor .title-text h1 {
+      #contents .visual-floor .title-text h1 {
         font-size: 80px;
         font-weight: normal;
         padding-top: 20px; }
-        #contents .title-floor .title-text h1 strong {
+        #contents .visual-floor .title-text h1 strong {
           font: 80px nexa script; }
-      #contents .title-floor .title-text h2 {
+      #contents .visual-floor .title-text h2 {
         letter-spacing: 1em;
         font: bold 12px nexa; }
-      #contents .title-floor .title-text .tline {
+      #contents .visual-floor .title-text .tline {
         display: inline-block;
         width: 490px;
-        border-top: 1px solid #cccccc;
+        border-top: 1px solid #ccc;
         margin: 20px 0; }
-      #contents .title-floor .title-text p {
+      #contents .visual-floor .title-text p {
         font-size: 14px;
         font-weight: normal;
         line-height: 22px; }
-    #contents .title-floor .title-subimg {
+    #contents .visual-floor .title-subimg {
       width: 130px;
       height: 120px;
       position: absolute;
       bottom: 0;
       left: 180px;
       background: #fff; }
-      #contents .title-floor .title-subimg img {
+      #contents .visual-floor .title-subimg img {
         margin: 15px 0 0 15px; }
+    #contents .visual-floor.loaded {
+      padding-bottom: 40%; }
+      #contents .visual-floor.loaded .title-text {
+        margin-top: 0;
+        opacity: 1; }
+      #contents .visual-floor.loaded .visual-image-wrapper img {
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -ms-filter: blur(3px); }
   #contents .article-main {
     overflow: hidden;
     margin-bottom: 60px;
@@ -1036,6 +1067,17 @@ img {
       position: absolute;
       top: 0;
       right: 0; }
+      #contents .article-floor .con-imagebox .frame-image {
+        position: relative; }
+      #contents .article-floor .con-imagebox .float-image {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.6s ease 0.7s;
+        -webkit-transition: opacity 0.6s ease 0.7s;
+        -moz-transition: opacity 0.6s ease 0.7s;
+        -ms-transition: opacity 0.6s ease 0.7s; }
+    #contents .article-floor.loaded .con-imagebox .float-image {
+      opacity: 1; }
     #contents .article-floor.article-grid2 {
       text-align: right; }
       #contents .article-floor.article-grid2 .con-infobox {
@@ -1058,19 +1100,21 @@ img {
         width: 1600px;
         height: 600px; }
       #contents .article-floor.box1 {
-        margin-top: 140px; }
+        margin-top: 140px;
+        margin-bottom: 60px; }
         #contents .article-floor.box1 .con-infobox {
           top: 150px;
           left: 145px; }
         #contents .article-floor.box1 .con-imagebox {
           right: 160px; }
       #contents .article-floor.box2 {
-        margin-top: 140px; }
+        margin-top: 140px;
+        margin-bottom: 290px; }
         #contents .article-floor.box2 .con-imagebox {
-          left: 20px; }
+          left: -80px; }
         #contents .article-floor.box2 .con-infobox {
           top: 130px;
-          right: 25px; }
+          right: 125px; }
       #contents .article-floor.box3 {
         margin-top: 140px; }
         #contents .article-floor.box3 .con-infobox {
@@ -1079,17 +1123,24 @@ img {
         #contents .article-floor.box3 .con-imagebox {
           right: 90px; }
       #contents .article-floor.box4 {
-        margin-top: 140px; }
+        margin-top: 140px;
+        margin-bottom: 385px; }
         #contents .article-floor.box4 .con-imagebox {
           left: 70px; }
+          #contents .article-floor.box4 .con-imagebox .float-image {
+            top: 0;
+            right: -300px; }
         #contents .article-floor.box4 .con-infobox {
           right: 80px; }
       #contents .article-floor.box5 {
-        margin-top: 140px; }
+        margin-top: 100px; }
         #contents .article-floor.box5 .con-infobox {
           left: 90px; }
         #contents .article-floor.box5 .con-imagebox {
-          right: -5px; } }
+          right: -5px; }
+          #contents .article-floor.box5 .con-imagebox .float-image {
+            bottom: -135px;
+            left: -268px; } }
     #contents .article-floor .preload-anim {
       display: inline-block;
       position: relative;
@@ -1100,6 +1151,11 @@ img {
         -webkit-transform: translate3d(-100%, 0, 0);
         -moz-transform: translate3d(-100%, 0, 0);
         -ms-transform: translate3d(-100%, 0, 0); }
+      #contents .article-floor .preload-anim.preload-anim-opacity.loaded > * {
+        transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
+        -webkit-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
+        -moz-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
+        -ms-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s; }
       #contents .article-floor .preload-anim::after {
         content: '';
         display: block;
@@ -1109,14 +1165,14 @@ img {
         top: 0;
         left: 0;
         background: #000;
-        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease 0.3s;
-        -webkit-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease 0.3s;
-        -moz-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease 0.3s;
-        -ms-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.5s ease 0.3s;
-        transform: translate3d(-100%, 0, 0);
-        -webkit-transform: translate3d(-100%, 0, 0);
-        -moz-transform: translate3d(-100%, 0, 0);
-        -ms-transform: translate3d(-100%, 0, 0); }
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -moz-transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -ms-transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: translate3d(-101%, 0, 0);
+        -webkit-transform: translate3d(-101%, 0, 0);
+        -moz-transform: translate3d(-101%, 0, 0);
+        -ms-transform: translate3d(-101%, 0, 0); }
       #contents .article-floor .preload-anim.loading > * {
         transform: translate3d(-20px, 0, 0);
         -webkit-transform: translate3d(-20px, 0, 0);
@@ -1133,15 +1189,15 @@ img {
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         -ms-transform: translate3d(0, 0, 0);
-        transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
-        -webkit-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
-        -moz-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s;
-        -ms-transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s, opacity 0.5s ease 0.3s; }
+        transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+        -webkit-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+        -moz-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+        -ms-transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s; }
       #contents .article-floor .preload-anim.loaded::after {
-        transform: translate3d(100%, 0, 0);
-        -webkit-transform: translate3d(100%, 0, 0);
-        -moz-transform: translate3d(100%, 0, 0);
-        -ms-transform: translate3d(100%, 0, 0); }
+        transform: translate3d(101%, 0, 0);
+        -webkit-transform: translate3d(101%, 0, 0);
+        -moz-transform: translate3d(101%, 0, 0);
+        -ms-transform: translate3d(101%, 0, 0); }
 
 .image-basic {
   padding: 60px 0; }
