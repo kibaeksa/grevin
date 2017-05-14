@@ -91,13 +91,33 @@ $font_2: NotoSansKRRegular; //urls
 
 
 #header {
-    overflow: hidden;
     width: 100%;
     height: 131px;
+    position: relative;
+
+    &::after{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 19;
+        display: none;
+        opacity: 0;
+
+        @include css3(transition,opacity 0.5s);
+    }
 
     .header-top{
+        width: 100%;
         height: 30px;
+        position: relative;
         border: 1px solid  #eee;
+        z-index: 20;
+        background: #fff;
 
         ul{
             position: absolute;
@@ -161,6 +181,9 @@ $font_2: NotoSansKRRegular; //urls
     .header-content{
         width: 100%;
         height: 100px;
+        position: relative;
+        z-index: 20;
+        background: #fff;
 
         h1{
             padding-top: 25px;
@@ -172,17 +195,20 @@ $font_2: NotoSansKRRegular; //urls
             }
         }
 
-        #navigation{
+        #global-navigation{
+            height: 56px;
             position: absolute;
             top: 42px;
-            left: 265px;
+            left: 245px;
 
-            ul{
-                li{
+            >ul{
+                @extend %clfix;
+                >li{
+                    height: 24px;
                     float: left;
-                    margin-right: 40px;
+                    padding:0 20px;
                     a{
-                        font:500 16px/16px 'noto sans kr';
+                        font:500 16px/24px 'noto sans kr';
                         color: #222;
                         letter-spacing: -0.75px;
                     }
@@ -254,6 +280,59 @@ $font_2: NotoSansKRRegular; //urls
         }
     }
     /* header-content END */
+
+    /* gnb-contents-wrapper START */
+    .gnb-contents-wrapper{
+        display: none;
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+
+        @include css3(transition,opacity 0.5s);
+
+        .gnb-content{
+            width: 100%;
+            min-height: 370px;
+            border-top: 1px solid  #d20038;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+        }
+    }
+    /* gnb-contents-wrapper END */
+
+    /* GNB 오버했을 떄 */
+    &.gnb-before-over{
+        &::after{
+            display: block;
+        }
+
+        .gnb-contents-wrapper{
+            display: block;
+            .gnb-content{
+
+            }
+        }
+    }
+
+    &.gnb-over{
+        &::after{
+            opacity: 0.5;
+        }
+
+        .gnb-contents-wrapper{
+            opacity: 1;
+            .gnb-content{
+
+            }
+        }
+    }
+
+
 }
 /*** header END ***/
 
@@ -828,10 +907,21 @@ $font_2: NotoSansKRRegular; //urls
 
 /***** main *****/
 .slide-main-wrap {
+    width: 100%;
+    height: 650px;
     overflow: hidden;
     position: relative;
     top: 0;
+
+    .content-inner{
+        position: absolute;
+        top: 0;
+        left:50%;
+        margin-left: -950px;
+    }
+
     #slide-main {
+
     }
 
     .control-m {

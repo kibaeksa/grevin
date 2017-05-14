@@ -1,13 +1,16 @@
+/**
+* Swiper
+* Image Slider
+* @param {Object} options
+		 width
+		 loop
+		 auto
+		 duration
+		 easing
+		 autoDuration
+
+*/
 $.fn.Swipers = function(_options){
-	/*
-		options
-		* width
-		* loop
-		* auto
-		* dragable
-		* duration
-		* easing
-	*/
 
 	var wrapperElem = $(this);
 	var sliderElem = wrapperElem.children();
@@ -21,9 +24,13 @@ $.fn.Swipers = function(_options){
 		autoTime : _options.auto ? 3000 : false,
 		dragable : false,
 		easing : false,
-		duration : 800
+		duration : 800,
+		autoDuration : 800
 	};
 	var options = $.extend(defaultOptions,_options);
+	if(options.auto && !options.loop){
+		options.loop = true;
+	}
 
 	var index = 0;
 	var prevIdx = -1;
@@ -31,7 +38,6 @@ $.fn.Swipers = function(_options){
 	var moveValue = !!options.moveValue ? options.moveValue : options.width;
 
 	var autoTimer;
-	var isClone = false;
 	var isAnimating = false;
 
 	function init(){
@@ -72,6 +78,10 @@ $.fn.Swipers = function(_options){
 				checkAnimate(index+1,true);
 			},options.autoTime);
 		}
+
+		if(!!options.init){
+			options.init.call(wrapperElem.get(0) , length);
+		}
 	}
 
 	function setIndex(idx){
@@ -80,68 +90,72 @@ $.fn.Swipers = function(_options){
 	}
 
 	function checkAnimate(num,isAuto){
-		if(isAnimating){
-			return false;
-		}
-
-		var cb;
-		isClone = false;
+		var duration = !isAuto ? defaultOptions.duration : (defaultOptions.autoDuration || defaultOptions.duration);
+		var animData = {
+			isAuto : isAuto,
+			duration : duration ? duration : undefined
+		};
 
 		if(options.loop){
 			if(num < 0){
-				isClone = true;
-				setIndex(length-1);
-				cb =function(){
-					sliderElem.stop().css({
-						left : (length) * -moveValue
-					});
-				};
 
-			}else if(num >= length){
-				isClone = true;
-				setIndex(0);
-				cb = function(){
-					sliderElem.stop().css({
-						left : -moveValue
+				setIndex(length-1);
+				sliderElem.css({
+					left : (length+1) * moveValue * -1
 					});
-				};
+				animData.num = length;
+			}else if(num >= length){
+
+				setIndex(0);
+				sliderElem.css({
+					left : 0
+					});
+				animData.num = 1;
 			}else{
+				animData.num = num+1;
 				setIndex(num);
 			}
-			animate(num+1 , cb);
+
 		}else{
-			if(isAuto){
-				if(num < 0){
-					num = length-1;
-				}else if(num > length-1){
-					num = 0;
-				}
-			}else{
+			// if(isAuto){
 				if(num < 0 || num > length-1){
-					return false;
-				}
+					return;
+				}else{
+					animData.num = num;
 			}
+			// }else{
+				// if(num < 0 || num > length-1){
+					// return false;
+				// }
+			// }
 
 			setIndex(num);
-			animate(num);
 		}
 
-	}
+		animate(animData);
 
-	function animate(num , cb){
-		if(isAnimating){
-			return false;
 		}
 
-		isAnimating = true;
+	function animate(animOptions){
 
-		if(options.autoTime){
+		var duration = animOptions.duration;
+		var num = animOptions.num;
+		var easing = animOptions.isAuto ? 'easeOutSine' : options.easing;
+
+		if(options.autoTime && !animOptions.isAuto){
 			clearInterval(autoTimer);
 		}
 
-		sliderElem.animate({
-			left : moveValue * num * -1
-		},options.duration,options.easing);
+		if($.easing.easeOutSine){
+			sliderElem.stop().animate({
+				left : moveValue * num * -1
+			},duration,easing);
+		}else{
+			sliderElem.stop().animate({
+				left : moveValue * num * -1
+			},duration);
+		}
+
 
 		if(!!options.callback){
 			options.callback.call($(itemElems[index]),index,prevIdx);
@@ -149,16 +163,13 @@ $.fn.Swipers = function(_options){
 
 		setTimeout(function(){
 			isAnimating = false;
-			if(!!cb){
-				cb();
-			}
-
-			if(options.autoTime){
+			if(options.autoTime && !animOptions.isAuto){
+				clearInterval(autoTimer);
 				autoTimer = setInterval(function(){
 					checkAnimate(index+1,true);
 				},options.autoTime);
 			}
-		},options.duration);
+		},duration);
 	}
 
 	init();
