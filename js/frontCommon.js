@@ -20,33 +20,43 @@ var bClose = function (){
 (function(){
     var timer;
     var timerMouseOut;
+    var isGnbOver = false;
 
-    $('#global-navigation').bind('mouseenter',function(){
-        gnbMouseOver();
-    });
-
-    $('#global-navigation').bind('mouseleave',function(){
-        console.log('gnb out');
-        gnbMouseOut();
-    });
+    // $('#global-navigation').bind('mouseenter',function(){
+    //     gnbMouseOver();
+    // });
+    //
+    // $('#global-navigation').bind('mouseleave',function(){
+    //     gnbMouseOut();
+    // });
 
     $('#global-navigation>ul>li').bind('mouseenter',function(){
         gnbMouseOver();
+        openGnbMenu($(this).attr('data-gnbmenu'));
+    });
+
+    $('#global-navigation>ul>li').bind('mouseleave',function(){
+        gnbMouseOver();
+        openGnbMenu($(this).attr('data-gnbmenu'));
     });
 
     $('#header .gnb-contents-wrapper').bind('mouseenter',function(){
-        console.log('gnb content enter');
         clearTimeout(timerMouseOut);
         gnbMouseOver();
     });
 
     $('#header .gnb-contents-wrapper').bind('mouseleave',function(){
-        console.log('gnb content out');
         gnbMouseOut();
     });
 
+    function openGnbMenu(elemId){
+        $('.gnb-contents-wrapper>div').removeClass('open');
+        $('#'+elemId).addClass('open');
+    }
+
     function gnbMouseOver(){
         clearTimeout(timerMouseOut);
+        clearTimeout(timer);
         $('#header').addClass('gnb-before-over');
         setTimeout(function(){
             clearTimeout(timerMouseOut);

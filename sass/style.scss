@@ -204,7 +204,7 @@ $font_2: NotoSansKRRegular; //urls
             >ul{
                 @extend %clfix;
                 >li{
-                    height: 24px;
+                    height: 56px;
                     float: left;
                     padding:0 20px;
                     a{
@@ -283,24 +283,42 @@ $font_2: NotoSansKRRegular; //urls
 
     /* gnb-contents-wrapper START */
     .gnb-contents-wrapper{
+        width: 100%;
+        height: 370px;
         display: none;
         opacity: 0;
         width: 100%;
         position: absolute;
-        bottom: 0;
+        top: 132px;
         left: 0;
         z-index: 20;
+        background: #fff;
+        border-top: 1px solid  #d20038;
 
-        @include css3(transition,opacity 0.5s);
+        @include css3(transition,opacity 0.3s);
 
         .gnb-content{
             width: 100%;
             min-height: 370px;
-            border-top: 1px solid  #d20038;
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
             background: #fff;
+            opacity: 0;
+
+            .gnb-box1{
+
+            }
+
+            .gnb-box2{
+
+            }
+
+            .gnb-box3{
+
+            }
+
         }
     }
     /* gnb-contents-wrapper END */
@@ -314,7 +332,7 @@ $font_2: NotoSansKRRegular; //urls
         .gnb-contents-wrapper{
             display: block;
             .gnb-content{
-
+                display: block;
             }
         }
     }
@@ -327,7 +345,10 @@ $font_2: NotoSansKRRegular; //urls
         .gnb-contents-wrapper{
             opacity: 1;
             .gnb-content{
-
+                &.open{
+                    @include css3(transition,opacity 0.2s);
+                    opacity: 1;
+                }
             }
         }
     }
