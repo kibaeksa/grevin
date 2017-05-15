@@ -34,11 +34,6 @@ var bClose = function (){
         gnbMouseOver();
     });
 
-    $('#global-navigation>ul>li').bind('mouseleave',function(){
-        console.log('gnb>li out');
-        gnbMouseOut();
-    });
-
     $('#header .gnb-contents-wrapper').bind('mouseenter',function(){
         console.log('gnb content enter');
         clearTimeout(timerMouseOut);
@@ -57,12 +52,12 @@ var bClose = function (){
             clearTimeout(timerMouseOut);
             timer = setTimeout(function(){
                 $('#header').addClass('gnb-over');
-            },);
+            },10);
         },10);
     }
 
     function gnbMouseOut(delayTime){
-        var dt = delayTime == undefined ? 1000 : delayTime;
+        var dt = delayTime == undefined ? 300 : delayTime;
         timerMouseOut = setTimeout(function(){
             $('#header').removeClass('gnb-over');
             timer = setTimeout(function(){
