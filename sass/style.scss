@@ -3,6 +3,14 @@
 @import 'common/mixin.scss';
 @import 'common/common.scss';
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/*
+    100 Thin
+    300 Light
+    400 Regular
+    500 Medium
+    700 Bold
+    900 Black
+*/
 
 //colors
 $black: #000;
@@ -299,7 +307,8 @@ $font_2: NotoSansKRRegular; //urls
 
         .gnb-content{
             width: 100%;
-            min-height: 370px;
+            min-height: 320px;
+            padding-top: 50px;
             display: none;
             position: absolute;
             top: 0;
@@ -307,16 +316,128 @@ $font_2: NotoSansKRRegular; //urls
             background: #fff;
             opacity: 0;
 
-            .gnb-box1{
+            @extend %clfix;
 
+            .gnb-box1{
+                width: 350px;
+                position: relative;
+                float: left;
+
+                dl{
+                    dt{
+                        margin-bottom: 30px;
+                        font:300 30px/30px 'noto sans kr';
+                        color: #222;
+                    }
+
+                    dd{
+                        .desc{
+                            margin-bottom: 20px;
+                            font:500 14px/25px 'noto sans kr';
+                            color: #666;
+                        }
+                        a{
+                            display: inline-block;
+                            position: relative;
+                            font:500 14px/14px 'noto sans kr';
+
+                            &::after{
+                                content:'';
+                                display: block;
+                                width: 5px;
+                                height: 9px;
+                                margin-left: 5px;
+                                background:url('/img/ico_red_arrow.gif') 0 0 no-repeat;
+                                position: absolute;
+                                top: 3px;
+                                right: -10px;
+                            }
+                        }
+                    }
+                }
+
+                &::after{
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 1px;
+                    height: 270px;
+                    border-right: 1px solid #ddd;
+                }
             }
 
             .gnb-box2{
+                width: 225px;
+                position: relative;
+                padding-left: 50px;
+                float: left;
 
+                li{
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    &::after{
+                        content:'';
+                        width: 39px;
+                        height: 17px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background:url('/img/ico_gnb_arrow.png') 0 0 no-repeat;
+                        opacity:0;
+
+                        @include css3(transition,all 0.15s);
+                        @include css3(transform,translate3d(-10px,0,0));
+                    }
+
+                    &.active{
+                        &::after{
+                            opacity: 1;
+                            @include css3(transform,translate3d(0,0,0));
+                        }
+                        a{
+                            color: #d20038;
+                        }
+                    }
+
+                    a{
+                        font:20px/20px 'nexa';
+                        color: #000;
+
+                        .kr{
+                            font:300 18px/20px 'noto sans kr';
+                        }
+                    }
+                }
             }
 
             .gnb-box3{
+                position: absolute;
+                top: 0;
+                right: 0;
 
+                .box{
+                    display: none;
+
+                    &.active{
+                        display: block;
+                    }
+
+                    .img{
+                        margin-bottom: 20px;
+                    }
+                    dt{
+                        margin-bottom: 20px;
+                        font:18px/18px 'nexa';
+                        text-transform: uppercase;
+                    }
+                    dd{
+                        font:500 14px/20px 'noto sans kr';
+                        color: #666;
+                    }
+                }
             }
 
         }
@@ -332,7 +453,9 @@ $font_2: NotoSansKRRegular; //urls
         .gnb-contents-wrapper{
             display: block;
             .gnb-content{
-                display: block;
+                &.open{
+                    display: block;
+                }
             }
         }
     }
