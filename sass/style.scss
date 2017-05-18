@@ -1584,6 +1584,39 @@ $font_2: NotoSansKRRegular; //urls
             margin: 0 auto;
         }
 
+        &.box1{
+            margin-top: 100px;
+            .con-infobox{
+                top: 150px;
+                left: 0;
+            }
+
+            .con-imagebox{
+                right: 0;
+
+                img{
+                    width: 700px;
+                }
+            }
+        }
+
+        &.box2{
+            margin-top: 100px;
+            .con-imagebox{
+                width: 700px;
+                left: 0;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .con-infobox{
+                top: 130px;
+                right: 0;
+            }
+        }
+
         /* 화면크기 1201~1400픽셀 일 때 */
         @media only screen and (min-width : 1280px) and (max-width : 1400px){
             .content-inner{
