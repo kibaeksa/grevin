@@ -1221,7 +1221,8 @@ img {
       position: absolute;
       top: 0;
       left: 0;
-      text-align: left; }
+      text-align: left;
+      z-index: 10; }
       #contents .article-floor .con-infobox h3 {
         font-size: 24px;
         font-weight: 300;
@@ -1291,6 +1292,33 @@ img {
       #contents .article-floor.box2 .con-infobox {
         top: 130px;
         right: 0; }
+    #contents .article-floor.box3 {
+      margin-top: 100px; }
+      #contents .article-floor.box3 .con-infobox {
+        top: 150px;
+        left: 0; }
+      #contents .article-floor.box3 .con-imagebox {
+        right: 0; }
+        #contents .article-floor.box3 .con-imagebox img {
+          width: 700px; }
+    #contents .article-floor.box4 {
+      margin-top: 100px; }
+      #contents .article-floor.box4 .con-imagebox {
+        width: 500px;
+        left: 0; }
+        #contents .article-floor.box4 .con-imagebox img {
+          width: 100%; }
+        #contents .article-floor.box4 .con-imagebox .float-image {
+          top: 0;
+          right: -100px; }
+      #contents .article-floor.box4 .con-infobox {
+        top: 130px;
+        right: 0; }
+    #contents .article-floor.box5 {
+      margin-top: 350px; }
+      #contents .article-floor.box5 .con-imagebox .float-image {
+        bottom: -258px;
+        left: -203px; }
     @media only screen and (min-width: 1280px) and (max-width: 1400px) {
       #contents .article-floor .content-inner {
         width: 1280px; } }
@@ -1412,16 +1440,22 @@ img {
 .title-basic {
   width: 100%;
   height: 80px;
+  position: relative;
   margin-top: 60px;
   text-align: center;
-  background: url("../img/test/line_01.png") 0 0 repeat-x; }
+  background: url("../img/test/line_01.png") 0 bottom repeat-x; }
   .title-basic h2 {
     font-size: 45px;
     font-weight: 500;
     letter-spacing: -0.05em;
     color: #333; }
+    .title-basic h2 em {
+      text-transform: uppercase;
+      font: 46px/46px 'nexa'; }
   .title-basic span {
-    float: right;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
     color: #999;
     font-size: 12px;
     vertical-align: middle; }

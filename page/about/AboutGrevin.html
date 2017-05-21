@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,10 +12,20 @@
 
         <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="http://image.reebok.co.kr/js/jquery/easing/jquery.easing.1.3.js"></script>
+        <script src="/js/Swiper.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+
+
+            });
+        </script>
+
     </head>
     <body>
         <div id="wrapper">
 
+            
             <!-- Header START -->
             <div id="header">
                 <div class="header-top">
@@ -339,232 +349,34 @@
             </div>
             <!-- Header END -->
 
-            <div id="contents">
-                <!-- 배너형 타이틀 start -->
-                <div class="visual-floor">
-                    <div class="visual-image-wrapper">
-                        <div class="visual-image">
-                            <div>
-                                <img src="/img/test/bg_title.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-text">
-                       <h2>GREVIN WORLD</h2>
-                       <h1><strong>2th</strong> FLOOR</h1>
-                       <div class="tline"></div>
-                       <p>세계적인 패션디자이너와 패셔니스타는 물론 헐리웃 스타, 한류의 주역들 그리고 스포츠 선수들까지!<br>이 모든 스타들을 한 자리에서 만날 수 있는 공간</p>
-                    </div>
-                    <div class="title-subimg">
-                       <img src="/img/test/bg_title_sub.jpg" alt="">
-                    </div>
-                </div>
-                <!-- 배너형 타이틀 End -->
 
-                <!-- 컨텐츠 start -->
-                <div class="article-floor box1">
-                    <div class="content-inner">
-                        <div class="con-infobox preload-anim preload-anim-opacity" data-delay="500" data-parallax="" data-parallax-speed="0.2">
-                            <h3>뷰티살롱</h3>
-                            <h2>BEAUTY<br>SALON</h2>
-                            <p>시대와 국가를 초월한 여배우들을 만날 수 있는 곳. <br>
-                            여배우의 분장실이라는 컨셉으로 세팅된 이 공간에는 한국을 대표하는 <br>
-                            배우 고소영과 영화 ‘로마의 휴일’의 히로인 오드리 햅번, <br>
-                            할리우드의 패션 아이콘 중 한 명인 패리스 힐튼의 밀랍인형을 만날 수 있다.</p>
-                            <span><img src="/img/test/view_point.png" alt="뷰포인트">가장 멋진 스타를 선택하여 내 얼굴과 합성해보자!</span>
-                            <a href="#; return false;">GAME ZONE ▶</a>
-                        </div>
-                        <div class="con-imagebox" data-parallax="" data-parallax-speed="0.15" >
-                            <div class="frame-image preload-anim"><img class="con-img" src="/img/test/2F-01.png" alt=""></div>
-                            <div class="con-img_bg"></div>
-                            <div class="deco"></div>
-                        </div>
+            <div id="contents" class="w-fix">
+
+                <!-- 타이틀 기본형 START -->
+                <div class="title-basic">
+                    <h2><em>ABout</em> 그레뱅</h2>
+                    <span>HOME <img src="/img/test/gt.png" alt=""> 관람안내 <img src="/img/test/gt.png" alt=""> 관람시간 / 이용요금</span>
+                </div>
+                <!-- 타이틀 기본형 END -->
+
+                <div class="about-grevin">
+                    <div class="box">
+                        <h3>'신문 1면의 인물들을 3D로 만들자'는<br/>상상에서 시작된 그레뱅 뮤지엄</h3>
+                        <p class="desc">신문에 사진이 거의 없던 시절, 아르튀르 메이에르가 자신이 발간하던 일간지 '르 골루아 (Le Gaulois)'의<br/>1면을 장식하는 사람들을 입체적으로 소개하자는 아이디어에서 그레뱅 뮤지엄이 탄생하게 되었다.</p>
+                        <p class="desc">'르 골루아'의 편집장이였던 아르튀르 메이에르는 만화가이자 극장 의상 디자이너, 조각가였던 알프레드 그레뱅과<br/>손을 잡았고, 알프레드 그레뱅은 예술 감독으로서 창작 과장의 전반을 맡아 이 프로젝트를 열정적으로 추진했디.</p>
+                        <p class="desc">그 결과 그의 이름을 딴 그레뱅 뮤지엄이 1882년 6월 5일, 파리 그랑 불르바르 지역에 처음으로 공개됐으며<br/>그 반응은 매우 뜨거웠다. 1883년 에펠탑과 극장을 운영하던 가브리엘 토마스가 그레뱅 뮤지엄의<br/>투자자로 합류하게 돼 구조적 확립과 운영에 기여했으며 그는 거울의 전당 등 그레뱅 뮤지엄 역사에<br/>큰 유산으로 남을 많은 장식을 만들었다.</p>
+                        <p class="desc">130여 년이 지난 지금도 창시자들의 정신을 바탕으로 그레뱅은 대중들과 유명인사들의 만남을 가능케 한다.</p>
+                        <p class="desc">누구나 한 번쯤은 상상하고 꿈꿔왔던 유명인사와의 만남과 더불어 특별한 공간 안에서의 색다른 체험은<br/>관람객들로 하여금 환상을 현실로 만나게 하는 그레뱅만의 특별한 가치가 될 것이다.</p>
+                    </div>
+
+                    <div class="box">
+                        <h3>그레뱅 뮤지엄, 역사를 돌아보다.</h3>
+                        <p class="desc">그레뱅 뮤지엄은 1882년 파리 개관부터 지금까지 2,000여 개가 넘는 밀랍인형을<br/>제작 및 전시했으며, 개관 이후 지금까지 약 6,000만 명의 관람객이 방문했다.</p>
+                        <p class="desc">2000년 대에 들어 그레뱅 뮤지엄은 전면적 레노베이션을 진행해 새롭게 단장했다<br/>전시될 유명 인사를 선택하고 검토하는 그레뱅 아카데미도 운영하게 되었다.</p>
+                        <p class="desc">지난 2012년에 그래벵 뮤지엄은 개관 130주년을 맞았고,<br/>이후 2013년 몬트리올을 시작으로 그레뱅 뮤지엄의 글로벌 확장이 시작됐다.</p>
                     </div>
                 </div>
 
-                <div class="article-floor article-grid2 box2">
-                    <div class="content-inner">
-                        <div class="con-infobox preload-anim preload-anim-opacity" data-delay="500" data-parallax="" data-parallax-speed="0.2">
-                            <h3>패션 스튜디오</h3>
-                            <h2>FASHION<br>STUDIO</h2>
-                            <p>세계적인 패션 디자이너들과 패셔니스타들의 공간으로 한국을 대표했던<br>
-                            디자이너 앙드레 김, 대한민국 대표 패셔니스타 배우 김태희, 세계적인 탑 모델 나오미 캠벨,<br>
-                            남다른 패션 감각을 보여줬던 다이애나 영국 왕세자비의 밀랍인형이 전시되어 있다.<br><br>
-
-                            특히, 디자이너 앙드레 김이 직접 디자인하고 제작한 드레스도 인물들과 함께<br>
-                            전시되어 있어 이 패셔너블한 공간에 특별함을 더해준다.</p>
-                            <span><img src="/img/test/view_point.png" alt="뷰포인트">세계적인 디자이너와 패셔니스타의 숨결 느껴보기!</span>
-                        </div>
-                        <div class="con-imagebox" data-parallax="" data-parallax-speed="0.15">
-                            <div class="frame-image preload-anim"><img class="con-img" src="/img/test/2F-02.png" alt=""></div>
-                            <div class="con-img_bg"></div>
-                            <div class="deco"></div>
-                            <span class="arrow"><img src="/img/test/arrow.png" alt="">1 / 3</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="article-floor box3">
-                    <div class="content-inner">
-                        <div class="con-infobox preload-anim preload-anim-opacity" data-delay="500" data-parallax="" data-parallax-speed="0.2">
-                            <h3>명예의 전당</h3>
-                            <h2>HALL<br>OF FAME</h2>
-                            <p>그레뱅 뮤지엄의 메인 홀인 명예의 전당에서는 월드 스타들을 만날 수 있다.<br>
-                            2017년 새롭게 입성한 국민MC 유재석, K-POP의 주역인 싸이와 지드래곤, 비,<br>
-                            팝의 황제 마이클 잭슨과 세계적 피아니스트 랑랑의 밀랍인형이 전시되어 있다.<br><br>
-
-                            또한, 할리우드의 대표적인 섹시 스타 안젤리나 졸리와<br>
-                            아카데미상 3회 수상에 빛나는 연기파 배우 메릴 스트립과등을 확인할 수 있다.</p>
-                            <span><img src="/img/test/view_point.png" alt="뷰포인트">그레벵 스타들의 핸드 프린팅에 내손을 살포시 얹어보기!</span>
-                        </div>
-                        <div class="con-imagebox" data-parallax="" data-parallax-speed="0.15">
-                            <div class="frame-image preload-anim"><img class="con-img" src="/img/test/2F-03.jpg" alt=""></div>
-                            <div class="con-img_bg"></div>
-                            <div class="deco"></div>
-                            <span class="arrow">1 / 2<img src="/img/test/arrow_r.png" alt=""></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="article-floor  article-grid2 box4">
-                    <div class="content-inner">
-                        <div class="con-infobox preload-anim preload-anim-opacity" data-delay="500" data-parallax="" data-parallax-speed="0.2">
-                            <h3>레코딩 스튜디오</h3>
-                            <h2>RECODING<br>STUDIO</h2>
-                            <p>실제 녹음실 현장과 그 분위기를 그대로 재현한 전시관으로<br>
-                            세계적인 음악가들의 밀랍인형이 음악 팬들에게 최고의 순간을 선사한다. <br>
-                            세계 3대 테너로 꼽히는 이탈리안 성악가 루치아노 파바로티와 세계적인 소프라노 조수미,<br>
-                            그리고 영국 팝의 전설 비틀즈 멤버 존 레논의 밀랍인형을이곳에서 만날 수 있다.</p>
-                            <span><img src="/img/test/view_point.png" alt="뷰포인트">존 레논의 음향 콘솔에 설치된 뮤직 퀴즈 게임을 해보자!</span>
-                            <a href="#; return false;">GAME ZONE ▶</a>
-                        </div>
-                        <div class="con-imagebox" data-parallax="" data-parallax-speed="0.15">
-                            <div class="frame-image preload-anim"><img class="con-img" src="/img/test/2F-04.png" alt=""></div>
-                            <div class="float-image"><img class="con-img2" src="/img/test/2F-04_sub.jpg" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="article-floor box5">
-                    <div class="content-inner">
-                        <div class="con-infobox preload-anim preload-anim-opacity" data-delay="500" data-parallax="" data-parallax-speed="0.2">
-                            <h3>한류우드</h3>
-                            <h2>KOREAN<br>WAVE</h2>
-                            <p>소품, 지미집 카메라 등이 있는 이곳은 드라마 촬영 현장을 그대로 재현한 공간.<br>
-                            실제 드라마 촬영 현장에서와 같은 생동감 넘치는 음향 효과와 함께<br>
-                            한류 스타 김수현, 박신혜, 이민호, 장근석, 현빈의 밀랍인형을 확인할 수 있다. <br>
-                            국내 팬들을 비롯해 외국인 관람객에게도 최고의 인기 장소다.</p>
-                            <span><img src="/img/test/view_point.png" alt="뷰포인트">한류우드스크린 안의 내 모습을 놓치지 말자!</span>
-                        </div>
-
-                        <div class="con-imagebox" data-parallax="" data-parallax-speed="0.15">
-                            <div class="frame-image preload-anim"><img class="con-img" src="/img/test/2F-05.jpg" alt=""></div>
-                            <div class="float-image">
-                                <img class="con-img2" src="/img/test/2F-05_sub.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- 컨텐츠 End -->
-
-                <div class="bot-banner">
-                    <div class="bb-title">
-                        <p>EXPERIENCE</p>
-                        <div class="deco"></div>
-                    </div>
-
-                    <script type="text/javascript">
-                        jssor_1_slider_init = function() {
-
-                            var jssor_1_options = {
-                              $AutoPlay: 1,
-                              $SlideWidth: 1080,
-                              $Cols: 2,
-                              $Align: 410,
-                              $ArrowNavigatorOptions: {
-                                $Class: $JssorArrowNavigator$
-                              },
-                              $BulletNavigatorOptions: {
-                                $Class: $JssorBulletNavigator$
-                              }
-                            };
-
-                            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-                            /*responsive code begin*/
-                            /*remove responsive code if you don't want the slider scales while window resizing*/
-                            function ScaleSlider() {
-                                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                                if (refSize) {
-                                    refSize = Math.min(refSize, 1900);
-                                    jssor_1_slider.$ScaleWidth(refSize);
-                                }
-                                else {
-                                    window.setTimeout(ScaleSlider, 30);
-                                }
-                            }
-                            ScaleSlider();
-                            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-                            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-                            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-                            /*responsive code end*/
-
-                        };
-                    </script>
-
-                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1900px;height:680px;visibility:hidden;">
-                        <!-- Loading Screen -->
-                        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
-                            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-                            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-                        </div>
-                        <div class="mask">
-                            <div class="mask-dark"></div>
-                            <div class="mask-block"></div>
-                            <div class="mask-dark"></div>
-                        </div>
-                        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1900px;height:680px;overflow:hidden;">
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                            <div class="slitem">
-                                <img data-u="image" src="/img/test/slide_01.jpg" />
-                            </div>
-                        </div>
-                        <!-- Bullet Navigator -->
-                        <div data-u="navigator" class="jssorb01" style="bottom:-30px;right:16px;" data-autocenter="1">
-                            <div data-u="prototype" style="width:6px;height:6px;border-radius:3px;"></div>
-                        </div>
-                        <!-- Arrow Navigator -->
-                        <span data-u="arrowleft" class="jssora13l" data-autocenter="2"></span>
-                        <span data-u="arrowright" class="jssora13r" data-autocenter="2"></span>
-                    </div>
-                    <script type="text/javascript">jssor_1_slider_init();</script>
-                    <!-- #endregion Jssor Slider End -->
-
-                </div>
-                <!-- 하단 배너 -->
 
             </div>
 
@@ -638,71 +450,10 @@
                 </div>
 
             </div>
+
+
         </div>
 
-        <script type="text/javascript">
-
-
-
-            function animRender(){
-                var preloadElemArray = $('.article-floor');
-                preloadElemArray.each(function(){
-                    if($(this).offset().top < $(window).scrollTop() + $(window).height() * 0.8){
-                        var preloadElems = $(this).find('.preload-anim');
-                        $(this).addClass('loaded');
-
-                        for(var i = 0; i < preloadElems.length; i++){
-
-                            (function(i){
-                                var delay = 1;
-
-                                if($(preloadElems[i]).attr('data-delay')){
-                                    delay = $(preloadElems[i]).attr('data-delay');
-                                }
-
-                                setTimeout(function(){
-                                    $(preloadElems[i]).addClass('loading');
-                                    setTimeout(function(){
-                                        $(preloadElems[i]).addClass('loaded');
-                                    },400);
-                                },delay);
-                            })(i);
-
-                        }
-                    }
-                });
-
-                requestAnimationFrame(animRender);
-            }
-
-            animRender();
-
-
-
-
-            function initVisualScroll(){
-                $('.visual-floor').addClass('loaded');
-                setTimeout(function(){
-                    $(document).bind('mousemove',function(event){
-                        var middleX = $(window).width() / 2;
-                        var middleY = $(window).height() / 2;
-
-                        var x = (middleX - event.clientX) * 0.01;
-                        var y = (middleY - event.clientY) * 0.01;
-
-                        $('.visual-image>div').css({
-                            transform:'translate3d('+x+'px,'+y+'px,0)'
-                        })
-                    });
-                },800);
-
-            }
-
-            initVisualScroll();
-
-        </script>
-
-        <script src="/js/prx.min.js" type="text/javascript"></script>
-        <script src="/js/frontCommon.js" type="text/javascript"></script>
+        <script src="/js/frontCommon.js"></script>
     </body>
 </html>
