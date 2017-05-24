@@ -866,8 +866,27 @@ img {
           border: 1px solid #ccc; }
 
 /* VenueRentalsInfo END */
-/* Reservation */
-/* Reservation END */
+/* CateringMenu */
+.catering-table {
+  width: 100%;
+  text-align: center; }
+  .catering-table tr {
+    border-bottom: 1px solid #ebebeb; }
+    .catering-table tr td {
+      padding: 50px 0; }
+      .catering-table tr td .ct-img-circle {
+        overflow: hidden;
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: steelblue; }
+      .catering-table tr td h4 {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #222; }
+
+/* CateringMenu END */
 /* RentalHistory */
 .history-basic .history-box {
   padding: 40px 0;

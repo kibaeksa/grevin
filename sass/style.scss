@@ -1037,8 +1037,34 @@ $font_2: NotoSansKRRegular; //urls
 }
 /* VenueRentalsInfo END */
 
-/* Reservation */
-/* Reservation END */
+/* CateringMenu */
+.catering-table{
+    width: 100%;
+    text-align: center;
+    tr{
+        border-bottom: 1px solid #ebebeb;
+        td{
+            padding: 50px 0;
+            .ct-img-circle{
+                overflow: hidden;
+                display: inline-block;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                background: steelblue;
+                img{
+
+                }
+            }
+            h4{
+                margin-top: 10px;
+                font-size: 16px;
+                color: #222;
+            }
+        }
+    }
+}
+/* CateringMenu END */
 
 /* RentalHistory */
 .history-basic{

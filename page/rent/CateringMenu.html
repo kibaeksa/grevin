@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="추후 업데이트">
+        <meta name="Keywords" content="추후 업데이트">
+
+        <title>그레벵</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+        <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
+        <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+        <script src="/js/jquery.bpopup.min.js"></script>
+        <script src="/js/frontCommon.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+
+        $('.btn_more').mouseenter(function () {
+
+            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+
+            //$(this).find('img').attr('src','/img/test/btn_more_more.png');
+            tipCpInfo.stop().animate({height: "400px"});
+            tipCpInfo.find('h3').addClass('on');
+            tipCpInfo.find('.tci_text_01').stop().hide();
+            tipCpInfo.find('.tci_text_02').stop().fadeIn(1000);
+
+        });
+
+        $('.btn_more').mouseleave(function () {
+
+            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+
+            //$(this).find('img').attr('src','/img/test/btn_more.png');
+            tipCpInfo.stop().animate({height: "160px"});
+            tipCpInfo.find('h3').removeClass('on');
+            tipCpInfo.find('.tci_text_01').stop().fadeIn(1000);
+            tipCpInfo.find('.tci_text_02').stop().hide();
+
+        });
+
+    });
+
+    </script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+
+            <div id="header">
+                <!-- 추후 업데이트 -->
+            </div>
+            <div class="header_line"></div>
+
+            <div id="contents" class="w-fix">
+
+                <!-- 타이틀 기본형 START -->
+                <div class="title-basic" style="background: none; margin-bottom: 30px;">
+                    <h2>케이터링 메뉴 안내</h2>
+                    <span>HOME <img src="/img/test/gt.png" alt=""> 대관안내 <img src="/img/test/gt.png" alt=""> 케이터링 메뉴 안내</span>
+                </div>
+                <!-- 타이틀 기본형 END -->
+
+                <!-- Tip 컨텐츠 기본형 START -->
+                <div class="tip-basic">
+
+                    <aside id="tab">
+                    	<input id="first" type="radio" name="tab" checked="checked" />
+                    	<input id="second" type="radio" name="tab" />
+                    	<input id="third" type="radio" name="tab" />
+                    	<section>
+                    		<label for="first">Dinner</label>
+                    		<label for="second">Cocktail</label>
+                    		<label for="third">Dessert</label>
+                    	</section>
+                        <!-- Dinner 컨텐츠 -->
+                    	<div style="padding-top: 0;">
+                            <table class="catering-table">
+                                <colgroup>
+                                    <col width="25%">
+                                    <col width="25%">
+                                    <col width="25%">
+                                    <col width="25%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="해물 빠에야">
+                                            </div>
+                                            <h4>해물 빠에야</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="갈비 구이">
+                                            </div>
+                                            <h4>갈비 구이</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="크로와상 샌드위치">
+                                            </div>
+                                            <h4>크로와상 샌드위치</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="해물 엔다이브">
+                                            </div>
+                                            <h4>해물 엔다이브</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="해물&치킨 컵밥">
+                                            </div>
+                                            <h4>해물&치킨 컵밥</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="묵은지 곁들인 관자찜">
+                                            </div>
+                                            <h4>묵은지 곁들인 관자찜</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="떡갈비">
+                                            </div>
+                                            <h4>떡갈비</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="가지구이 & 우엉잡채">
+                                            </div>
+                                            <h4>가지구이 & 우엉잡채</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="그라브락스">
+                                            </div>
+                                            <h4>그라브락스</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="트러플 오일 파스타">
+                                            </div>
+                                            <h4>트러플 오일 파스타</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="온면">
+                                            </div>
+                                            <h4>온면</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="리코타 샐러드">
+                                            </div>
+                                            <h4>리코타 샐러드</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="치즈 보드">
+                                            </div>
+                                            <h4>치즈 보드</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="리얼 브라우니">
+                                            </div>
+                                            <h4>리얼 브라우니</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="과일컵">
+                                            </div>
+                                            <h4>과일컵</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="초코렛">
+                                            </div>
+                                            <h4>초코렛</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="단호박 케익">
+                                            </div>
+                                            <h4>단호박 케익</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="레모네이드">
+                                            </div>
+                                            <h4>레모네이드</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="구아바 쥬스">
+                                            </div>
+                                            <h4>구아바 쥬스</h4>
+                                        </td>
+                                        <td>
+                                            <div class="ct-img-circle">
+                                                <img src="" alt="커피">
+                                            </div>
+                                            <h4>커피</h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    	</div>
+                        <!-- Dinner 컨텐츠 -->
+                        <!-- Cocktail 컨텐츠 -->
+                    	<div>
+
+                    	</div>
+                        <!-- Cocktail 컨텐츠 -->
+                        <!-- Dessert 컨텐츠 -->
+                    	<div>
+
+                    	</div>
+                        <!-- Dessert 컨텐츠 -->
+                    </aside>
+                </div>
+                <!-- Tip 컨텐츠 기본형 END -->
+
+            </div>
+
+            <div id="footer">
+
+            </div>
+
+
+        </div>
+
+    </body>
+</html>
