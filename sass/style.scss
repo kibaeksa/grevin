@@ -903,6 +903,46 @@ $font_2: NotoSansKRRegular; //urls
             padding-top: 15px;
         }
     }
+    .inquiry_info{
+        display: inline-block;
+        position: relative;
+        margin-top: 30px;
+        width: 720px;
+        height: 120px;
+        background: #f8f8f8;
+        @extend %extend_2;
+        .ii-th{
+            display: inline-block;
+            position: absolute;
+            top: 28px;
+            left: 150px;
+            height: 40px;
+            font-size: 35px;
+            padding: 12px 30px 12px 0;
+            color: #333;
+            border-right: 2px solid #dbdbdb;
+        }
+        .ii-td{
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            left: 340px;
+            height: 64px;
+            text-align: left;
+            vertical-align: top;
+            p{
+                font-family: $font_0;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                letter-spacing: 0.03em;
+            }
+            span{
+                font-size: 13px;
+                color: #444;
+            }
+        }
+    }
 }
 .place-basic{
     .place-box{
@@ -1008,20 +1048,37 @@ $font_2: NotoSansKRRegular; //urls
         &:last-child{
             border-color: #222;
         }
-        .history-img{
+        .history-date{
             width: 300px;
             height: 200px;
+            margin-top: 25px;
             overflow: hidden;
             display: inline-block;
-            img{
-                width: 100%;
-                display: block;
+            text-align: center;
+            .hd_icon{
+                display: inline-block;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: #c7a136;
+                color: #fff;
+                padding-top: 40px;
+                @extend %extend_2;
+                strong{
+                    font-family: $font_0;
+                    font-size: 20px;
+                    letter-spacing: 0.2em;
+                }
+                b{
+                    font-family: $font_0;
+                    font-size: 60px;
+                }
             }
         }
         .history-text{
             display: inline-block;
             vertical-align: top;
-            margin-top: 15px;
+            margin-top: 30px;
             margin-left: 50px;
             span{
                 font-family: $font_0;
@@ -1526,6 +1583,7 @@ $font_2: NotoSansKRRegular; //urls
                 height: 21px;
                 font-size: 12px;
                 line-height: 21px;
+                color: #c7a136;
             }
 
             a {
@@ -2575,17 +2633,16 @@ $font_2: NotoSansKRRegular; //urls
 /***** tip *****/
 /* tip - couple page */
 .title-tip{
-    background: #ac8827;
+    background: url('/img/test/bg_tip.jpg')no-repeat;
     width: 100%;
     height: 250px;
-    line-height: 250px;
+    line-height: 210px;
     text-align: center;
     p{
-        font-family: $font_0;
         color: #fff;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 2em;
+        font-size: 30px;
+        font-weight: 200;
+        letter-spacing: 0.3em;
     }
 }
 .tip-head{
