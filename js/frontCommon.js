@@ -23,6 +23,8 @@ var bClose = function (){
     var isGnbOver = false;
 
     $('#global-navigation>ul>li').bind('mouseenter',function(){
+        $('#global-navigation>ul>li').removeClass('active');
+        $(this).addClass('active');
         gnbMouseOver();
         openGnbMenu($(this).attr('data-gnbmenu'));
     });
@@ -39,23 +41,6 @@ var bClose = function (){
 
     $('#header .gnb-contents-wrapper').bind('mouseleave',function(){
         gnbMouseOut();
-    });
-
-    $('.gnb-contents-wrapper>div .gnb-box2 li').bind('mouseover',function(){
-        if($(this).hasClass('active')){
-            return false;
-        }
-        var elemLists = $(this).parent().find('li');
-        var elemConts = $(this).parents('.gnb-box2').siblings('.gnb-box3').find('.box');
-
-        elemLists.removeClass('active');
-        $(this).addClass('active');
-
-        if(!$(this).hasClass('no_content')){
-            elemConts.removeClass('active');
-            elemConts.eq($(this).index()).addClass('active');
-        }
-
     });
 
     function openGnbMenu(elemId){
@@ -79,6 +64,7 @@ var bClose = function (){
         var dt = delayTime == undefined ? 300 : delayTime;
         timerMouseOut = setTimeout(function(){
             $('#header').removeClass('gnb-over');
+            $('#global-navigation>ul>li').removeClass('active');
             timer = setTimeout(function(){
                 $('#header').removeClass('gnb-before-over');
             },250);

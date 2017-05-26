@@ -220,6 +220,12 @@ $font_2: NotoSansKRRegular; //urls
                         color: #222;
                         letter-spacing: -0.75px;
                     }
+
+                    &.active{
+                        a{
+                            color: #d20038;
+                        }
+                    }
                 }
             }
         }
@@ -392,7 +398,7 @@ $font_2: NotoSansKRRegular; //urls
                         @include css3(transform,translate3d(-10px,0,0));
                     }
 
-                    &.active{
+                    &:hover{
                         &::after{
                             opacity: 1;
                             @include css3(transform,translate3d(0,0,0));
@@ -419,11 +425,6 @@ $font_2: NotoSansKRRegular; //urls
                 right: 0;
 
                 .box{
-                    display: none;
-
-                    &.active{
-                        display: block;
-                    }
 
                     .img{
                         margin-bottom: 20px;

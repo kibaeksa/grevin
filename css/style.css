@@ -286,6 +286,8 @@ img {
           font: 500 16px/24px 'noto sans kr';
           color: #222;
           letter-spacing: -0.75px; }
+        #header .header-content #global-navigation > ul > li.active a {
+          color: #d20038; }
     #header .header-content .social-selector {
       position: absolute;
       top: 31px;
@@ -409,13 +411,13 @@ img {
             -webkit-transform: translate3d(-10px, 0, 0);
             -moz-transform: translate3d(-10px, 0, 0);
             -ms-transform: translate3d(-10px, 0, 0); }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box2 li.active::after {
+          #header .gnb-contents-wrapper .gnb-content .gnb-box2 li:hover::after {
             opacity: 1;
             transform: translate3d(0, 0, 0);
             -webkit-transform: translate3d(0, 0, 0);
             -moz-transform: translate3d(0, 0, 0);
             -ms-transform: translate3d(0, 0, 0); }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box2 li.active a {
+          #header .gnb-contents-wrapper .gnb-content .gnb-box2 li:hover a {
             color: #d20038; }
           #header .gnb-contents-wrapper .gnb-content .gnb-box2 li a {
             font: 20px/20px 'nexa';
@@ -426,19 +428,15 @@ img {
         position: absolute;
         top: 0;
         right: 0; }
-        #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box {
-          display: none; }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box.active {
-            display: block; }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box .img {
-            margin-bottom: 20px; }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box dt {
-            margin-bottom: 20px;
-            font: 18px/18px 'nexa';
-            text-transform: uppercase; }
-          #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box dd {
-            font: 500 14px/20px 'noto sans kr';
-            color: #666; }
+        #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box .img {
+          margin-bottom: 20px; }
+        #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box dt {
+          margin-bottom: 20px;
+          font: 18px/18px 'nexa';
+          text-transform: uppercase; }
+        #header .gnb-contents-wrapper .gnb-content .gnb-box3 .box dd {
+          font: 500 14px/20px 'noto sans kr';
+          color: #666; }
   #header.gnb-before-over::after {
     display: block; }
   #header.gnb-before-over .gnb-contents-wrapper {
