@@ -148,7 +148,7 @@ img {
     700 Bold
     900 Black
 */
-#contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .con-box .sm-info-01 ul li, #contents .article-main .con-box .control-01 .num a, #contents .article-main .con-box .control-02 .num a, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -757,6 +757,40 @@ img {
       font-weight: 500; }
     .place-description p:last-child {
       padding-top: 15px; }
+  .place-description .inquiry_info {
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+    width: 720px;
+    height: 120px;
+    background: #f8f8f8; }
+    .place-description .inquiry_info .ii-th {
+      display: inline-block;
+      position: absolute;
+      top: 28px;
+      left: 150px;
+      height: 40px;
+      font-size: 35px;
+      padding: 12px 30px 12px 0;
+      color: #333;
+      border-right: 2px solid #dbdbdb; }
+    .place-description .inquiry_info .ii-td {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      left: 340px;
+      height: 64px;
+      text-align: left;
+      vertical-align: top; }
+      .place-description .inquiry_info .ii-td p {
+        font-family: nexa;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        letter-spacing: 0.03em; }
+      .place-description .inquiry_info .ii-td span {
+        font-size: 13px;
+        color: #444; }
 
 .place-basic .place-box {
   overflow: hidden;
@@ -830,26 +864,59 @@ img {
           border: 1px solid #ccc; }
 
 /* VenueRentalsInfo END */
-/* Reservation */
-/* Reservation END */
+/* CateringMenu */
+.catering-table {
+  width: 100%;
+  text-align: center; }
+  .catering-table tr {
+    border-bottom: 1px solid #ebebeb; }
+    .catering-table tr td {
+      padding: 50px 0; }
+      .catering-table tr td .ct-img-circle {
+        overflow: hidden;
+        display: inline-block;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: steelblue; }
+      .catering-table tr td h4 {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #222; }
+
+/* CateringMenu END */
 /* RentalHistory */
 .history-basic .history-box {
   padding: 40px 0;
   border-bottom: 1px solid #ccc; }
   .history-basic .history-box:last-child {
     border-color: #222; }
-  .history-basic .history-box .history-img {
+  .history-basic .history-box .history-date {
     width: 300px;
     height: 200px;
+    margin-top: 25px;
     overflow: hidden;
-    display: inline-block; }
-    .history-basic .history-box .history-img img {
-      width: 100%;
-      display: block; }
+    display: inline-block;
+    text-align: center; }
+    .history-basic .history-box .history-date .hd_icon {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #c7a136;
+      color: #fff;
+      padding-top: 40px; }
+      .history-basic .history-box .history-date .hd_icon strong {
+        font-family: nexa;
+        font-size: 20px;
+        letter-spacing: 0.2em; }
+      .history-basic .history-box .history-date .hd_icon b {
+        font-family: nexa;
+        font-size: 60px; }
   .history-basic .history-box .history-text {
     display: inline-block;
     vertical-align: top;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: 50px; }
     .history-basic .history-box .history-text span {
       font-family: nexa;
@@ -1237,7 +1304,8 @@ img {
         display: block;
         height: 21px;
         font-size: 12px;
-        line-height: 21px; }
+        line-height: 21px;
+        color: #c7a136; }
       #contents .article-floor .con-infobox a {
         display: inline-block;
         padding: 22px 74px;
@@ -2031,17 +2099,16 @@ img {
 /***** tip *****/
 /* tip - couple page */
 .title-tip {
-  background: #ac8827;
+  background: url("/img/test/bg_tip.jpg") no-repeat;
   width: 100%;
   height: 250px;
-  line-height: 250px;
+  line-height: 210px;
   text-align: center; }
   .title-tip p {
-    font-family: nexa;
     color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 2em; }
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 0.3em; }
 
 .tip-head {
   width: 100%;
