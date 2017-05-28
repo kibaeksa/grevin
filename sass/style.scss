@@ -67,8 +67,14 @@ $font_2: NotoSansKRRegular; //urls
 }
 
 %sprite{
-    background:url('/img/sprite.png') 0 0 no-repeat;
+    background:url('/images/sprite.png') 0 0 no-repeat;
     display: block;
+}
+
+.content-inner{
+    width: 1080px;
+    position: relative;
+    margin: 0 auto;
 }
 
 /* Layout */
@@ -353,7 +359,7 @@ $font_2: NotoSansKRRegular; //urls
                                 width: 5px;
                                 height: 9px;
                                 margin-left: 5px;
-                                background:url('/img/ico_red_arrow.gif') 0 0 no-repeat;
+                                background:url('/images/ico_red_arrow.gif') 0 0 no-repeat;
                                 position: absolute;
                                 top: 3px;
                                 right: -10px;
@@ -391,7 +397,7 @@ $font_2: NotoSansKRRegular; //urls
                         position: absolute;
                         top: 0;
                         right: 0;
-                        background:url('/img/ico_gnb_arrow.png') 0 0 no-repeat;
+                        background:url('/images/ico_gnb_arrow.png') 0 0 no-repeat;
                         opacity:0;
 
                         @include css3(transition,all 0.15s);
@@ -528,7 +534,14 @@ $font_2: NotoSansKRRegular; //urls
         .social-selector{
             width: 230px;
             height: 90px;
-            padding:50px 0 0 30px;
+            padding:10px 0 0 30px;
+
+            dt{
+                margin-bottom: 30px;
+                font-size: 12px;
+                font-weight:500;
+                color: #666;
+            }
 
             a{
                 @extend %sprite;
@@ -679,6 +692,7 @@ $font_2: NotoSansKRRegular; //urls
         }
     }
 }
+
 .information-calendar{
     width: 100%;
     .calendar_box{
@@ -1133,7 +1147,139 @@ $font_2: NotoSansKRRegular; //urls
 /* RentalHistory END */
 /***** rent END *****/
 
+/*
+    Gallery
+    /page/organ/SchoolAlbum.html
+ */
+.grevin-gallery{
+    width: 1110px;
+    margin-top: 40px;
+    margin-left: -15px;
+
+    @extend %clfix;
+    .box{
+        width: 340px;
+        height: 194px;
+        float: left;
+        position: relative;
+        padding: 0 15px 30px;
+
+        a{
+            display: block;
+            position: relative;
+
+            .icon-video{
+                width: 38px;
+                height: 38px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                background:url('/images/ico_youtube.png') 0 0 no-repeat;
+            }
+
+
+            .layer{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                background:rgba(0,0,0,0.6);
+                padding: 30px;
+                opacity: 0;
+
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+
+                @include css3(transition,opacity 0.3s);
+
+                >*{
+                    color: #fff;
+                }
+
+                .date{
+                    margin-bottom: 10px;
+                    font: 13px 'nexa';
+                }
+
+                .title{
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+            }
+
+            &:hover , &.active{
+                .layer{
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+}
+
 /***** main *****/
+.today_schedule{
+    height: 47px;
+    border-bottom: 1px solid  #ddd;
+
+    .content-inner{
+        width: 1078px;
+        height: 47px;
+        overflow: hidden;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    dl{
+        margin:14px 0 0 50px;
+
+        @extend %clfix;
+        dt{
+            position: relative;
+            float: left;
+            margin-right: 15px;
+            padding-right: 15px;
+            font:500 13px 'noto sans kr';
+            color: #222;
+
+            &::after{
+                content:'';
+                width: 1px;
+                height: 11px;
+                background: #ddd;
+                position: absolute;
+                top: 5px;
+                right: 0;
+            }
+        }
+
+        dd{
+            float: left;
+            font:600 13px 'nexa';
+            color: #999;
+            letter-spacing: 0.25px;
+
+            span{
+                font: 12px 'noto sans kr';
+            }
+        }
+    }
+
+    a{
+        display: block;
+        position: absolute;
+        top: 17px;
+        right: 40px;
+        padding-right: 18px;
+        font-size:12px;
+        color: #444;
+        background:url('/images/ico_more.gif') right 2px no-repeat;
+    }
+
+}
+
 .slide-main-wrap {
     width: 100%;
     height: 650px;
@@ -1320,9 +1466,27 @@ $font_2: NotoSansKRRegular; //urls
         overflow: hidden;
         margin-bottom: 60px;
 
+        h2 {
+            font-family: $font_0;
+            font-size: 28px;
+            font-weight: normal;
+            padding-bottom: 20px;
+
+            strong {
+                font-weight: bold;
+            }
+
+            #btn-sns {
+                float: right;
+                padding-top: 2px;
+            }
+        }
+
         ul.icon-box {
             overflow: hidden;
             width: 100%;
+            padding-bottom: 60px;
+            background: url('/images/line_01.png') 0 bottom repeat-x;
 
             li {
                 width: 25%;
@@ -1351,32 +1515,10 @@ $font_2: NotoSansKRRegular; //urls
                 }
             }
         }
-        /* icon box END */
-        .line_divid {
-            width: 100%;
-            height: 9px;
-            background: url('../img/test/line_01.png') 0 0  repeat-x;
-        }
-        /* line_divid END */
+
         .con-box {
             display: inline-block;
             position: relative;
-
-            h2 {
-                font-family: $font_0;
-                font-size: 28px;
-                font-weight: normal;
-                padding-bottom: 20px;
-
-                strong {
-                    font-weight: bold;
-                }
-
-                #btn-sns {
-                    float: right;
-                    padding-top: 2px;
-                }
-            }
 
             .slide_min {
                 float: left;
@@ -1574,6 +1716,107 @@ $font_2: NotoSansKRRegular; //urls
             /* control END */
         }
         /* slide-min END */
+
+        .slider-wrapper{
+            position: relative;
+
+            ul{
+                width: 1000%;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                li{
+                    float: left;
+                }
+            }
+
+            .num-wrapper{
+                *{
+                    font:bold 16px 'nexa';
+                    color: #666;
+                }
+            }
+
+            .arrow-wrapper{
+                width: 47px;
+                height: 23px;
+                border: 1px solid #e3e7ee;
+                @extend %clfix;
+                *{
+                    width: 23px;
+                    height: 23px;
+                    display: block;
+                    float: left;
+
+                }
+
+                .prev{
+                    border-right: 1px solid #e3e7ee;
+                    background:url('/images/btn_main_arrow_prev.jpg') 0 0 no-repeat;
+                }
+
+                .next{
+                    background:url('/images/btn_main_arrow_next.jpg') 0 0 no-repeat;
+                }
+
+
+            }
+
+            &.upcoming-event-slider{
+                width: 1080px;
+                height: 350px;
+
+                .num-wrapper{
+                    position: absolute;
+                    right: 70px;
+                    top: -33px;
+                }
+
+                .arrow-wrapper{
+                    position: absolute;
+                    right: 0;
+                    top: -38px;
+                }
+
+                li{
+                    width: 1080px;
+                    height: 350px;
+
+                    @extend %clfix;
+
+                    .box{
+                        float: left;
+
+                        &.last{
+                            float: right;
+                        }
+
+                        .img{
+                            margin-bottom: 20px;
+                        }
+
+                        .date{
+                            margin-bottom: 7px;
+                            font:bold 12px 'nexa';
+                            color: #999;
+                        }
+
+                        .title{
+                            margin-bottom: 10px;
+                            font-size: 20px;
+                            color: #222;
+                            letter-spacing: -0.75px;
+                        }
+
+                        .desc{
+                            font-size: 14px;
+                            color: #222;
+                        }
+                    }
+                }
+            }
+        }
     }
     /* article-main END */
     /********************************************/
@@ -1928,7 +2171,7 @@ $font_2: NotoSansKRRegular; //urls
     position: relative;
     margin-top: 60px;
     text-align: center;
-    background: url('../img/test/line_01.png') 0 bottom repeat-x;
+    background: url('/images/line_01.png') 0 bottom repeat-x;
 
     h2{
         font-size: 45px;
@@ -2236,7 +2479,7 @@ $font_2: NotoSansKRRegular; //urls
             overflow: hidden;
             width: 100%;
             height: 220px;
-            background: url('../img/test/event_img.jpg')no-repeat;
+            background: url('/images/event_img.jpg')no-repeat;
             background-size: cover;
             background-position: center;
         }
@@ -2660,7 +2903,7 @@ $font_2: NotoSansKRRegular; //urls
 /***** tip *****/
 /* tip - couple page */
 .title-tip{
-    background: url('/img/test/bg_tip.jpg')no-repeat;
+    background: url('/images/bg_tip.jpg')no-repeat;
     width: 100%;
     height: 250px;
     line-height: 210px;
@@ -2693,7 +2936,7 @@ $font_2: NotoSansKRRegular; //urls
 }
 .tip-body{
     overflow: hidden;
-    background: url(../img/test/line_01.png) repeat-x;
+    background: url('/images/line_01.png') repeat-x;
     background-position: left bottom;
     padding-bottom: 30px;
     &.col3{
@@ -2714,7 +2957,7 @@ $font_2: NotoSansKRRegular; //urls
             overflow: hidden;
             width: 100%;
             height: 220px;
-            background: url('../img/test/couple_01.jpg')no-repeat;
+            background: url('/images/couple_01.jpg')no-repeat;
             background-size: cover;
             background-position: center;
             img{
@@ -2775,7 +3018,7 @@ $font_2: NotoSansKRRegular; //urls
                 width: 60px;
                 height: 60px;
                 border: 2px solid #ccc;
-                background: url(../img/test/btn_more.png) no-repeat;
+                background: url('/images/btn_more.png') no-repeat;
                 background-position: center;
                 transition: .4s;
                 transform: translate3d(0, 0, 0);
@@ -2784,7 +3027,7 @@ $font_2: NotoSansKRRegular; //urls
                     width: 84%;
                     height: 60px;
                     border: 2px solid #d20038;
-                    background: url(../img/test/btn_more_more.png) no-repeat;
+                    background: url('/images/btn_more_more.png') no-repeat;
                     background-position: center;
                     transform: translate3d(0, 0, 0);
                 }
@@ -2944,7 +3187,7 @@ $font_2: NotoSansKRRegular; //urls
     display: block;
     position: absolute;
     cursor: pointer;
-    background: url('../img/test/btn_prev.png') no-repeat;
+    background: url('/images/btn_prev.png') no-repeat;
     overflow: hidden;
     z-index: 2;
     top: 0;
@@ -2958,7 +3201,7 @@ $font_2: NotoSansKRRegular; //urls
     display: block;
     position: absolute;
     cursor: pointer;
-    background: url('../img/test/btn_next.png') 0 0 no-repeat;
+    background: url('/images/btn_next.png') 0 0 no-repeat;
     overflow: hidden;
     z-index: 2;
     top: 0;
@@ -3006,7 +3249,7 @@ $font_2: NotoSansKRRegular; //urls
     }
 
     .deco {
-        background: url('../img/test/deco_06.png') no-repeat;
+        background: url('/images/deco_06.png') no-repeat;
         width: 205px;
         height: 50px;
         position: absolute;
@@ -3018,7 +3261,7 @@ $font_2: NotoSansKRRegular; //urls
 /* bot-banner END */
 
 /* layer popup */
-.tip-cp-layerpop-wrapper{
+.modal-layerpopup-wrapper{
     display: none;
     overflow: auto;
     position: fixed;
@@ -3027,7 +3270,10 @@ $font_2: NotoSansKRRegular; //urls
     width: 100%;
     height:100%;
     background:rgba(0,0,0,0.6);
+    z-index: 50;
 }
+/* layer popup END */
+
 .tip-cp-layerpop {
     background-color:#fff;
     color:#000;
@@ -3036,6 +3282,7 @@ $font_2: NotoSansKRRegular; //urls
     min-height: 500px;
     display: block;
     margin: 30px auto;
+
     .tcl-head{
         position: relative;
         width: 1080px;
@@ -3164,7 +3411,102 @@ $font_2: NotoSansKRRegular; //urls
         }
     }
 }
+/* grevin tip popup END */
 
-/* layer popup END */
+.gallery-modalpopup{
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+
+    .detail-images-slider-wrapper{
+        width: 1080px;
+        height: 615px;
+        position: relative;
+        margin: auto;
+
+        .arrow-gal{
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 1080px;
+            height: 615px;
+            z-index: 5;
+
+            &.prev-gal{
+                left: 50%;
+                margin-left: -1620px;
+            }
+
+            &.next-gal{
+                right: 50%;
+                margin-right: -1620px;
+            }
+        }
+
+        .slider{
+            width: 1080px;
+            height: 615px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include css3(transition,left 0.5s);
+
+            .box{
+                width: 1080px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #000;
+
+                img{
+                    opacity: 0.5;
+                    @include css3(transition,opacity 0.3s);
+                }
+
+
+                &.active{
+                    img{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .detail-info{
+        position: relative;
+        width: 1080px;
+        margin: 30px auto 0;
+
+        .close-modalpopup{
+            width: 55px;
+            height: 55px;
+            background:url('/images/btn_popup_close.png') 0 0 no-repeat;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        >*{
+            color: #fff;
+        }
+
+        .title{
+            margin-bottom: 15px;
+            font:300 30px/36px 'noto sans kr';
+        }
+
+        .date{
+            margin-bottom: 30px;
+            font:13px/13px 'nexa';
+        }
+
+        .description{
+
+        }
+    }
+}
+
 
 .dn{display: none;}

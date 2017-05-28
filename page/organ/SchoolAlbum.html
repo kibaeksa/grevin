@@ -12,80 +12,11 @@
 
         <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="/js/jquery/jquery-1.12.4.min.js"></script>
-        <script type="text/javascript" src="http://image.reebok.co.kr/js/jquery/easing/jquery.easing.1.3.js"></script>
-        <script src="/js/Swiper.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                var swipers0 = $('#slide-main').Swipers({
-                    width : 1900/*100 + '%'*/,
-                    height : 650,
-                    auto : true,
-                    loop : true,
-                    duration : 800,
-                    autoDuration : 1200,
-                    autoTime : 3000,
-                    callback : function(index){
-                        $('.control-m .num a').removeClass('on').eq(index).addClass('on');
-                    }
-                });
-
-                var swipers1 = $('#sm01').Swipers({
-                    width : 500,
-                    height : 380,
-                    auto : true,
-                    loop : true,
-                    duration : 800,
-                    callback : function(index){
-                        $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
-                    }
-                });
-
-                var swipers2 = $('#sm02').Swipers({
-                    width : 300,
-                    height : 380,
-                    auto : true,
-                    loop : true,
-                    duration : 800,
-                    callback : function(index){
-                        $('.control-02 .num a').removeClass('on').eq(index).addClass('on');
-                    }
-                });
-
-                $('.prev-01').bind('click',function(){swipers1.prev();});
-                $('.prev-02').bind('click',function(){swipers2.prev();});
-
-                $('.next-01').bind('click',function(){swipers1.next();});
-                $('.next-02').bind('click',function(){swipers2.next();});
-
-                $('.control-m .num a').bind('click',function(){
-                    swipers0.move($(this).index());
-                });
-                $('.control-01 .num a').bind('click',function(){
-                    swipers1.move($(this).index());
-                });
-                $('.control-02 .num a').bind('click',function(){
-                    swipers2.move($(this).index());
-                });
-
-                $('#head_banner').click(function(){
-                    $(this).slideUp();
-                });
-
-            });
-        </script>
 
     </head>
     <body>
         <div id="wrapper">
 
-            <!-- Top 배너 START -->
-            <div id="head_banner">
-                <div class="head_banner_inner">
-                    <a href="#"><img src="/images/btn_close_bn.jpg" alt="배너닫기버튼"></a>
-                    TOP BANNER
-                </div>
-            </div>
-            <!-- Top 배너 END -->
             <!-- Header START -->
             <div id="header">
                 <div class="header-top">
@@ -348,131 +279,36 @@
             </div>
             <!-- Header END -->
 
-            <!-- Main 슬라이드 START -->
-            <div class="slide-main-wrap">
-                <div class="content-inner">
-                    <div id="slide-main">
-                        <ul>
-                            <li><img src="/images/bg_main.jpg" alt=""></li>
-                            <li><img src="/images/bg_main.jpg" alt=""></li>
-                            <li><img src="/images/bg_main.jpg" alt=""></li>
-                            <li><img src="/images/bg_main.jpg" alt=""></li>
-                            <li><img src="/images/bg_main.jpg" alt=""></li>
-                        </ul>
-                    </div>
-                    <div class="control-m">
-                        <div class="num">
-                            <a href="javascript:void(0)" class="on"></a>
-                            <a href="javascript:void(0)"></a>
-                            <a href="javascript:void(0)"></a>
-                            <a href="javascript:void(0)"></a>
-                            <a href="javascript:void(0)"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Main 슬라이드 END -->
-
-            <div class="today_schedule">
-                <div class="content-inner">
-                    <dl>
-                        <dt>오늘의 관람시간</dt>
-                        <dd>
-                            OPEN 09:30 AM ~ CLOSE 07:00 PM<span>(입장 마감 06:15 PM)</span>
-                        </dd>
-                    </dl>
-                    <a href="#">이번달 관람시간 확인하기</a>
-                </div>
-            </div>
-            <!-- Aside floor START -->
-            <div id="aside-floor">
-                <a href="#"><img src="/images/aside_floor.jpg" alt=""></a>
-            </div>
-            <!-- Aside floor END -->
-
             <div id="contents" class="w-fix">
 
-                <!-- 컨텐츠 start -->
-                <div class="article-main">
-                    <ul class="icon-box">
-                        <li>
-                            <img src="/images/icon_01.png" alt="">
-                            <h3>시간 안내</h3>
-                            <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                        </li>
-                        <li>
-                            <img src="/images/icon_02.png" alt="">
-                            <h3>예매하기</h3>
-                            <p>온라인 에매시 2,000원 할인 혜택</p>
-                        </li>
-                        <li>
-                            <img src="/images/icon_03.png" alt="">
-                            <h3>대관 안내</h3>
-                            <p>품격있고 프라이빗한 비즈니스 공간</p>
-                        </li>
-                        <li>
-                            <img src="/images/icon_04.png" alt="">
-                            <h3>오시는 길</h3>
-                            <p>그레벵으로 떠나는 특별한 여행</p>
-                        </li>
-                    </ul>
+                <!-- 타이틀 기본형 START -->
+                <div class="title-basic">
+                    <h2>사진 및 영상앨범</h2>
+                    <span>HOME <img src="/images/gt.png" alt=""> 학교단체 <img src="/images/gt.png" alt=""> 사진 및 영상앨범</span>
                 </div>
+                <!-- 타이틀 기본형 END -->
 
-                <div class="article-main">
-                    <h2>UPCOMING <strong>EVENT</strong></h2>
-                    <div class="slider-wrapper upcoming-event-slider">
-                        <div class="num-wrapper">
-                            <strong>1</strong>
-                            <span> / 2</span>
-                        </div>
-                        <div class="arrow-wrapper">
-                            <a href="" class="prev"></a>
-                            <a href="" class="next"></a>
-                        </div>
-                        <ul>
-                            <li>
-                                <div class="box">
-                                    <div class="img">
-                                        <a href="#"><img src="/images/temp_main_banner_1.jpg" alt=""></a>
-                                    </div>
-                                    <p class="date">2016 .10 .31</p>
-                                    <p class="title"><a href="#">그레뱅 뮤지엄 할로윈 스페셜 오픈</a></p>
-                                    <p class="desc">할로윈을 맞아 그레뱅 뮤지엄에서 특별히 준비한 좀비 투어가 곧 시작됩니다!</p>
-                                </div>
-                                <div class="box last">
-                                    <div class="img">
-                                        <a href="#"><img src="/images/temp_main_banner_2.jpg" alt=""></a>
-                                    </div>
-                                    <p class="date">2016 .10 .31</p>
-                                    <p class="title"><a href="#">트럼프 대통령 밀랍인형 공개</a></p>
-                                    <p class="desc">프랑스 파리에서 제작 된 트럼프 밀랍인형이 그레뱅 서울 뮤지엄으로 입성했습니다.</p>
-                                </div>
-                            </li>
-                        </ul>
-
+                <div class="grevin-gallery" id="grevinGallery">
+                    <!-- <div class="box">
+                        <a href="javascript:void(0)">
+                            <img src="/images/temp_album1.jpg" alt="">
+                            <div class="layer">
+                                <p class="date">2017. 04. 18</p>
+                                <p class="title">그레뱅 레이어 제목입니다. 클릭 시 상세 레이어가 나옵니다.</p>
+                            </div>
+                            <span class="icon-video"></span>
+                        </a>
                     </div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div>
+                    <div class="box"><a href="javascript:void(0)"><img src="/images/temp_album2.jpg" alt=""></a></div> -->
                 </div>
-                <!--슬라이드-->
-
-                <div class="article-main">
-                    <div class="con-box" style="width:; float:left;">
-                        <h2><strong>CAFE</strong> GREVIN</h2>
-                        <div>
-                            <img src="/images/cafe_01.jpg" alt="" style="margin-right:10px;">
-                            <img src="/images/cafe_02.jpg" alt="">
-                        </div>
-                    </div>
-
-                    <div class="con-box" style="width:; float:right;">
-                        <h2>GREVIN <strong>BOUTIQUE</strong></h2>
-                        <div>
-                            <img src="/images/boutique_01.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-deco x01"><img src="/images/deco_m01.png" alt=""></div>
-                <div class="bg-deco x02"><img src="/images/deco_04.png" alt=""></div>
 
             </div>
 
@@ -551,10 +387,251 @@
                 </div>
 
             </div>
-
-
         </div>
 
+        <!-- <div class="modal-layerpopup-wrapper" style="display: block;">
+            <div class="gallery-modalpopup">
+                <div class="detail-images-slider-wrapper">
+                    <div class="slider">
+                        <div class="box" style="left: -1080px;"><img src="/images/temp_gallery_detail1.jpg" alt=""/></div>
+                        <div class="box active"><img src="/images/temp_gallery_detail2.jpg" alt=""/></div>
+                        <div class="box" style="left: 1080px;"><img src="/images/temp_gallery_detail3.jpg" alt=""/></div>
+                    </div>
+                </div>
+
+                <div class="detail-info">
+                    <a href="javascript:void(0)" class="close-modalpopup"></a>
+                    <div class="title">제목</div>
+                    <div class="date">19782</div>
+                    <div class="description">설명</div>
+                </div>
+            </div>
+        </div> -->
+
         <script src="/js/frontCommon.js"></script>
+        <script type="text/javascript">
+
+
+            (function(){
+                var galleryObj = [
+                    {
+                        date : '2017 .04 .18',
+                        title : '오버 시 제목과 날짜를 보여줍니다.',
+                        thumbImage : '/images/temp_album1.jpg',
+                        detailImage : '/images/temp_gallery_detail1.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>',
+                        ytbId : '2VDs5I4nNwM'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '두번 쨰 아티클입니다.',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail2.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '세번 쨰 아티클',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail3.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '네번 쨰 아티클',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail1.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '다섯번 쨰 아티클',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail2.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '여섯번 쨰 아티클',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail3.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    },
+                    {
+                        date : '2017 .03 .18',
+                        title : '일곱번 쨰 아티클',
+                        thumbImage : '/images/temp_album2.jpg',
+                        detailImage : '/images/temp_gallery_detail1.jpg',
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                    }
+                ];
+                var isAnimating = false;
+
+                function handleGalleryBox(event){
+                    $(this).addClass('active');
+                    initGalleryLayer($(this).parent().attr('data-key'));
+                }
+
+                function initGalleryLayer(objIndex){
+                    objIndex *= 1;
+                    var htmlString = '<div id="galleryModalpopup" class="modal-layerpopup-wrapper" style="display:block;" data-index="'+objIndex+'">';
+                    htmlString += '    <div class="gallery-modalpopup">';
+                    htmlString += '        <div class="detail-images-slider-wrapper">';
+                    htmlString += '        <a href="javascript:void(0)" class="arrow-gal prev-gal"></a>';
+                    htmlString += '        <a href="javascript:void(0)" class="arrow-gal next-gal"></a>';
+                    htmlString += '            <div class="slider_wrapper">';
+                    htmlString += '            <div class="slider">';
+                    if(objIndex > 0){
+                        htmlString += '        <div class="box" style="left:-1080px;"><img src="'+galleryObj[objIndex-1].detailImage+'" alt=""/></div>';
+                    }
+                    htmlString += '        <div class="box active"><img src="'+galleryObj[objIndex].detailImage+'" alt=""/></div>';
+                    if(objIndex < galleryObj.length-1){
+                        htmlString += '        <div class="box" style="left:1080px;"><img src="'+galleryObj[objIndex+1].detailImage+'" alt=""/></div>';
+                    }
+                    htmlString += '                ';
+                    htmlString += '            </div>';
+                    htmlString += '            </div>';
+                    htmlString += '        </div>';
+                    htmlString += '        <div class="detail-info">';
+                    htmlString += '            <a href="javascript:void(0)" class="close-modalpopup"></a>';
+                    htmlString += '            <div class="title">'+galleryObj[objIndex].title+'</div>';
+                    htmlString += '            <div class="date">'+galleryObj[objIndex].date+'</div>';
+                    // htmlString += '            <div class="description">'+galleryObj[objIndex].contents+'</div>';
+                    htmlString += '        </div>';
+                    htmlString += '    </div>';
+                    htmlString += '</div>';
+
+                    $('body').append(htmlString);
+
+                    $('#galleryModalpopup .close-modalpopup').bind('click',function(){
+                        $('#grevinGallery>.box>a').removeClass('active');
+                        $('#galleryModalpopup').remove();
+                    });
+
+                    $('#galleryModalpopup .prev-gal').bind('click',handlePrevGallery);
+                    $('#galleryModalpopup .next-gal').bind('click',handleNextGallery);
+                }
+
+                function handlePrevGallery(){
+                    var index = $('#galleryModalpopup').attr('data-index') * 1;
+                    if(index == 0 || isAnimating){
+                        return;
+                    }
+                    isAnimating = true;
+
+                    if(index > 1){
+                        var htmlString = '<div class="box" style="left:-2160px;"><img src="'+galleryObj[index-2].detailImage+'" alt=""/></div>'
+                    }
+
+                    $('#galleryModalpopup').attr('data-index',index-1);
+                    $('#galleryModalpopup .slider>.box').removeClass('active').eq(0).addClass('active');
+
+                    setGalleryInfo(index-1);
+
+                    $('#galleryModalpopup .slider').prepend(htmlString).css({
+                        left  : 1080
+                    });
+
+                    setTimeout(function(){
+                        var htmlString = '<div class="slider">';
+                        var posArray = [
+                            '-1080',
+                            '0',
+                            '1080'
+                        ];
+                        for(var i = 0 , index = $('#galleryModalpopup').attr('data-index') * 1 - 1; i < 3; i++ , index++){
+                            if(index < 0){
+                                continue;
+                            }
+                            if(i == 1){
+                                htmlString += '<div class="box active" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                            }else{
+                                htmlString += '<div class="box" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                            }
+                        }
+                        htmlString += '</div>';
+                        $('#galleryModalpopup .slider_wrapper').html(htmlString);
+
+                        isAnimating = false;
+                    },500);
+
+                }
+
+                function handleNextGallery(){
+                    var index = $('#galleryModalpopup').attr('data-index') * 1;
+                    if(index == galleryObj.length-1 ||  isAnimating){
+                        return;
+                    }
+                    isAnimating = true;
+                    var activeIndex = index == 0 ? 1 : 2;
+
+                    if(index < galleryObj.length - 2){
+                        var htmlString = '<div class="box" style="left:2160px;"><img src="'+galleryObj[index+2].detailImage+'" alt=""/></div>'
+                    }
+
+                    $('#galleryModalpopup').attr('data-index',index+1);
+                    $('#galleryModalpopup .slider>.box').removeClass('active').eq(activeIndex).addClass('active');
+
+                    setGalleryInfo(index+1);
+
+                    $('#galleryModalpopup .slider').append(htmlString).css({
+                        left  : -1080
+                    });
+
+                    setTimeout(function(){
+                        var htmlString = '<div class="slider">';
+                        var posArray = [
+                            '-1080',
+                            '0',
+                            '1080'
+                        ];
+                        for(var i = 0 , index = $('#galleryModalpopup').attr('data-index') * 1 - 1; i < 3; i++ , index++){
+                            if(index > galleryObj.length-1){
+                                continue;
+                            }
+                            if(i == 1){
+                                htmlString += '<div class="box active" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                            }else{
+                                htmlString += '<div class="box" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                            }
+                        }
+                        htmlString += '</div>';
+                        $('#galleryModalpopup .slider_wrapper').html(htmlString);
+
+                        isAnimating = false;
+                    },500);
+                }
+
+                function setGalleryInfo(objIndex){
+                    $('#galleryModalpopup .detail-info .title').html(galleryObj[objIndex].title);
+                    $('#galleryModalpopup .detail-info .date').html(galleryObj[objIndex].date);
+                }
+
+                function renderGallery(){
+                    var i = 0,
+                        htmlString = '';
+                    for(; i < galleryObj.length; i++){
+                        htmlString += '<div class="box" data-key="'+i+'"><a href="javascript:void(0)">';
+                        htmlString += '<img src="'+galleryObj[i].thumbImage+'" alt=""/>';
+                        htmlString += '<div class="layer">';
+                        htmlString += '    <p class="date">'+galleryObj[i].date+'</p>';
+                        htmlString += '    <p class="title">'+galleryObj[i].title+'</p>';
+                        htmlString += '</div>';
+                        if(galleryObj[i].ytbId != undefined){
+                            htmlString += '<span class="icon-video"></span>';
+                        }
+                        htmlString += '</a></div>';
+                    }
+
+                    $('#grevinGallery').html(htmlString);
+                    $('#grevinGallery>.box>a').bind('click',handleGalleryBox);
+                }
+
+                renderGallery();
+
+                // grevin-gallery
+            })();
+        </script>
+
     </body>
 </html>

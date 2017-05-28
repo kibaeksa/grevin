@@ -8,7 +8,7 @@ $.fn.openLayerPopup = function(options){
 }
 
 var bClose = function (){
-  $('.tip-cp-layerpop-wrapper').hide();
+  $('.modal-layerpopup-wrapper').hide();
 
   $('body').css({
       position:'relative',
