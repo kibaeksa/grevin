@@ -470,6 +470,7 @@
                 function initGalleryLayer(objIndex){
                     objIndex *= 1;
                     var htmlString = '<div id="galleryModalpopup" class="modal-layerpopup-wrapper" style="display:block;" data-index="'+objIndex+'">';
+                    htmlString += '    <div class="overlay" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>';
                     htmlString += '    <div class="gallery-modalpopup">';
                     htmlString += '        <div class="detail-images-slider-wrapper">';
                     htmlString += '        <a href="javascript:void(0)" class="arrow-gal prev-gal"></a>';
@@ -496,11 +497,18 @@
                     htmlString += '    </div>';
                     htmlString += '</div>';
 
-                    $('body').append(htmlString);
+                    $('body').append(htmlString).css({
+                        position:'relative',
+                        overflow:'hidden'
+                    });
 
-                    $('#galleryModalpopup .close-modalpopup').bind('click',function(){
+                    $('#galleryModalpopup .close-modalpopup , #galleryModalpopup .overlay').bind('click',function(){
                         $('#grevinGallery>.box>a').removeClass('active');
                         $('#galleryModalpopup').remove();
+                        $('body').css({
+                            position:'relative',
+                            overflow:'visible'
+                        });
                     });
 
                     $('#galleryModalpopup .prev-gal').bind('click',handlePrevGallery);
