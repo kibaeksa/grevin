@@ -1532,7 +1532,7 @@ $font_2: NotoSansKRRegular; //urls
             ul{
                 width: 1000%;
                 position: absolute;
-                top: 0;
+                top: inherit;
                 left: 0;
 
                 li{
@@ -1560,12 +1560,18 @@ $font_2: NotoSansKRRegular; //urls
 
                 }
 
-                .prev{
+                .prev,
+                .prev-01,
+                .prev-03,
+                .prev-04{
                     border-right: 1px solid #e3e7ee;
                     background:url('/images/btn_main_arrow_prev.jpg') 0 0 no-repeat;
                 }
 
-                .next{
+                .next,
+                .next-01,
+                .next-03,
+                .next-04{
                     background:url('/images/btn_main_arrow_next.jpg') 0 0 no-repeat;
                 }
             }
@@ -1619,6 +1625,126 @@ $font_2: NotoSansKRRegular; //urls
                         .desc{
                             font-size: 14px;
                             color: #222;
+                        }
+                    }
+                }
+            }
+            &.grevin-cafe{
+                width: 525px;
+                height: 340px;
+
+                .num-wrapper{
+                    position: absolute;
+                    right: 70px;
+                    top: -33px;
+                }
+
+                .arrow-wrapper{
+                    position: absolute;
+                    right: 0;
+                    top: -38px;
+                }
+
+                li{
+                    width: 525px;
+                    height: 290px;
+
+                    @extend %clfix;
+
+                    .box{
+                        float: left;
+
+                        .img{
+                            float: left;
+                        }
+
+                        .text_area{
+                            float: right;
+                            width: 260px;
+                            height: 290px;
+                            padding: 85px 40px 0;
+                            background-color: #c7a136;
+                            @extend %extend_2;
+                            .ta-01{
+                                margin-bottom: 15px;
+                                font: 12px 'nexa';
+                                color: #fff;
+                                letter-spacing: 0.075em;
+                            }
+
+                            .ta-02{
+                                margin-bottom: 10px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 22px;
+                                color: #fff;
+                            }
+
+                            .ta-03{
+                                font-size: 14px;
+                                color: #fff;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.grevin-shop{
+                width: 525px;
+                height: 340px;
+
+                .num-wrapper{
+                    position: absolute;
+                    right: 70px;
+                    top: -33px;
+                }
+
+                .arrow-wrapper{
+                    position: absolute;
+                    right: 0;
+                    top: -38px;
+                }
+
+                li{
+                    width: 525px;
+                    height: 290px;
+
+                    @extend %clfix;
+
+                    .box{
+                        float: left;
+
+                        .img{
+                            float: left;
+                        }
+
+                        .text_area{
+                            float: right;
+                            width: 260px;
+                            height: 290px;
+                            padding: 85px 40px 0;
+                            background-color: #d20038;
+                            @extend %extend_2;
+                            .ta-01{
+                                margin-bottom: 15px;
+                                font: 12px 'nexa';
+                                color: #fff;
+                                letter-spacing: 0.075em;
+                            }
+
+                            .ta-02{
+                                margin-bottom: 10px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: 22px;
+                                color: #fff;
+                            }
+
+                            .ta-03{
+                                font-size: 14px;
+                                color: #fff;
+                                line-height: 20px;
+                            }
                         }
                     }
                 }
@@ -1714,7 +1840,7 @@ $font_2: NotoSansKRRegular; //urls
             overflow: hidden;
             .slider-wrapper{
                 width: 525px;
-                height: 290px;
+                // height: 290px;
                 position: relative;
                 float: left;
 

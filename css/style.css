@@ -132,7 +132,7 @@ img {
   position: relative;
   margin: 0 auto; }
 
-#header .header-content #global-navigation > ul::after, #header .gnb-contents-wrapper .gnb-content::after, .grevin-gallery::after, .today_schedule dl::after, #contents .article-main .slider-wrapper .arrow-wrapper::after, #contents .article-main .slider-wrapper.upcoming-event-slider li::after, #contents .article-main .sns-hub-wrapper .grevin-social::after {
+#header .header-content #global-navigation > ul::after, #header .gnb-contents-wrapper .gnb-content::after, .grevin-gallery::after, .today_schedule dl::after, #contents .article-main .slider-wrapper .arrow-wrapper::after, #contents .article-main .slider-wrapper.upcoming-event-slider li::after, #contents .article-main .slider-wrapper.grevin-cafe li::after, #contents .article-main .slider-wrapper.grevin-shop li::after, #contents .article-main .sns-hub-wrapper .grevin-social::after {
   content: '';
   display: block;
   height: 0;
@@ -148,7 +148,7 @@ img {
     700 Bold
     900 Black
 */
-.place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1242,7 +1242,7 @@ img {
       #contents .article-main .slider-wrapper ul {
         width: 1000%;
         position: absolute;
-        top: 0;
+        top: inherit;
         left: 0; }
         #contents .article-main .slider-wrapper ul li {
           float: left; }
@@ -1258,10 +1258,16 @@ img {
           height: 23px;
           display: block;
           float: left; }
-        #contents .article-main .slider-wrapper .arrow-wrapper .prev {
+        #contents .article-main .slider-wrapper .arrow-wrapper .prev,
+        #contents .article-main .slider-wrapper .arrow-wrapper .prev-01,
+        #contents .article-main .slider-wrapper .arrow-wrapper .prev-03,
+        #contents .article-main .slider-wrapper .arrow-wrapper .prev-04 {
           border-right: 1px solid #e3e7ee;
           background: url("/images/btn_main_arrow_prev.jpg") 0 0 no-repeat; }
-        #contents .article-main .slider-wrapper .arrow-wrapper .next {
+        #contents .article-main .slider-wrapper .arrow-wrapper .next,
+        #contents .article-main .slider-wrapper .arrow-wrapper .next-01,
+        #contents .article-main .slider-wrapper .arrow-wrapper .next-03,
+        #contents .article-main .slider-wrapper .arrow-wrapper .next-04 {
           background: url("/images/btn_main_arrow_next.jpg") 0 0 no-repeat; }
       #contents .article-main .slider-wrapper.upcoming-event-slider {
         width: 1080px;
@@ -1295,6 +1301,84 @@ img {
             #contents .article-main .slider-wrapper.upcoming-event-slider li .box .desc {
               font-size: 14px;
               color: #222; }
+      #contents .article-main .slider-wrapper.grevin-cafe {
+        width: 525px;
+        height: 340px; }
+        #contents .article-main .slider-wrapper.grevin-cafe .num-wrapper {
+          position: absolute;
+          right: 70px;
+          top: -33px; }
+        #contents .article-main .slider-wrapper.grevin-cafe .arrow-wrapper {
+          position: absolute;
+          right: 0;
+          top: -38px; }
+        #contents .article-main .slider-wrapper.grevin-cafe li {
+          width: 525px;
+          height: 290px; }
+          #contents .article-main .slider-wrapper.grevin-cafe li .box {
+            float: left; }
+            #contents .article-main .slider-wrapper.grevin-cafe li .box .img {
+              float: left; }
+            #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area {
+              float: right;
+              width: 260px;
+              height: 290px;
+              padding: 85px 40px 0;
+              background-color: #c7a136; }
+              #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area .ta-01 {
+                margin-bottom: 15px;
+                font: 12px 'nexa';
+                color: #fff;
+                letter-spacing: 0.075em; }
+              #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area .ta-02 {
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                color: #fff; }
+              #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area .ta-03 {
+                font-size: 14px;
+                color: #fff;
+                line-height: 20px; }
+      #contents .article-main .slider-wrapper.grevin-shop {
+        width: 525px;
+        height: 340px; }
+        #contents .article-main .slider-wrapper.grevin-shop .num-wrapper {
+          position: absolute;
+          right: 70px;
+          top: -33px; }
+        #contents .article-main .slider-wrapper.grevin-shop .arrow-wrapper {
+          position: absolute;
+          right: 0;
+          top: -38px; }
+        #contents .article-main .slider-wrapper.grevin-shop li {
+          width: 525px;
+          height: 290px; }
+          #contents .article-main .slider-wrapper.grevin-shop li .box {
+            float: left; }
+            #contents .article-main .slider-wrapper.grevin-shop li .box .img {
+              float: left; }
+            #contents .article-main .slider-wrapper.grevin-shop li .box .text_area {
+              float: right;
+              width: 260px;
+              height: 290px;
+              padding: 85px 40px 0;
+              background-color: #d20038; }
+              #contents .article-main .slider-wrapper.grevin-shop li .box .text_area .ta-01 {
+                margin-bottom: 15px;
+                font: 12px 'nexa';
+                color: #fff;
+                letter-spacing: 0.075em; }
+              #contents .article-main .slider-wrapper.grevin-shop li .box .text_area .ta-02 {
+                margin-bottom: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                color: #fff; }
+              #contents .article-main .slider-wrapper.grevin-shop li .box .text_area .ta-03 {
+                font-size: 14px;
+                color: #fff;
+                line-height: 20px; }
     #contents .article-main .sns-hub-wrapper {
       padding: 55px 0 45px;
       background: #f5f5f5; }
@@ -1351,7 +1435,6 @@ img {
       overflow: hidden; }
       #contents .article-main .grevin-service-wrapper .slider-wrapper {
         width: 525px;
-        height: 290px;
         position: relative;
         float: left; }
         #contents .article-main .grevin-service-wrapper .slider-wrapper.grevin-shop {

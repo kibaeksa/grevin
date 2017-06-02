@@ -29,33 +29,48 @@
                     }
                 });
 
-                var swipers1 = $('#sm01').Swipers({
-                    width : 500,
-                    height : 380,
-                    auto : true,
+                // var swipers1 = $('#slide-event').Swipers({
+                //     width : 1080,
+                //     height : 326,
+                //     auto : false,
+                //     loop : true,
+                //     duration : 800,
+                //     callback : function(index){
+                //         $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
+                //     }
+                // });
+
+                var swipers3 = $('#slide-cafe').Swipers({
+                    width : 525,
+                    height : 290,
+                    auto : false,
                     loop : true,
                     duration : 800,
                     callback : function(index){
-                        $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
+                        $('.control-03 .num a').removeClass('on').eq(index).addClass('on');
                     }
                 });
 
-                var swipers2 = $('#sm02').Swipers({
-                    width : 300,
-                    height : 380,
-                    auto : true,
+                var swipers4 = $('#slide-shop').Swipers({
+                    width : 525,
+                    height : 290,
+                    auto : false,
                     loop : true,
                     duration : 800,
                     callback : function(index){
-                        $('.control-02 .num a').removeClass('on').eq(index).addClass('on');
+                        $('.control-04 .num a').removeClass('on').eq(index).addClass('on');
                     }
                 });
 
-                $('.prev-01').bind('click',function(){swipers1.prev();});
-                $('.prev-02').bind('click',function(){swipers2.prev();});
+                //$('.prev-01').bind('click',function(){swipers1.prev();});
+                //$('.prev-02').bind('click',function(){swipers2.prev();});
+                $('.prev-03').bind('click',function(){swipers3.prev();});
+                $('.prev-04').bind('click',function(){swipers4.prev();});
 
-                $('.next-01').bind('click',function(){swipers1.next();});
-                $('.next-02').bind('click',function(){swipers2.next();});
+                //$('.next-01').bind('click',function(){swipers1.next();});
+                //$('.next-02').bind('click',function(){swipers2.next();});
+                $('.next-03').bind('click',function(){swipers3.next();});
+                $('.next-04').bind('click',function(){swipers4.next();});
 
                 $('.control-m .num a').bind('click',function(){
                     swipers0.move($(this).index());
@@ -468,10 +483,10 @@
                                 <span> / 2</span>
                             </div>
                             <div class="arrow-wrapper">
-                                <a href="" class="prev"></a>
-                                <a href="" class="next"></a>
+                                <a href="#;" class="prev-01"></a>
+                                <a href="#;" class="next-01"></a>
                             </div>
-                            <ul>
+                            <ul id="slide-event">
                                 <li>
                                     <div class="box">
                                         <div class="img">
@@ -532,14 +547,35 @@
                                     <span> / 2</span>
                                 </div>
                                 <div class="arrow-wrapper">
-                                    <a href="" class="prev"></a>
-                                    <a href="" class="next"></a>
+                                    <a href="#;" class="prev-03"></a>
+                                    <a href="#;" class="next-03"></a>
                                 </div>
 
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                <ul id="slide-cafe">
+                                    <li>
+                                        <div class="box">
+                                            <div class="img">
+                                                <a href="#"><img src="/images/temp_banner_cafe.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="ta-01">NEW MENU</p>
+                                                <p class="ta-02">바베큐 치킨 & 리코타 바질<br>피자 타르트 플랑베</p>
+                                                <p class="ta-03">바삭함과 담백함이 일품인 유럽인들이 사랑하는 플랑베</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img">
+                                                <a href="#"><img src="/images/temp_banner_cafe.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="ta-01">NEW MENU</p>
+                                                <p class="ta-02">바베큐 치킨 & 리코타 바질<br>피자 타르트 플랑베</p>
+                                                <p class="ta-03">바삭함과 담백함이 일품인 유럽인들이 사랑하는 플랑베</p>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -550,14 +586,35 @@
                                     <span> / 2</span>
                                 </div>
                                 <div class="arrow-wrapper">
-                                    <a href="" class="prev"></a>
-                                    <a href="" class="next"></a>
+                                    <a href="#;" class="prev-04"></a>
+                                    <a href="#;" class="next-04"></a>
                                 </div>
 
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                <ul id="slide-shop">
+                                    <li>
+                                        <div class="box">
+                                            <div class="img">
+                                                <a href="#"><img src="/images/temp_banner_shop.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="ta-01">NEW ITEM</p>
+                                                <p class="ta-02">빅뱅 데뷔 10주년 기념<br>스페셜 MD 입고!</p>
+                                                <p class="ta-03">YG ESHOPD에서 품절되었던 화재의 베어 손거울 판매!</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img">
+                                                <a href="#"><img src="/images/temp_banner_shop.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text_area">
+                                                <p class="ta-01">NEW ITEM</p>
+                                                <p class="ta-02">빅뱅 데뷔 10주년 기념<br>스페셜 MD 입고!</p>
+                                                <p class="ta-03">YG ESHOPD에서 품절되었던 화재의 베어 손거울 판매!</p>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
 
