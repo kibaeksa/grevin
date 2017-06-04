@@ -29,17 +29,6 @@
                     }
                 });
 
-                // var swipers1 = $('#slide-event').Swipers({
-                //     width : 1080,
-                //     height : 326,
-                //     auto : false,
-                //     loop : true,
-                //     duration : 800,
-                //     callback : function(index){
-                //         $('.control-01 .num a').removeClass('on').eq(index).addClass('on');
-                //     }
-                // });
-
                 var swipers3 = $('#slide-cafe').Swipers({
                     width : 525,
                     height : 290,
@@ -48,6 +37,7 @@
                     duration : 800,
                     callback : function(index){
                         $('.control-03 .num a').removeClass('on').eq(index).addClass('on');
+                        $('.grevin-cafe .num-wrapper strong').text(index+1);
                     }
                 });
 
@@ -59,6 +49,7 @@
                     duration : 800,
                     callback : function(index){
                         $('.control-04 .num a').removeClass('on').eq(index).addClass('on');
+                        $('.grevin-shop .num-wrapper strong').text(index+1);
                     }
                 });
 
@@ -400,18 +391,52 @@
             <!-- Header END -->
 
 
-
-            <!-- Aside floor START -->
-            <div id="aside-floor">
-                <a href="#"><img src="/images/aside_floor.jpg" alt=""></a>
-            </div>
-            <!-- Aside floor END -->
-
             <div id="contents">
                 <!-- 컨텐츠 start -->
 
                 <!-- Main 슬라이드 START -->
                 <div class="slide-main-wrap">
+                    <div class="aside-floor">
+                        <a href="javascript:void(0)"><img src="/images/aside_floor.jpg" alt=""></a>
+                        <div class="floor-contents">
+                            <div class="bg_line"><img src="/images/bg_floor_line.jpg" alt=""></div>
+                            <div class="bg_text"><img src="/images/bg_floor_text.jpg" alt=""></div>
+                            <a href="javascript:void(0)" class="close"><img src="/images/floor_pop_close.jpg"/></a>
+                            <h2>층별안내</h2>
+                            <ul>
+                                <li>
+                                    <div class="num">F4</div>
+                                    <dl>
+                                        <dt><span>4th</span> floor</dt>
+                                        <dd>평화의 지도자, 한국의 위인, 세기의 천재들을 만날 수있고<br/>시네마 천국에 들어온 듯 영화의 한 장면을 재현한 공간</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <div class="num">F3</div>
+                                    <dl>
+                                        <dt><span>3th</span> floor</dt>
+                                        <dd>대통령 전용기와 파리의 명소는 물론 밀랍인형의 탄생과정을<br/>확인하고 예술가와 스포츠의 정상들을 만날 수 있는 공간</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <div class="num">F2</div>
+                                    <dl>
+                                        <dt><span>2th</span> floor</dt>
+                                        <dd>세계적인 패션디자이너와 패셔니 스타는 물론 헐리웃 스타,<br/>한류의 주역들까지 한 자리에서 만날 수 있는 공간</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <div class="num">F1</div>
+                                    <dl>
+                                        <dt><span>1th</span> floor</dt>
+                                        <dd>서울 도심 속 리얼 유러피안 키친 카페 그레뱅과,<br/>뮤지엄 방문을 기념할 수 있는 그레뱅 부띠크</dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                            <a href="#" class="link">그레뱅 뮤지엄 층별안내 자세히 보기 &nbsp;&nbsp;&gt;</a>
+                        </div>
+                    </div>
+
                     <div class="content-inner">
                         <div id="slide-main">
                             <ul>
@@ -522,14 +547,18 @@
                                 <li class="ytb last"><a href="#">YOU TUBE</a></li>
                             </ul>
                             <div class="slider-wrapper">
-                                <ul>
-                                    <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
-                                    <li><a href="#"><img src="/images/snshub_banner2.png" alt=""></a></li>
-                                    <li><a href="#"><img src="/images/snshub_banner3.png" alt=""></a></li>
-                                    <li><a href="#"><img src="/images/snshub_banner4.png" alt=""></a></li>
-                                    <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
-                                    <li><a href="#"><img src="/images/snshub_banner2.png" alt=""></a></li>
-                                </ul>
+                                <a href="javascript:void(0)" class="prev disable"><img src="/images/arrow_prev.png" alt=""></a>
+                                <a href="javascript:void(0)" class="next"><img src="/images/arrow_next.png" alt=""></a>
+                                <div class="slider-wrapper-inner">
+                                    <ul>
+                                        <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
+                                        <li><a href="#"><img src="/images/snshub_banner2.png" alt=""></a></li>
+                                        <li><a href="#"><img src="/images/snshub_banner3.png" alt=""></a></li>
+                                        <li><a href="#"><img src="/images/snshub_banner4.png" alt=""></a></li>
+                                        <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
+                                        <li><a href="#"><img src="/images/snshub_banner2.png" alt=""></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -708,5 +737,57 @@
         </div>
 
         <script src="/js/frontCommon.js"></script>
+        <script type="text/javascript">
+            (function(){
+                var elemContainer = $('.sns-hub-wrapper .slider-wrapper');
+                var index = 0;
+                var itemDisplayed = 4;
+                var length = elemContainer.find('li').length;
+
+                elemContainer.find('.prev').bind('click',function(){
+                    if($(this).hasClass('disable')){
+                        return;
+                    }
+
+                    elemContainer.find('.next').removeClass('disable');
+
+                    index--;
+                    elemContainer.find('ul').stop().animate({
+                        left : index * -260
+                    });
+
+                    if(index == 0){
+                        $(this).addClass('disable');
+                    }
+                });
+
+                elemContainer.find('.next').bind('click',function(){
+                    if($(this).hasClass('disable')){
+                        return;
+                    }
+
+                    elemContainer.find('.prev').removeClass('disable');
+
+                    index++;
+                    elemContainer.find('ul').stop().animate({
+                        left : index * -260
+                    });
+
+                    if(length == index + itemDisplayed){
+                        $(this).addClass('disable');
+                    }
+                });
+
+            })();
+
+            $('.aside-floor>a').bind('click',function(){
+                $(this).parent().addClass('open');
+            });
+
+            $('.aside-floor .floor-contents .close').bind('click',function(){
+                $('.aside-floor').removeClass('open');
+            });
+
+        </script>
     </body>
 </html>
