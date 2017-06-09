@@ -720,6 +720,7 @@ $font_2: NotoSansKRRegular; //urls
         h2{
             font-size: 35px;
             font-weight: 200;
+            line-height: 44px;
             color: #222;
             margin-bottom: 30px;
         }
@@ -955,8 +956,8 @@ $font_2: NotoSansKRRegular; //urls
         text-align: center;
         .step-circle2{
             display: inline-block;
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background-color: #dda813;
             margin-top: 5px;
