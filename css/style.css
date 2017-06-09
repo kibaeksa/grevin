@@ -148,7 +148,7 @@ img {
     700 Bold
     900 Black
 */
-.place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.about-wax .about-step .step-box .step-img, .about-wax .about-step .step-box .step-text, .place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -559,6 +559,261 @@ img {
 /*** footer END ***/
 .header_line {
   border-top: 9px solid #d20038; }
+
+/***** about *****/
+.about-grevin {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  margin-top: 50px; }
+  .about-grevin .about-img-01 {
+    position: absolute;
+    top: 30px;
+    left: 0; }
+  .about-grevin .about-img-02 {
+    position: absolute;
+    top: 460px;
+    left: 30px; }
+    .about-grevin .about-img-02 :nth-child(2) {
+      position: absolute;
+      top: -50px;
+      left: -87px; }
+    .about-grevin .about-img-02 :nth-child(3) {
+      position: absolute;
+      bottom: -80px;
+      right: 20px;
+      z-index: -1; }
+  .about-grevin .about-img-03 {
+    position: absolute;
+    top: 490px;
+    right: 0; }
+    .about-grevin .about-img-03 .deco {
+      position: absolute;
+      top: -150px;
+      right: 30px;
+      z-index: -1; }
+  .about-grevin .about-text {
+    position: absolute;
+    top: 0;
+    left: 310px; }
+    .about-grevin .about-text .box {
+      margin-bottom: 50px; }
+      .about-grevin .about-text .box h3 {
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        line-height: 34px;
+        color: #222; }
+      .about-grevin .about-text .box p.desc {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #666;
+        margin-bottom: 20px; }
+
+.about-wax .about-text {
+  position: relative;
+  margin-top: 50px;
+  text-align: center; }
+  .about-wax .about-text h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #222;
+    margin-bottom: 30px; }
+  .about-wax .about-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    margin-bottom: 15px; }
+  .about-wax .about-text span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #666; }
+  .about-wax .about-text .deco {
+    position: absolute;
+    top: 0px;
+    left: -130px; }
+
+.about-wax .about-step {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center; }
+  .about-wax .about-step .step-head {
+    position: relative; }
+    .about-wax .about-step .step-head .step-circle {
+      display: inline-block;
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 115px;
+      background-color: #dda813;
+      color: #fff;
+      font-family: nexa;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.05em; }
+    .about-wax .about-step .step-head .deco {
+      position: absolute;
+      top: 35px;
+      right: 250px;
+      opacity: 0.3; }
+  .about-wax .about-step .step-box {
+    width: 100%;
+    height: 380px;
+    float: left;
+    background: url(../images/about/step-line.jpg) repeat-y;
+    background-position: center center; }
+    .about-wax .about-step .step-box.s01 .num {
+      position: absolute;
+      top: 100px;
+      right: 10px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s02 .deco {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: inline-block;
+      width: 160px;
+      height: 225px;
+      background: #d20038;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s02 .num {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s03 .deco {
+      position: absolute;
+      bottom: 10px;
+      left: -410px;
+      display: inline-block;
+      width: 750px;
+      height: 280px;
+      background: #f9f9f9;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s03 .deco2 {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s03 .num {
+      position: absolute;
+      top: -60px;
+      right: 100px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s04 .deco {
+      position: absolute;
+      top: 35px;
+      right: 40px;
+      display: inline-block;
+      width: 290px;
+      height: 180px;
+      background: #dda813;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s04 .num {
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .deco {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      display: inline-block;
+      width: 350px;
+      height: 100px;
+      background: #f2f2f2;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .deco2 {
+      position: absolute;
+      top: 110px;
+      left: -80px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s05 .deco3 {
+      position: absolute;
+      bottom: 10px;
+      right: 80px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s05 .num {
+      position: absolute;
+      bottom: -140px;
+      right: 130px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .num2 {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s06 .deco2 {
+      position: absolute;
+      bottom: 8px;
+      left: 200px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s06 .deco3 {
+      position: absolute;
+      top: 35px;
+      right: 40px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box .step-img {
+      float: left;
+      position: relative;
+      padding: 50px 0;
+      width: 50%; }
+    .about-wax .about-step .step-box .step-text {
+      float: left;
+      position: relative;
+      padding: 54px 50px 0;
+      width: 50%;
+      text-align: left; }
+      .about-wax .about-step .step-box .step-text h3 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #222;
+        margin-bottom: 10px; }
+      .about-wax .about-step .step-box .step-text h4 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #666; }
+      .about-wax .about-step .step-box .step-text .hline {
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        margin: 25px 0;
+        border-top: 1px solid #666; }
+      .about-wax .about-step .step-box .step-text p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #666; }
+
+.about-wax .step-end {
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  text-align: center; }
+  .about-wax .step-end .step-circle2 {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #dda813;
+    margin-top: 5px; }
 
 /***** info *****/
 .information-time {
