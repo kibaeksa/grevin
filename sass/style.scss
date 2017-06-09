@@ -966,6 +966,70 @@ $font_2: NotoSansKRRegular; //urls
 }
 
 /***** info *****/
+.direction_map{
+    margin: 60px 0 25px;
+}
+.info-map-01{
+    overflow: hidden;
+    width: 100%;
+    .info-address{
+        float: left;
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            color: #444;
+            margin-bottom: 10px;
+            span{
+                font-family: $font_0;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 0.05em;
+                padding-right: 20px;
+            }
+        }
+    }
+    .btn-map{
+        float: right;
+    }
+}
+.info-map-02{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 70px;
+    .info-transe{
+        width: 50%;
+        float: left;
+        h2{
+            font-size: 35px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #444;
+        }
+    }
+    .info-parking{
+        width: 50%;
+        float: left;
+        h2{
+            font-size: 35px;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #444;
+        }
+    }
+}
+
 .information-time{
     width: 100%;
     text-align: center;

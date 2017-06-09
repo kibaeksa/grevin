@@ -817,6 +817,59 @@ img {
     margin-top: 5px; }
 
 /***** info *****/
+.direction_map {
+  margin: 60px 0 25px; }
+
+.info-map-01 {
+  overflow: hidden;
+  width: 100%; }
+  .info-map-01 .info-address {
+    float: left; }
+    .info-map-01 .info-address p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 10px; }
+      .info-map-01 .info-address p span {
+        font-family: nexa;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        padding-right: 20px; }
+  .info-map-01 .btn-map {
+    float: right; }
+
+.info-map-02 {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 70px; }
+  .info-map-02 .info-transe {
+    width: 50%;
+    float: left; }
+    .info-map-02 .info-transe h2 {
+      font-size: 35px;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 24px; }
+    .info-map-02 .info-transe p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #444; }
+  .info-map-02 .info-parking {
+    width: 50%;
+    float: left; }
+    .info-map-02 .info-parking h2 {
+      font-size: 35px;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 20px; }
+    .info-map-02 .info-parking p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #444; }
+
 .information-time {
   width: 100%;
   text-align: center;
