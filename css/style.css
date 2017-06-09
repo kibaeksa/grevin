@@ -1190,14 +1190,17 @@ img {
   .catering-table tr {
     border-bottom: 1px solid #ebebeb; }
     .catering-table tr td {
-      padding: 50px 0; }
+      padding: 50px 0;
+      background: url("/images/rent/td_hline.png") no-repeat;
+      background-position: right center; }
+      .catering-table tr td:last-child {
+        background: none; }
       .catering-table tr td .ct-img-circle {
         overflow: hidden;
         display: inline-block;
         width: 160px;
         height: 160px;
-        border-radius: 50%;
-        background: steelblue; }
+        border-radius: 50%; }
       .catering-table tr td h4 {
         margin-top: 10px;
         font-size: 16px;

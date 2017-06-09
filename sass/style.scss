@@ -1439,13 +1439,17 @@ $font_2: NotoSansKRRegular; //urls
         border-bottom: 1px solid #ebebeb;
         td{
             padding: 50px 0;
+            background: url('/images/rent/td_hline.png') no-repeat;
+            background-position: right center;
+            &:last-child{
+                background: none;
+            }
             .ct-img-circle{
                 overflow: hidden;
                 display: inline-block;
                 width: 160px;
                 height: 160px;
                 border-radius: 50%;
-                background: steelblue;
                 img{
 
                 }
