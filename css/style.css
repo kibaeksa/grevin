@@ -148,7 +148,7 @@ img {
     700 Bold
     900 Black
 */
-.about-wax .about-step .step-box .step-img, .about-wax .about-step .step-box .step-text, .place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.about-wax .about-step .step-box .step-img, .about-wax .about-step .step-box .step-text, .place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .edu-intro ul li, .edu-composition .edu-choise-sub > div, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2442,6 +2442,148 @@ img {
 
 /***** news END *****/
 /***** organ *****/
+/* EducationProgram */
+.edu-intro {
+  margin-top: 50px;
+  text-align: center; }
+  .edu-intro h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333; }
+  .edu-intro > p {
+    padding: 20px 0;
+    margin: 25px 0 40px;
+    font-size: 16px;
+    color: #222;
+    background-color: #efefef;
+    border: 1px solid #e7e7e7; }
+  .edu-intro h4 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #444; }
+  .edu-intro ul {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    border-bottom: 1px solid #e7e7e7; }
+    .edu-intro ul li {
+      float: left;
+      width: 33.3333%;
+      border-right: 1px solid #e7e7e7; }
+      .edu-intro ul li:last-child {
+        border: none; }
+      .edu-intro ul li h5 {
+        margin: 20px 0 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #222; }
+      .edu-intro ul li p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+
+.edu-composition {
+  margin-top: 100px;
+  text-align: center; }
+  .edu-composition h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7; }
+  .edu-composition > h4 {
+    margin: 50px 0 10px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #444; }
+  .edu-composition span {
+    font-size: 16px;
+    color: #666; }
+  .edu-composition .edu-choise {
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 0 35px; }
+    .edu-composition .edu-choise .edu-choise-box {
+      float: left;
+      position: relative;
+      width: 50%;
+      text-align: left; }
+      .edu-composition .edu-choise .edu-choise-box > span {
+        position: absolute;
+        top: 235px;
+        right: 35px;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background: #d20038;
+        color: #fff; }
+      .edu-composition .edu-choise .edu-choise-box h5 {
+        margin: 25px 0 15px;
+        font-size: 20px;
+        color: #222; }
+        .edu-composition .edu-choise .edu-choise-box h5 span {
+          font-size: 12px;
+          font-weight: 300;
+          padding-left: 10px; }
+      .edu-composition .edu-choise .edu-choise-box ul {
+        padding-bottom: 30px; }
+        .edu-composition .edu-choise .edu-choise-box ul li {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          color: #666; }
+  .edu-composition .edu-choise-sub {
+    overflow: hidden;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7; }
+    .edu-composition .edu-choise-sub > div {
+      float: left;
+      width: 50%;
+      padding: 30px 0; }
+      .edu-composition .edu-choise-sub > div:last-child {
+        border-left: 1px solid #e7e7e7; }
+      .edu-composition .edu-choise-sub > div h4 {
+        margin-bottom: 15px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #222; }
+      .edu-composition .edu-choise-sub > div p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #666; }
+      .edu-composition .edu-choise-sub > div span {
+        font-size: 12px;
+        font-weight: 300;
+        padding-left: 10px; }
+      .edu-composition .edu-choise-sub > div a {
+        display: inline-block;
+        padding: 10px 24px;
+        font-size: 13px;
+        font-weight: 300px;
+        color: #222;
+        border: 1px solid #ccc; }
+
+.edu-gallery {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 100px; }
+  .edu-gallery h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333;
+    margin: 100px 0 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7; }
+  .edu-gallery ul li {
+    float: left;
+    margin-right: 10px; }
+    .edu-gallery ul li:last-child {
+      margin-right: 0; }
+
 /* SchoolReservation */
 .reserve-sub {
   padding: 55px 0 15px; }
