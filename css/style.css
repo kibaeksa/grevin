@@ -1056,6 +1056,81 @@ img {
     font-weight: 100;
     color: #fff; }
 
+/* GrevinZone */
+.zone-basic {
+  padding-top: 30px; }
+  .zone-basic .zone-box {
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc; }
+    .zone-basic .zone-box:last-child {
+      border-color: #222; }
+    .zone-basic .zone-box .zone-img {
+      overflow: hidden;
+      float: left;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 540px;
+      height: 350px; }
+      .zone-basic .zone-box .zone-img span {
+        position: absolute;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        font-family: nexa;
+        font-size: 30px;
+        letter-spacing: 0.1em; }
+      .zone-basic .zone-box .zone-img img {
+        width: 100%;
+        display: block; }
+    .zone-basic .zone-box .zone-text {
+      float: left;
+      vertical-align: top;
+      margin-left: 70px;
+      margin-top: 40px; }
+      .zone-basic .zone-box .zone-text h5 {
+        display: inline-block;
+        font-family: nexa;
+        font-size: 13px;
+        font-weight: 600;
+        color: #222;
+        letter-spacing: 0.05em;
+        padding-bottom: 10px; }
+      .zone-basic .zone-box .zone-text h2 {
+        font-family: nexa;
+        font-size: 40px;
+        font-weight: 600;
+        color: #222;
+        padding-bottom: 20px;
+        text-transform: uppercase; }
+        .zone-basic .zone-box .zone-text h2 span {
+          font-family: nexa;
+          font-size: 20px;
+          font-weight: 300;
+          color: #222; }
+      .zone-basic .zone-box .zone-text p {
+        font-size: 13px;
+        font-weight: 300;
+        color: #666;
+        line-height: 22px; }
+      .zone-basic .zone-box .zone-text a {
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #222;
+        margin-top: 40px;
+        font-family: nexa;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.05em; }
+
 /***** info END *****/
 /***** rent *****/
 /* VenueRentalsInfo */
