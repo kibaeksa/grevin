@@ -461,6 +461,9 @@ img {
 
 /*** header END ***/
 #footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   border-top: 1px solid  #ddd;
   /* footer-content END */
   /* footer-copyright END */ }
@@ -3088,12 +3091,79 @@ img {
 
 /***** tip END *****/
 /* #contents END */
-#footer {
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
+/***** footer *****/
+.image-basic2 {
+  padding: 40px 0;
+  text-align: center; }
 
-/* #footer END */
+/* CDAGroup */
+.cda-text {
+  padding: 60px 0;
+  text-align: center; }
+  .cda-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #444;
+    margin-bottom: 30px; }
+    .cda-text p:nth-child(4) {
+      margin-bottom: 50px; }
+    .cda-text p:nth-child(8) {
+      margin-bottom: 50px; }
+  .cda-text .ffnexa {
+    font-family: nexa;
+    font-weight: Lighter;
+    letter-spacing: 0.03em; }
+
+/* GrevinKorea */
+.korea-text {
+  text-align: center; }
+  .korea-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #444;
+    margin-bottom: 30px; }
+
+/* Entertainment */
+/* Userterm */
+.term-head {
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc; }
+  .term-head h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #222;
+    padding-bottom: 20px; }
+  .term-head p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #444; }
+
+.term-body {
+  padding: 50px 0;
+  font-size: 14px;
+  color: #444; }
+  .term-body p {
+    line-height: 26px;
+    margin-bottom: 40px; }
+    .term-body p span {
+      color: #d20038; }
+  .term-body h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px; }
+  .term-body .vspace {
+    width: 100%;
+    height: 50px; }
+  .term-body .hspace {
+    display: inline-block;
+    height: 16px;
+    width: 16px; }
+
+/***** footer END *****/
 .jssorb01 {
   position: absolute; }
   .jssorb01 div {
