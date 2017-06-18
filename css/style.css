@@ -148,7 +148,7 @@ img {
     700 Bold
     900 Black
 */
-.place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
+.about-wax .about-step .step-box .step-img, .about-wax .about-step .step-box .step-text, .place-description .inquiry_info, .history-basic .history-box .history-date .hd_icon, #contents .article-main ul.icon-box li, #contents .article-main .slider-wrapper.grevin-cafe li .box .text_area, #contents .article-main .slider-wrapper.grevin-shop li .box .text_area, .search-basic input[type="search"], .recent-event .recent-event-box, .edu-intro ul li, .edu-composition .edu-choise-sub > div, .reserve-basic .reserve-box .reserve-input, .around-map .around-map-list, .download .download-list, .download .download-list ul li, .tip-body .tip-cp-box .tip-cp_info, .tip-body .tip-cp-box .tip-cp_button a, #tab > section, #tab > section > label, #tab > div {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -461,6 +461,9 @@ img {
 
 /*** header END ***/
 #footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
   border-top: 1px solid  #ddd;
   /* footer-content END */
   /* footer-copyright END */ }
@@ -560,7 +563,316 @@ img {
 .header_line {
   border-top: 9px solid #d20038; }
 
+/***** about *****/
+.about-grevin {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  margin-top: 50px; }
+  .about-grevin .about-img-01 {
+    position: absolute;
+    top: 30px;
+    left: 0; }
+  .about-grevin .about-img-02 {
+    position: absolute;
+    top: 460px;
+    left: 30px; }
+    .about-grevin .about-img-02 :nth-child(2) {
+      position: absolute;
+      top: -50px;
+      left: -87px; }
+    .about-grevin .about-img-02 :nth-child(3) {
+      position: absolute;
+      bottom: -80px;
+      right: 20px;
+      z-index: -1; }
+  .about-grevin .about-img-03 {
+    position: absolute;
+    top: 490px;
+    right: 0; }
+    .about-grevin .about-img-03 .deco {
+      position: absolute;
+      top: -150px;
+      right: 30px;
+      z-index: -1; }
+  .about-grevin .about-text {
+    position: absolute;
+    top: 0;
+    left: 310px; }
+    .about-grevin .about-text .box {
+      margin-bottom: 50px; }
+      .about-grevin .about-text .box h3 {
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 30px;
+        line-height: 34px;
+        color: #222; }
+      .about-grevin .about-text .box p.desc {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #666;
+        margin-bottom: 20px; }
+
+.about-wax .about-text {
+  position: relative;
+  margin-top: 50px;
+  text-align: center; }
+  .about-wax .about-text h2 {
+    font-size: 35px;
+    font-weight: 200;
+    line-height: 44px;
+    color: #222;
+    margin-bottom: 30px; }
+  .about-wax .about-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #666;
+    margin-bottom: 15px; }
+  .about-wax .about-text span {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #666; }
+  .about-wax .about-text .deco {
+    position: absolute;
+    top: 0px;
+    left: -130px; }
+
+.about-wax .about-step {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center; }
+  .about-wax .about-step .step-head {
+    position: relative; }
+    .about-wax .about-step .step-head .step-circle {
+      display: inline-block;
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 115px;
+      background-color: #dda813;
+      color: #fff;
+      font-family: nexa;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.05em; }
+    .about-wax .about-step .step-head .deco {
+      position: absolute;
+      top: 35px;
+      right: 250px;
+      opacity: 0.3; }
+  .about-wax .about-step .step-box {
+    width: 100%;
+    height: 380px;
+    float: left;
+    background: url(../images/about/step-line.jpg) repeat-y;
+    background-position: center center; }
+    .about-wax .about-step .step-box.s01 .num {
+      position: absolute;
+      top: 100px;
+      right: 10px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s02 .deco {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: inline-block;
+      width: 160px;
+      height: 225px;
+      background: #d20038;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s02 .num {
+      position: absolute;
+      top: 40px;
+      left: 100px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s03 .deco {
+      position: absolute;
+      bottom: 10px;
+      left: -410px;
+      display: inline-block;
+      width: 750px;
+      height: 280px;
+      background: #f9f9f9;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s03 .deco2 {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s03 .num {
+      position: absolute;
+      top: -60px;
+      right: 100px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s04 .deco {
+      position: absolute;
+      top: 35px;
+      right: 40px;
+      display: inline-block;
+      width: 290px;
+      height: 180px;
+      background: #dda813;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s04 .num {
+      position: absolute;
+      top: 20px;
+      left: -10px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .deco {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      display: inline-block;
+      width: 350px;
+      height: 100px;
+      background: #f2f2f2;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .deco2 {
+      position: absolute;
+      top: 110px;
+      left: -80px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s05 .deco3 {
+      position: absolute;
+      bottom: 10px;
+      right: 80px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s05 .num {
+      position: absolute;
+      bottom: -140px;
+      right: 130px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s05 .num2 {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box.s06 .deco2 {
+      position: absolute;
+      bottom: 8px;
+      left: 200px;
+      display: inline-block;
+      z-index: 1; }
+    .about-wax .about-step .step-box.s06 .deco3 {
+      position: absolute;
+      top: 35px;
+      right: 40px;
+      display: inline-block;
+      z-index: -1; }
+    .about-wax .about-step .step-box .step-img {
+      float: left;
+      position: relative;
+      padding: 50px 0;
+      width: 50%; }
+    .about-wax .about-step .step-box .step-text {
+      float: left;
+      position: relative;
+      padding: 54px 50px 0;
+      width: 50%;
+      text-align: left; }
+      .about-wax .about-step .step-box .step-text h3 {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 24px;
+        color: #222;
+        margin-bottom: 10px; }
+      .about-wax .about-step .step-box .step-text h4 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #666; }
+      .about-wax .about-step .step-box .step-text .hline {
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        margin: 25px 0;
+        border-top: 1px solid #666; }
+      .about-wax .about-step .step-box .step-text p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #666; }
+
+.about-wax .step-end {
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  text-align: center; }
+  .about-wax .step-end .step-circle2 {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dda813;
+    margin-top: 5px; }
+
 /***** info *****/
+.direction_map {
+  margin: 60px 0 25px; }
+
+.info-map-01 {
+  overflow: hidden;
+  width: 100%; }
+  .info-map-01 .info-address {
+    float: left; }
+    .info-map-01 .info-address p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 10px; }
+      .info-map-01 .info-address p span {
+        font-family: nexa;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        padding-right: 20px; }
+  .info-map-01 .btn-map {
+    float: right; }
+
+.info-map-02 {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 70px; }
+  .info-map-02 .info-transe {
+    width: 50%;
+    float: left; }
+    .info-map-02 .info-transe h2 {
+      font-size: 35px;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 24px; }
+    .info-map-02 .info-transe p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #444; }
+  .info-map-02 .info-parking {
+    width: 50%;
+    float: left; }
+    .info-map-02 .info-parking h2 {
+      font-size: 35px;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 20px; }
+    .info-map-02 .info-parking p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      color: #444; }
+
 .information-time {
   width: 100%;
   text-align: center;
@@ -747,6 +1059,81 @@ img {
     font-weight: 100;
     color: #fff; }
 
+/* GrevinZone */
+.zone-basic {
+  padding-top: 30px; }
+  .zone-basic .zone-box {
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc; }
+    .zone-basic .zone-box:last-child {
+      border-color: #222; }
+    .zone-basic .zone-box .zone-img {
+      overflow: hidden;
+      float: left;
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 540px;
+      height: 350px; }
+      .zone-basic .zone-box .zone-img span {
+        position: absolute;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        font-family: nexa;
+        font-size: 30px;
+        letter-spacing: 0.1em; }
+      .zone-basic .zone-box .zone-img img {
+        width: 100%;
+        display: block; }
+    .zone-basic .zone-box .zone-text {
+      float: left;
+      vertical-align: top;
+      margin-left: 70px;
+      margin-top: 40px; }
+      .zone-basic .zone-box .zone-text h5 {
+        display: inline-block;
+        font-family: nexa;
+        font-size: 13px;
+        font-weight: 600;
+        color: #222;
+        letter-spacing: 0.05em;
+        padding-bottom: 10px; }
+      .zone-basic .zone-box .zone-text h2 {
+        font-family: nexa;
+        font-size: 40px;
+        font-weight: 600;
+        color: #222;
+        padding-bottom: 20px;
+        text-transform: uppercase; }
+        .zone-basic .zone-box .zone-text h2 span {
+          font-family: nexa;
+          font-size: 20px;
+          font-weight: 300;
+          color: #222; }
+      .zone-basic .zone-box .zone-text p {
+        font-size: 13px;
+        font-weight: 300;
+        color: #666;
+        line-height: 22px; }
+      .zone-basic .zone-box .zone-text a {
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #222;
+        margin-top: 40px;
+        font-family: nexa;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.05em; }
+
 /***** info END *****/
 /***** rent *****/
 /* VenueRentalsInfo */
@@ -881,17 +1268,21 @@ img {
   .catering-table tr {
     border-bottom: 1px solid #ebebeb; }
     .catering-table tr td {
-      padding: 50px 0; }
+      padding: 50px 0;
+      background: url("/images/rent/td_hline.png") no-repeat;
+      background-position: right center; }
+      .catering-table tr td:last-child {
+        background: none; }
       .catering-table tr td .ct-img-circle {
         overflow: hidden;
         display: inline-block;
         width: 160px;
         height: 160px;
-        border-radius: 50%;
-        background: steelblue; }
+        border-radius: 50%; }
       .catering-table tr td h4 {
         margin-top: 10px;
         font-size: 16px;
+        font-weight: 400;
         color: #222; }
 
 /* CateringMenu END */
@@ -2134,6 +2525,148 @@ img {
 
 /***** news END *****/
 /***** organ *****/
+/* EducationProgram */
+.edu-intro {
+  margin-top: 50px;
+  text-align: center; }
+  .edu-intro h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333; }
+  .edu-intro > p {
+    padding: 20px 0;
+    margin: 25px 0 40px;
+    font-size: 16px;
+    color: #222;
+    background-color: #efefef;
+    border: 1px solid #e7e7e7; }
+  .edu-intro h4 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #444; }
+  .edu-intro ul {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    border-bottom: 1px solid #e7e7e7; }
+    .edu-intro ul li {
+      float: left;
+      width: 33.3333%;
+      border-right: 1px solid #e7e7e7; }
+      .edu-intro ul li:last-child {
+        border: none; }
+      .edu-intro ul li h5 {
+        margin: 20px 0 10px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #222; }
+      .edu-intro ul li p {
+        font-size: 14px;
+        line-height: 20px;
+        color: #666; }
+
+.edu-composition {
+  margin-top: 100px;
+  text-align: center; }
+  .edu-composition h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7; }
+  .edu-composition > h4 {
+    margin: 50px 0 10px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #444; }
+  .edu-composition span {
+    font-size: 16px;
+    color: #666; }
+  .edu-composition .edu-choise {
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 0 35px; }
+    .edu-composition .edu-choise .edu-choise-box {
+      float: left;
+      position: relative;
+      width: 50%;
+      text-align: left; }
+      .edu-composition .edu-choise .edu-choise-box > span {
+        position: absolute;
+        top: 235px;
+        right: 35px;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background: #d20038;
+        color: #fff; }
+      .edu-composition .edu-choise .edu-choise-box h5 {
+        margin: 25px 0 15px;
+        font-size: 20px;
+        color: #222; }
+        .edu-composition .edu-choise .edu-choise-box h5 span {
+          font-size: 12px;
+          font-weight: 300;
+          padding-left: 10px; }
+      .edu-composition .edu-choise .edu-choise-box ul {
+        padding-bottom: 30px; }
+        .edu-composition .edu-choise .edu-choise-box ul li {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          color: #666; }
+  .edu-composition .edu-choise-sub {
+    overflow: hidden;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7; }
+    .edu-composition .edu-choise-sub > div {
+      float: left;
+      width: 50%;
+      padding: 30px 0; }
+      .edu-composition .edu-choise-sub > div:last-child {
+        border-left: 1px solid #e7e7e7; }
+      .edu-composition .edu-choise-sub > div h4 {
+        margin-bottom: 15px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #222; }
+      .edu-composition .edu-choise-sub > div p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #666; }
+      .edu-composition .edu-choise-sub > div span {
+        font-size: 12px;
+        font-weight: 300;
+        padding-left: 10px; }
+      .edu-composition .edu-choise-sub > div a {
+        display: inline-block;
+        padding: 10px 24px;
+        font-size: 13px;
+        font-weight: 300px;
+        color: #222;
+        border: 1px solid #ccc; }
+
+.edu-gallery {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 100px; }
+  .edu-gallery h3 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #333;
+    margin: 100px 0 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7; }
+  .edu-gallery ul li {
+    float: left;
+    margin-right: 10px; }
+    .edu-gallery ul li:last-child {
+      margin-right: 0; }
+
 /* SchoolReservation */
 .reserve-sub {
   padding: 55px 0 15px; }
@@ -2638,12 +3171,79 @@ img {
 
 /***** tip END *****/
 /* #contents END */
-#footer {
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
+/***** footer *****/
+.image-basic2 {
+  padding: 40px 0;
+  text-align: center; }
 
-/* #footer END */
+/* CDAGroup */
+.cda-text {
+  padding: 60px 0;
+  text-align: center; }
+  .cda-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #444;
+    margin-bottom: 30px; }
+    .cda-text p:nth-child(4) {
+      margin-bottom: 50px; }
+    .cda-text p:nth-child(8) {
+      margin-bottom: 50px; }
+  .cda-text .ffnexa {
+    font-family: nexa;
+    font-weight: Lighter;
+    letter-spacing: 0.03em; }
+
+/* GrevinKorea */
+.korea-text {
+  text-align: center; }
+  .korea-text p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    color: #444;
+    margin-bottom: 30px; }
+
+/* Entertainment */
+/* Userterm */
+.term-head {
+  padding: 50px 0;
+  text-align: center;
+  border-bottom: 1px solid #ccc; }
+  .term-head h2 {
+    font-size: 35px;
+    font-weight: 200;
+    color: #222;
+    padding-bottom: 20px; }
+  .term-head p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #444; }
+
+.term-body {
+  padding: 50px 0;
+  font-size: 14px;
+  color: #444; }
+  .term-body p {
+    line-height: 26px;
+    margin-bottom: 40px; }
+    .term-body p span {
+      color: #d20038; }
+  .term-body h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px; }
+  .term-body .vspace {
+    width: 100%;
+    height: 50px; }
+  .term-body .hspace {
+    display: inline-block;
+    height: 16px;
+    width: 16px; }
+
+/***** footer END *****/
 .jssorb01 {
   position: absolute; }
   .jssorb01 div {
