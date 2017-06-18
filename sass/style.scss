@@ -2048,13 +2048,18 @@ $font_2: NotoSansKRRegular; //urls
                 color: #c7a136;
             }
 
-            a {
+            a.button {
                 display: inline-block;
                 padding: 22px 74px;
                 border: 1px solid $black;
                 margin-top: 65px;
                 font-size: 12px;
                 letter-spacing: 0.05em;
+
+                &:hover{
+                    background: #000;
+                    color: #fff;
+                }
             }
         }
         /* con-infobox END */
@@ -2067,19 +2072,69 @@ $font_2: NotoSansKRRegular; //urls
 
             .frame-image{
                 position: relative;
+                z-index: 10;
+
+                .slider-wrapper{
+                    position: relative;
+                    overflow: hidden;
+
+                    >*{
+                        width: 5000%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        overflow: hidden;
+
+                        >*{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .slide-controller{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -30px;
+                    z-index: 5;
+
+                    @include css3(transform,translate3d(0,0,0));
+
+                    .arrow{
+                        width: 53px;
+                        height: 60px;
+                        display: block;
+                        background:url('/images/floor_arrow_right.jpg') 0 0 no-repeat;
+                    }
+                }
             }
+            /* frame-image END */
 
             .float-image{
                 position: absolute;
                 opacity: 0;
                 @include css3(transition,opacity 0.6s ease 0.7s);
             }
+
+            .deco-background{
+                position: absolute;
+                z-index: 0;
+                opacity: 0;
+                @include css3(transition,opacity 0.6s ease 0.9s);
+            }
+
         }
         /* con-imagebox END */
 
         &.loaded{
             .con-imagebox{
                 .float-image{
+                    opacity: 1;
+                }
+
+                .deco-background{
                     opacity: 1;
                 }
             }
@@ -2115,8 +2170,19 @@ $font_2: NotoSansKRRegular; //urls
             .con-imagebox{
                 right: 0;
 
-                img{
-                    width: 700px;
+                .frame-image{
+                    img{
+                        width: 700px;
+                    }
+                }
+
+                .deco-background{
+                    width: 340px;
+                    height: 190px;
+                    background: #bc8d0b;
+                    position: absolute;
+                    top: 20px;
+                    right: -20px;
                 }
             }
         }
@@ -2127,8 +2193,19 @@ $font_2: NotoSansKRRegular; //urls
                 width: 700px;
                 left: 0;
 
-                img{
-                    width: 100%;
+                .frame-image{
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .deco-background{
+                    width: 378px;
+                    height: 535px;
+                    background: #d30039;
+                    position: absolute;
+                    bottom: -80px;
+                    left: -70px;
                 }
             }
 
@@ -2146,10 +2223,17 @@ $font_2: NotoSansKRRegular; //urls
             }
 
             .con-imagebox{
+                width: 780px;
+                height: 500px;
                 right: 0;
 
-                img{
-                    width: 700px;
+                .deco-background{
+                    width: 460px;
+                    height: 225px;
+                    background: #bc8d0b;
+                    position: absolute;
+                    bottom: -15px;
+                    right: -15px;
                 }
             }
         }
@@ -2159,15 +2243,24 @@ $font_2: NotoSansKRRegular; //urls
             .con-imagebox{
                 width: 500px;
                 left: 0;
-
-                img{
-                    width: 100%;
+                .frame-image{
+                    img{
+                        width: 100%;
+                    }
                 }
 
                 .float-image{
                     top: 0;
                     right: -100px;
+                }
 
+                .deco-background{
+                    width: 220px;
+                    height: 415px;
+                    background: #d30039;
+                    position: absolute;
+                    bottom: -20px;
+                    left: -20px;
                 }
             }
 
@@ -2184,6 +2277,15 @@ $font_2: NotoSansKRRegular; //urls
                 .float-image{
                     bottom: -258px;
                     left: -203px;
+                }
+
+                .deco-background{
+                    width: 630px;
+                    height: 230px;
+                    background: #dea814;
+                    position: absolute;
+                    bottom: -30px;
+                    right: -145px;
                 }
             }
         }
@@ -2222,6 +2324,12 @@ $font_2: NotoSansKRRegular; //urls
 
                 .con-imagebox{
                     right: 160px;
+
+                    .frame-image{
+                        img{
+                            width: auto;
+                        }
+                    }
                 }
             }
 
@@ -2230,12 +2338,12 @@ $font_2: NotoSansKRRegular; //urls
                 margin-bottom: 290px;
 
                 .con-imagebox{
-                    left: -80px;
+                    left: 20px;
                 }
 
                 .con-infobox{
                     top: 130px;
-                    right: 125px;
+                    right: 50px;
                 }
             }
 

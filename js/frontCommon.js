@@ -71,3 +71,106 @@ var bClose = function (){
         },dt);
     }
 })();
+
+var floorApp = {};
+
+floorApp.createDeco = function(){
+
+};
+
+
+floorApp.slider = function(options){
+    var containerElem = $(options.containerElem);
+    var sliderElem = containerElem.children();
+    var itemElems = sliderElem.children();
+
+    var index = 0;
+    var length = itemElems.length;
+    var moveVal = containerElem.attr('data-width') || containerElem.width();
+
+    containerElem.css({
+        width : containerElem.attr('data-width'),
+        height : containerElem.attr('data-height')
+    });
+
+    sliderElem.css({
+        height : containerElem.attr('data-height')
+    });
+
+    for(var i = 0; i < length; i++){
+        $(itemElems[i]).css({
+            width : moveVal,
+            left : i * moveVal
+        });
+    }
+
+
+    if(containerElem.attr('data-width') != undefined && containerElem.attr('data-height') != undefined){
+        var ratio = containerElem.attr('data-height') / containerElem.attr('data-width');
+    }
+
+    function animate(){
+        sliderElem.animate({
+            left : index * -moveVal
+        });
+    }
+
+    function setResize(){
+        var newValue = options.setResize();
+
+        moveVal = newValue;
+        containerElem.css({
+            width : newValue,
+            height : newValue * ratio
+        });
+
+        sliderElem.css({
+            left : -newValue * index,
+            height : newValue * ratio
+        });
+
+        for(var i = 0; i < length; i++){
+            $(itemElems[i]).css({
+                width : newValue,
+                left : i * moveVal
+            });
+        }
+
+    }
+
+    if(!!options.setResize){
+        setResize();
+        $(window).resize(setResize);
+    }
+
+    return {
+        next : function(){
+            if(index == length-1){
+                index = 0;
+            }else{
+                index += 1;
+            }
+
+            animate();
+        },
+        prev : function(){
+            if(index == length-1){
+                index = 0;
+            }else{
+                index -= 1;
+            }
+
+            animate();
+        },
+        slide : function(_index){
+            if(index == _index || _index < 0 || _index > length-1 ){
+                return false;
+            }
+
+            index = _index;
+
+            animate();
+        }
+    }
+
+}
