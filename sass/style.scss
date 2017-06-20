@@ -200,11 +200,11 @@ $font_2: NotoSansKRRegular; //urls
         background: #fff;
 
         h1{
-            padding-top: 25px;
+            padding-top: 17px;
             a{
                 @extend %sprite;
                 width: 123px;
-                height: 53px;
+                height: 66px;
                 text-indent: -9999px;
             }
         }
@@ -265,7 +265,7 @@ $font_2: NotoSansKRRegular; //urls
                         width: 9px;
                         height: 18px;
                         margin: -9px 0 0 -4px;
-                        background-position: 0 -60px;
+                        background-position: 0 -69px;
                     }
                 }
 
@@ -274,7 +274,7 @@ $font_2: NotoSansKRRegular; //urls
                         width: 12px;
                         height: 16px;
                         margin: -8px 0 0 -6px;
-                        background-position: -20px -60px;
+                        background-position: -20px -69px;
                     }
                 }
 
@@ -283,7 +283,7 @@ $font_2: NotoSansKRRegular; //urls
                         width: 21px;
                         height: 13px;
                         margin: -6px 0 0 -10px;
-                        background-position: -40px -60px;
+                        background-position: -40px -69px;
                     }
                 }
 
@@ -292,7 +292,7 @@ $font_2: NotoSansKRRegular; //urls
                         width: 17px;
                         height: 17px;
                         margin: -8px 0 0 -8px;
-                        background-position: -70px -60px;
+                        background-position: -70px -69px;
                     }
 
                 }
@@ -2080,13 +2080,56 @@ $font_2: NotoSansKRRegular; //urls
                 float: left;
                 text-align: center;
                 @extend %extend_2;
-
+                // &:nth-child(1) img{
+                //     background: url('/images/icon-deco01.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(2) img{
+                //     background: url('/images/icon-deco02.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(3) img{
+                //     background: url('/images/icon-deco03.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(4) img{
+                //     background: url('/images/icon-deco04.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(1):hover img{
+                //     background: url('/images/icon-deco01.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                //     transform: rotate(360deg);
+                // }
+                // &:nth-child(2):hover img{
+                //     background: url('/images/icon-deco02.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(3):hover img{
+                //     background: url('/images/icon-deco03.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
+                // &:nth-child(4):hover img{
+                //     background: url('/images/icon-deco04.png') center center no-repeat;
+                //     background-size: 100% 100%;
+                // }
                 &:last-child {
                     border-right: 0 none;
                 }
-
-                img {
+                > div{
+                    display: inline-block;
+                    position: relative;
+                    width: 144px;
+                    height: 112px;
                     margin-bottom: 15px;
+                    &:hover img:nth-child(2){
+                        transform: rotateZ(360deg);
+                        transition: transform 0.8s ease-in-out;
+                    }
+                    img {
+                        position: absolute;
+                        top: 0; left: 0;
+                    }
                 }
 
                 h3 {
