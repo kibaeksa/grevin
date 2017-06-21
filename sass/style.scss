@@ -2197,6 +2197,10 @@ $font_2: NotoSansKRRegular; //urls
                 .prev-04{
                     border-right: 1px solid #e3e7ee;
                     background:url('/images/btn_main_arrow_prev.jpg') 0 0 no-repeat;
+
+                    &.disable{
+                        opacity: 0.3;
+                    }
                 }
 
                 .next,
@@ -2204,6 +2208,9 @@ $font_2: NotoSansKRRegular; //urls
                 .next-03,
                 .next-04{
                     background:url('/images/btn_main_arrow_next.jpg') 0 0 no-repeat;
+                    &.disable{
+                        opacity: 0.3;
+                    }
                 }
             }
 
@@ -2223,42 +2230,51 @@ $font_2: NotoSansKRRegular; //urls
                     top: -38px;
                 }
 
-                li{
-                    width: 1080px;
+                .slider-wrapper{
+                    width: 1110px;
                     height: 350px;
+                    margin-left: -15px;
+                    overflow: hidden;
 
-                    @extend %clfix;
+                    .slider-wrapper-inner{
+                        li{
+                            width: 525px;
+                            height: 350px;
+                            margin: 0 15px;
+                            float: left;
 
-                    .box{
-                        float: left;
+                            @extend %clfix;
 
-                        &.last{
-                            float: right;
-                        }
 
-                        .img{
-                            margin-bottom: 20px;
-                        }
+                            .img{
+                                margin-bottom: 20px;
+                            }
 
-                        .date{
-                            margin-bottom: 7px;
-                            font:bold 12px 'nexa';
-                            color: #999;
-                        }
+                            .date{
+                                margin-bottom: 7px;
+                                font:bold 12px 'nexa';
+                                color: #999;
+                            }
 
-                        .title{
-                            margin-bottom: 10px;
-                            font-size: 20px;
-                            color: #222;
-                            letter-spacing: -0.75px;
-                        }
+                            .title{
+                                margin-bottom: 10px;
+                                font-size: 20px;
+                                color: #222;
+                                letter-spacing: -0.75px;
+                            }
 
-                        .desc{
-                            font-size: 14px;
-                            color: #222;
+                            .desc{
+                                font-size: 14px;
+                                color: #222;
+                            }
+
                         }
                     }
                 }
+
+
+
+
             }
             &.grevin-cafe{
                 width: 525px;

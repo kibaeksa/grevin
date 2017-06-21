@@ -132,7 +132,7 @@ img {
   position: relative;
   margin: 0 auto; }
 
-#header .header-content #global-navigation > ul::after, #header .gnb-contents-wrapper .gnb-content::after, .grevin-gallery::after, .today_schedule dl::after, #contents .article-main .slider-wrapper .arrow-wrapper::after, #contents .article-main .slider-wrapper.upcoming-event-slider li::after, #contents .article-main .slider-wrapper.grevin-cafe li::after, #contents .article-main .slider-wrapper.grevin-shop li::after, #contents .article-main .sns-hub-wrapper .grevin-social::after {
+#header .header-content #global-navigation > ul::after, #header .gnb-contents-wrapper .gnb-content::after, .grevin-gallery::after, .today_schedule dl::after, #contents .article-main .slider-wrapper .arrow-wrapper::after, #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li::after, #contents .article-main .slider-wrapper.grevin-cafe li::after, #contents .article-main .slider-wrapper.grevin-shop li::after, #contents .article-main .sns-hub-wrapper .grevin-social::after {
   content: '';
   display: block;
   height: 0;
@@ -1747,11 +1747,21 @@ img {
         #contents .article-main .slider-wrapper .arrow-wrapper .prev-04 {
           border-right: 1px solid #e3e7ee;
           background: url("/images/btn_main_arrow_prev.jpg") 0 0 no-repeat; }
+          #contents .article-main .slider-wrapper .arrow-wrapper .prev.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .prev-01.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .prev-03.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .prev-04.disable {
+            opacity: 0.3; }
         #contents .article-main .slider-wrapper .arrow-wrapper .next,
         #contents .article-main .slider-wrapper .arrow-wrapper .next-01,
         #contents .article-main .slider-wrapper .arrow-wrapper .next-03,
         #contents .article-main .slider-wrapper .arrow-wrapper .next-04 {
           background: url("/images/btn_main_arrow_next.jpg") 0 0 no-repeat; }
+          #contents .article-main .slider-wrapper .arrow-wrapper .next.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .next-01.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .next-03.disable,
+          #contents .article-main .slider-wrapper .arrow-wrapper .next-04.disable {
+            opacity: 0.3; }
       #contents .article-main .slider-wrapper.upcoming-event-slider {
         width: 1080px;
         height: 350px; }
@@ -1763,25 +1773,28 @@ img {
           position: absolute;
           right: 0;
           top: -38px; }
-        #contents .article-main .slider-wrapper.upcoming-event-slider li {
-          width: 1080px;
-          height: 350px; }
-          #contents .article-main .slider-wrapper.upcoming-event-slider li .box {
+        #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper {
+          width: 1110px;
+          height: 350px;
+          margin-left: -15px;
+          overflow: hidden; }
+          #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li {
+            width: 525px;
+            height: 350px;
+            margin: 0 15px;
             float: left; }
-            #contents .article-main .slider-wrapper.upcoming-event-slider li .box.last {
-              float: right; }
-            #contents .article-main .slider-wrapper.upcoming-event-slider li .box .img {
+            #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li .img {
               margin-bottom: 20px; }
-            #contents .article-main .slider-wrapper.upcoming-event-slider li .box .date {
+            #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li .date {
               margin-bottom: 7px;
               font: bold 12px 'nexa';
               color: #999; }
-            #contents .article-main .slider-wrapper.upcoming-event-slider li .box .title {
+            #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li .title {
               margin-bottom: 10px;
               font-size: 20px;
               color: #222;
               letter-spacing: -0.75px; }
-            #contents .article-main .slider-wrapper.upcoming-event-slider li .box .desc {
+            #contents .article-main .slider-wrapper.upcoming-event-slider .slider-wrapper .slider-wrapper-inner li .desc {
               font-size: 14px;
               color: #222; }
       #contents .article-main .slider-wrapper.grevin-cafe {
