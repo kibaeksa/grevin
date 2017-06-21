@@ -1989,6 +1989,7 @@ $font_2: NotoSansKRRegular; //urls
             @include css3(transform,translate3d(-50%,-50%,0));
 
             h1 {
+                font-family: 'nexa';
                 font-size: 80px;
                 font-weight: normal;
                 padding-top: 20px;
