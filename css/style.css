@@ -964,7 +964,7 @@ img {
         font-size: 12px;
         white-space: nowrap;
         word-wrap: normal;
-        width: 70px;
+        width: 100px;
         overflow: hidden; }
       #info-calendar tbody tr td h4 {
         font-family: nexa;
@@ -2749,7 +2749,7 @@ img {
         width: 100px;
         height: 40px;
         margin: 0 5px;
-        padding: 0 10px;
+        padding: 0 0 0 10px;
         text-align: center; }
       .reserve-basic .reserve-box .reserve-input textarea {
         margin-left: 5px; }
