@@ -1631,9 +1631,11 @@ img {
         font-family: 'nexa';
         font-size: 80px;
         font-weight: normal;
-        padding-top: 20px; }
+        padding-top: 20px;
+        letter-spacing: 3px; }
         #contents .visual-floor .title-text h1 strong {
-          font: 80px nexa script; }
+          font: 80px nexa script;
+          letter-spacing: 0; }
       #contents .visual-floor .title-text h2 {
         letter-spacing: 1em;
         font: bold 12px nexa; }
@@ -1643,9 +1645,9 @@ img {
         border-top: 1px solid #ccc;
         margin: 20px 0; }
       #contents .visual-floor .title-text p {
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 22px; }
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30px; }
     #contents .visual-floor .title-subimg {
       width: 130px;
       height: 120px;
@@ -2072,7 +2074,7 @@ img {
         #contents .article-floor.box1 .con-imagebox .deco-background {
           width: 340px;
           height: 190px;
-          background: #bc8d0b;
+          background: #bb8d0b;
           position: absolute;
           top: 20px;
           right: -20px; }
@@ -2086,7 +2088,7 @@ img {
         #contents .article-floor.box2 .con-imagebox .deco-background {
           width: 378px;
           height: 535px;
-          background: #d30039;
+          background: #d11242;
           position: absolute;
           bottom: 0;
           left: -190px; }
@@ -2105,7 +2107,7 @@ img {
         #contents .article-floor.box3 .con-imagebox .deco-background {
           width: 460px;
           height: 225px;
-          background: #bc8d0b;
+          background: #bb8d0b;
           position: absolute;
           top: 150px;
           right: -15px; }
@@ -2122,7 +2124,7 @@ img {
         #contents .article-floor.box4 .con-imagebox .deco-background {
           width: 220px;
           height: 415px;
-          background: #d30039;
+          background: #d11242;
           position: absolute;
           top: 120px;
           left: -20px; }
@@ -2137,7 +2139,7 @@ img {
       #contents .article-floor.box5 .con-imagebox .deco-background {
         width: 630px;
         height: 230px;
-        background: #dea814;
+        background: #bb8d0b;
         position: absolute;
         top: -100px;
         right: -145px; }
@@ -2817,6 +2819,7 @@ img {
   .around-map .around-map-list {
     width: 100%;
     padding: 20px;
+    margin-bottom: 40px;
     border: 1px solid #999; }
     .around-map .around-map-list ul {
       overflow: hidden; }
@@ -2846,75 +2849,8 @@ img {
           font-weight: 700; }
           .around-map .around-map-list ul li.on span {
             background: #d20038; }
-
-.around-basic .around-box {
-  overflow: hidden;
-  padding: 30px 0;
-  border-bottom: 1px solid #ccc; }
-  .around-basic .around-box:last-child {
-    border-color: #222; }
-  .around-basic .around-box .around-img {
-    overflow: hidden;
-    float: left;
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 540px;
-    height: 350px; }
-    .around-basic .around-box .around-img span {
-      position: absolute;
-      display: inline-block;
-      width: 80px;
-      height: 80px;
-      line-height: 80px;
-      text-align: center;
-      background-color: #333;
-      color: #fff;
-      font-family: nexa;
-      font-size: 30px;
-      letter-spacing: 0.1em; }
-    .around-basic .around-box .around-img img {
-      width: 100%;
-      display: block; }
-  .around-basic .around-box .around-text {
-    float: left;
-    vertical-align: top;
-    margin-left: 70px; }
-    .around-basic .around-box .around-text h2 {
-      font-size: 40px;
-      font-weight: 300;
-      color: #222;
-      padding-top: 38px;
-      text-transform: uppercase; }
-    .around-basic .around-box .around-text span {
-      display: inline-block;
-      font-family: nexa;
-      font-size: 13px;
-      font-weight: 600;
-      color: #d20038;
-      letter-spacing: 0.05em;
-      padding: 15px 0; }
-      .around-basic .around-box .around-text span i {
-        font-style: inherit;
-        color: #999;
-        margin: 0 10px;
-        text-decoration: none; }
-    .around-basic .around-box .around-text p {
-      font-size: 13px;
-      font-weight: 300;
-      color: #666;
-      line-height: 22px; }
-    .around-basic .around-box .around-text a {
-      display: inline-block;
-      width: 150px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      border: 1px solid #222;
-      margin-top: 60px;
-      font-family: nexa;
-      font-size: 13px;
-      letter-spacing: 0.05em; }
+  .around-map .around-basic {
+    margin-bottom: 150px; }
 
 /* AroundCourse END */
 /* SchoolDownloadLi */

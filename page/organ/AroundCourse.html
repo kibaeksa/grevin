@@ -348,14 +348,17 @@
                             <li><span>14</span>경복궁</li>
                         </ul>
                     </div>
+
+                    <div class="around-basic">
+                        <img src="/images/around-map-tips.jpg" alt="" usemap="#around_grevin" >
+                        <map name="around_grevin" id="around_grevin">
+                            <area  shape="rect"  coords="371,128,483,151"  alt="자세히 보기 및 신청"  title="자세히 보기 및 신청"  href="#" />
+                        </map>
+                    </div>
                 </div>
                 <!-- 주변볼거리 맵 END -->
                 <!-- 주변볼거리 START -->
-                <div class="around-basic">
 
-
-
-                </div>
                 <!-- 주변볼거리 END -->
 
             </div>
@@ -485,7 +488,9 @@
                     $('.around-map-list li').removeClass('on');
                     $(this).addClass('on');
 
-                    initMap(positionData[curMap]);
+                    // initMap(positionData[curMap]);
+                    globalMap.panTo(positionData[curMap]);
+                    globalMarker.setPosition(positionData[curMap]);
                 });
 
 
