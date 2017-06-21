@@ -72,6 +72,68 @@ var bClose = function (){
     }
 })();
 
+function itemSlider(options){
+    // var elemContainer = $('.sns-hub-wrapper .slider-wrapper');
+    var elemContainer = $(options.elemContainer);
+    var elemSlider = elemContainer.children();
+    var elemItems = elemSlider.children();
+    var index = 0;
+    var itemDisplayed = options.viewItems ? options.viewItems : 4;
+    var length = elemItems.length;
+    var moveValue = options.moveValue;
+
+    if(length == itemDisplayed){
+        elemContainer.find('.next').addClass('disable');
+    }
+
+    if(!!options.init){
+        options.init.call(elemContainer,length);
+    }
+
+    function animate(){
+        elemSlider.stop().animate({
+            left : index * -moveValue
+        });
+
+        if(!!options.callback){
+            options.callback.call(window , index);
+        }
+    }
+
+    return {
+        prev : function(){
+            if(index == 0){
+                return;
+            }
+
+            elemContainer.find('.next').removeClass('disable');
+
+            index--;
+
+            animate();
+
+            if(index == 0){
+                return 'done';
+            }
+        },
+        next : function(){
+            if(length == index + itemDisplayed){
+                return;
+            }
+
+            elemContainer.find('.prev').removeClass('disable');
+
+            index++;
+
+            animate();
+
+            if(length == index + itemDisplayed){
+                return 'done';
+            }
+        }
+    }
+}
+
 var floorApp = {};
 
 floorApp.createDeco = function(){

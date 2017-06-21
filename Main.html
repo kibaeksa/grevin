@@ -302,6 +302,7 @@
                                         <li><a href="#"><span class="kr">장소안내</span></a></li>
                                         <li><a href="#"><span class="kr">케이터링 메뉴</span></a></li>
                                         <li><a href="#"><span class="kr">행사연혁</span></a></li>
+                                        <li><a href="#"><span class="kr">사진 및 영상앨범</span></a></li>
                                     </ul>
                                 </div>
                                 <div class="gnb-box3">
@@ -335,7 +336,6 @@
                                         <li><a href="#"><span class="kr">교육 프로그램</span></a></li>
                                         <li><a href="#"><span class="kr">주변 볼거리</span></a></li>
                                         <li><a href="#"><span class="kr">문의 및 예약</span></a></li>
-                                        <li><a href="#"><span class="kr">사진 및 영상앨범</span></a></li>
                                         <li><a href="#"><span class="kr">자료 다운로드</span></a></li>
                                     </ul>
                                 </div>
@@ -520,29 +520,54 @@
                                 <span> / 2</span>
                             </div>
                             <div class="arrow-wrapper">
-                                <a href="#;" class="prev-01"></a>
-                                <a href="#;" class="next-01"></a>
+                                <a href="javascript:void(0)" class="prev-01 disable"></a>
+                                <a href="javascript:void(0)" class="next-01"></a>
                             </div>
-                            <ul id="slide-event">
-                                <li>
-                                    <div class="box">
+
+                            <div class="slider-wrapper" id="slide-event">
+                                <ul class="slider-wrapper-inner">
+                                    <li class="box">
                                         <div class="img">
                                             <a href="#"><img src="/images/temp_main_banner_1.jpg" alt=""></a>
                                         </div>
                                         <p class="date">2016 .10 .31</p>
                                         <p class="title"><a href="#">그레뱅 뮤지엄 할로윈 스페셜 오픈</a></p>
                                         <p class="desc">할로윈을 맞아 그레뱅 뮤지엄에서 특별히 준비한 좀비 투어가 곧 시작됩니다!</p>
-                                    </div>
-                                    <div class="box last">
+                                    </li>
+                                    <li class="box">
                                         <div class="img">
                                             <a href="#"><img src="/images/temp_main_banner_2.jpg" alt=""></a>
                                         </div>
                                         <p class="date">2016 .10 .31</p>
                                         <p class="title"><a href="#">트럼프 대통령 밀랍인형 공개</a></p>
                                         <p class="desc">프랑스 파리에서 제작 된 트럼프 밀랍인형이 그레뱅 서울 뮤지엄으로 입성했습니다.</p>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <li class="box">
+                                        <div class="img">
+                                            <a href="#"><img src="/images/temp_main_banner_2.jpg" alt=""></a>
+                                        </div>
+                                        <p class="date">2016 .10 .31</p>
+                                        <p class="title"><a href="#">트럼프 대통령 밀랍인형 공개</a></p>
+                                        <p class="desc">프랑스 파리에서 제작 된 트럼프 밀랍인형이 그레뱅 서울 뮤지엄으로 입성했습니다.</p>
+                                    </li>
+                                    <li class="box">
+                                        <div class="img">
+                                            <a href="#"><img src="/images/temp_main_banner_2.jpg" alt=""></a>
+                                        </div>
+                                        <p class="date">2016 .10 .31</p>
+                                        <p class="title"><a href="#">트럼프 대통령 밀랍인형 공개</a></p>
+                                        <p class="desc">프랑스 파리에서 제작 된 트럼프 밀랍인형이 그레뱅 서울 뮤지엄으로 입성했습니다.</p>
+                                    </li>
+                                    <li class="box">
+                                        <div class="img">
+                                            <a href="#"><img src="/images/temp_main_banner_2.jpg" alt=""></a>
+                                        </div>
+                                        <p class="date">2016 .10 .31</p>
+                                        <p class="title"><a href="#">트럼프 대통령 밀랍인형 공개</a></p>
+                                        <p class="desc">프랑스 파리에서 제작 된 트럼프 밀랍인형이 그레뱅 서울 뮤지엄으로 입성했습니다.</p>
+                                    </li>
+                                </ul>
+                            </div>
 
                         </div>
                     </div>
@@ -561,6 +586,7 @@
                             <div class="slider-wrapper">
                                 <a href="javascript:void(0)" class="prev disable"><img src="/images/arrow_prev.png" alt=""></a>
                                 <a href="javascript:void(0)" class="next"><img src="/images/arrow_next.png" alt=""></a>
+
                                 <div class="slider-wrapper-inner">
                                     <ul>
                                         <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
@@ -569,6 +595,7 @@
                                         <li><a href="#"><img src="/images/snshub_banner4.png" alt=""></a></li>
                                         <li><a href="#"><img src="/images/snshub_banner1.png" alt=""></a></li>
                                         <li><a href="#"><img src="/images/snshub_banner2.png" alt=""></a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -744,51 +771,86 @@
                 </div>
 
             </div>
-
-
         </div>
 
         <script src="/js/frontCommon.js"></script>
         <script type="text/javascript">
             (function(){
-                var elemContainer = $('.sns-hub-wrapper .slider-wrapper');
-                var index = 0;
-                var itemDisplayed = 4;
-                var length = elemContainer.find('li').length;
 
-                elemContainer.find('.prev').bind('click',function(){
-                    if($(this).hasClass('disable')){
-                        return;
+                var snshubSlider = itemSlider({
+                    elemContainer : '.sns-hub-wrapper .slider-wrapper .slider-wrapper-inner',
+                    viewItems : 4,
+                    moveValue : 260,
+                    init : function(length){
+                        if(length <= 4){
+                            $('.sns-hub-wrapper .slider-wrapper .next').addClass('disable');
+                        }else{
+                            $('.sns-hub-wrapper .slider-wrapper .prev').bind('click',function(){
+                                if($(this).hasClass('disable')){
+                                    return false;
+                                }
+                                $('.sns-hub-wrapper .slider-wrapper .next').removeClass('disable');
+
+                                var isDone = snshubSlider.prev();
+                                if(isDone == 'done'){
+                                    $(this).addClass('disable');
+                                }
+                            });
+
+                            $('.sns-hub-wrapper .slider-wrapper .next').bind('click',function(){
+                                if($(this).hasClass('disable')){
+                                    return false;
+                                }
+                                $('.sns-hub-wrapper .slider-wrapper .prev').removeClass('disable');
+
+                                var isDone = snshubSlider.next();
+
+                                if(isDone == 'done'){
+                                    $(this).addClass('disable');
+                                }
+                            });
+                        }
                     }
+                });
 
-                    elemContainer.find('.next').removeClass('disable');
 
-                    index--;
-                    elemContainer.find('ul').stop().animate({
-                        left : index * -260
-                    });
+                var upcomingSlider = itemSlider({
+                    elemContainer : '.upcoming-event-slider .slider-wrapper',
+                    viewItems : 2,
+                    moveValue : 555,
+                    init : function(length){
+                        if(length <= 2){
+                            $('.upcoming-event-slider .arrow-wrapper .next-01').addClass('disable');
+                        }else{
+                            $('.upcoming-event-slider .arrow-wrapper .prev-01').bind('click',function(){
+                                if($(this).hasClass('disable')){
+                                    return false;
+                                }
+                                $('.upcoming-event-slider .arrow-wrapper .next-01').removeClass('disable');
 
-                    if(index == 0){
-                        $(this).addClass('disable');
+                                var isDone = upcomingSlider.prev();
+                                if(isDone == 'done'){
+                                    $(this).addClass('disable');
+                                }
+                            });
+
+                            $('.upcoming-event-slider .arrow-wrapper .next-01').bind('click',function(){
+                                if($(this).hasClass('disable')){
+                                    return false;
+                                }
+                                $('.upcoming-event-slider .arrow-wrapper .prev-01').removeClass('disable');
+
+                                var isDone = upcomingSlider.next();
+
+                                if(isDone == 'done'){
+                                    $(this).addClass('disable');
+                                }
+                            });
+                        }
                     }
                 });
 
-                elemContainer.find('.next').bind('click',function(){
-                    if($(this).hasClass('disable')){
-                        return;
-                    }
 
-                    elemContainer.find('.prev').removeClass('disable');
-
-                    index++;
-                    elemContainer.find('ul').stop().animate({
-                        left : index * -260
-                    });
-
-                    if(length == index + itemDisplayed){
-                        $(this).addClass('disable');
-                    }
-                });
 
             })();
 
