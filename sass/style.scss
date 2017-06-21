@@ -2033,7 +2033,7 @@ $font_2: NotoSansKRRegular; //urls
         /* title-subimg END */
 
         &.loaded{
-            padding-bottom: 40%;
+            padding-bottom: 30%;
             .title-text{
                 margin-top: 0;
                 opacity: 1;
@@ -2721,8 +2721,8 @@ $font_2: NotoSansKRRegular; //urls
                     height: 535px;
                     background: #d30039;
                     position: absolute;
-                    bottom: -80px;
-                    left: -70px;
+                    bottom: 0;
+                    left: -190px;
                 }
             }
 

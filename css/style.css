@@ -1656,7 +1656,7 @@ img {
       #contents .visual-floor .title-subimg img {
         margin: 15px 0 0 15px; }
     #contents .visual-floor.loaded {
-      padding-bottom: 40%; }
+      padding-bottom: 30%; }
       #contents .visual-floor.loaded .title-text {
         margin-top: 0;
         opacity: 1; }
@@ -2088,8 +2088,8 @@ img {
           height: 535px;
           background: #d30039;
           position: absolute;
-          bottom: -80px;
-          left: -70px; }
+          bottom: 0;
+          left: -190px; }
       #contents .article-floor.box2 .con-infobox {
         top: 130px;
         right: 0; }
