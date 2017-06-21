@@ -2984,6 +2984,18 @@ $font_2: NotoSansKRRegular; //urls
                 }
             }
 
+            &.preload-yellow{
+                &::after{
+                    background: #bb8d0b;
+                }
+            }
+
+            &.preload-red{
+                &::after{
+                    background: #d11242;
+                }
+            }
+
 
         }
 

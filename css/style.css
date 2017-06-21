@@ -2267,6 +2267,10 @@ img {
         -webkit-transform: translate3d(101%, 0, 0);
         -moz-transform: translate3d(101%, 0, 0);
         -ms-transform: translate3d(101%, 0, 0); }
+      #contents .article-floor .preload-anim.preload-yellow::after {
+        background: #bb8d0b; }
+      #contents .article-floor .preload-anim.preload-red::after {
+        background: #d11242; }
 
 .image-basic {
   padding: 60px 0; }
