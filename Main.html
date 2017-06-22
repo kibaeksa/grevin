@@ -77,6 +77,15 @@
                     $(this).slideUp();
                 });
 
+                $('.last').mouseenter(function () {
+                    $('.reserve_down').show();
+                    return false;
+                });
+                $('.last').mouseleave(function () {
+                    $('.reserve_down').hide();
+                    return false;
+                });
+
             });
         </script>
 
@@ -88,7 +97,7 @@
             <div id="head_banner">
                 <div class="head_banner_inner">
                     <img src="/images/main_top_banner/TOP-banner-test.jpg" alt="">
-                    <a href="#"><img src="/images/btn_close_bn.jpg" alt="배너닫기버튼"></a>                
+                    <a href="#"><img src="/images/btn_close_bn.jpg" alt="배너닫기버튼"></a>
                 </div>
             </div>
             <!-- Top 배너 END -->
@@ -106,7 +115,12 @@
                         <ul class="utils">
                             <li><a href="#">오시는길</a></li>
                             <li><a href="#">대관안내</a></li>
-                            <li class="last"><a href="#">예매 및 취소</a></li>
+                            <li class="last"><a href="#">예매 및 확인</a>
+                                <ul class="reserve_down">
+                                    <li><a href="#">예매하기</a></li>
+                                    <li><a href="#">취소하기</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -148,6 +162,7 @@
                             <a href="#" class="ytb" target="_blank"><span>그레뱅 유투브 바로가기</span></a>
                             <a href="#" class="insta" target="_blank"><span>그레뱅 인스타그램 바로가기</span></a>
                         </div>
+                        
                     </div>
                 </div>
                 <!-- header-content END -->
@@ -475,26 +490,26 @@
                 <div class="article-main">
                     <div class="content-inner">
                         <ul class="icon-box">
-                            <li>
+                            <li><a href="javascript:void(0)">
                                 <img src="/images/icon_01.png" alt="">
                                 <h3>시간 안내</h3>
                                 <p>그레뱅 방문 전 일정을 참고해주세요</p>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="javascript:void(0)">
                                 <img src="/images/icon_02.png" alt="">
                                 <h3>예매하기</h3>
                                 <p>온라인 에매시 2,000원 할인 혜택</p>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="javascript:void(0)">
                                 <img src="/images/icon_03.png" alt="">
                                 <h3>대관 안내</h3>
                                 <p>품격있고 프라이빗한 비즈니스 공간</p>
-                            </li>
-                            <li>
+                            </a></li>
+                            <li><a href="javascript:void(0)">
                                 <img src="/images/icon_04.png" alt="">
                                 <h3>오시는 길</h3>
                                 <p>그레벵으로 떠나는 특별한 여행</p>
-                            </li>
+                            </a></li>
                         </ul>
                     </div>
                 </div>
