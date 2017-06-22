@@ -86,19 +86,18 @@ $font_2: NotoSansKRRegular; //urls
 }
 
 #head_banner {
-    height: 150px;
-    background: #d20038;
-    color: #fff;
-    text-align: center;
-    line-height: 150px;
-
+    overflow: hidden;
     .head_banner_inner{
-        width: 1080px;
-        margin: 0 auto;
-        font-family: $font_1;
-        font-size: 42px;
+        position: relative;
+        top: 0;
+        left: 50%;
+        margin-left: -960px;
+        width: 1920px;
+        height: 150px;
         a{
-            float:right;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
 }
@@ -1726,7 +1725,7 @@ $font_2: NotoSansKRRegular; //urls
         position: absolute;
         top: 0;
         left:50%;
-        margin-left: -950px;
+        margin-left: -960px;
     }
 
     #slide-main {
@@ -1734,7 +1733,7 @@ $font_2: NotoSansKRRegular; //urls
     }
 
     .control-m {
-        width: 1900px;
+        width: 1920px;
         height: 650px;
         position: absolute;
         top: 0;
