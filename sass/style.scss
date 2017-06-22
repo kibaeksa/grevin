@@ -1557,63 +1557,25 @@ $font_2: NotoSansKRRegular; //urls
 /* RentalHistory */
 .history-basic{
     .history-box{
-        padding: 40px 0;
+        padding: 50px 0;
         border-bottom: 1px solid #ccc;
+        text-align: center;
         &:last-child{
             border-color: #222;
         }
-        .history-date{
-            width: 300px;
-            height: 200px;
-            margin-top: 25px;
-            overflow: hidden;
-            display: inline-block;
-            text-align: center;
-            .hd_icon{
-                display: inline-block;
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                background: #c7a136;
-                color: #fff;
-                padding-top: 40px;
-                @extend %extend_2;
-                strong{
-                    font-family: $font_0;
-                    font-size: 20px;
-                    letter-spacing: 0.2em;
-                }
-                b{
-                    font-family: $font_0;
-                    font-size: 60px;
-                }
-            }
+        span{
+            font-family: $font_0;
+            font-size: 30px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: #c7a136;
         }
-        .history-text{
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 30px;
-            margin-left: 50px;
-            span{
-                font-family: $font_0;
-                font-size: 15px;
-                font-weight: 600;
-                color: #999;
-                letter-spacing: 0.05em;
-            }
-            h2{
-                font-size: 40px;
-                font-weight: 300;
-                color: #222;
-                padding: 10px 0 25px;
-                text-transform: uppercase;
-            }
-            p{
-                font-size: 15px;
-                font-weight: 300;
-                color: #666;
-                line-height: 22px;
-            }
+        h3{
+            padding-top: 15px;
+            font-size: 40px;
+            font-weight: 200;
+            letter-spacing: -0.01em;
+            color: #222;
         }
     }
 }
@@ -2083,56 +2045,43 @@ $font_2: NotoSansKRRegular; //urls
                 float: left;
                 text-align: center;
                 @extend %extend_2;
-                // &:nth-child(1) img{
-                //     background: url('/images/icon-deco01.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(2) img{
-                //     background: url('/images/icon-deco02.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(3) img{
-                //     background: url('/images/icon-deco03.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(4) img{
-                //     background: url('/images/icon-deco04.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(1):hover img{
-                //     background: url('/images/icon-deco01.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                //     transform: rotate(360deg);
-                // }
-                // &:nth-child(2):hover img{
-                //     background: url('/images/icon-deco02.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(3):hover img{
-                //     background: url('/images/icon-deco03.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
-                // &:nth-child(4):hover img{
-                //     background: url('/images/icon-deco04.png') center center no-repeat;
-                //     background-size: 100% 100%;
-                // }
+                img{
+                    transition: .6s;
+                }
+                &:nth-child(1) img{
+                    background: url('/images/icon-deco01.png') center center no-repeat;
+                    background-size: 50px 50px;
+                }
+                &:nth-child(2) img{
+                    background: url('/images/icon-deco02.png') center center no-repeat;
+                    background-size: 50px 50px;
+                }
+                &:nth-child(3) img{
+                    background: url('/images/icon-deco03.png') center center no-repeat;
+                    background-size: 50px 50px;
+                }
+                &:nth-child(4) img{
+                    background: url('/images/icon-deco04.png') center center no-repeat;
+                    background-size: 50px 50px;
+                }
+                &:nth-child(1):hover img{
+                    background: url('/images/icon-deco01.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:nth-child(2):hover img{
+                    background: url('/images/icon-deco02.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:nth-child(3):hover img{
+                    background: url('/images/icon-deco03.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
+                &:nth-child(4):hover img{
+                    background: url('/images/icon-deco04.png') center center no-repeat;
+                    background-size: 100% 100%;
+                }
                 &:last-child {
                     border-right: 0 none;
-                }
-                > div{
-                    display: inline-block;
-                    position: relative;
-                    width: 144px;
-                    height: 112px;
-                    margin-bottom: 15px;
-                    &:hover img:nth-child(2){
-                        transform: rotateZ(360deg);
-                        transition: transform 0.8s ease-in-out;
-                    }
-                    img {
-                        position: absolute;
-                        top: 0; left: 0;
-                    }
                 }
 
                 h3 {
@@ -2248,6 +2197,12 @@ $font_2: NotoSansKRRegular; //urls
 
                             .img{
                                 margin-bottom: 20px;
+                                overflow: hidden;
+                                width: 525px;
+                                height: 240px;
+                                img{
+                                    width: 100%;
+                                }
                             }
 
                             .date{
@@ -2271,10 +2226,6 @@ $font_2: NotoSansKRRegular; //urls
                         }
                     }
                 }
-
-
-
-
             }
             &.grevin-cafe{
                 width: 525px;
@@ -2303,6 +2254,12 @@ $font_2: NotoSansKRRegular; //urls
 
                         .img{
                             float: left;
+                            overflow: hidden;
+                            width: 265px;
+                            height: 290px;
+                            img{
+                                height: 100%;
+                            }
                         }
 
                         .text_area{
@@ -2415,6 +2372,7 @@ $font_2: NotoSansKRRegular; //urls
                     a{
                         color: #999999;
                         font:14px 'nexa';
+                        letter-spacing: 0em;
                     }
 
                     &::before{
@@ -2511,6 +2469,15 @@ $font_2: NotoSansKRRegular; //urls
                         li{
                             float: left;
                             margin-right: 40px;
+                            .img_circle{
+                                overflow: hidden;
+                                width: 220px;
+                                height: 220px;
+                                border-radius: 50%;
+                                img{
+                                    height: 100%;
+                                }
+                            }
                         }
                     }
                 }

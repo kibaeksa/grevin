@@ -31,6 +31,16 @@
             $('.accordion-box-title',this).addClass('on');
         });
 
+        // 버튼을 눌렀을때 해당 섹션이 닫힘
+        $('.btnSlideUp').on('click', function(){
+            $(this).parents('.accordion-box-title').siblings('.accordion-box-dropdown').slideUp();
+            $(this).parents('.accordion-box-title').removeClass('on');
+            $('.al_down',this).attr('src','/images/ac_list_down.png');
+
+            return false;
+        });
+
+
     });
     </script>
 
@@ -70,7 +80,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>뮤지엄 내 음식을 먹을 만한 장소가 있나요?</td>
-                                        <td><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -106,7 +116,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>티켓을 할인받는 방법은 없나요?</td>
-                                        <td><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -141,7 +151,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>관람 소요 시간은 얼마나 되나요?</td>
-                                        <td><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -176,7 +186,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>티켓 구매는 어떻게 하나요?</td>
-                                        <td><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
                                     </tr>
                                 </tbody>
                             </table>
