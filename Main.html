@@ -73,8 +73,8 @@
                     swipers2.move($(this).index());
                 });
 
-                $('#head_banner').click(function(){
-                    $(this).slideUp();
+                $('#btn_top_banner').click(function(){
+                    $('#head_banner').slideUp();
                 });
 
                 $('.last').mouseenter(function () {
@@ -97,7 +97,7 @@
             <div id="head_banner">
                 <div class="head_banner_inner">
                     <img src="/images/main_top_banner/TOP-banner-test.jpg" alt="">
-                    <a href="#"><img src="/images/btn_close_bn.jpg" alt="배너닫기버튼"></a>
+                    <a href="#" id="btn_top_banner"><img src="/images/btn_close_bn.jpg" alt="배너닫기버튼"></a>
                 </div>
             </div>
             <!-- Top 배너 END -->
@@ -162,7 +162,7 @@
                             <a href="#" class="ytb" target="_blank"><span>그레뱅 유투브 바로가기</span></a>
                             <a href="#" class="insta" target="_blank"><span>그레뱅 인스타그램 바로가기</span></a>
                         </div>
-                        
+
                     </div>
                 </div>
                 <!-- header-content END -->

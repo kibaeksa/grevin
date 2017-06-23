@@ -12,6 +12,7 @@
 
         <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=Z3f3_jCvSnsoCF5cZtcB"></script>
 
     </head>
     <body>
@@ -32,7 +33,9 @@
                 <!-- 타이틀 기본형 END -->
 
                 <div class="direction_map">
-                    <table cellpadding="0" cellspacing="0" width="1080"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?query=7ISc7Jq4IOykkeq1rCDsnYTsp4DroZwyMyDqt7jroIjrsrXrrqTsp4Dsl4Q%3D&searchCoord=&menu=location&tab=1&lng=d4a56c55c060b400e3cfdb9c5e9d65fe&__fromRestorer=true&mapMode=0&mpx=37.4955041%2C127.0333186%3AZ11%3A0.0344144%2C0.0147365&lat=f72e987eb1e9d87ccd8d73ad6f0050a1&dlevel=12&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1496992226305_-1658736499" width="1078" height="557" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2017.6.9</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?query=7ISc7Jq4IOykkeq1rCDsnYTsp4DroZwyMyDqt7jroIjrsrXrrqTsp4Dsl4Q%3D&searchCoord=&menu=location&tab=1&lng=d4a56c55c060b400e3cfdb9c5e9d65fe&__fromRestorer=true&mapMode=0&mpx=37.4955041%2C127.0333186%3AZ11%3A0.0344144%2C0.0147365&lat=f72e987eb1e9d87ccd8d73ad6f0050a1&dlevel=12&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+                    <div id="map" style="width : 100%; height : 550px;">
+
+                    </div>
                 </div>
 
                 <div class="info-map-01">
@@ -40,7 +43,7 @@
                         <p>주소 : 서울시 중구 을지로23 그레뱅뮤지엄</p>
                         <p>문의처 : <span>tel 02.777.4700</span><span>fax 02.752.8201</span></p>
                     </div>
-                    <div class="btn-map">
+                    <div class="btn-map" style="display: none;">
                         <a href="#"><img src="/images/info/btn_naver.jpg" alt="네이버 지도에서 보기"></a>
                     </div>
                 </div>
@@ -63,5 +66,30 @@
             </div>
 
         </div>
+
+        <script src="/js/frontCommon.js"></script>
+        <script>
+            (function(){
+
+                var position = new naver.maps.LatLng(37.566334, 126.980341);
+                var map = new naver.maps.Map('map', {
+                    center: position,
+                    zoom: 12
+                });
+
+                var markerOptions = {
+                    position : position,
+                    map: map,
+                    icon: {
+                        url: '/images/map_marker.png'
+                    }
+                };
+
+                var marker = new naver.maps.Marker(markerOptions);
+
+            })();
+
+        </script>
+
     </body>
 </html>
