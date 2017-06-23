@@ -229,6 +229,7 @@ img {
     height: 30px;
     position: relative;
     border: 1px solid  #eee;
+    z-index: 21;
     background: #fff;
     /* lang-selector END */
     /* utils END */ }
@@ -265,7 +266,7 @@ img {
           width: 100px;
           background-color: #fff;
           border: 1px solid #e7e7e7;
-          z-index: 10000;
+          z-index: 50;
           box-sizing: border-box; }
           #header .header-top .utils li .reserve_down li {
             float: left;

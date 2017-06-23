@@ -129,7 +129,7 @@ $font_2: NotoSansKRRegular; //urls
         height: 30px;
         position: relative;
         border: 1px solid  #eee;
-        // z-index: 20;
+        z-index: 21;
         background: #fff;
 
         ul{
@@ -180,7 +180,7 @@ $font_2: NotoSansKRRegular; //urls
                     width: 100px;
                     background-color: #fff;
                     border: 1px solid #e7e7e7;
-                    z-index: 10000;
+                    z-index: 50;
                     box-sizing: border-box;
                     li{
                         float: left;
