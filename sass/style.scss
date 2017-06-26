@@ -4523,17 +4523,12 @@ $font_2: NotoSansKRRegular; //urls
                 left: 0;
                 background: #000;
 
-                .video-layer{
-                    width: 1080px;
-                    height: 615px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: 15;
-                    background: #000;
+                >img{
+                    opacity: 0.5;
+                    @include css3(transition,opacity 0.3s);
                 }
 
-                >img{
+                >iframe{
                     opacity: 0.5;
                     @include css3(transition,opacity 0.3s);
                 }
@@ -4552,7 +4547,11 @@ $font_2: NotoSansKRRegular; //urls
 
 
                 &.active{
-                    img{
+                    >img{
+                        opacity: 1;
+                    }
+                    
+                    >iframe{
                         opacity: 1;
                     }
                 }
