@@ -1349,8 +1349,14 @@ img {
     position: relative;
     padding: 0 15px 30px; }
     .grevin-gallery .box a {
+      width: 340px;
+      height: 194px;
       display: block;
-      position: relative; }
+      position: relative;
+      overflow: hidden; }
+      .grevin-gallery .box a > img {
+        width: 100%;
+        min-width: 340px; }
       .grevin-gallery .box a .icon-video {
         width: 38px;
         height: 38px;
@@ -3446,15 +3452,17 @@ img {
 
 /* grevin tip popup END */
 .gallery-modalpopup {
-  width: 100%;
+  width: 1080px;
   position: relative;
   overflow: hidden;
-  padding-top: 100px; }
+  padding-top: 100px;
+  margin: 0 auto; }
   .gallery-modalpopup .detail-images-slider-wrapper {
     width: 1080px;
     height: 615px;
     position: relative;
-    margin: auto; }
+    margin: auto;
+    overflow: hidden; }
     .gallery-modalpopup .detail-images-slider-wrapper .arrow-gal {
       display: block;
       position: absolute;

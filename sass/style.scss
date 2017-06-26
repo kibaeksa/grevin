@@ -1630,8 +1630,16 @@ $font_2: NotoSansKRRegular; //urls
         padding: 0 15px 30px;
 
         a{
+            width: 340px;
+            height: 194px;
             display: block;
             position: relative;
+            overflow: hidden;
+
+            >img{
+                width: 100%;
+                min-width: 340px;
+            }
 
             .icon-video{
                 width: 38px;
@@ -4477,16 +4485,18 @@ $font_2: NotoSansKRRegular; //urls
 /* grevin tip popup END */
 
 .gallery-modalpopup{
-    width: 100%;
+    width: 1080px;
     position: relative;
     overflow: hidden;
     padding-top: 100px;
+    margin: 0 auto;
 
     .detail-images-slider-wrapper{
         width: 1080px;
         height: 615px;
         position: relative;
         margin: auto;
+        overflow: hidden;
 
         .arrow-gal{
             display: block;
@@ -4550,7 +4560,7 @@ $font_2: NotoSansKRRegular; //urls
                     >img{
                         opacity: 1;
                     }
-                    
+
                     >iframe{
                         opacity: 1;
                     }
