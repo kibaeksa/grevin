@@ -18,28 +18,20 @@
     $(document).ready(function() {
 
         // 아코디언 리스트 jquery
-        $('.accordion-box').on('click', function(){
+        $('.accordion-box .accordion-box-title').on('click', function(event){
 
-            // 클릭한 박스 외에 다른 모든 박스에 대한 이벤트
-            $(this).siblings().find('.accordion-box-dropdown').slideUp();
-            $(this).siblings().find('.al_down').attr('src','/images/ac_list_down.png');
-            $(this).siblings().find('.accordion-box-title').removeClass('on');
+            if($(this).hasClass('on')){
+                $(this).siblings('.accordion-box-dropdown').slideUp();
+                $(this).removeClass('on');
+            }else{
+                $('.accordion-box .accordion-box-dropdown').slideUp();
+                $('.accordion-box .accordion-box-title').removeClass('on');
 
-            // 클릭한 박스에 대한 이벤트
-            $('.accordion-box-dropdown',this).slideDown();
-            $('.al_down',this).attr('src','/images/ac_list_up.png');
-            $('.accordion-box-title',this).addClass('on');
+                $(this).siblings('.accordion-box-dropdown').slideDown();
+                $(this).addClass('on');
+            }
+
         });
-
-        // 버튼을 눌렀을때 해당 섹션이 닫힘
-        $('.btnSlideUp').on('click', function(){
-            $(this).parents('.accordion-box-title').siblings('.accordion-box-dropdown').slideUp();
-            $(this).parents('.accordion-box-title').removeClass('on');
-            $('.al_down',this).attr('src','/images/ac_list_down.png');
-
-            return false;
-        });
-
 
     });
     </script>
@@ -80,7 +72,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>뮤지엄 내 음식을 먹을 만한 장소가 있나요?</td>
-                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -116,7 +108,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>티켓을 할인받는 방법은 없나요?</td>
-                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -151,7 +143,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>관람 소요 시간은 얼마나 되나요?</td>
-                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -186,7 +178,7 @@
                                     <tr>
                                         <th>Q</th>
                                         <td>티켓 구매는 어떻게 하나요?</td>
-                                        <td class="btnSlideUp"><img src="/images/ac_list_down.png" class="al_down" alt=""></td>
+                                        <td class="btnSlideUp"></td>
                                     </tr>
                                 </tbody>
                             </table>

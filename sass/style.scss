@@ -3260,10 +3260,22 @@ $font_2: NotoSansKRRegular; //urls
         margin-top: -1px;
         border-bottom: 1px solid #e7e7e7;
         .accordion-box-title{
+            cursor:pointer;
             &.on{
                 background: #f8f8f8;
                 border-top: 1px solid #444;
                 border-bottom: 1px solid #e7e7e7;
+
+                table{
+                    tr{
+                        td{
+                            &.btnSlideUp{
+                                background:url('/images/ac_list_down.png') center center no-repeat;
+                            }
+                        }
+                    }
+                }
+
             }
             img{
                 vertical-align: middle;
@@ -3281,6 +3293,10 @@ $font_2: NotoSansKRRegular; //urls
                         color: #444;
                         &:last-child{
                             text-align: center;
+                        }
+
+                        &.btnSlideUp{
+                            background:url('/images/ac_list_up.png') center center no-repeat;
                         }
                     }
                 }
@@ -4507,9 +4523,31 @@ $font_2: NotoSansKRRegular; //urls
                 left: 0;
                 background: #000;
 
-                img{
+                .video-layer{
+                    width: 1080px;
+                    height: 615px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 15;
+                    background: #000;
+                }
+
+                >img{
                     opacity: 0.5;
                     @include css3(transition,opacity 0.3s);
+                }
+
+                .play-video{
+                    width: 128px;
+                    height: 92px;
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin:-46px 0 0 -64px;
+                    z-index: 10;
+                    background:url('/images/btn_ytb.png') 0 0 no-repeat;
                 }
 
 

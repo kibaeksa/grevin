@@ -398,7 +398,7 @@
                         detailImage : '/images/temp_gallery_detail1.jpg',
                         video : 'https://www.youtube.com/embed/0ZfX3xFhGIs',
                         contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>',
-                        ytbId : '2VDs5I4nNwM'
+                        ytbId : 'https://www.youtube.com/embed/4Z8Q3Cy7fNM"'
                     },
                     {
                         date : '2017 .03 .18',
@@ -419,7 +419,8 @@
                         title : '네번째 아티클',
                         thumbImage : '/images/temp_album2.jpg',
                         detailImage : '/images/temp_gallery_detail1.jpg',
-                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>'
+                        contents : '이곳은 내용이 나오는 부분입니다. 갤러리의 데이터를 json으로 받아 프론트에서 그려주는 방식으로 작업 했습니다.<br/>',
+                        ytbId : 'https://www.youtube.com/embed/4Z8Q3Cy7fNM"'
                     },
                     {
                         date : '2017 .03 .18',
@@ -452,6 +453,12 @@
                 }
 
                 function initGalleryLayer(objIndex){
+                    var posArray = [
+                        '-1080',
+                        '0',
+                        '1080'
+                    ];
+                    var className = '';
                     objIndex *= 1;
                     var htmlString = '<div id="galleryModalpopup" class="modal-layerpopup-wrapper" style="display:block;" data-index="'+objIndex+'">';
                     htmlString += '    <div class="overlay" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>';
@@ -461,13 +468,25 @@
                     htmlString += '        <a href="javascript:void(0)" class="arrow-gal next-gal"></a>';
                     htmlString += '            <div class="slider_wrapper">';
                     htmlString += '            <div class="slider">';
-                    if(objIndex > 0){
-                        htmlString += '        <div class="box" style="left:-1080px;"><img src="'+galleryObj[objIndex-1].detailImage+'" alt=""/></div>';
+
+                    for(var i = 0, loopIndex = objIndex - 1; i < 3; i++ , loopIndex++){
+                        if(i == 1){
+                            className = ' active';
+                        }else{
+                            className = '';
+                        }
+
+                        if(loopIndex < 0 || loopIndex > galleryObj.length-1){
+                            continue;
+                        }else{
+                            if(!!galleryObj[loopIndex].ytbId){
+                                htmlString += '        <div class="box'+className+'" style="left:'+posArray[i]+'px;">'+initYtbVideo(galleryObj[loopIndex].ytbId)+'</div>';
+                            }else{
+                                htmlString += '        <div class="box'+className+'" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[loopIndex].detailImage+'" alt=""/></div>';
+                            }
+                        }
                     }
-                    htmlString += '        <div class="box active"><img src="'+galleryObj[objIndex].detailImage+'" alt=""/></div>';
-                    if(objIndex < galleryObj.length-1){
-                        htmlString += '        <div class="box" style="left:1080px;"><img src="'+galleryObj[objIndex+1].detailImage+'" alt=""/></div>';
-                    }
+
                     htmlString += '                ';
                     htmlString += '            </div>';
                     htmlString += '            </div>';
@@ -526,14 +545,23 @@
                             '0',
                             '1080'
                         ];
+                        var className = '';
                         for(var i = 0 , index = $('#galleryModalpopup').attr('data-index') * 1 - 1; i < 3; i++ , index++){
                             if(index < 0){
                                 continue;
                             }
+
                             if(i == 1){
-                                htmlString += '<div class="box active" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                                className = ' active';
                             }else{
-                                htmlString += '<div class="box" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                                className = '';
+                            }
+
+
+                            if(!!galleryObj[index].ytbId){
+                                htmlString += '<div class="box'+className+'" style="left:'+posArray[i]+'px;">'+initYtbVideo(galleryObj[index].ytbId)+'</div>';
+                            }else{
+                                htmlString += '<div class="box'+className+'" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
                             }
                         }
                         htmlString += '</div>';
@@ -553,7 +581,12 @@
                     var activeIndex = index == 0 ? 1 : 2;
 
                     if(index < galleryObj.length - 2){
-                        var htmlString = '<div class="box" style="left:2160px;"><img src="'+galleryObj[index+2].detailImage+'" alt=""/></div>'
+                        if(!!galleryObj[index+2].ytbId){
+                            var htmlString = '<div class="box" style="left:2160px;">'+initYtbVideo(galleryObj[index+2].ytbId)+'</div>';
+                        }else{
+                            var htmlString = '<div class="box" style="left:2160px;"><img src="'+galleryObj[index+2].detailImage+'" alt=""/></div>';
+                        }
+
                     }
 
                     $('#galleryModalpopup').attr('data-index',index+1);
@@ -572,14 +605,23 @@
                             '0',
                             '1080'
                         ];
+                        var className = '';
+
                         for(var i = 0 , index = $('#galleryModalpopup').attr('data-index') * 1 - 1; i < 3; i++ , index++){
                             if(index > galleryObj.length-1){
                                 continue;
                             }
+
                             if(i == 1){
-                                htmlString += '<div class="box active" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                                className = ' active';
                             }else{
-                                htmlString += '<div class="box" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
+                                className = '';
+                            }
+                            
+                            if(!!galleryObj[index].ytbId){
+                                htmlString += '<div class="box'+className+'" style="left:'+posArray[i]+'px;">'+initYtbVideo(galleryObj[index].ytbId)+'</div>';
+                            }else{
+                                htmlString += '<div class="box'+className+'" style="left:'+posArray[i]+'px;"><img src="'+galleryObj[index].detailImage+'" alt=""/></div>';
                             }
                         }
                         htmlString += '</div>';
@@ -612,6 +654,10 @@
 
                     $('#grevinGallery').html(htmlString);
                     $('#grevinGallery>.box>a').bind('click',handleGalleryBox);
+                }
+
+                function  initYtbVideo(videoId){
+                    return '<iframe width="1080" height="615" src="'+videoId+'" frameborder="0" allowfullscreen="" wmode="transparent"> </iframe>';
                 }
 
                 renderGallery();
