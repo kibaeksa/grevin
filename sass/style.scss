@@ -2793,7 +2793,7 @@ $font_2: NotoSansKRRegular; //urls
             }
 
             /* 화면크기 1201~1400픽셀 일 때 */
-            @media only screen and (min-width : 1280px) and (max-width : 1400px){
+            @media only screen and (max-width : 1280px){
                 .content-inner{
                     width: 1280px;
                     height: auto;
@@ -2814,6 +2814,9 @@ $font_2: NotoSansKRRegular; //urls
                     display: block;
                     @include css3(transform,translate3d(0,0,0) !important);
                 }
+            }
+            @media only screen and (min-width : 1280px) and (max-width : 1400px){
+
             }
             /* 화면크기 1201~1400픽셀 일 때 END */
 

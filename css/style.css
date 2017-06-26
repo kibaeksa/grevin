@@ -2192,7 +2192,7 @@ img {
       #contents .floor-wrapper .article-floor .content-inner {
         height: 500px;
         margin: 0 auto; }
-      @media only screen and (min-width: 1280px) and (max-width: 1400px) {
+      @media only screen and (max-width: 1280px) {
         #contents .floor-wrapper .article-floor .content-inner {
           width: 1280px;
           height: auto; }
