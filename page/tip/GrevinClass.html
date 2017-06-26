@@ -19,9 +19,9 @@
 
     $(document).ready(function() {
 
-        $('.btn_more').mouseenter(function () {
+        $('.tip-cp_button').mouseenter(function () {
 
-            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+            var tipCpInfo = $(this).siblings('.tip-cp_info');
 
             //$(this).find('img').attr('src','/images/btn_more_more.png');
             tipCpInfo.stop().animate({height: "350px"});
@@ -29,17 +29,27 @@
             tipCpInfo.find('.tci_text_01').stop().hide();
             tipCpInfo.find('.tci_text_02').stop().fadeIn(1000);
 
+            $(this).find('.btn_detail').css({
+                'transform':'translate3d(0, 0, 0)',
+                'opacity':'1'
+            });
+
         });
 
-        $('.btn_more').mouseleave(function () {
+        $('.tip-cp_button').mouseleave(function () {
 
-            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+            var tipCpInfo = $(this).siblings('.tip-cp_info');
 
             //$(this).find('img').attr('src','/images/btn_more.png');
             tipCpInfo.stop().animate({height: "160px"});
             tipCpInfo.find('h3').removeClass('on');
             tipCpInfo.find('.tci_text_01').stop().fadeIn(1000);
             tipCpInfo.find('.tci_text_02').stop().hide();
+
+            $(this).find('.btn_detail').css({
+                'transform':'translate3d(0, 90px, 0)',
+                'opacity':'0'
+            });
 
         });
 
@@ -84,7 +94,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-01"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-01"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-01"></a>
                             </div>
                         </div>
 
@@ -101,7 +112,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-02"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-02"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-02"></a>
                             </div>
                         </div>
 
@@ -118,7 +130,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-03"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-03"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-03"></a>
                             </div>
                         </div>
 
@@ -135,7 +148,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-04"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-04"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-04"></a>
                             </div>
                         </div>
 
@@ -152,7 +166,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-05"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-05"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-05"></a>
                             </div>
                         </div>
 
@@ -169,7 +184,8 @@
                                 자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                             </div>
                             <div class="tip-cp_button">
-                                <a href="#; return false;" class="btn_more" data-popupid="layerPop-06"></a>
+                                <a href="#;" class="btn_more" data-popupid="layerPop-06"></a>
+                                <a href="#;" class="btn_detail" data-popupid="layerPop-06"></a>
                             </div>
                         </div>
 
@@ -200,7 +216,7 @@
 
                 }
 
-                $('.btn_more').bind('click', function(e) {
+                $('.btn_detail').bind('click', function(e) {
                     console.log(this.dateset);
                     console.log($(this).attr('data-popupid'));
 
@@ -221,7 +237,7 @@
 
         </script>
 
-        <div id="layerPop-01" class="modal-layerpopup-wrapper"  onclick="bClose();">
+        <div id="layerPop-01" class="modal-layerpopup-wrapper">
             <div class="tip-cp-layerpop">
 
                 <div class="tcl-head">

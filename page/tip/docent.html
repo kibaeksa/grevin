@@ -19,27 +19,37 @@
 
     $(document).ready(function() {
 
-        $('.btn_more').mouseenter(function () {
+        $('.tip-cp_button').mouseenter(function () {
 
-            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+            var tipCpInfo = $(this).siblings('.tip-cp_info');
 
             //$(this).find('img').attr('src','/images/btn_more_more.png');
-            tipCpInfo.stop().animate({height: "400px"});
+            tipCpInfo.stop().animate({height: "350px"});
             tipCpInfo.find('h3').addClass('on');
             tipCpInfo.find('.tci_text_01').stop().hide();
             tipCpInfo.find('.tci_text_02').stop().fadeIn(1000);
 
+            $(this).find('.btn_detail').css({
+                'transform':'translate3d(0, 0, 0)',
+                'opacity':'1'
+            });
+
         });
 
-        $('.btn_more').mouseleave(function () {
+        $('.tip-cp_button').mouseleave(function () {
 
-            var tipCpInfo = $(this).parent().siblings('.tip-cp_info');
+            var tipCpInfo = $(this).siblings('.tip-cp_info');
 
             //$(this).find('img').attr('src','/images/btn_more.png');
             tipCpInfo.stop().animate({height: "160px"});
             tipCpInfo.find('h3').removeClass('on');
             tipCpInfo.find('.tci_text_01').stop().fadeIn(1000);
             tipCpInfo.find('.tci_text_02').stop().hide();
+
+            $(this).find('.btn_detail').css({
+                'transform':'translate3d(0, 90px, 0)',
+                'opacity':'0'
+            });
 
         });
 
@@ -96,7 +106,8 @@
                                         자 그러면 저를 따라 움츠렸던 어깨도 확 펴보세요.</p>
                                     </div>
                                     <div class="tip-cp_button">
-                                        <a href="http://naver.com" target="_blank" class="btn_more"></a>
+                                        <a href="#;" target="_blank" class="btn_more"></a>
+                                        <a href="http://naver.com" class="btn_detail" target="_blank"></a>
                                     </div>
                                 </div>
 
@@ -120,7 +131,7 @@
                                         </p>
                                     </div>
                                     <div class="tip-cp_button">
-                                        <a href="http://naver.com" target="_blank" class="btn_more"></a>
+                                        <a href="#;" target="_blank" class="btn_more"></a>
                                     </div>
                                 </div>
 
@@ -138,7 +149,7 @@
                                             물론 이보다 더 실용적인 분야인 무술과 검술, 궁술에서도 빼어난 솜씨를 보였다.</p>
                                     </div>
                                     <div class="tip-cp_button">
-                                        <a href="http://naver.com" target="_blank" class="btn_more"></a>
+                                        <a href="#;" target="_blank" class="btn_more"></a>
                                     </div>
                                 </div>
 
@@ -159,7 +170,7 @@
                                             그 결과 겐지는 생명이 위태로울 정도로 큰 부상을 입는다.</p>
                                     </div>
                                     <div class="tip-cp_button">
-                                        <a href="http://naver.com" target="_blank" class="btn_more"></a>
+                                        <a href="#;" target="_blank" class="btn_more"></a>
                                     </div>
                                 </div>
 

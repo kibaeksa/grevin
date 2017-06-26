@@ -3992,24 +3992,29 @@ $font_2: NotoSansKRRegular; //urls
             width: 100%;
             height: 60px;
             line-height: 60px;
-            a{
+            &:hover a.btn_more{
+                opacity: 0;
+            }
+            a.btn_more{
                 display: inline-block;
                 width: 60px;
                 height: 60px;
                 border: 2px solid #ccc;
                 background: url('/images/btn_more.png') no-repeat;
                 background-position: center;
-                transition: .4s;
-                transform: translate3d(0, 0, 0);
                 @extend %extend_2;
-                &:hover{
-                    width: 84%;
-                    height: 60px;
-                    border: 2px solid #d20038;
-                    background: url('/images/btn_more_more.png') no-repeat;
-                    background-position: center;
-                    transform: translate3d(0, 0, 0);
-                }
+            }
+            a.btn_detail{
+                display: block;
+                margin: -90px auto;
+                width: 84%;
+                height: 60px;
+                border: 2px solid #d20038;
+                background: url('/images/btn_more_more.png') center center no-repeat;
+                transition: .4s;
+                transition-delay: .2s;
+                transform: translate3d(0, 90px, 0);
+                opacity: 0;
             }
         }
     }
@@ -4550,7 +4555,7 @@ $font_2: NotoSansKRRegular; //urls
                     >img{
                         opacity: 1;
                     }
-                    
+
                     >iframe{
                         opacity: 1;
                     }
