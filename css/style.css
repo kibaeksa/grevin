@@ -606,7 +606,8 @@ img {
     .about-grevin .about-img-02 :nth-child(2) {
       position: absolute;
       top: -50px;
-      left: -87px; }
+      left: -87px;
+      z-index: -1; }
     .about-grevin .about-img-02 :nth-child(3) {
       position: absolute;
       bottom: -80px;
@@ -3297,7 +3298,8 @@ img {
   top: 0;
   right: 25%;
   width: 39px;
-  height: 74px; }
+  height: 74px;
+  margin-right: -39px; }
 
 /* jssora13r END */
 .mask {

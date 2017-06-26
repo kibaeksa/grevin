@@ -702,6 +702,7 @@ $font_2: NotoSansKRRegular; //urls
             position: absolute;
             top: -50px;
             left: -87px;
+            z-index: -1;
         }
         :nth-child(3){
             position: absolute;
@@ -4287,6 +4288,7 @@ $font_2: NotoSansKRRegular; //urls
     right: 25%;
     width: 39px;
     height: 74px;
+    margin-right: -39px;
 }
 /* jssora13r END */
 .slitem {}
