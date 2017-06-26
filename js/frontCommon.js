@@ -136,9 +136,57 @@ function itemSlider(options){
 
 var floorApp = {};
 
-floorApp.createDeco = function(){
+floorApp.createDotDecoration = function(){
+    var canvasElems = $('.canvas-dot-decoration');
+    canvasElems.each(function(){
+        var canvas = this;
+        var ctx = canvas.getContext('2d');
+        var color = $(this).attr('data-color');
+        var pointWidth = 2;
+        var pointHeight = 2;
+        var padding = !!$(this).attr('data-padding') ? $(this).attr('data-padding')*1 : 10;
 
+        var xAxisLength = canvas.width / (padding + pointWidth);
+        var yAxisLength = canvas.height / (padding + pointHeight);
+
+        var clearRect = function(){
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+        };
+
+        var dotPoint
+
+        var draw = function(){
+
+            var i = 0;
+            var j = 0;
+            var eachTimer = 0;
+
+            for(; i < xAxisLength; i++){
+                for(; j < yAxisLength; j++){
+                    eachTimer += 15;
+                    (function(i,j,eachTimer){
+                        ctx.fillStyle = color;
+                        ctx.beginPath();
+                        if(!!$(this).attr('data-radius')){
+                            console.log(111);
+                            ctx.arc(i * padding , j * padding ,$(this).attr('data-radius')*1,0,2*Math.PI);
+                        }else{
+                            ctx.rect(i * padding , j * padding ,pointWidth,pointHeight);
+                        }
+
+                        ctx.closePath();
+                        ctx.fill();
+                    })(i , j , eachTimer);
+                }
+                j = 0;
+            }
+        }
+
+        draw();
+    });
 };
+
+floorApp.createDotDecoration();
 
 
 floorApp.slider = function(options){

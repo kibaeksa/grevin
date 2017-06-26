@@ -108,6 +108,7 @@
 	}
 
 	(function render(){
+		resize();
 		var i = 0;
 		for(;i < parallaxElement.length; i++){
 			var triggerPointValue = 0;
@@ -156,10 +157,6 @@
 					}
 				}
 
-				if($(parallaxElement[i]).hasClass('test')){
-					console.log(parallaxElement[i]);
-				}
-
 
 			}
 		}
@@ -167,7 +164,5 @@
 		requestAnimFrame(render);
 
 	})();
-
-	window.addEventListener('resize',resize);
 
 })();
