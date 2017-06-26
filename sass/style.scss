@@ -2788,53 +2788,54 @@ $font_2: NotoSansKRRegular; //urls
             //이미지가 좌측,글자가 우측의 그리드일때
 
             .content-inner{
-                height: 500px;
+                width: 1600px;
+                height: 600px;
                 margin: 0 auto;
             }
 
             /* 화면크기 1201~1400픽셀 일 때 */
-            @media only screen and (max-width : 1280px){
-                .content-inner{
-                    width: 1280px;
-                    height: auto;
-                }
-
-                .con-infobox{
-                    top: 0 !important;
-                    left: 0 !important;
-                    position: relative;
-                    display: block;
-                    @include css3(transform,translate3d(0,0,0) !important);
-                }
-
-                .con-imagebox{
-                    top: 0 !important;
-                    left: 0 !important;
-                    position: relative;
-                    display: block;
-                    @include css3(transform,translate3d(0,0,0) !important);
-                }
-            }
-            @media only screen and (min-width : 1280px) and (max-width : 1400px){
-
-            }
+            // @media only screen and (max-width : 1280px){
+            //     .content-inner{
+            //         width: 1280px;
+            //         height: auto;
+            //     }
+            //
+            //     .con-infobox{
+            //         top: 0 !important;
+            //         left: 0 !important;
+            //         position: relative;
+            //         display: block;
+            //         @include css3(transform,translate3d(0,0,0) !important);
+            //     }
+            //
+            //     .con-imagebox{
+            //         top: 0 !important;
+            //         left: 0 !important;
+            //         position: relative;
+            //         display: block;
+            //         @include css3(transform,translate3d(0,0,0) !important);
+            //     }
+            // }
+            // @media only screen and (min-width : 1280px) and (max-width : 1400px){
+            //
+            // }
             /* 화면크기 1201~1400픽셀 일 때 END */
 
             /* 화면크기 1401~1600픽셀 일 때 */
-            @media only screen and (min-width : 1401px) and (max-width : 1600px){
-                .content-inner{
-                    width: 1400px;
-                }
-            }
+            // @media only screen and (min-width : 1401px) and (max-width : 1600px){
+            //     .content-inner{
+            //         width: 1400px;
+            //     }
+            // }
             /* 화면크기 1401~1600픽셀 일 때 END */
 
             /* 화면크기 1600픽셀 이상일 때 */
-            @media only screen and (min-width : 1601px){
-                .content-inner{
-                    width: 1600px;
-                    height: 600px;
-                }
-            }
+            // @media only screen and (min-width : 1601px){
+            //     .content-inner{
+            //         width: 1600px;
+            //         height: 600px;
+            //     }
+            // }
             /* 화면크기 1600픽셀 이상일 때 END */
 
         }
@@ -2843,20 +2844,16 @@ $font_2: NotoSansKRRegular; //urls
         &.floor2{
             .article-floor{
                 &.box1{
-                    margin-top: 100px;
+                    margin-top: 140px;
+                    margin-bottom: 60px;
+
                     .con-infobox{
                         top: 150px;
-                        left: 0;
+                        left: 145px;
                     }
 
                     .con-imagebox{
-                        right: 0;
-
-                        .frame-image{
-                            img{
-                                width: 700px;
-                            }
-                        }
+                        right: 160px;
 
                         .deco-background{
                             width: 340px;
@@ -2877,10 +2874,12 @@ $font_2: NotoSansKRRegular; //urls
                 }
 
                 &.box2{
-                    margin-top: 100px;
+                    margin-top: 140px;
+                    margin-bottom: 290px;
+
                     .con-imagebox{
                         width: 700px;
-                        left: 0;
+                        left: 20px;
 
                         .frame-image{
                             img{
@@ -2908,21 +2907,23 @@ $font_2: NotoSansKRRegular; //urls
 
                     .con-infobox{
                         top: 130px;
-                        right: 0;
+                        right: 50px;
                     }
                 }
 
                 &.box3{
-                    margin-top: 100px;
+                    margin-top: 140px;
+
                     .con-infobox{
-                        top: 150px;
-                        left: 0;
+                        top: 80px;
+                        left: 90px;
+
                     }
 
                     .con-imagebox{
                         width: 780px;
                         height: 500px;
-                        right: 0;
+                        right: 90px;
 
                         .deco-background{
                             width: 460px;
@@ -2943,10 +2944,12 @@ $font_2: NotoSansKRRegular; //urls
                 }
 
                 &.box4{
-                    margin-top: 100px;
+                    margin-top: 140px;
+                    margin-bottom: 385px;
+
                     .con-imagebox{
                         width: 500px;
-                        left: 0;
+                        left: 70px;
                         .frame-image{
                             img{
                                 width: 100%;
@@ -2955,7 +2958,7 @@ $font_2: NotoSansKRRegular; //urls
 
                         .float-image{
                             top: 0;
-                            right: -100px;
+                            right: -300px;
                         }
 
                         .deco-background{
@@ -2968,17 +2971,24 @@ $font_2: NotoSansKRRegular; //urls
 
                     .con-infobox{
                         top: 130px;
-                        right: 0;
+                        right: 80px;
                     }
                 }
 
                 &.box5{
-                    margin-top: 350px;
+                    margin-top: 100px;
+
+                    .con-infobox{
+                        left: 90px;
+                    }
 
                     .con-imagebox{
+
+                        right: -5px;
+
                         .float-image{
-                            bottom: -258px;
-                            left: -203px;
+                            bottom: -135px;
+                            left: -268px;
                         }
 
                         .deco-background{
@@ -2996,90 +3006,8 @@ $font_2: NotoSansKRRegular; //urls
                         }
                     }
                 }
+                /* floor2 box5 END */
 
-                @media only screen and (min-width : 1601px){
-                    &.box1{
-                        margin-top: 140px;
-                        margin-bottom: 60px;
-
-                        .con-infobox{
-                            top: 150px;
-                            left: 145px;
-                        }
-
-                        .con-imagebox{
-                            right: 160px;
-
-                            .frame-image{
-                                img{
-                                    width: auto;
-                                }
-                            }
-                        }
-                    }
-
-                    &.box2{
-                        margin-top: 140px;
-                        margin-bottom: 290px;
-
-                        .con-imagebox{
-                            left: 20px;
-                        }
-
-                        .con-infobox{
-                            top: 130px;
-                            right: 50px;
-                        }
-                    }
-
-                    &.box3{
-                        margin-top: 140px;
-
-                        .con-infobox{
-                            top: 80px;
-                            left: 90px;
-                        }
-
-                        .con-imagebox{
-                            right: 90px;
-                        }
-                    }
-
-                    &.box4{
-                        margin-top: 140px;
-                        margin-bottom: 385px;
-
-                        .con-imagebox{
-                            left: 70px;
-
-                            .float-image{
-                                top: 0;
-                                right: -300px;
-                            }
-                        }
-
-                        .con-infobox{
-                            right: 80px;
-                        }
-                    }
-
-                    &.box5{
-                        margin-top: 100px;
-
-                        .con-infobox{
-                            left: 90px;
-                        }
-
-                        .con-imagebox{
-                            right: -5px;
-
-                            .float-image{
-                                bottom: -135px;
-                                left: -268px;
-                            }
-                        }
-                    }
-                }
             }
             /* article-floor END */
         }
