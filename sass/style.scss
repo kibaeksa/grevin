@@ -242,7 +242,7 @@ $font_2: NotoSansKRRegular; //urls
         #global-navigation{
             height: 56px;
             position: absolute;
-            top: 42px;
+            top: 36px;
             left: 160px;
 
             >ul{
@@ -702,6 +702,7 @@ $font_2: NotoSansKRRegular; //urls
             position: absolute;
             top: -50px;
             left: -87px;
+            z-index: -1;
         }
         :nth-child(3){
             position: absolute;
@@ -1313,7 +1314,7 @@ $font_2: NotoSansKRRegular; //urls
         padding: 30px 0;
         border-bottom: 1px solid #ccc;
         &:last-child{
-            border-color: #222;
+            border: 0 none;
         }
         .zone-img{
             overflow: hidden;
@@ -1929,7 +1930,7 @@ $font_2: NotoSansKRRegular; //urls
     position: relative;
     &.w-fix{
         width: 1080px;
-        margin: 45px auto;
+        margin: 45px auto 80px;
     }
     .bg-deco{
         position: absolute;
@@ -2215,7 +2216,7 @@ $font_2: NotoSansKRRegular; //urls
                 .num-wrapper{
                     position: absolute;
                     right: 70px;
-                    top: -33px;
+                    top: -35px;
                 }
 
                 .arrow-wrapper{
@@ -2448,6 +2449,7 @@ $font_2: NotoSansKRRegular; //urls
                         &::before{
                             width: 6px;
                             height: 11px;
+                            margin-top: 2px;
                             background:url('/images/ico_snshub_fb.gif') 0 0 no-repeat;
                         }
                     }
@@ -2457,6 +2459,7 @@ $font_2: NotoSansKRRegular; //urls
                         &::before{
                             width: 12px;
                             height: 12px;
+                            margin-top: 2px;
                             background:url('/images/ico_snshub_insta.gif') 0 0 no-repeat;
                         }
                     }
@@ -2465,6 +2468,7 @@ $font_2: NotoSansKRRegular; //urls
                         &::before{
                             width: 8px;
                             height: 11px;
+                            margin-top: 2px;
                             background:url('/images/ico_snshub_blog.gif') 0 0 no-repeat;
                         }
                     }
@@ -2474,6 +2478,7 @@ $font_2: NotoSansKRRegular; //urls
                         &::before{
                             width: 16px;
                             height: 10px;
+                            margin-top: 2px;
                             background:url('/images/ico_snshub_ytb.gif') 0 0 no-repeat;
                         }
                     }
@@ -2550,7 +2555,7 @@ $font_2: NotoSansKRRegular; //urls
 
                 .num-wrapper{
                     position: absolute;
-                    top: 5px;
+                    top: 3px;
                     right: 65px;
                 }
             }
@@ -4456,7 +4461,7 @@ $font_2: NotoSansKRRegular; //urls
 			display: block;
 			width: 33.4%;
 			height: 70px;
-
+            font-family: $font_0;
 			@extend %extend_2;
 			text-align: center;
 			font-size: 24px;
@@ -4624,6 +4629,7 @@ $font_2: NotoSansKRRegular; //urls
     right: 25%;
     width: 39px;
     height: 74px;
+    margin-right: -39px;
 }
 /* jssora13r END */
 .slitem {}

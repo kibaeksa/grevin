@@ -307,7 +307,7 @@ img {
     #header .header-content #global-navigation {
       height: 56px;
       position: absolute;
-      top: 42px;
+      top: 36px;
       left: 160px; }
       #header .header-content #global-navigation > ul > li {
         height: 56px;
@@ -606,7 +606,8 @@ img {
     .about-grevin .about-img-02 :nth-child(2) {
       position: absolute;
       top: -50px;
-      left: -87px; }
+      left: -87px;
+      z-index: -1; }
     .about-grevin .about-img-02 :nth-child(3) {
       position: absolute;
       bottom: -80px;
@@ -1093,7 +1094,7 @@ img {
     padding: 30px 0;
     border-bottom: 1px solid #ccc; }
     .zone-basic .zone-box:last-child {
-      border-color: #222; }
+      border: 0 none; }
     .zone-basic .zone-box .zone-img {
       overflow: hidden;
       float: left;
@@ -1567,7 +1568,7 @@ img {
   /* floor-wrapper END */ }
   #contents.w-fix {
     width: 1080px;
-    margin: 45px auto; }
+    margin: 45px auto 80px; }
   #contents .bg-deco {
     position: absolute;
     z-index: -1; }
@@ -1790,7 +1791,7 @@ img {
         #contents .article-main .slider-wrapper.upcoming-event-slider .num-wrapper {
           position: absolute;
           right: 70px;
-          top: -33px; }
+          top: -35px; }
         #contents .article-main .slider-wrapper.upcoming-event-slider .arrow-wrapper {
           position: absolute;
           right: 0;
@@ -1940,22 +1941,26 @@ img {
           #contents .article-main .sns-hub-wrapper .grevin-social li.fb::before {
             width: 6px;
             height: 11px;
+            margin-top: 2px;
             background: url("/images/ico_snshub_fb.gif") 0 0 no-repeat; }
           #contents .article-main .sns-hub-wrapper .grevin-social li.insta {
             padding-left: 21px; }
             #contents .article-main .sns-hub-wrapper .grevin-social li.insta::before {
               width: 12px;
               height: 12px;
+              margin-top: 2px;
               background: url("/images/ico_snshub_insta.gif") 0 0 no-repeat; }
           #contents .article-main .sns-hub-wrapper .grevin-social li.blog::before {
             width: 8px;
             height: 11px;
+            margin-top: 2px;
             background: url("/images/ico_snshub_blog.gif") 0 0 no-repeat; }
           #contents .article-main .sns-hub-wrapper .grevin-social li.ytb {
             padding-left: 26px; }
             #contents .article-main .sns-hub-wrapper .grevin-social li.ytb::before {
               width: 16px;
               height: 10px;
+              margin-top: 2px;
               background: url("/images/ico_snshub_ytb.gif") 0 0 no-repeat; }
       #contents .article-main .sns-hub-wrapper .slider-wrapper {
         position: relative;
@@ -2002,7 +2007,7 @@ img {
           right: 0; }
         #contents .article-main .grevin-service-wrapper .slider-wrapper .num-wrapper {
           position: absolute;
-          top: 5px;
+          top: 3px;
           right: 65px; }
   #contents .floor-wrapper {
     /* con-infobox END */
@@ -3377,6 +3382,7 @@ img {
       display: block;
       width: 33.4%;
       height: 70px;
+      font-family: nexa;
       text-align: center;
       font-size: 24px;
       line-height: 70px;
@@ -3500,7 +3506,8 @@ img {
   top: 0;
   right: 25%;
   width: 39px;
-  height: 74px; }
+  height: 74px;
+  margin-right: -39px; }
 
 /* jssora13r END */
 .mask {
