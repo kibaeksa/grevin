@@ -2865,8 +2865,8 @@ $font_2: NotoSansKRRegular; //urls
                                 width: 632px;
                                 height: 122px;
                                 top: auto;
-                                bottom: -40px;
-                                left: -100px;
+                                bottom: -60px;
+                                left: 0;
                                 background: none;
                             }
                         }
@@ -2945,7 +2945,7 @@ $font_2: NotoSansKRRegular; //urls
 
                 &.box4{
                     margin-top: 140px;
-                    margin-bottom: 385px;
+                    margin-bottom: 250px;
 
                     .con-imagebox{
                         width: 500px;
@@ -2967,6 +2967,12 @@ $font_2: NotoSansKRRegular; //urls
                             bottom: -20px;
                             left: -20px;
                         }
+                        .deco{
+                            top: 180px;
+                            right: -450px;
+                            position: absolute;
+                            z-index: -1;
+                        }
                     }
 
                     .con-infobox{
@@ -2980,6 +2986,12 @@ $font_2: NotoSansKRRegular; //urls
 
                     .con-infobox{
                         left: 90px;
+                        .deco{
+                            top: -180px;
+                            right: 50px;
+                            position: absolute;
+                            z-index: -1;
+                        }
                     }
 
                     .con-imagebox{
@@ -3073,6 +3085,12 @@ $font_2: NotoSansKRRegular; //urls
 
                     .con-infobox{
                         right: 250px;
+                        .deco{
+                            top: -180px;
+                            right: -320px;
+                            position: absolute;
+                            transform: rotateZ(180deg);
+                        }
                     }
 
                     .con-imagebox{
@@ -3092,6 +3110,12 @@ $font_2: NotoSansKRRegular; //urls
                         top: 100px;
                         left: 150px;
                         // margin-top: 150px;
+                        .deco{
+                            bottom: 0;
+                            left: -350px;
+                            position: absolute;
+                            transform: rotateZ(90deg);
+                        }
                     }
 
                     .con-imagebox{
@@ -3138,6 +3162,11 @@ $font_2: NotoSansKRRegular; //urls
                         top: 50px;
                         right: 450px;
                         // margin-top: 150px;
+                        .deco{
+                            top: -200px;
+                            right: -150px;
+                            position: absolute;
+                        }
                     }
 
                     &.loaded{
@@ -3152,7 +3181,7 @@ $font_2: NotoSansKRRegular; //urls
         }
         /* floor3 END */
 
-        &.floor3{
+        &.floor4{
             .article-floor{
                 &.box1{
                     margin-top: 200px;
@@ -3289,7 +3318,7 @@ $font_2: NotoSansKRRegular; //urls
             }
             /* article-floor END */
         }
-        /* floor3 END */
+        /* floor4 END */
 
     }
     /* floor-wrapper END */
@@ -4610,7 +4639,7 @@ $font_2: NotoSansKRRegular; //urls
 /* mask END */
 .bot-banner .bb-title {
     position: relative;
-    padding: 250px 0 55px;
+    padding: 150px 0 55px;
     text-align: center;
 
     p {
