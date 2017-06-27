@@ -2025,12 +2025,23 @@ $font_2: NotoSansKRRegular; //urls
             width: 130px;
             height: 120px;
             position: absolute;
-            bottom: 0;
+            bottom: -30px;
             left: 180px;
             background: $white;
             opacity: 0;
 
             @include css3(transition,opacity 0.4s ease 0.2s);
+
+            &.title-subimg-4f{
+                width: 130px;
+                height: 225px;
+                bottom: -200px;
+                background: #bb8d0b;
+            }
+
+            &.title-subimg-game{
+                left: 65%;
+            }
 
             img {
                 margin: 15px 0 0 15px;
@@ -2576,14 +2587,24 @@ $font_2: NotoSansKRRegular; //urls
             z-index: 10;
 
             h3 {
+                font-family: $font_0;
                 font-size: 24px;
                 font-weight: 300;
                 margin-bottom: 10px;
+                text-transform: uppercase;
             }
 
             h2 {
                 font: bold 58px $font_0;
                 letter-spacing: 0.3em;
+            }
+
+            h1 {
+                font: 400 52px 'Noto Sans KR';
+                i{
+                    font-style: normal;
+                    font-weight: 200;
+                }
             }
 
             p {
@@ -3060,7 +3081,7 @@ $font_2: NotoSansKRRegular; //urls
                     margin-top: 100px;
 
                     .con-infobox{
-                        left: 100px;
+                        // left: 100px;
                         margin-top: 150px;
                         .deco-background{
                             position: absolute;
@@ -3074,8 +3095,8 @@ $font_2: NotoSansKRRegular; //urls
                         .deco-background{
                             width: 500px;
                             height: 670px;
-                            top: -145px;
-                            right: -90px;
+                            top: -80px;
+                            right: 0px;
                         }
                     }
                 }
@@ -3186,126 +3207,157 @@ $font_2: NotoSansKRRegular; //urls
                 &.box1{
                     margin-top: 200px;
                     .con-imagebox{
-                        left: 60px;
+                        right: 100px;
 
                         .deco-background{
-                            width: 360px;
-                            height: 420px;
-                            top: -40px;
-                            left: -30px;
+                            width: 300px;
+                            height: 405px;
+                            top: -30px;
+                            right: -70px;
+                            &.dot-decoration{
+                                width: 632px;
+                                height: 122px;
+                                top: auto;
+                                bottom: 220px;
+                                left: -490px;
+                                background: none;
+                            }
                         }
                     }
 
                     .con-infobox{
                         top: 100px;
-
-                        .deco-background{
-                            position: absolute;
-                            right: 0;
-                            top: -200px;
-
-                            &.deco-dotted2{
-                                top: -325px;
-                                right: 120px;
-                            }
-                        }
+                        left : 250px;
                     }
                 }
 
                 &.box2{
-                    margin-top: 100px;
-
+                    margin-top: 50px;
                     .con-infobox{
-                        left: 100px;
-                        margin-top: 150px;
+                        top: 50px;
+                        right: 200px;
                         .deco-background{
                             position: absolute;
                             top: -70px;
                             left: -200px;
                             z-index: -1;
                         }
+                        .deco{
+                            top: -180px;
+                            right: -180px;
+                            position: absolute;
+                            transform: rotateZ(90deg);
+                            z-index: -1;
+                        }
                     }
 
                     .con-imagebox{
+                        left: 100px;
                         .deco-background{
-                            width: 500px;
-                            height: 670px;
-                            top: -145px;
-                            right: -90px;
+                            width: 280px;
+                            height: 490px;
+                            top: -150px;
+                            left: -40px;
                         }
                     }
                 }
 
                 &.box3{
-                    margin-top: 180px;
+                    margin-top: 100px;
 
                     .con-infobox{
-                        right: 250px;
+                        left: 250px;
+                        .deco{
+                            top: -200px;
+                            left: -190px;
+                            position: absolute;
+                        }
                     }
 
                     .con-imagebox{
+                        right: 50px;
                         .deco-background{
-                            width: 540px;
-                            height: 455px;
-                            top: -55px;
-                            left: -60px;
+                            width: 291px;
+                            height: 431px;
+                            top: -180px;
+                            right: -60px;
+                            &.dot-decoration{
+                                width: 50px;
+                                height: 210px;
+                                top: auto;
+                                top: -180px;
+                                left: -550px;
+                                background: none;
+                            }
                         }
                     }
                 }
 
                 &.box4{
-                    margin-top: 100px;
 
                     .con-infobox{
-                        top: 100px;
-                        left: 150px;
-                        // margin-top: 150px;
+                        left: 650px;
+                        .deco{
+                            top: -150px;
+                            right: 50px;
+                            position: absolute;
+                        }
+                        .deco2{
+                            top: -250px;
+                            right: 350px;
+                            position: absolute;
+                        }
                     }
 
                     .con-imagebox{
+                        top: -100px;
+                        left: 50px;
                         .deco-background{
-                            width: 240px;
-                            height: 340px;
-                            top: -25px;
-                            right: -60px;
+                            width: 330px;
+                            height: 640px;
+                            top: -190px;
+                            left: -25px;
+                            &.dot-decoration{
+                                width: 632px;
+                                height: 122px;
+                                top: auto;
+                                bottom: -50px;
+                                left: -140px;
+                                background: none;
+                            }
                         }
                     }
                 }
 
                 &.box5{
                     margin: 100px 0 150px;
-
-                    .deco-subimage{
-                        position: absolute;
-                        bottom: -100px;
-                        right: 0;
-
-                        opacity: 0;
-                        @include css3(transition,opacity 0.3s ease 0.8s);
-                    }
-
                     .con-imagebox{
-                        left: 220px;
+                        right: 150px;
 
-                        .deco-red{
-                            width: 240px;
-                            height: 375px;
-                            top: -50px;
-                            left: -80px;
-                        }
-
-                        .deco-yellow{
-                            width: 190px;
-                            height: 280px;
-                            top: 180px;
-                            left: -240px;
+                        .deco-background{
+                            width: 520px;
+                            height: 400px;
+                            top: -250px;
+                            right: -270px;
+                            &.dot-decoration{
+                                width: 242px;
+                                height: 50px;
+                                top: auto;
+                                top: -130px;
+                                right: -240px;
+                                background: none;
+                            }
                         }
                     }
 
                     .con-infobox{
-                        top: 50px;
-                        right: 450px;
-                        // margin-top: 150px;
+                        top: 100px;
+                        left: 150px;
+                        .deco{
+                            top: -200px;
+                            right: 110px;
+                            position: absolute;
+                        }
                     }
 
                     &.loaded{
@@ -3319,6 +3371,240 @@ $font_2: NotoSansKRRegular; //urls
             /* article-floor END */
         }
         /* floor4 END */
+
+        &.interactive-game{
+            .article-floor{
+                &.box1{
+                    margin-top: 150px;
+                    .con-imagebox{
+                        left: 180px;
+
+                        .deco-background{
+                            width: 190px;
+                            height: 340px;
+                            top: -100px;
+                            left: -40px;
+                            &.dot-decoration{
+                                width: 632px;
+                                height: 122px;
+                                top: auto;
+                                bottom: 160px;
+                                left: -25px;
+                                background: none;
+                            }
+                        }
+                    }
+
+                    .con-infobox{
+                        top: 200px;
+                        right : 280px;
+                    }
+                }
+
+                &.box2{
+                    margin-top: 50px;
+                    .con-infobox{
+                        top: 200px;
+                        left: 150px;
+                    }
+
+                    .con-imagebox{
+                        right: 50px;
+                        .deco-background{
+                            width: 270px;
+                            height: 390px;
+                            top: -140px;
+                            right: -100px;
+                            &.dot-decoration{
+                                width: 50px;
+                                height: 242px;
+                                top: -190px;
+                                right: 250px;
+                                background: none;
+                            }
+                        }
+                    }
+                }
+
+                &.box3{
+                    margin-top: 100px;
+
+                    .con-infobox{
+                        top: 50px;
+                        right: 280px;
+                        .deco{
+                            top: -200px;
+                            right: -80px;
+                            position: absolute;
+                        }
+                    }
+
+                    .con-imagebox{
+                        left: 50px;
+                        .deco-background{
+                            width: 520px;
+                            height: 284px;
+                            top: 60px;
+                            left: -40px;
+                        }
+                    }
+                }
+
+                &.box4{
+
+                    .con-infobox{
+                        top: 100px;
+                        left: 350px;
+                        .deco{
+                            top: -250px;
+                            right: -170px;
+                            position: absolute;
+                            transform: rotateZ(90deg);
+                            z-index: -1;
+                        }
+                        .deco2{
+                            top: -150px;
+                            left: -200px;
+                            position: absolute;
+                        }
+                    }
+
+                    .con-imagebox{
+                        right: 200px;
+                        .deco-background{
+                            width: 335px;
+                            height: 275px;
+                            top: 150px;
+                            right: -25px;
+                        }
+                    }
+                }
+
+                &.box5{
+                    margin-top: 100px;
+                    .con-imagebox{
+                        left: 50px;
+
+                        .deco-background{
+                            width: 232px;
+                            height: 320px;
+                            top: -10px;
+                            left: -40px;
+                            &.dot-decoration{
+                                width: 242px;
+                                height: 50px;
+                                top: auto;
+                                top: 120px;
+                                left: -120px;
+                                background: none;
+                            }
+                        }
+                    }
+
+                    .con-infobox{
+                        top: 50px;
+                        left: 800px;
+                    }
+                }
+
+                &.box6{
+                    .con-imagebox{
+                        right: 180px;
+
+                        .deco-background{
+                            width: 250px;
+                            height: 400px;
+                            top: -200px;
+                            right: -20px;
+                            &.dot-decoration{
+                                width: 542px;
+                                height: 122px;
+                                top: auto;
+                                top: 50px;
+                                left: -910px;
+                                background: none;
+                            }
+                        }
+                        .float-image{
+                            top: -290px;
+                            right: -330px;
+                        }
+                    }
+
+                    .con-infobox{
+                        top: 50px;
+                        left: 250px;
+                    }
+                }
+
+                &.box7{
+                    .con-imagebox{
+                        left: 70px;
+
+                        .deco-background{
+                            width: 560px;
+                            height: 260px;
+                            top: -30px;
+                            right: -20px;
+                            &.dot-decoration{
+                                width: 324px;
+                                height: 90px;
+                                top: auto;
+                                top: 80px;
+                                left: 1400px;
+                                background: none;
+                            }
+                        }
+                        .float-image{
+                            top: -150px;
+                            left: -250px;
+                        }
+                    }
+
+                    .con-infobox{
+                        top: 50px;
+                        right: 250px;
+                    }
+                }
+                &.box8{
+                    .con-imagebox{
+                        right: 230px;
+
+                        .deco-background{
+                            width: 250px;
+                            height: 350px;
+                            top: -240px;
+                            right: -20px;
+                            &.dot-decoration{
+                                width: 242px;
+                                height: 50px;
+                                top: auto;
+                                top: 170px;
+                                left: -980px;
+                                background: none;
+                            }
+                        }
+                        .float-image{
+                            top: -100px;
+                            right: -200px;
+                        }
+                    }
+
+                    .con-infobox{
+                        left: 280px;
+                    }
+
+                    &.loaded{
+                        .deco-subimage{
+                            opacity: 1;
+                        }
+                    }
+                }
+
+            }
+            /* article-floor END */
+        }
+        /* interactive-game END */
 
     }
     /* floor-wrapper END */
