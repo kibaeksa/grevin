@@ -12,6 +12,8 @@
 
         <script src="/js/jssor.slider-23.1.0.min.js" type="text/javascript"></script>
         <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=Z3f3_jCvSnsoCF5cZtcB"></script>
+
 
     </head>
     <body>
@@ -77,7 +79,9 @@
                     </div>
 
                     <div class="around-hos-img">
-                        <img src="/images/around-hos_01.jpg" alt="">
+                        <div id="map1" class="map-wrapper">
+
+                        </div>
                         <h3>강북삼성병원</h3>
                         <ul>
                             <li><span>A</span>서울특별시 종로구 새문안로 9</li>
@@ -86,7 +90,9 @@
                     </div>
 
                     <div class="around-hos-img">
-                        <img src="/images/around-hos_01.jpg" alt="">
+                        <div id="map2" class="map-wrapper">
+
+                        </div>
                         <h3>서울 적십자병원</h3>
                         <ul>
                             <li><span>A</span>서울특별시 종로구 새문안로 9</li>
@@ -105,6 +111,33 @@
 
 
         </div>
+
+
+        <script>
+           (function(){
+
+               function initMap(targetId,mapPosition){
+                  var globalMap = new naver.maps.Map(targetId, {
+                       center : mapPosition,
+                       zoom : 12
+                   });
+
+                   var globalMarker = new naver.maps.Marker({
+                       position: mapPosition,
+                       map: globalMap,
+                       icon : {
+                           url : 'http://grevin2017.cafe24.com/ko/images/map_marker.png'
+                       }
+                   });
+               }
+
+               initMap('map1',new naver.maps.LatLng(37.568375, 126.967484));
+               initMap('map2',new naver.maps.LatLng(37.567167, 126.967055));
+
+
+           })();
+
+       </script>
 
     </body>
 </html>
