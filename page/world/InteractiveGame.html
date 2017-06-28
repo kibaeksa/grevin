@@ -614,7 +614,7 @@
             </div>
         </div>
 
-        <script src="/js/prx.min.js" type="text/javascript"></script>
+        <script src="/js/prx.js" type="text/javascript"></script>
         <script src="/js/frontCommon.js" type="text/javascript"></script>
         <script type="text/javascript">
 
@@ -702,14 +702,10 @@
                 containerElem : '#slider1',
                 setResize : function(){
                     var newValue;
-                    if($(window).width() > 1600){
-                        newValue = 900;
-                    }else if($(window).width() <= 1600 && $(window).width() > 1401){
-                        newValue = 760;
-                    }else if($(window).width() <= 1400 && $(window).width() > 1280){
-                        newValue = 760;
+                    if($(window).width() > 1280){
+                        newValue = 470;
                     }else{
-                        newValue = 760;
+                        newValue = 390;
                     }
 
                     return newValue;
@@ -722,7 +718,17 @@
             });
 
             var floorSlider2 = floorApp.slider({
-                containerElem : '#slider2'
+                containerElem : '#slider2',
+                setResize : function(){
+                    var newValue;
+                    if($(window).width() > 1280){
+                        newValue = 470;
+                    }else{
+                        newValue = 390;
+                    }
+
+                    return newValue;
+                }
             });
 
             $('#slider2_wrapper .arrow').bind('click',function(){
@@ -738,7 +744,17 @@
             });
 
             var floorSlider4 = floorApp.slider({
-                containerElem : '#slider4'
+                containerElem : '#slider4',
+                setResize : function(){
+                    var newValue;
+                    if($(window).width() > 1280){
+                        newValue = 660;
+                    }else{
+                        newValue = 440;
+                    }
+
+                    return newValue;
+                }
             });
 
             $('#slider4_wrapper .arrow').bind('click',function(){

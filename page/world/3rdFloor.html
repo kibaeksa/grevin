@@ -376,7 +376,7 @@
                             <div class="con-imagebox" data-parallax="" data-parallax-speed="0.2">
                                 <div class="frame-image preload-anim preload-yellow" id="slider1_wrapper">
 
-                                    <div id="slider1" class="slider-wrapper" data-width="900" data-height="650">
+                                    <div id="slider1" class="slider-wrapper" data-width="895" data-height="672">
                                         <ul>
                                             <li><img class="con-img" src="/images/floor/3F/3F-02-01.png" alt=""></li>
                                             <li><img class="con-img" src="/images/floor/3F/3F-02-02.png" alt=""></li>
@@ -765,14 +765,10 @@
                 containerElem : '#slider1',
                 setResize : function(){
                     var newValue;
-                    if($(window).width() > 1600){
-                        newValue = 994;
-                    }else if($(window).width() <= 1600 && $(window).width() > 1401){
-                        newValue = 760;
-                    }else if($(window).width() <= 1400 && $(window).width() > 1280){
-                        newValue = 760;
+                    if($(window).width() > 1280){
+                        newValue = 895;
                     }else{
-                        newValue = 760;
+                        newValue = 525;
                     }
 
                     return newValue;
@@ -785,7 +781,17 @@
             });
 
             var floorSlider2 = floorApp.slider({
-                containerElem : '#slider2'
+                containerElem : '#slider2',
+                setResize : function(){
+                    var newValue;
+                    if($(window).width() > 1280){
+                        newValue = 760;
+                    }else{
+                        newValue = 505;
+                    }
+
+                    return newValue;
+                }
             });
 
             $('#slider2_wrapper .arrow').bind('click',function(){
@@ -793,7 +799,17 @@
             });
 
             var floorSlider3 = floorApp.slider({
-                containerElem : '#slider3'
+                containerElem : '#slider3',
+                setResize : function(){
+                    var newValue;
+                    if($(window).width() > 1280){
+                        newValue = 800;
+                    }else{
+                        newValue = 500;
+                    }
+
+                    return newValue;
+                }
             });
 
             $('#slider3_wrapper .arrow').bind('click',function(){
@@ -801,7 +817,17 @@
             });
 
             var floorSlider4 = floorApp.slider({
-                containerElem : '#slider4'
+                containerElem : '#slider4',
+                setResize : function(){
+                    var newValue;
+                    if($(window).width() > 1280){
+                        newValue = 478;
+                    }else{
+                        newValue = 385;
+                    }
+
+                    return newValue;
+                }
             });
 
             $('#slider4_wrapper .arrow').bind('click',function(){
