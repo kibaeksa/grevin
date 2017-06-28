@@ -3921,13 +3921,8 @@ img {
   overflow: hidden;
   background: url("/images/line_01.png") repeat-x;
   background-position: left bottom;
-  padding-bottom: 30px; }
-  .tip-body.col3 {
-    width: 1110px;
-    margin-left: -15px; }
-  .tip-body.col2 {
-    width: 1100px;
-    margin-left: -15px; }
+  padding-bottom: 30px;
+  /* tip-cp-box END */ }
   .tip-body .tip-cp-box {
     float: left;
     position: relative;
@@ -3948,26 +3943,30 @@ img {
       left: 50%;
       bottom: 60px;
       margin-left: -160px;
-      padding: 28px 30px;
+      padding: 20px 30px 28px;
       text-align: center;
       width: 320px;
       height: 160px;
-      background: #fff; }
+      background: #fff;
+      transition: height 0.4s;
+      -webkit-transition: height 0.4s;
+      -moz-transition: height 0.4s;
+      -ms-transition: height 0.4s; }
       .tip-body .tip-cp-box .tip-cp_info h3 {
         font-size: 16px;
         font-weight: 500;
         color: #999;
-        padding-bottom: 28px;
-        transition: .4s; }
-        .tip-body .tip-cp-box .tip-cp_info h3.on {
-          font-size: 20px;
-          color: #222; }
+        padding-bottom: 20px; }
       .tip-body .tip-cp-box .tip-cp_info p {
         font-size: 24px;
         font-weight: 400;
         color: #222;
-        line-height: 28px; }
+        line-height: 28px;
+        letter-spacing: -0.25px; }
+        .tip-body .tip-cp-box .tip-cp_info p.tci_text_01 {
+          margin-bottom: 15px; }
         .tip-body .tip-cp-box .tip-cp_info p.tci_text_02 {
+          display: block;
           text-align: left;
           font-size: 15px;
           font-weight: 300;
@@ -3975,7 +3974,12 @@ img {
           color: #666;
           border-top: 1px dashed #ccc;
           padding-top: 20px;
-          line-height: 20px; }
+          line-height: 20px;
+          opacity: 0;
+          transition: opacity ease 0.2s;
+          -webkit-transition: opacity ease 0.2s;
+          -moz-transition: opacity ease 0.2s;
+          -ms-transition: opacity ease 0.2s; }
     .tip-body .tip-cp-box .tip-cp_button {
       position: absolute;
       left: 0;
@@ -3988,11 +3992,15 @@ img {
         opacity: 0; }
       .tip-body .tip-cp-box .tip-cp_button a.btn_more {
         display: inline-block;
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         border: 2px solid #ccc;
-        background: url("/images/btn_more.png") no-repeat;
-        background-position: center; }
+        background: url("/images/btn_more.png") center center no-repeat;
+        border-radius: 50%;
+        transition: opacity 0.2s;
+        -webkit-transition: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s; }
       .tip-body .tip-cp-box .tip-cp_button a.btn_detail {
         display: block;
         margin: -90px auto;
@@ -4000,10 +4008,44 @@ img {
         height: 60px;
         border: 2px solid #d20038;
         background: url("/images/btn_more_more.png") center center no-repeat;
-        transition: .4s;
-        transition-delay: .2s;
+        opacity: 0;
         transform: translate3d(0, 90px, 0);
-        opacity: 0; }
+        -webkit-transform: translate3d(0, 90px, 0);
+        -moz-transform: translate3d(0, 90px, 0);
+        -ms-transform: translate3d(0, 90px, 0);
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s; }
+    .tip-body .tip-cp-box.active .tip-cp_button a.btn_more {
+      opacity: 0; }
+    .tip-body .tip-cp-box.active .tip-cp_button a.btn_detail {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      transition: all 0.3s ease 0.34s;
+      -webkit-transition: all 0.3s ease 0.34s;
+      -moz-transition: all 0.3s ease 0.34s;
+      -ms-transition: all 0.3s ease 0.34s; }
+    .tip-body .tip-cp-box.active .tip-cp_info {
+      height: 400px; }
+      .tip-body .tip-cp-box.active .tip-cp_info h3 {
+        font: 700 20px 'noto sans kr';
+        color: #000; }
+      .tip-body .tip-cp-box.active .tip-cp_info p.tci_text_01 {
+        display: none; }
+      .tip-body .tip-cp-box.active .tip-cp_info p.tci_text_02 {
+        opacity: 1; }
+  .tip-body.col3 {
+    width: 1110px;
+    margin-left: -15px; }
+    .tip-body.col3 .tip-cp-box.active .tip-cp_info {
+      height: 350px; }
+  .tip-body.col2 {
+    width: 1100px;
+    margin-left: -15px; }
 
 .btn_morelist {
   width: 100%;
@@ -4025,6 +4067,10 @@ img {
 /* Docent page */
 #tab {
   margin: 0 5px; }
+  #tab label {
+    cursor: pointer; }
+    #tab label:hover {
+      color: #222 !important; }
   #tab > input {
     display: none; }
     #tab > input:nth-of-type(1):checked ~ div:nth-of-type(1) {

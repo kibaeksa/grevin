@@ -5396,14 +5396,7 @@ $font_2: NotoSansKRRegular; //urls
     background: url('/images/line_01.png') repeat-x;
     background-position: left bottom;
     padding-bottom: 30px;
-    &.col3{
-        width: 1110px;
-        margin-left: -15px;
-    }
-    &.col2{
-        width: 1100px;
-        margin-left: -15px;
-    }
+
     .tip-cp-box{
         float: left;
         position: relative;
@@ -5426,31 +5419,31 @@ $font_2: NotoSansKRRegular; //urls
             left: 50%;
             bottom: 60px;
             margin-left: -160px;
-            padding: 28px 30px;
+            padding: 20px 30px 28px;
             text-align: center;
             width: 320px;
             height: 160px;
             background: #fff;
 
             @extend %extend_2;
+            @include css3(transition , height 0.4s);
             h3{
                 font-size: 16px;
                 font-weight: 500;
                 color: #999;
-                padding-bottom: 28px;
-                transition: .4s;
-                &.on{
-                    font-size: 20px;
-                    color: #222;
-                }
+                padding-bottom: 20px;
             }
             p{
                 font-size: 24px;
                 font-weight: 400;
                 color: #222;
                 line-height: 28px;
-                &.tci_text_01{}
+                letter-spacing: -0.25px;
+                &.tci_text_01{
+                    margin-bottom: 15px;
+                }
                 &.tci_text_02{
+                    display: block;
                     text-align: left;
                     font-size: 15px;
                     font-weight: 300;
@@ -5459,6 +5452,8 @@ $font_2: NotoSansKRRegular; //urls
                     border-top: 1px dashed #ccc;
                     padding-top: 20px;
                     line-height: 20px;
+                    opacity: 0;
+                    @include css3(transition , opacity ease 0.2s);
                 }
             }
         }
@@ -5475,12 +5470,14 @@ $font_2: NotoSansKRRegular; //urls
             }
             a.btn_more{
                 display: inline-block;
-                width: 60px;
-                height: 60px;
+                width: 40px;
+                height: 40px;
                 border: 2px solid #ccc;
-                background: url('/images/btn_more.png') no-repeat;
-                background-position: center;
+                background: url('/images/btn_more.png') center center no-repeat;
+                border-radius: 50%;
                 @extend %extend_2;
+
+                @include css3(transition , opacity 0.2s);
             }
             a.btn_detail{
                 display: block;
@@ -5489,12 +5486,66 @@ $font_2: NotoSansKRRegular; //urls
                 height: 60px;
                 border: 2px solid #d20038;
                 background: url('/images/btn_more_more.png') center center no-repeat;
-                transition: .4s;
-                transition-delay: .2s;
-                transform: translate3d(0, 90px, 0);
+
                 opacity: 0;
+
+                @include css3(transform , translate3d(0, 90px, 0));
+                @include css3(transition , all 0.3s ease 0s);
             }
         }
+
+        &.active{
+            .tip-cp_button{
+
+                a.btn_more{
+                    opacity: 0;
+                }
+
+                a.btn_detail{
+                    opacity: 1;
+                    @include css3(transform , translate3d(0, 0, 0));
+                    @include css3(transition , all 0.3s ease 0.34s);
+                }
+
+            }
+
+            .tip-cp_info{
+                height: 400px;
+
+                h3{
+                    font:700 20px 'noto sans kr';
+                    color: #000;
+                }
+
+                p{
+                    &.tci_text_01{
+                        display: none;
+                    }
+
+                    &.tci_text_02{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    /* tip-cp-box END */
+
+    &.col3{
+        width: 1110px;
+        margin-left: -15px;
+
+        .tip-cp-box{
+            &.active{
+                .tip-cp_info{
+                    height: 350px;
+                }
+            }
+        }
+    }
+    &.col2{
+        width: 1100px;
+        margin-left: -15px;
     }
 }
 
@@ -5522,6 +5573,15 @@ $font_2: NotoSansKRRegular; //urls
 
 #tab {
 	margin: 0 5px;
+
+    label{
+        cursor: pointer;
+
+        &:hover{
+            color: #222 !important;
+        }
+    }
+
 	> input {
 		display: none;
 		&:nth-of-type(1) {

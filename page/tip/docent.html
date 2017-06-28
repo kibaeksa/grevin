@@ -19,38 +19,46 @@
 
     $(document).ready(function() {
 
-        $('.tip-cp_button').mouseenter(function () {
+        // $('.tip-cp_button').mouseenter(function () {
+        //
+        //     var tipCpInfo = $(this).siblings('.tip-cp_info');
+        //
+        //     //$(this).find('img').attr('src','/images/btn_more_more.png');
+        //     tipCpInfo.stop().animate({height: "350px"});
+        //     tipCpInfo.find('h3').addClass('on');
+        //     tipCpInfo.find('.tci_text_01').stop().hide();
+        //     tipCpInfo.find('.tci_text_02').stop().fadeIn(1000);
+        //
+        //     $(this).find('.btn_detail').css({
+        //         'transform':'translate3d(0, 0, 0)',
+        //         'opacity':'1'
+        //     });
+        //
+        // });
+        //
+        // $('.tip-cp_button').mouseleave(function () {
+        //
+        //     var tipCpInfo = $(this).siblings('.tip-cp_info');
+        //
+        //     //$(this).find('img').attr('src','/images/btn_more.png');
+        //     tipCpInfo.stop().animate({height: "160px"});
+        //     tipCpInfo.find('h3').removeClass('on');
+        //     tipCpInfo.find('.tci_text_01').stop().fadeIn(1000);
+        //     tipCpInfo.find('.tci_text_02').stop().hide();
+        //
+        //     $(this).find('.btn_detail').css({
+        //         'transform':'translate3d(0, 90px, 0)',
+        //         'opacity':'0'
+        //     });
+        //
+        // });
 
-            var tipCpInfo = $(this).siblings('.tip-cp_info');
-
-            //$(this).find('img').attr('src','/images/btn_more_more.png');
-            tipCpInfo.stop().animate({height: "350px"});
-            tipCpInfo.find('h3').addClass('on');
-            tipCpInfo.find('.tci_text_01').stop().hide();
-            tipCpInfo.find('.tci_text_02').stop().fadeIn(1000);
-
-            $(this).find('.btn_detail').css({
-                'transform':'translate3d(0, 0, 0)',
-                'opacity':'1'
-            });
-
+        $('.tip-cp-box').bind('mouseenter',function(){
+            $(this).addClass('active');
         });
 
-        $('.tip-cp_button').mouseleave(function () {
-
-            var tipCpInfo = $(this).siblings('.tip-cp_info');
-
-            //$(this).find('img').attr('src','/images/btn_more.png');
-            tipCpInfo.stop().animate({height: "160px"});
-            tipCpInfo.find('h3').removeClass('on');
-            tipCpInfo.find('.tci_text_01').stop().fadeIn(1000);
-            tipCpInfo.find('.tci_text_02').stop().hide();
-
-            $(this).find('.btn_detail').css({
-                'transform':'translate3d(0, 90px, 0)',
-                'opacity':'0'
-            });
-
+        $('.tip-cp-box').bind('mouseleave',function(){
+            $(this).removeClass('active');
         });
 
     });
