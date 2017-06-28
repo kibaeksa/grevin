@@ -1417,70 +1417,30 @@ $font_2: NotoSansKRRegular; //urls
             padding-top: 15px;
         }
     }
-    .inquiry_info{
-        display: inline-block;
-        position: relative;
-        margin-top: 30px;
-        width: 720px;
-        height: 120px;
-        background: #f8f8f8;
-        @extend %extend_2;
-        .ii-th{
-            display: inline-block;
-            position: absolute;
-            top: 28px;
-            left: 150px;
-            height: 40px;
-            font-size: 35px;
-            padding: 12px 30px 12px 0;
-            color: #333;
-            border-right: 2px solid #dbdbdb;
-        }
-        .ii-td{
-            display: inline-block;
-            position: absolute;
-            top: 20px;
-            left: 340px;
-            height: 64px;
-            text-align: left;
-            vertical-align: top;
-            p{
-                font-family: $font_0;
-                font-size: 18px;
-                font-weight: bold;
-                margin-bottom: 5px;
-                letter-spacing: 0.03em;
-            }
-            span{
-                font-size: 13px;
-                color: #444;
-            }
-        }
-    }
 }
 .place-basic{
     .place-box{
         overflow: hidden;
-        padding: 30px 0;
+        padding: 50px 0;
         border-bottom: 1px solid #ccc;
         &:last-child{
-            border-color: #222;
+            border: 0 none;
         }
         .place-img{
             width: 540px;
             height: 370px;
             overflow: hidden;
-            float: right;
+            float: left;
             img{
                 width: 100%;
                 display: block;
             }
         }
         .place-text{
-            float:left;
+            float:right;
             vertical-align: top;
             margin-top: 15px;
-            margin-left: 50px;
+            margin-right: 50px;
             h2{
                 font-family: $font_0;
                 font-size: 40px;
@@ -1549,6 +1509,53 @@ $font_2: NotoSansKRRegular; //urls
         }
     }
 }
+.inquiry_box{
+    padding: 25px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    text-align: center;
+    .inquiry_info{
+        display: inline-block;
+        position: relative;
+        width: 720px;
+        height: 64px;
+        @extend %extend_2;
+        .ii-th{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 150px;
+            height: 40px;
+            font-size: 35px;
+            font-weight: 300;
+            padding: 12px 30px 12px 0;
+            color: #333;
+            border-right: 2px solid #dbdbdb;
+        }
+        .ii-td{
+            display: inline-block;
+            position: absolute;
+            top: -4px;
+            left: 340px;
+            height: 64px;
+            text-align: left;
+            vertical-align: top;
+            p{
+                font-family: $font_0;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: bold;
+                margin-bottom: 5px;
+                letter-spacing: 0.03em;
+            }
+            span{
+                font-size: 12px;
+                color: #444;
+            }
+        }
+    }
+}
+
 /* VenueRentalsInfo END */
 
 /* CateringMenu */
