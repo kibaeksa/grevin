@@ -2123,11 +2123,70 @@ img {
           position: relative;
           overflow: hidden; }
           #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * {
-            width: 5000%;
+            width: 100%;
             position: absolute;
             top: 0;
             left: 0;
             overflow: hidden; }
+            #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * .mask-wrapper {
+              width: 100%;
+              height: 100%;
+              z-index: 10;
+              position: absolute;
+              top: 0;
+              left: 100%; }
+              #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * .mask-wrapper div {
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform 0.7s cubic-bezier(0.49, 0.31, 0, 1);
+                -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.49, 0.31, 0, 1); }
+                #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * .mask-wrapper div.mask1 {
+                  background: #000;
+                  transition-delay: 0s;
+                  -webkit-transition-delay: 0s;
+                  -moz-transition-delay: 0s;
+                  -ms-transition-delay: 0s; }
+                #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * .mask-wrapper div.mask2 {
+                  background: #bb8d0b;
+                  transition-delay: 0.2s;
+                  -webkit-transition-delay: 0.2s;
+                  -moz-transition-delay: 0.2s;
+                  -ms-transition-delay: 0.2s; }
+                #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * .mask-wrapper div.mask3 {
+                  background: #d11242;
+                  transition-delay: 0.3s;
+                  -webkit-transition-delay: 0.3s;
+                  -moz-transition-delay: 0.3s;
+                  -ms-transition-delay: 0.3s; }
+            #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > *.progress .mask-wrapper div {
+              transform: translate3d(-100%, 0, 0);
+              -webkit-transform: translate3d(-100%, 0, 0);
+              -moz-transform: translate3d(-100%, 0, 0);
+              -ms-transform: translate3d(-100%, 0, 0); }
+            #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > *.finish .mask-wrapper div {
+              transform: translate3d(-200%, 0, 0);
+              -webkit-transform: translate3d(-200%, 0, 0);
+              -moz-transform: translate3d(-200%, 0, 0);
+              -ms-transform: translate3d(-200%, 0, 0); }
+              #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > *.finish .mask-wrapper div.mask1 {
+                transition-delay: 0.3s;
+                -webkit-transition-delay: 0.3s;
+                -moz-transition-delay: 0.3s;
+                -ms-transition-delay: 0.3s; }
+              #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > *.finish .mask-wrapper div.mask2 {
+                transition-delay: 0.2s;
+                -webkit-transition-delay: 0.2s;
+                -moz-transition-delay: 0.2s;
+                -ms-transition-delay: 0.2s; }
+              #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > *.finish .mask-wrapper div.mask3 {
+                transition-delay: 0s;
+                -webkit-transition-delay: 0s;
+                -moz-transition-delay: 0s;
+                -ms-transition-delay: 0s; }
             #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * > * {
               position: absolute;
               top: 0;
@@ -2412,6 +2471,8 @@ img {
             width: 535px;
             height: 342px;
             right: 0; }
+            #contents .floor-wrapper.floor2 .article-floor.box3 .con-imagebox .slider-wrapper img {
+              width: 100%; }
             #contents .floor-wrapper.floor2 .article-floor.box3 .con-imagebox .deco-background {
               right: -48px; }
               #contents .floor-wrapper.floor2 .article-floor.box3 .con-imagebox .deco-background.deco-check-floor {

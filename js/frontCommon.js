@@ -73,7 +73,6 @@ var bClose = function (){
 })();
 
 function itemSlider(options){
-    // var elemContainer = $('.sns-hub-wrapper .slider-wrapper');
     var elemContainer = $(options.elemContainer);
     var elemSlider = elemContainer.children();
     var elemItems = elemSlider.children();
@@ -194,7 +193,9 @@ floorApp.slider = function(options){
     var sliderElem = containerElem.children();
     var itemElems = sliderElem.children();
 
+    var status = true;
     var index = 0;
+    var prevIndex = -1;
     var length = itemElems.length;
     var moveVal = containerElem.attr('data-width') || containerElem.width();
 
@@ -220,9 +221,57 @@ floorApp.slider = function(options){
     }
 
     function animate(){
-        sliderElem.animate({
-            left : index * -moveVal
-        });
+        status = false;
+        sliderElem.append('<div class="mask-wrapper"><div class="mask1"></div><div class="mask2"></div><div class="mask3"></div></div>')
+
+        setTimeout(function(){
+            sliderElem.addClass('progress');
+
+
+            setTimeout(function(){
+                console.log(prevIndex);
+                $(itemElems[prevIndex]).css({
+                    left : '-100%'
+                });
+
+                if(prevIndex > index){
+                    $(itemElems[index]).css({
+                        left : '-10px'
+                    });
+                }else{
+                    $(itemElems[index]).css({
+                        left : '10px'
+                    });
+                }
+
+                sliderElem.addClass('finish');
+
+                setTimeout(function(){
+                    $(itemElems[index]).animate({
+                        left : 0
+                    });
+
+                    setTimeout(function(){
+                        status = true;
+                        sliderElem.removeClass('finish progress').find('.mask-wrapper').remove();
+                    },500);
+
+                },300);
+            },800);
+        },100);
+
+        // sliderElem.animate({
+        //     left : index * -moveVal
+        // });
+    }
+
+    function setIndex(idx){
+        if(idx == index){
+            return;
+        }
+
+        prevIndex = index;
+        index = idx;
     }
 
     function setResize(){
@@ -255,29 +304,41 @@ floorApp.slider = function(options){
 
     return {
         next : function(){
+            if(!status){
+                return false;
+            }
+
             if(index == length-1){
-                index = 0;
+                setIndex(0);
             }else{
-                index += 1;
+                setIndex(index + 1);
             }
 
             animate();
         },
         prev : function(){
+            if(!status){
+                return false;
+            }
+
             if(index == length-1){
-                index = 0;
+                setIndex(0);
             }else{
-                index -= 1;
+                setIndex(index - 1);
             }
 
             animate();
         },
         slide : function(_index){
+            if(!status){
+                return false;
+            }
+
             if(index == _index || _index < 0 || _index > length-1 ){
                 return false;
             }
 
-            index = _index;
+            setIndex(_index);
 
             animate();
         }

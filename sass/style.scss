@@ -2713,11 +2713,75 @@ $font_2: NotoSansKRRegular; //urls
                     overflow: hidden;
 
                     >*{
-                        width: 5000%;
+                        width: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;
                         overflow: hidden;
+
+                        .mask-wrapper{
+                            width: 100%;
+                            height: 100%;
+                            z-index: 10;
+                            position: absolute;
+                            top: 0;
+                            left: 100%;
+
+                            div{
+                                width: 100%;
+                                height: 100%;
+                                z-index: 10;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                                transition:transform 0.7s cubic-bezier(0.49, 0.31, 0, 1);
+                            	-webkit-transition:-webkit-transform 0.7s cubic-bezier(0.49, 0.31, 0, 1);
+
+                                &.mask1{
+                                    background: #000;
+                                    @include css3(transition-delay,0s);
+                                }
+
+                                &.mask2{
+                                    background:#bb8d0b;
+                                    @include css3(transition-delay,0.2s);
+                                }
+
+                                &.mask3{
+                                    background:#d11242;
+                                    @include css3(transition-delay,0.3s);
+                                }
+                            }
+                        }
+
+                        &.progress{
+                            .mask-wrapper{
+                                div{
+                                    @include css3(transform , translate3d(-100%,0,0));
+                                }
+                            }
+                        }
+
+                        &.finish{
+                            .mask-wrapper{
+                                div{
+
+                                    @include css3(transform , translate3d(-200%,0,0));
+                                    &.mask1{
+                                        @include css3(transition-delay , 0.3s);
+                                    }
+
+                                    &.mask2{
+                                        @include css3(transition-delay , 0.2s);
+                                    }
+
+                                    &.mask3{
+                                        @include css3(transition-delay , 0s);
+                                    }
+                                }
+                            }
+                        }
 
                         >*{
                             position: absolute;
@@ -3179,6 +3243,12 @@ $font_2: NotoSansKRRegular; //urls
                             width: 535px;
                             height: 342px;
                             right: 0;
+
+                            .slider-wrapper{
+                                img{
+                                    width: 100%;
+                                }
+                            }
 
                             .deco-background{
                                 right: -48px;
