@@ -459,20 +459,22 @@ $font_2: NotoSansKRRegular; //urls
                 position: absolute;
                 top: 0;
                 right: 0;
+                a{
+                    display: inline-block;
+                    .box{
 
-                .box{
-
-                    .img{
-                        margin-bottom: 20px;
-                    }
-                    dt{
-                        margin-bottom: 20px;
-                        font:18px/18px 'nexa';
-                        text-transform: uppercase;
-                    }
-                    dd{
-                        font:500 14px/20px 'noto sans kr';
-                        color: #666;
+                        .img{
+                            margin-bottom: 20px;
+                        }
+                        dt{
+                            margin-bottom: 20px;
+                            font:18px/18px 'nexa';
+                            text-transform: uppercase;
+                        }
+                        dd{
+                            font:500 14px/20px 'noto sans kr';
+                            color: #666;
+                        }
                     }
                 }
             }
@@ -521,7 +523,7 @@ $font_2: NotoSansKRRegular; //urls
     width: 100%;
     position: relative;
     border-top: 1px solid  #ddd;
-
+    margin-top: 150px;
     .movetop{
         width: 50px;
         height: 50px;
@@ -5434,7 +5436,7 @@ $font_2: NotoSansKRRegular; //urls
                 padding-bottom: 20px;
             }
             p{
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 400;
                 color: #222;
                 line-height: 28px;
