@@ -2806,7 +2806,19 @@ $font_2: NotoSansKRRegular; //urls
                         width: 53px;
                         height: 60px;
                         display: block;
+                        position: relative;
                         background:url('/images/floor_arrow_right.jpg') 0 0 no-repeat;
+                        right: -100px;
+
+                        @include css3(transition,right 0.3s ease 0.6s);
+                    }
+                }
+
+                &.loaded{
+                    .slide-controller{
+                        .arrow{
+                            right: 0;
+                        }
                     }
                 }
             }

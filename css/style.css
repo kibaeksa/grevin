@@ -2208,7 +2208,15 @@ img {
             width: 53px;
             height: 60px;
             display: block;
-            background: url("/images/floor_arrow_right.jpg") 0 0 no-repeat; }
+            position: relative;
+            background: url("/images/floor_arrow_right.jpg") 0 0 no-repeat;
+            right: -100px;
+            transition: right 0.3s ease 0.6s;
+            -webkit-transition: right 0.3s ease 0.6s;
+            -moz-transition: right 0.3s ease 0.6s;
+            -ms-transition: right 0.3s ease 0.6s; }
+        #contents .floor-wrapper .con-imagebox .frame-image.loaded .slide-controller .arrow {
+          right: 0; }
       #contents .floor-wrapper .con-imagebox .float-image {
         position: absolute;
         opacity: 0;
