@@ -23,39 +23,31 @@ var bClose = function (){
         var that = $(this);
         $(this).bind('mouseenter',function(){
             clearTimeout(timer);
-            that.children('span').animate({
-                marginLeft : 10
-            },500);
-            setTimeout(function(){
-                that.find('.cover').stop().css({left : '-100%'}).animate({
-                    left : 0
-                },200);
-                setTimeout(function(){
-                    that.find('.cover span').stop().css({
-                        marginLeft : -40
-                    }).animate({
-                        marginLeft : 0
-                    },300);
-                },50);
 
-            },100);
+            that.find('.cover .bg').stop().css({
+                left : '-100%'
+            }).animate({
+                left : 0
+            });
+            setTimeout(function(){
+                that.find('.cover .txt').stop().css({
+                    left : -10,
+                    opacity: 1
+                }).animate({
+                    left : 0
+                });
+            },180);
         });
 
         $(this).bind('mouseleave',function(){
-            that.children('span').stop().css({
-                marginLeft : -40
-            }).animate({
-                marginLeft : 0
-            },300);
-
-            that.find('.cover').animate({
+            that.find('.cover .bg').stop().animate({
                 left : '100%'
             });
-            timer = setTimeout(function(){
-                that.find('.cover').css({
-                    left : '-100%'
-                });
-            },500);
+
+            that.find('.cover .txt').stop().animate({
+                opacity: 0,
+                left : 10
+            })
         });
     });
 })();
