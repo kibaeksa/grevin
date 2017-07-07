@@ -16,50 +16,6 @@ var bClose = function (){
   });
 };
 
-/* Button animation */
-(function(){
-    $('.anim-button').each(function(){
-        var timer;
-        var that = $(this);
-        $(this).bind('mouseenter',function(){
-            clearTimeout(timer);
-            that.children('span').animate({
-                marginLeft : 10
-            },500);
-            setTimeout(function(){
-                that.find('.cover').stop().css({left : '-100%'}).animate({
-                    left : 0
-                },200);
-                setTimeout(function(){
-                    that.find('.cover span').stop().css({
-                        marginLeft : -40
-                    }).animate({
-                        marginLeft : 0
-                    },300);
-                },50);
-
-            },100);
-        });
-
-        $(this).bind('mouseleave',function(){
-            that.children('span').stop().css({
-                marginLeft : -40
-            }).animate({
-                marginLeft : 0
-            },300);
-
-            that.find('.cover').animate({
-                left : '100%'
-            });
-            timer = setTimeout(function(){
-                that.find('.cover').css({
-                    left : '-100%'
-                });
-            },500);
-        });
-    });
-})();
-
 /* GNB Clouser */
 (function(){
     var timer;
@@ -239,10 +195,8 @@ floorApp.slider = function(options){
 
     var status = true;
     var index = 0;
-    var fakeIndex = 1;
     var prevIndex = -1;
     var length = itemElems.length;
-    var fakeLen = length + 1;
     var moveVal = containerElem.attr('data-width') || containerElem.width();
 
     containerElem.css({
@@ -254,13 +208,10 @@ floorApp.slider = function(options){
         height : containerElem.attr('data-height')
     });
 
-    $(itemElems[0]).clone().appendTo(sliderElem);
-
-    // sliderElem.prepend(itemElems[length-3]);
-
     for(var i = 0; i < length; i++){
         $(itemElems[i]).css({
-            width : moveVal
+            width : moveVal,
+            left : i * moveVal
         });
     }
 
@@ -269,20 +220,44 @@ floorApp.slider = function(options){
         var ratio = containerElem.attr('data-height') / containerElem.attr('data-width');
     }
 
-    function animate(val){
+    function animate(){
         status = false;
-
-        sliderElem.animate({
-            left : val
-        } , 500);
+        sliderElem.append('<div class="mask-wrapper"><div class="mask1"></div><div class="mask2"></div><div class="mask3"></div></div>')
 
         setTimeout(function(){
             sliderElem.addClass('progress');
 
+
             setTimeout(function(){
+                console.log(prevIndex);
+                $(itemElems[prevIndex]).css({
+                    left : '-100%'
+                });
+
+                if(prevIndex > index){
+                    $(itemElems[index]).css({
+                        left : '-10px'
+                    });
+                }else{
+                    $(itemElems[index]).css({
+                        left : '10px'
+                    });
+                }
+
                 sliderElem.addClass('finish');
-                status = true;
-            },300);
+
+                setTimeout(function(){
+                    $(itemElems[index]).animate({
+                        left : 0
+                    });
+
+                    setTimeout(function(){
+                        status = true;
+                        sliderElem.removeClass('finish progress').find('.mask-wrapper').remove();
+                    },500);
+
+                },300);
+            },800);
         },100);
 
         // sliderElem.animate({
@@ -297,7 +272,6 @@ floorApp.slider = function(options){
 
         prevIndex = index;
         index = idx;
-
     }
 
     function setResize(){
@@ -316,7 +290,8 @@ floorApp.slider = function(options){
 
         for(var i = 0; i < length; i++){
             $(itemElems[i]).css({
-                width : newValue
+                width : newValue,
+                left : i * moveVal
             });
         }
 
@@ -333,20 +308,13 @@ floorApp.slider = function(options){
                 return false;
             }
 
-            // if(index == length-1){
-                // setIndex(0);
-            // }else{
-            if(index == fakeLen-1){
-                sliderElem.css({
-                    left : 0
-                });
-                setIndex(1);
+            if(index == length-1){
+                setIndex(0);
             }else{
                 setIndex(index + 1);
             }
 
-
-            animate(index * -moveVal);
+            animate();
         },
         prev : function(){
             if(!status){

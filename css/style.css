@@ -178,6 +178,22 @@ img {
   position: relative;
   margin: 0 auto; }
 
+.anim-button {
+  overflow: hidden; }
+  .anim-button > span {
+    position: relative;
+    transition: left 0.4s ease-in-out;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -ms-transition: left 0.4s ease-in-out; }
+  .anim-button .cover {
+    position: absolute;
+    top: 0;
+    left: -100%; }
+    .anim-button .cover span {
+      position: absolute;
+      margin-left: -20px; }
+
 /* Layout */
 #wrapper {
   position: relative;
@@ -2097,22 +2113,40 @@ img {
         line-height: 26px;
         margin: 20px 0;
         letter-spacing: -0.75px; }
-      #contents .floor-wrapper .con-infobox span {
+      #contents .floor-wrapper .con-infobox > span {
         display: block;
         height: 21px;
         font-size: 12px;
         line-height: 21px;
         color: #c7a136; }
       #contents .floor-wrapper .con-infobox a.button {
+        width: 208px;
+        height: 58px;
+        position: relative;
         display: inline-block;
-        padding: 22px 74px;
         border: 1px solid #000;
         margin-top: 65px;
         font-size: 12px;
         letter-spacing: 0.05em; }
-        #contents .floor-wrapper .con-infobox a.button:hover {
+        #contents .floor-wrapper .con-infobox a.button > span {
+          position: absolute;
+          top: 22px;
+          left: 70px;
+          font-size: 12px;
+          letter-spacing: 0.05em; }
+        #contents .floor-wrapper .con-infobox a.button .cover {
+          width: 100%;
+          height: 100%;
           background: #000;
-          color: #fff; }
+          color: #fff;
+          text-align: center;
+          line-height: 55px; }
+          #contents .floor-wrapper .con-infobox a.button .cover span {
+            margin-left: -40px;
+            top: 0;
+            left: 70px;
+            font-size: 12px;
+            letter-spacing: 0.05em; }
     #contents .floor-wrapper .con-imagebox {
       display: inline-block;
       position: absolute;
@@ -2126,7 +2160,7 @@ img {
           position: relative;
           overflow: hidden; }
           #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * {
-            width: 100%;
+            width: 5000%;
             position: absolute;
             top: 0;
             left: 0;
@@ -2191,9 +2225,7 @@ img {
                 -moz-transition-delay: 0s;
                 -ms-transition-delay: 0s; }
             #contents .floor-wrapper .con-imagebox .frame-image .slider-wrapper > * > * {
-              position: absolute;
-              top: 0;
-              left: 0; }
+              float: left; }
         #contents .floor-wrapper .con-imagebox .frame-image .slide-controller {
           position: absolute;
           top: 50%;
@@ -2210,13 +2242,17 @@ img {
             display: block;
             position: relative;
             background: url("/images/floor_arrow_right.jpg") 0 0 no-repeat;
-            right: -100px;
-            transition: right 0.3s ease 0.6s;
-            -webkit-transition: right 0.3s ease 0.6s;
-            -moz-transition: right 0.3s ease 0.6s;
-            -ms-transition: right 0.3s ease 0.6s; }
+            right: 0;
+            opacity: 0;
+            transition: all 0.3s ease 0.6s;
+            -webkit-transition: all 0.3s ease 0.6s;
+            -moz-transition: all 0.3s ease 0.6s;
+            -ms-transition: all 0.3s ease 0.6s; }
+          #contents .floor-wrapper .con-imagebox .frame-image .slide-controller.a_left {
+            right: auto;
+            left: 0; }
         #contents .floor-wrapper .con-imagebox .frame-image.loaded .slide-controller .arrow {
-          right: 0; }
+          opacity: 1; }
       #contents .floor-wrapper .con-imagebox .float-image {
         position: absolute;
         opacity: 0;
@@ -2568,6 +2604,8 @@ img {
             height: 670px;
             top: -80px;
             right: 0px; }
+          #contents .floor-wrapper.floor3 .article-floor.box2 .slide-controller .arrow {
+            left: 35px; }
         #contents .floor-wrapper.floor3 .article-floor.box3 {
           margin-top: 180px; }
           #contents .floor-wrapper.floor3 .article-floor.box3 .con-infobox {
@@ -2627,6 +2665,8 @@ img {
               top: -200px;
               right: -150px;
               position: absolute; }
+          #contents .floor-wrapper.floor3 .article-floor.box5 .slide-controller .arrow {
+            right: 20px; }
           #contents .floor-wrapper.floor3 .article-floor.box5.loaded .deco-subimage {
             opacity: 1; }
         @media only screen and (max-width: 1280px) {
