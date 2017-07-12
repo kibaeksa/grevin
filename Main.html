@@ -15,6 +15,16 @@
         <script type="text/javascript" src="http://image.reebok.co.kr/js/jquery/easing/jquery.easing.1.3.js"></script>
         <script src="/js/Swiper.js"></script>
         <script type="text/javascript">
+
+            function popupOpen(){
+
+                var popUrl = "page/popup/popup.html";	//팝업창에 출력될 페이지 URL
+                var popOption = "width=400, height=440, left=100, top=100, toolbar=no, location=no, directories=no, menubar=no, resizable=no, scrollbars=no, status=no;";    //팝업창 옵션(optoin)
+
+                window.open(popUrl,"팝업",popOption);
+
+            };
+
             $(document).ready(function(){
                 var swipers0 = $('#slide-main').Swipers({
                     width : 1920/*100 + '%'*/,
@@ -90,7 +100,7 @@
         </script>
 
     </head>
-    <body>
+    <body onload="javascript:popupOpen();">
         <div id="wrapper">
 
             <!-- Top 배너 START -->
@@ -455,7 +465,7 @@
                     <div class="content-inner">
                         <div id="slide-main">
                             <ul>
-                                <li><img src="/images/bg_main.jpg" alt="" width="100%"></li>
+                                <li><a href="http://naver.com"><img src="/images/bg_main.jpg" alt="" width="100%"></a></li>
                                 <li><img src="/images/bg_main.jpg" alt="" width="100%"></li>
                                 <li><img src="/images/bg_main.jpg" alt="" width="100%"></li>
                                 <li><img src="/images/bg_main.jpg" alt="" width="100%"></li>
